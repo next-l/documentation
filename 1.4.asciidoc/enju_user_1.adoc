@@ -1,0 +1,461 @@
+= 第1章 資料を検索する - Next-L Enju 利用者マニュアル
+:doctype: book
+:group: enju_user
+:page-layout: page
+:title_short: 第1章 資料を検索する
+:version: 1.4
+
+* Contents
+
+[#section1]
+= 第1章 資料を検索する
+
+Enjuを利用した資料の検索方法には、演算子やフィールド名を直接入力して検索する方法と、該当のテキストボックスに検索語入力する方法があります。
+
+* キーワードで検索する
+* 条件を詳しく指定して検索する
+* 演算子やフィールド名を使って検索をする
+
+[#section1-1]
+== 1-1 キーワードで検索する
+
+資料を指定したキーワードで検索できます。
+
+[discrete]
+==== 1. トップページの検索語にキーワードを入力し、［検索］ボタンをクリックします。
+
+image::../assets/images/1.1/image_operation_242.png[キーワードを入力]+++<div class="alert alert-info memo">+++【Memo】
+
+* スペースで区切りながらキーワードを入力すると、複数のキーワードに一致する資料を検索できます。
+* ISBNでも検索できます。ハイフンありでも、なしでも、10桁でも13桁でも検索可能です。+++</div>+++
+
+[discrete]
+==== 2. キーワードに該当する資料が検索されます。詳細を知りたい資料のタイトルをクリックします。
+
+image::../assets/images/1.1/image_operation_244.png[該当する資料が検索される]
+
+[discrete]
+==== 3. 資料の詳細が表示されます。
+
+image::../assets/images/1.3/image_operation_244_2.png[該当する資料の表示]
+
+[#section1-2]
+== 1-2 条件を詳しく指定して検索する
+
+条件を詳しく指定して、資料を検索することもできます。
+
+[discrete]
+==== 1. トップページの［（条件を詳しく指定して検索）］をクリックします。
+
+image::../assets/images/1.1/image_operation_245.png[（条件を詳しく指定して検索）クリック]
+
+[discrete]
+==== 2. 複数の条件を指定して［検索］ボタンをクリックします。
+
+image::../assets/images/1.2/advanced_search_1.png[複数の条件を指定]+++<div class="alert alert-info memo">+++【Memo】
+
+* ISBN はハイフンありでもハイフンなしでも検索できます
+* 請求記号は前方一致検索します。
+* 分類は前方一致検索します。+++</div>+++
+
+[#section1-3]
+== 1-3 フィールド名や演算子を使って検索する
+
+「and」や「or」や 「()」 などの演算子と、フィールド名を組み合わせた検索式を作成できます。
+
+検索式の例：ruby and (Web or ライブラリ)
+
+より詳しい説明については、 https://github.com/next-l/enju_leaf/issues/130[issue #130]　を参照してください。
+
+[#section1-4]
+== 1-4 検索結果を絞り込む
+
+検索結果の画面に表示された資料の情報は、画面右側のメニューにある絞込みメニュー（ファセット）を使って絞り込めます。
+絞り込める項目は標準では以下の5つが用意されています：
+
+* 資料の形態
+* 所蔵する図書館
+* 資料の言語
+* 出版年
+* 予約可能の可否
+
+[discrete]
+==== 1. 検索結果を表示する。
+
+image::../assets/images/1.1/search_result_facet_1.png[検索結果を表示]
+
+[discrete]
+==== 2. 出版日の項目から「2010 - 2019」と書かれたリンクをクリックします。
+
+image::../assets/images/1.1/search_result_facet_2.png[出版年を使って絞り込む]
+
+【Memo】それぞれの絞り込みリンクの表記、たとえば「2010 - 2019 (7)」のうち、カッコ内の数字（7）は、この絞り込みにより該当する資料のヒット件数を示しています。参考にしてみてください。
+
+[discrete]
+==== 3. 出版年が2010年以降の範囲に絞り込まれた検索結果に移ります。
+
+image::../assets/images/1.1/search_result_facet_3.png[出版年 2010 - 2019 での絞り込み結果]
+
+右側の絞り込みリンクが選択した部分（出版日: 2010 - 2019）だけになり、「この絞り込みを解除する」というリンクが付きます。
+絞込みを解除したい場合はこの解除するリンクをクリックしてください。
+さらに、別の項目も使って絞り込みたい場合は他のファセットを選択することも可能です。
+
+絞り込んだ中から、詳しく見たい資料を選択してクリックします。
+
+[#section1-5]
+== 1-5 検索結果一覧のソート方法を変更する
+
+検索結果一覧の表示順序のソート方法を変更することができます。
+書誌作成日の新しさ、出版日の新しさ、適合度（昇順のみ）、タイトルの五十音で、
+ソート方法を変更することができます。
+
+[discrete]
+==== 1. ソート方法を選び、[表示]ボタンをクリックします。
+
+image::../assets/images/1.2/search_result_sort_1.png[ソート方法を選ぶ]
+
+[discrete]
+==== 2. 選んだソート方法の順序で表示されます。
+
+image::../assets/images/1.2/search_result_sort_2.png[ソート結果]
+
+[#section1-6]
+== 1-6 検索結果一覧の表示件数を変更する
+
+検索結果一覧の表示件数を変更することができます。
+10件、20件、50件、100件から選ぶことができます。
+
+[discrete]
+==== 1. 表示件数を選び、[表示]ボタンをクリックします。
+
+image::../assets/images/1.2/search_result_number_1.png[表示件数を選ぶ]
+
+[discrete]
+==== 2. 選んだ表示件数分の検索結果が表示されます。
+
+image::../assets/images/1.2/search_result_number_2.png[検索結果表示]
+
+[#section1-7]
+== 1-7 検索結果のフィード(RSS)を取得する
+
+検索結果のRSSを取得することができます。
+検索結果の最初の10件（最近登録された10件）を得ることができます。
+※検索結果が複数の画面にわたる場合でも、
+どの画面の[検索結果フィード]でもかならず最近登録された10件のみとなります。
+
+[discrete]
+==== 1. 右メニューの[検索結果のフィード]をクリックします。
+
+image::../assets/images/1.1/search_result_rss_1.png[検索結果のフィード]
+
+[discrete]
+==== 2. 最近登録された10件のRSSが表示されます。
+
+image::../assets/images/1.1/search_result_rss_2.png[RSS]
+
+[#section1-8]
+== 1-8 検索結果一覧の書き出し
+
+[#section1-8-1]
+=== 1-8-1 RDF/XML 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果画面を表示させます。[RDF/XML]リンクをクリックします
+
+image::../assets/images/1.1/search_result_rdf_1.png[RDF/XML]
+
+※　現在、画面でみえている結果の分だけが書き出しができます。
+
+==== 2. RDF/XML 形式のファイルがダウンロードできます。
+
+* link:enju_webapi_1.html#bib_rdf_example[出力されるRDF/XMLの例（Web APIマニュアル1-2-2節参照）]
+
+[#section1-8-2]
+=== 1-8-2 MOS 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果画面を表示させます。[MODS]リンクをクリックします
+
+image::../assets/images/1.1/search_result_mods_1.png[MOS]
+
+※　現在、画面でみえている結果の分だけが書き出しができます。
+
+==== 2. MOS 形式のファイルがダウンロードできます。
+
+....
+
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3">
+<titleInfo>
+  <title>Rails of Ruby on Rails : Case of Locusandwonders.com</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title/>
+</titleInfo>
+<name type="personal">
+  <namePart>清水, 智雄</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>Plan de Sens</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>毎日コミュニケーションズ</publisher>
+  <dateIssued>2008-05-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">547.483</classification>
+<abstract/>
+<note/>
+<identifier type="isbn">9784839922214</identifier>
+<recordInfo>
+  <recordCreationDate>2015-12-05 12:34:42 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-06 17:33:23 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/3</recordIdentifier>
+</recordInfo>
+<titleInfo>
+  <title>レッスン</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title>The lesson</title>
+</titleInfo>
+<name type="personal">
+  <namePart>Pearson, Carol Lynn</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>灰島, かり, 1950-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>ささめや, ゆき, 1943-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>平凡社</publisher>
+  <dateIssued>2002-12-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">933.7</classification>
+<abstract>1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)</abstract>
+<note/>
+<identifier type="isbn">9784582831351</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:08:23 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-10 01:42:21 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/2</recordIdentifier>
+</recordInfo>
+<titleInfo>
+  <title>はじめてのRuby on Rails : 話題の「Webアプリケーション・フレームワーク」が使える! : instant rails</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title/>
+</titleInfo>
+<name type="personal">
+  <namePart>清水, 美樹</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>工学社</publisher>
+  <dateIssued>2006-08-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">547.483</classification>
+<abstract/>
+<note/>
+<identifier type="isbn">9784777512324</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:05:32 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-14 23:50:35 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/1</recordIdentifier>
+</recordInfo>
+</modsCollection>
+....
+
+[#section1-8-3]
+=== 1-8-3 TSV 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果画面を表示させます。[TSV]リンクをクリックします
+
+image::../assets/images/1.2/search_result_tsv_1.png[TSV]
+
+※　現在、画面でみえている結果の分だけが書き出しができます。
+
+[#bib_tsv]
+==== 2. TSV 形式のファイルがダウンロードできます。
+
+* link:enju_webapi_1.html#bib_tsv_example[出力されるTSVの例（Web APIマニュアル1-1-2節参照）]
+* link:enju_webapi_1.html#bib_tsv_export[出力される項目の詳細（Web APIマニュアル1-1-3参照）]
+
+[#section1-8-4]
+=== 1-8-4 JSON 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果画面を表示させます。[JSON]リンクをクリックします
+
+image::../assets/images/1.3/search_result_json_1.png[TSV]
+
+※　現在、画面でみえている結果の分だけが書き出しができます。
+
+[#bib_json]
+==== 2. JSON 形式のファイルがダウンロードできます。
+
+* link:enju_webapi_1.html#bib_json_example[出力されるJSONの例（Web APIマニュアル「書誌と所蔵のJSON形式のデータの例」参照）]
+* link:enju_webapi_1.html#bib_json_export[出力される項目の詳細（Web APIマニュアル「書誌と所蔵のJSON形式の項目」参照）]
+
+[#section1-9]
+== 1-9 検索結果詳細の書き出し
+
+[#section1-9-1]
+=== 1-9-1 RDF/XML 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果詳細画面を表示させます。[RDF/XML]リンクをクリックし
+
+ます
+
+image::../assets/images/1.1/search_result_full_rdf_1.png[RDF/XML]
+
+==== 2. RDF/XML 形式のファイルがダウンロードできます。
+
+* link:enju_webapi_2.html#bib_rdf_example_simple[出力されるRDF/XMLの例（Web API マニュアル2-2-2節参照）]
+
+[#section1-9-2]
+=== 1-9-2 MOS 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果詳細画面を表示させます。[MODS]リンクをクリックします
+
+image::../assets/images/1.1/search_result_full_mods_1.png[MOS]
+
+==== 2. MOS 形式のファイルがダウンロードできます。
+
+....
+
+<?xml version="1.0" encoding="UTF-8"?>
+<mods version="3.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3">
+<titleInfo>
+  <title>レッスン</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title>The lesson</title>
+</titleInfo>
+<name type="personal">
+  <namePart>Pearson, Carol Lynn</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>灰島, かり, 1950-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>ささめや, ゆき, 1943-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>平凡社</publisher>
+  <dateIssued>2002-12-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">933.7</classification>
+<abstract>1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)</abstract>
+<note/>
+<identifier type="isbn">9784582831351</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:08:23 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-10 01:42:21 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/2</recordIdentifier>
+</recordInfo>
+</mods>
+....
+
+[#section1-9-3]
+=== 1-9-3 TSV 形式で書き出し
+
+==== 1. 書き出しをしたい検索結果詳細画面を表示させます。[TSV]リンクをクリックします
+
+image::../assets/images/1.1/search_result_full_tsv_1.png[TSV]
+
+==== 2. TSV 形式のファイルがダウンロードできます。
+
+* link:enju_webapi_2.html#bib_tsv_example_simple[出力されるTSVの例（Web APIマニュアル2-1-2節参照）]
+* link:enju_webapi_2.html#bib_tsv_export_simple[出力される項目の詳細（Web APIマニュアル2-1-3参照）]
+
+[#section1-10]
+== 1-10 検索結果詳細を電子メールで送る
+
+メールアドレスを登録しており、ログインしていると、
+検索結果詳細を電子メールで送ることができます。
+
+※　メールアドレスの登録方法はlink:enju_user_3.html#section3-2[「3-2メールアドレスや名前などを変更する」]を参照してください。
+
+[discrete]
+==== 1. 電子メールで送りたい検索結果詳細画面を表示させます。[書誌情報を電子メールで送信する]リンクをクリックします
+
+image::../assets/images/1.1/search_result_full_mail_1.png[mail]
+
+[discrete]
+==== 2. [OK]をクリックします。
+
+image::../assets/images/1.2/image_alert.png[ok]
+
+[discrete]
+==== 3. 電子メールで送られてきます。
+
+image::../assets/images/1.1/search_result_full_mail_3.png[mail_body]
+
+{% include enju_user/toc.md %}

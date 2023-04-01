@@ -1,0 +1,15 @@
+= 第9章 蔵書点検機能を利用する - Next-L Enju 運用マニュアル
+:doctype: book
+:group: enju_operation
+:page-layout: page
+:title_short: 第9章 蔵書点検機能を利用する
+:version: 1.4
+
++++<a name="9">++++++</a>+++
+
+[#section9]
+= 第9章 蔵書点検機能を利用する
+
+書架のバーコードなどを読み込んで作成した蔵書点検用のファイルを、Enjuに登録されたデータと照合し、蔵書点検を行うことができます。+++<div class="alert alert-info memo">+++【Memo】現在、開発中の機能です。リリースの目途はたっていません。+++</div>+++
+
+{% include enju_operation/toc.md %}

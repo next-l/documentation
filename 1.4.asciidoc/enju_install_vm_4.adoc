@@ -1,0 +1,58 @@
+= 第4章 Enjuのインストール - Next-L Enju インストールマニュアル（Docker編）
+:doctype: book
+:group: enju_install_vm
+:page-layout: page
+:title_short: 第4章 Enjuのインストール
+:version: 1.4
+
+* Contents
+
+[#section4]
+= 4章 Enjuのインストール(スタンドアロンで動作させる)
+
+[#section4-1]
+== 4-1 Enjuコンテナの入手
+
+Enjuのインストールに必要なパッケージは，すべてネットワーク上で提供されます。
+
+ $ git clone https://github.com/next-l/enju_leaf.git -b 1.4
+
+[#section4-2]
+== 4-2 Dockerの起動
+
+Dockerを起動します。
+
+ $ cd enju_leaf
+ $ docker compose up -d
+
+[#section4-3]
+== 4-3 Enjuの起動確認
+
+Windows上でWebブラウザを起動し、アドレス欄に``+http://localhost:8080+``と入力してください（ブラウザによっては `localhost:8080` でも可）。
+
+これで，Enjuのサーバに対してアクセスすることが可能になりました。
+
+[#section4-4]
+== 4-4 Enjuサーバの停止と再起動
+
+[#section4-4-1]
+=== 4-4-1 Enju コンテナのシャットダウン
+
+Enjuコンテナを終了(シャットダウン)させる場合には，正しい手順でのシャットダウンを行う必要があり，Dockerをいきなり終了させたり，PCの電源ボタンを押すなどして強制終了させると，使用中のデータベースファイルが壊れて，再起動できなくなるなどの問題が発生する可能性があります。
+
+. 以下のコマンドを入力します。
+
+ $ docker compose down
+
+Enjuコンテナをシャットダウンするタイミングは，図書館の運用方針で決定することができます。起動したら基本的にはずっと動作させ続けていても問題ありません。毎日Enjuコンテナをシャットダウンする，必要な時だけ稼働させるなど，ポリシーに応じた運用をすることができます。
+
+[#section4-4-2]
+=== 4-4-2 Enju コンテナの再起動
+
+. Dockerが終了していた場合，再度Dockerを起動してください。
+(TBD)
+. 「4-2 Dockerの起動」を実行してEnjuを起動してください。
+
+これで，再度Enjuが利用できるようになりました。
+
+{% include enju_install_vm/toc_1.4.md %}

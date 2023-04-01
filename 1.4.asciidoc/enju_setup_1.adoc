@@ -1,0 +1,9 @@
+= 第1章 Enju概要 - Next-L Enju初期設定マニュアル
+:group: enju_setup
+:page-layout: page
+:title_short: 第1章 Enju概要
+:version: 1.4
+
+{% include enju_introduction.md %}
+
+{% include enju_setup/toc.md %}

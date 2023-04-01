@@ -1,0 +1,9 @@
+= Next-L Enju Web APIマニュアル
+:group: navigation
+:page-layout: page
+:title_short: Web API
+:version: 1.4
+
+本マニュアルは、オープンソース統合図書館システムEnjuが提供するWeb APIについて、説明しています。EnjuのWeb APIを使うときにお読みください。
+
+{% include enju_webapi/1.4/toc.md %}

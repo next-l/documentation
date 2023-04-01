@@ -1,0 +1,15 @@
+= 第6章 新着資料の一覧を表示する - Next-L Enju 利用者マニュアル
+:doctype: book
+:group: enju_user
+:page-layout: page
+:title_short: 第6章 新着資料の一覧を表示する
+:version: 1.4
+
+* Contents
+
+[#section6]
+= 第6章 新着資料の一覧を表示する
+
+{% include enju_newbooks.md %}
+
+{% include enju_user/toc.md %}

@@ -1,9 +1,0 @@
-= 第1章 Enju概要 - Next-L Enju インストールマニュアル（Docker編）
-:group: enju_install_vm
-:page-layout: page
-:title_short: 第1章 Enju概要
-:version: 1.4
-
-{% include enju_introduction.md %}
-
-{% include enju_install_vm/toc_1.4.md %}

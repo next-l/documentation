@@ -1,0 +1,32 @@
+:showtitle:
+:page-title: Next-L Enju Leaf 1.4 マニュアル
+:page-description: A forkable blog-ready Jekyll site using AsciiDoc
+:sectanchors:
+
+= Enjuマニュアル一覧
+
+[.row-fluid.span4]
+=== link:enju_install_vm.html[インストールマニュアル, class="btn btn-inverse btn-large"]
+include::enju_install_vm_toc.adoc[]
+
+[.row-fluid.span4]
+=== link:enju_setup.html[初期設定マニュアル, class="btn btn-success btn-large"]
+include::enju_setup_toc.adoc[]
+
+[.row-fluid.span4]
+=== link:enju_operation.html[運用マニュアル, class="btn btn-primary btn-large"]
+include::enju_operation_toc.adoc[]
+
+[.row-fluid.span4]
+=== link:enju_user.html[利用者マニュアル, class="btn btn-info btn-large"]
+include::enju_user_toc.adoc[]
+
+[.row-fluid.span4]
+=== link:enju_webapi.html[Web APIマニュアル, class="btn btn-info btn-large"]
+include::enju_webapi_toc.adoc[]
+
+== 一括ダウンロード
+
+上記のインストール、初期設定、運用、利用者、WebAPIマニュアル全てを1つのPDFにしたものをダウンロードできます。
+
+* link:https://www.next-l.jp/?page=manual#download[マニュアル一括ダウンロード]

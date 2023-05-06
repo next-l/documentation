@@ -1,25 +1,9 @@
-- name: asciidoctor-ghpages
-  # You may pin to the exact commit or the version.
-  # uses: manoelcampos/asciidoctor-ghpages-action@60643a4db90d0da4647f891dfd460e1d38a4c02b
-  uses: manoelcampos/asciidoctor-ghpages-action@v2.3.0
-  with:
-    # Defines the source root directory from where AsciiDoc files will be built and other containing files will be published to gh-pages.
-    source_dir: # optional, default is .
-    # Extra parameters to pass to the asciidoctor command to customize the process of building adoc files
-    asciidoctor_params: # optional
-    # The extension you are using for your AsciiDoc Files
-    adoc_file_ext: # optional, default is .adoc
-    # Defines if a PDF ebook should be built along with the html files. That will generate an ebook.pdf file inside the gh-pages branch.
-    pdf_build: # optional, default is false
-    # Defines the name of the main AsciiDoc file that will be used if you are generating an ebook in PDF or any other supported format. For instance, if the main ebook file is "ebook.adoc", just inform "ebook" here.
-    ebook_main_adoc_file: # optional, default is README
-    # Defines if a slides.html file should be built using AsciiDoc Reveal.js. The slides.html file is generated inside the gh-pages branch.
-    slides_build: # optional, default is false
-    # Defines the name of the main AsciiDoc file that will be used if you are generating slides with Reveal.js. For instance, if the slides file is "slides.adoc", just inform "slides" here.
-    slides_main_adoc_file: # optional, default is README
-    # If slides are being generated using AsciiDoc Reveal.js, you may not want to build the regular html files using the asciidoctor command, but just using the asciidoctor-revealjs command. In order to generate only the slides.html instead of the regular html files, set this config to true.
-    slides_skip_asciidoctor_build: # optional, default is false
-    # Any arbitrary shell command to be executed before the asciidoc build is started. Optional.
-    pre_build: # optional, default is echo "No pre build command provided."
-    # Any arbitrary shell command to be executed after the asciidoc build is complete and before committing changes on gh-pages branch. Optional.
-    post_build: # optional, default is echo "No post build command provided."
+name: build a doc files
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: asciidoctor-ghpages
+      uses: manoelcampos/asciidoctor-ghpages-action@v2.3.0
+      

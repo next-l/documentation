@@ -18,4 +18,5 @@ asciidoctor:
     - icons=font
 
 JB:
-  ASSET_PATH : https://next-l.github.io/manual/assets/themes/twitter
+  BASE_PATH : https://next-l.github.io/documentation/
+  ASSET_PATH : https://next-l.github.io/documentation/assets/themes/twitter

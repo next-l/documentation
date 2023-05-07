@@ -6,11 +6,12 @@ group: enju_install_vm
 version: 1.4
 ---
 
-* Contents
-{:toc}
-// {::comment} FAQ.md {:/comment}
+:toc: macro
+:sectnums:
 
-== 第11章 トラブルシューティング {#section11}
+toc::[]
+
+== トラブルシューティング
 
 === Q. Dockerでプロキシ環境でも使用できる方法をおしえてください。
 

@@ -6,12 +6,12 @@ group: enju_install_vm
 version: 1.4
 ---
 
-* Contents
-{:toc}
+:toc: macro
+:sectnums:
 
-== 第9章 データのバックアップとリストア
+toc::[]
 
-{:toc}
+== データのバックアップとリストア
 
 https://github.com/next-l/enju_leaf/wiki/Backup を参照してください。
 

@@ -6,22 +6,21 @@ group: enju_install_vm
 version: 1.4
 ---
 
-* Contents
-{:toc}
-// {::comment} update.md {:/comment}
+:toc: macro
+:sectnums:
 
-== 第8章 Enjuのアップデート及び停止・起動
+toc::[]
 
 Enjuは，以下の手順で，Enjuのソースコードが公開されているGitHubから変更されたファイルを取り込み最新版にすることができます。
 
-=== 8-1 Enjuの停止
+== Enjuの停止
 
 1. 以下のコマンドを入力します。
 ```
 $ docker compose down
 ```
 
-=== 8-2 最新ソースコードの取り込み
+== 最新ソースコードの取り込み
 
 1. 以下のコマンドを入力します。
 ```
@@ -36,7 +35,7 @@ $ docker compose run --rm web rake db:migrate
 $ docker compose run --rm web rake assets:precompile
 ```
 
-=== 8-3 Enjuを（再）起動
+== Enjuを（再）起動
 
 1. 以下のコマンドを入力します。
 ```

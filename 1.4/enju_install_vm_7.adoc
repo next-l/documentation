@@ -6,7 +6,12 @@ group: enju_install_vm
 version: 1.4
 ---
 
-== 第7章 他のコンピュータからの利用設定
+:toc: macro
+:sectnums:
+
+toc::[]
+
+== 他のコンピュータからの利用設定
 
 以下のWebサイトをごらんください。  
 https://github.com/next-l/enju_leaf/wiki/Production

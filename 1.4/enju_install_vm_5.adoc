@@ -6,11 +6,10 @@ group: enju_install_vm
 version: 1.4
 ---
 
-* Contents
-{:toc}
-// {::comment}module.md{:/comment}
+:toc: macro
+:sectnums:
 
-== 第5章 モジュールの追加
+toc::[]
 
 Next-L Enju Leaf 1.4では、モジュールによる機能には対応しなくなりました。
 

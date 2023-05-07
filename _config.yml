@@ -19,7 +19,6 @@ asciidoctor:
 safe: true
 
 JB:
-  BASE_PATH : /documentation/
-  ASSET_PATH : /documentation/assets/themes/twitter
+  BASE_PATH : https://next-l.github.io/documentation
   pages_list :
     provider : custom

@@ -48,4 +48,4 @@ version: 1.4
 
 ![識別子の種類の作成](../assets/images/1.1/image_initial_083.png)  
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

@@ -373,4 +373,4 @@ Enjuでは形態の設定として，その他，次の機能を利用できま�
 
 所蔵情報TSVインポートや所蔵TSVエクスポートの列頭の文字列は、「item:項目コード」（例：項目コードが「kingaku」であれば、「item:kingaku」となります。
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

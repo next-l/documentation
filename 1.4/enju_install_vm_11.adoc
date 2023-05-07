@@ -8,24 +8,23 @@ version: 1.4
 
 * Contents
 {:toc}
-{::comment} FAQ.md {:/comment}
+// {::comment} FAQ.md {:/comment}
 
-第11章 トラブルシューティング {#section11}
-===========================================
+== 第11章 トラブルシューティング {#section11}
 
-## Q. Dockerでプロキシ環境でも使用できる方法をおしえてください。
-
-(TBD)
-
-## Q. VT機能が無効になっているというメッセージが表示されます。
+=== Q. Dockerでプロキシ環境でも使用できる方法をおしえてください。
 
 (TBD)
 
-## Q. 大きなファイルをTSVインポートしようとすると"413 Request Entity Too Large　nginx/1.4.6 (Ubuntu)"といったエラーメッセージが表示されてできません。
+=== Q. VT機能が無効になっているというメッセージが表示されます。
 
 (TBD)
 
-## Q. 504 Gateway Timeout というエラーメッセージが表示されて画面が表示されません。
+=== Q. 大きなファイルをTSVインポートしようとすると"413 Request Entity Too Large　nginx/1.4.6 (Ubuntu)"といったエラーメッセージが表示されてできません。
+
+(TBD)
+
+=== Q. 504 Gateway Timeout というエラーメッセージが表示されて画面が表示されません。
 
 設定の誤り等により起動時にエラーが発生している場合、ログファイルを確認する必要があります。
 以下のコマンドで、エラーメッセージが出ていないかを確認してください。
@@ -34,4 +33,4 @@ version: 1.4
 docker compose logs -f web
 ```
 
-{% include enju_install_vm/toc_1.4.md %}
+include::enju_install_vm_toc.adoc[]

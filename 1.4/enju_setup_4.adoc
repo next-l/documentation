@@ -219,4 +219,4 @@ Enjuでは，その他，次の機能が利用できます。
 
 {:/comment}
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

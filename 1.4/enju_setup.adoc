@@ -9,4 +9,4 @@ version: 1.4
 
 本マニュアルの作成にあたっては，(株)三菱総合研究所の全面的な支援をいただきました。心より感謝いたします。
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

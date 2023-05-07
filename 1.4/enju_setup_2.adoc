@@ -130,4 +130,4 @@ Enjuのメッセージ機能を利用して，利用者にメッセージを送�
 運用マニュアルの[「2-3 メッセージをやり取りする」](enju_operation_2.html#section2-3)
 を参照してください。
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

@@ -113,4 +113,4 @@ version: 1.4
      * [図書館の管理]メニューから[発注リスト]をたどっていける画面と同じ
      * 参照：[運用マニュアル「4-1-1 発注リストを作成する」](enju_operation_4.html#section4-1-1)
 
-{% include enju_setup_toc.md %}
+include::enju_setup_toc.adoc[]

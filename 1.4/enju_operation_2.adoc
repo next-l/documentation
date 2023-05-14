@@ -22,9 +22,11 @@ Enjuは、利用者にメッセージを送信する機能も搭載されてい�
 * メッセージの送信
 * メッセージのログの一覧表示・印刷
 
+////
 {::comment}2-1 enju_operation/role.md {:/comment}
 {::comment}2-2 enju_operation/login.md {:/comment}
 {::comment}2-3 enju_operation/message.md {:/comment}
+////
 
 == ユーザーアカウントの種類を知る
 
@@ -71,12 +73,12 @@ Enjuを利用するには、まずシステムにログインします。
 
 === ログインする
 
-1. Enjuにアクセスし、［ログイン］をクリックします。  
-
+. Enjuにアクセスし、［ログイン］をクリックします。
++
 ![Enju初期画面](../assets/images/1.1/image_operation_003.png)
 
-2. ユーザー名とパスワードを入力し［ログイン］をクリックします。  
-
+. ユーザー名とパスワードを入力し［ログイン］をクリックします。
++
 ![Enjuログイン](../assets/images/1.1/image_operation_005.png)
 
 <div class="alert alert-info memo">【Memo】ブラウザを閉じてもログイン状態を保持したい場合は、［ウィンドウを閉じてもログインしたままにする］をオンにします。
@@ -92,18 +94,18 @@ Enjuを利用するには、まずシステムにログインします。
 
 </div>
 
-3. 自分のアカウントでログインされていることを確認します。  
-
+. 自分のアカウントでログインされていることを確認します。
++
 ![Enjuログイン中](../assets/images/1.1/image_operation_007.png)
 
 === ログアウトする
 
-1. ［ログアウト］をクリックします。  
-
+. ［ログアウト］をクリックします。
++
 ![Enjuログアウト](../assets/images/1.1/image_operation_009.png)
 
-2. ログアウトされたこと（［ログイン］の表示に変わったこと）を画面で確認します。  
-
+. ログアウトされたこと（［ログイン］の表示に変わったこと）を画面で確認します。
++
 ![Enjuログアウト後](../assets/images/1.1/image_operation_011.png)
 
 <div class="alert alert-info">
@@ -130,37 +132,37 @@ Enjuのメッセージ機能を利用して、利用者にメッセージを送�
 
 === 利用者を検索してメッセージを送信する
 
-1. ［図書館の管理］メニューから［利用者の管理］を選択します。  
-
+. ［図書館の管理］メニューから［利用者の管理］を選択します。
++
 ![利用者の管理](../assets/images/1.1/image_operation_user.png)
 
-2. メッセージを送りたいユーザのユーザ名をクリックします。  
-
+. メッセージを送りたいユーザのユーザ名をクリックします。
++
 ![ユーザ名をクリック](../assets/images/1.1/image_operation_015.png)
 
 <div class="alert alert-info memo">【Memo】［検索語］にユーザ名や利用者番号を入力して、ユーザを検索することもできます。
 </div>
 
-3. 右メニューの［メッセージを送信する］をクリックします。  
-
+. 右メニューの［メッセージを送信する］をクリックします。
++
 ![メッセージを送信する](../assets/images/1.1/image_operation_017.png)
 
-4. 件名、本文を入力し、［メッセージを送信する］ボタンをクリックします。  
-
+. 件名、本文を入力し、［メッセージを送信する］ボタンをクリックします。
++
 ![メッセージ送信](../assets/images/1.1/image_operation_018.png)
 
 === 利用者のユーザー名を入力してメッセージを送信する
 
-1. ［アカウント］の左にあるメールアイコンをクリックします。  
-
+. ［アカウント］の左にあるメールアイコンをクリックします。
++
 ![メールアイコンをクリック](../assets/images/1.1/image_operation_020_1.png)
 
-2. 右メニューの[メッセージの新規作成]をクリックします。 
-
+. 右メニューの[メッセージの新規作成]をクリックします。
++
 ![メッセージの新規作成リンク](../assets/images/1.1/image_operation_020_2.png)
 
-4. 宛先（ユーザー名）、件名、本文を入力し、［メッセージを送信する］ボタンをクリックします。  
-
+. 宛先（ユーザー名）、件名、本文を入力し、［メッセージを送信する］ボタンをクリックします。
++
 ![メッセージ送信](../assets/images/1.1/image_operation_020_3.png)
 
 <div class="alert alert-info memo">【Memo】
@@ -169,6 +171,7 @@ Enjuのメッセージ機能を利用して、利用者にメッセージを送�
 
 === 受信したメッセージを読む
 
+////
 {::comment} 
 注意！ ここの内容は 
 
@@ -177,12 +180,14 @@ _includes/enju_read_message.md と enju_read_message_admin.md
 の内容を編集してください 
 {:/comment}
 
-{% include enju_read_message.md %} 
+include::enju_read_message.adoc[]
 
-{% include enju_read_message_admin.md %} 
+include::enju_read_message_admin.adoc[]
+////
 
 === メッセージを削除する
 
+////
 {::comment} 
 注意！ ここの内容は 
 
@@ -191,6 +196,7 @@ _includes/enju_rm_message.md
 の内容を編集してください 
 {:/comment}
 
-{% include enju_rm_message.md %} 
+include::enju_rm_message.adoc[]
+////
 
-{% include enju_operation/toc.md %}
+include::enju_operation_toc.adoc[]

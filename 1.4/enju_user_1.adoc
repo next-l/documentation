@@ -6,8 +6,10 @@ group: enju_user
 version: 1.4
 ---
 
-* Contents
-{:toc}
+:toc: macro
+:sectnums:
+
+toc::[]
 
 第1章 資料を検索する {#section1}
 ================================

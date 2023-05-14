@@ -1,7 +1,5 @@
 // {::comment} enju_introduction.md {:/comment}
 	
-= 第1章 Enju概要
-
 Enjuとはどのようなシステムなのか，概要を説明します。
 
 == 1-1 Enjuとは

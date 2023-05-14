@@ -1,0 +1,9 @@
+= 第1章 Enju概要 - Next-L Enju 運用マニュアル
+:group: enju_operation
+:page-layout: page
+:title_short: 第1章 Enju概要
+:version: 1.4
+
+include::enju_introduction.adoc[]
+
+include::enju_operation_toc.adoc[]

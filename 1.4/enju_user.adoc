@@ -7,4 +7,4 @@ version: 1.4
 ---
 本マニュアルは、オープンソース統合図書館システム Enju の利用方法について、説明しています。Enjuを使い、検索や予約をするときにお読みください。
 
-{% include enju_user/toc.md %}
+include::enju_user_vm_toc.adoc[]

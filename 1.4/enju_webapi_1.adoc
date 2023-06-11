@@ -6,7 +6,6 @@ group: enju_webapi
 version: 1.4
 ---
 
-
 :toc: macro
 :sectnums:
 

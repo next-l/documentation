@@ -1,21 +1,23 @@
-= 第3章 書誌情報をまとめて取得する (OAI-PMH) - Next-L Enju Web APIマニュアル
-:doctype: book
+---
+:layout: page 
 :group: enju_webapi
 :page-layout: page
-:title_short: 第3章 OAI-PMH
+:title_short: 第3章 書誌情報をまとめて取得する (OAI-PMH)
+:title: 第3章 書誌情報をまとめて取得する (OAI-PMH) - Next-L Enju Web APIマニュアル
 :version: 1.4
+---
 
-* Contents
+:toc: macro
 
-[#section2]
-= 第3章 書誌情報をまとめて取得する (OAI-PMH)
+toc::[]
+
+== 第3章 書誌情報をまとめて取得する (OAI-PMH)
 
 Enjuは資料の書誌情報全体をまとめて取得するOAI-PMIハーベスティングに対応しています。
 
 OAI-PMHの詳細な仕様は https://www.nii.ac.jp/irp/archive/translation/oai-pmh2.0/[OAI-PMH2.0日本語訳（https://www.nii.ac.jp/irp/archive/translation/oai-pmh2.0/）] などをご覧ください。
 
-[#section3-1]
-== 3-1 アクセス先（ベースURL）
+=== アクセス先（ベースURL）
 
 OAI-PMHのアクセス先は以下のように、Enjuの稼働するサーバアドレスに `/oai` をつけたものになります。
 
@@ -23,14 +25,12 @@ OAI-PMHのアクセス先は以下のように、Enjuの稼働するサーバア
 http://localhost:8080/oai?verb={_Verb_}
 ----
 
-[#section3-2]
-== 3-2 取得できるメタデータ形式
+=== 取得できるメタデータ形式
 
 EnjuがOAI-PMHで提供するメタデータ形式は Dublin Core, junii2, DCNDL の3種類に対応しています。
 それぞれメタデータ名称として oai_dc, junii2, dcndl を指定してください。
 
-[#section3-3]
-== 3-3 サーバ情報を取得する (Identify)
+=== サーバ情報を取得する (Identify)
 
 サーバ情報を取得するには Identify リクエストを送ります。
 
@@ -38,8 +38,7 @@ EnjuがOAI-PMHで提供するメタデータ形式は Dublin Core, junii2, DCNDL
 http://localhost:8080/oai?verb=Identify
 ----
 
-[#section3-4]
-== 3-4 対応メタデータ形式を確認する (ListMetadataFormats)
+=== 対応メタデータ形式を確認する (ListMetadataFormats)
 
 OAI-PMHで提供可能なメタデータ形式の一覧を取得するには ListMetadataFormats リクエストを送ります。
 
@@ -47,8 +46,7 @@ OAI-PMHで提供可能なメタデータ形式の一覧を取得するには Lis
 http://localhost:8080/oai?verb=ListMetadataFormats
 ----
 
-[#section3-5]
-== 3-5 書誌情報を取得する (ListRecords)
+=== 書誌情報を取得する (ListRecords)
 
 書誌情報レコードを取得するには ListRecords リクエストを送ります。
 取得されるメタデータ形式として、`metadataPrefix` パラメータで指定します。
@@ -76,4 +74,4 @@ http://localhost:8080/oai?verb=ListRecords&metadataPrefix=junii2
 http://localhost:8080/oai?verb=ListRecords&metadataPrefix=dcndl&from=2016-04-01&until=2016-06-30
 ----
 
-{% include enju_webapi/1.4/toc.md %}
+include::enju_webapi_toc.adoc[]

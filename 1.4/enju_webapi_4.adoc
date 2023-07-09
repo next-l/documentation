@@ -1,21 +1,25 @@
-= 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
+---
 :doctype: book
+:layout: page 
 :group: enju_webapi
 :page-layout: page
-:title_short: 第4章 OpenURL
+:title_short: 第4章 外部システムから書誌情報にリンクする (OpenURL)
+:title: 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
 :version: 1.4
+---
 
-* Contents
+:toc: macro
+
+toc::[]
 
 [#section4]
-= 第4章 外部システムから書誌情報にリンクする (OpenURL)
+== 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
 
 Enjuは資料の検索結果などに外部のサービスからリンクするOpenURLに対応しています。
 
 OpenURLの詳細な仕様は http://alcme.oclc.org/openurl/docs/pdf/openurl-01.pdf[OpenURL Version 0.1] などをご覧ください。
 
-[#section4-1]
-== 4-1 アクセス先（ベースURL）
+=== アクセス先（ベースURL）
 
 OpenURLのアクセス先は以下のように、Enjuの稼働するサーバアドレスに `/manifestations?api=openurl` をつけたものになります。
 
@@ -23,8 +27,7 @@ OpenURLのアクセス先は以下のように、Enjuの稼働するサーバア
 http://localhost:8080/manifestations?api=openurl&{_Parameters_}
 ----
 
-[#section4-2]
-== 4-2 使用できる検索項目パラメータ
+=== 使用できる検索項目パラメータ
 
 EnjuがOpenURLで使用できる検索項目は以下のものです。
 
@@ -62,8 +65,7 @@ EnjuがOpenURLで使用できる検索項目は以下のものです。
 | 出版者名
 |===
 
-[#section4-3]
-== 4-3 検索結果と使用例
+=== 検索結果と使用例
 
 指定したURLに移動すると、Enju上の書誌情報の検索結果画面が表示されます。
 
@@ -79,4 +81,4 @@ http://localhost:8080/manifestations?api=openurl&isbn=978-4-7907-1695-2
 http://localhost:8080/manifestations?api=openurl&au=%E9%80%B8%E6%9D%91%E8%A3%95&title=%E5%9B%B3%E6%9B%B8%E9%A4%A8%E6%83%85%E5%A0%B1%E5%AD%A6%E3%82%92%E5%AD%A6%E3%81%B6%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB
 ----
 
-{% include enju_webapi/1.4/toc.md %}
+include::enju_webapi_toc.adoc[]

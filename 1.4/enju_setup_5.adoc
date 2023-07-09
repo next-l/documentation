@@ -20,6 +20,7 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 * 発行頻度の編集作成
 * 資料の関係の種類の作成
 
+////
 {::comment}5-1 enju_setup/carrier_type.md {:/comment}
 
 {::comment}5-2 enju_setup/ciculaion_status.md {:/comment}
@@ -31,6 +32,7 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 {::comment}5-5 enju_setup/frequency.md {:/comment}
 
 {::comment}5-6 enju_setup/manifestation_relationship_type.md {:/comment}
+////
 
 == 資料の形態を作成する
 

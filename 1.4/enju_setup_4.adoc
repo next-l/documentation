@@ -52,7 +52,7 @@ Enjuの利用を始めるにあたり，資料の主題情報を扱う件名と�
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［件名］をクリックします。
 +
@@ -203,6 +203,7 @@ Enjuの利用を始めるにあたり，資料の主題情報を扱う件名と�
 +
 ![分類の種類の作成](../assets/images/1.1/image_initial_057.png)
 
+////
 {::comment}
 
 == その他の機能
@@ -215,5 +216,6 @@ Enjuでは，その他，次の機能が利用できます。
 * ［件名と分類の関係］をクリックして，設定します。
 
 {:/comment}
+////
 
 include::enju_setup_toc.adoc[]

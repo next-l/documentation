@@ -239,7 +239,7 @@ $ rails g geocoder:config
 
 1. ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
-image::../assets/images/1.1/image_system_setup.png)[システムの設定]
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 2. ［本棚］をクリックします。  
 +
@@ -533,15 +533,15 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［メッセージテンプレート］をクリックします。  
 +
-![メッセージテンプレートの設定](../assets/images/1.1/image_initial_042_0.png)
+image::../assets/images/1.1/image_initial_042_0.png[メッセージテンプレートの設定]
 
 . 設定したい項目の［編集］をクリックします。  
 +
-![メッセージテンプレートの編集](../assets/images/1.1/image_initial_042.png)  
+image::../assets/images/1.1/image_initial_042.png[メッセージテンプレートの編集]
 +
 <div class="alert alert-info">
 【Memo】一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
@@ -549,14 +549,14 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。  
 +
-![メッセージテンプレートの更新](../assets/images/1.1/image_initial_043.png)  
+image::../assets/images/1.1/image_initial_043.png[メッセージテンプレートの更新]
 
 == 検索エンジンを設定する
 
 検索エンジンを設定すると、資料を検索したときにヒット件数が0件だった場合に、同じ検索語で別のデータベース（検索エンジン）に検索をすることができるようになります。
 次の図は、ヒット件数が0件だったときの画面を表しています。ここでは、3つの検索エンジン（NDL Search, amazon.co.jp, CiNii Books）を表示しています。
 
-![0件ヒットと検索エンジン](../assets/images/1.1/image_initial_044_00.png)
+image::../assets/images/1.1/image_initial_044_00.png[0件ヒットと検索エンジン]
 
 === 設定項目
 
@@ -572,19 +572,19 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［検索エンジン］をクリックします。  
 +
-![検索エンジンの設定](../assets/images/1.1/image_initial_044_0.png)
+image::../assets/images/1.1/image_initial_044_0.png[検索エンジンの設定]
 
 . 右メニューの［検索エンジンの新規作成］をクリックします。
 +
-![検索エンジンの設定](../assets/images/1.1/image_search_engine_create.png)
+image::../assets/images/1.1/image_search_engine_create.png[検索エンジンの設定]
 
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![検索エンジンの設定](../assets/images/1.1/image_search_engine_input.png)
+image::../assets/images/1.1/image_search_engine_input.png[検索エンジンの設定]
 
 <div class="alert alert-info memo">
 【Memo】CiNii Booksの登録例（検索語がflowerであれば：https://ci.nii.ac.jp/books/search?q=flower&format=html というリクエストになる）を示しています。

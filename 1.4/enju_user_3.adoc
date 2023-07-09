@@ -37,11 +37,11 @@ image:../assets/images/1.1/image_user_passwd_009.png[パスワード変更完了
 
 #### 1. 右上の[アカウント]リンクをクリックします。
 
-![アカウント](../assets/images/1.1/image_user_passwd_003.png)
+image::../assets/images/1.1/image_user_passwd_003.png[アカウント]
 
 #### 2. 右メニューの[編集]リンクをクリックします。
 
-![アカウントの編集](../assets/images/1.1/image_user_account_003.png)
+image::../assets/images/1.1/image_user_account_003.png[アカウントの編集]
 
 <div class="alert alert-info memo" markdown="1">
 
@@ -58,7 +58,7 @@ Librarian権限以上でも、全利用者の購入リクエストは1.1.0,1.1.1
 
 #### 3. メールアドレスや名前を編集し、[更新する]をクリックします。
 
-![メールアドレスなどを編集](../assets/images/1.1/image_user_account_005.png)
+image::../assets/images/1.1/image_user_account_005.png[メールアドレスなどを編集]
 
 <div class="alert alert-info memo" markdown="1">
 

@@ -57,13 +57,13 @@ image::../assets/images/1.1/image_operation_245.png[（条件を詳しく指定�
 image::../assets/images/1.2/advanced_search_1.png[複数の条件を指定]
 
 //<div class="alert alert-info memo" markdown="1">
-----
-【Memo】
 
+[NOTE]
+====
 * ISBN はハイフンありでもハイフンなしでも検索できます
 * 請求記号は前方一致検索します。
 * 分類は前方一致検索します。 
-----
+====
 //</div>
 
 === フィールド名や演算子を使って検索する

@@ -12,8 +12,7 @@
 
 toc::[]
 
-[#section4]
-== 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
+== 外部システムから書誌情報にリンクする (OpenURL)
 
 Enjuは資料の検索結果などに外部のサービスからリンクするOpenURLに対応しています。
 

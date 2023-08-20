@@ -6,36 +6,22 @@ group: enju_user
 version: 1.4
 ---
 
-* Contents
-{:toc}
+:toc: macro
 
-第7章 メッセージを受信する {#section7}
-==========================================
+toc::[]
 
-7-1 メッセージを読む {#section7-1}
---------------------------------------
+== メッセージを受信する
 
-{::comment} 
-注意！ ここの内容は 
+=== メッセージを読む
 
-_includes/enju_read_message.md
+// 注意！ ここの内容は _includes/enju_read_message.adoc の内容を編集してください 
 
-の内容を編集してください 
-{:/comment}
+include::../_includes/enju_read_message.adoc[]
 
-{% include enju_read_message.md %} 
+=== メッセージを削除する
 
-7-2 メッセージを削除する {#section7-2}
---------------------------------------
+// 注意！ ここの内容は _includes/enju_rm_message.adoc の内容を編集してください 
 
-{::comment} 
-注意！ ここの内容は 
+include::../_includes/enju_rm_message.adoc[]
 
-_includes/enju_rm_message.md
-
-の内容を編集してください 
-{:/comment}
-
-{% include enju_rm_message.md %} 
-
-{% include enju_user/toc.md %}
+include::enju_user_toc.adoc[]

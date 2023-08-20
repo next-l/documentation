@@ -1,0 +1,9 @@
+// {::comment} メッセージを削除する {:/comment}
+
+1. ［アカウント］の左にあるメールアイコンをクリックします。  
++
+image::../assets/images/1.1/image_operation_026.png[メッセージを削除する]
++
+2. 削除したいメッセージのチェックボックスにチェックを入れ、［メッセージを削除する］ボタンをクリックします。  
++
+image::../assets/images/1.1/image_operation_027.png[メッセージ削除]

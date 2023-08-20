@@ -182,137 +182,138 @@ image::../assets/images/1.1/search_result_mods_1.png[MOS]
 
 ===== MOS 形式のファイルがダウンロードできます。
 
-<pre>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;modsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"&gt;
-&lt;titleInfo&gt;
-  &lt;title&gt;Rails of Ruby on Rails : Case of Locusandwonders.com&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;titleInfo type="alternative"&gt;
-  &lt;title/&gt;
-&lt;/titleInfo&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;清水, 智雄&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;Plan de Sens&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;typeOfResource&gt;text&lt;/typeOfResource&gt;
-&lt;originInfo&gt;
-  &lt;publisher&gt;毎日コミュニケーションズ&lt;/publisher&gt;
-  &lt;dateIssued&gt;2008-05-01 00:00:00 +0900&lt;/dateIssued&gt;
-  &lt;frequency&gt;unknown&lt;/frequency&gt;
-&lt;/originInfo&gt;
-&lt;language&gt;
-  &lt;languageTerm authority="iso639-2b" type="code"&gt;jpn&lt;/languageTerm&gt;
-&lt;/language&gt;
-&lt;physicalDescription&gt;
-  &lt;form authority="marcform"&gt;volume&lt;/form&gt;
-  &lt;extent/&gt;
-&lt;/physicalDescription&gt;
-&lt;subject&gt;
-&lt;/subject&gt;
-&lt;classification authority="ndc9"&gt;547.483&lt;/classification&gt;
-&lt;abstract/&gt;
-&lt;note/&gt;
-&lt;identifier type="isbn"&gt;9784839922214&lt;/identifier&gt;
-&lt;recordInfo&gt;
-  &lt;recordCreationDate&gt;2015-12-05 12:34:42 +0900&lt;/recordCreationDate&gt;
-  &lt;recordChangeDate&gt;2015-12-06 17:33:23 +0900&lt;/recordChangeDate&gt;
-  &lt;recordIdentifier&gt;http://localhost:8080/manifestations/3&lt;/recordIdentifier&gt;
-&lt;/recordInfo&gt;
-&lt;titleInfo&gt;
-  &lt;title&gt;レッスン&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;titleInfo type="alternative"&gt;
-  &lt;title&gt;The lesson&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;Pearson, Carol Lynn&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;灰島, かり, 1950-&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;ささめや, ゆき, 1943-&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;typeOfResource&gt;text&lt;/typeOfResource&gt;
-&lt;originInfo&gt;
-  &lt;publisher&gt;平凡社&lt;/publisher&gt;
-  &lt;dateIssued&gt;2002-12-01 00:00:00 +0900&lt;/dateIssued&gt;
-  &lt;frequency&gt;unknown&lt;/frequency&gt;
-&lt;/originInfo&gt;
-&lt;language&gt;
-  &lt;languageTerm authority="iso639-2b" type="code"&gt;jpn&lt;/languageTerm&gt;
-&lt;/language&gt;
-&lt;physicalDescription&gt;
-  &lt;form authority="marcform"&gt;volume&lt;/form&gt;
-  &lt;extent/&gt;
-&lt;/physicalDescription&gt;
-&lt;subject&gt;
-&lt;/subject&gt;
-&lt;classification authority="ndc9"&gt;933.7&lt;/classification&gt;
-&lt;abstract&gt;1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)&lt;/abstract&gt;
-&lt;note/&gt;
-&lt;identifier type="isbn"&gt;9784582831351&lt;/identifier&gt;
-&lt;recordInfo&gt;
-  &lt;recordCreationDate&gt;2015-11-29 12:08:23 +0900&lt;/recordCreationDate&gt;
-  &lt;recordChangeDate&gt;2015-12-10 01:42:21 +0900&lt;/recordChangeDate&gt;
-  &lt;recordIdentifier&gt;http://localhost:8080/manifestations/2&lt;/recordIdentifier&gt;
-&lt;/recordInfo&gt;
-&lt;titleInfo&gt;
-  &lt;title&gt;はじめてのRuby on Rails : 話題の「Webアプリケーション・フレームワーク」が使える! : instant rails&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;titleInfo type="alternative"&gt;
-  &lt;title/&gt;
-&lt;/titleInfo&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;清水, 美樹&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;typeOfResource&gt;text&lt;/typeOfResource&gt;
-&lt;originInfo&gt;
-  &lt;publisher&gt;工学社&lt;/publisher&gt;
-  &lt;dateIssued&gt;2006-08-01 00:00:00 +0900&lt;/dateIssued&gt;
-  &lt;frequency&gt;unknown&lt;/frequency&gt;
-&lt;/originInfo&gt;
-&lt;language&gt;
-  &lt;languageTerm authority="iso639-2b" type="code"&gt;jpn&lt;/languageTerm&gt;
-&lt;/language&gt;
-&lt;physicalDescription&gt;
-  &lt;form authority="marcform"&gt;volume&lt;/form&gt;
-  &lt;extent/&gt;
-&lt;/physicalDescription&gt;
-&lt;subject&gt;
-&lt;/subject&gt;
-&lt;classification authority="ndc9"&gt;547.483&lt;/classification&gt;
-&lt;abstract/&gt;
-&lt;note/&gt;
-&lt;identifier type="isbn"&gt;9784777512324&lt;/identifier&gt;
-&lt;recordInfo&gt;
-  &lt;recordCreationDate&gt;2015-11-29 12:05:32 +0900&lt;/recordCreationDate&gt;
-  &lt;recordChangeDate&gt;2015-12-14 23:50:35 +0900&lt;/recordChangeDate&gt;
-  &lt;recordIdentifier&gt;http://localhost:8080/manifestations/1&lt;/recordIdentifier&gt;
-&lt;/recordInfo&gt;
-&lt;/modsCollection&gt;
-</pre>
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3">
+<titleInfo>
+  <title>Rails of Ruby on Rails : Case of Locusandwonders.com</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title/>
+</titleInfo>
+<name type="personal">
+  <namePart>清水, 智雄</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>Plan de Sens</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>毎日コミュニケーションズ</publisher>
+  <dateIssued>2008-05-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">547.483</classification>
+<abstract/>
+<note/>
+<identifier type="isbn">9784839922214</identifier>
+<recordInfo>
+  <recordCreationDate>2015-12-05 12:34:42 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-06 17:33:23 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/3</recordIdentifier>
+</recordInfo>
+<titleInfo>
+  <title>レッスン</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title>The lesson</title>
+</titleInfo>
+<name type="personal">
+  <namePart>Pearson, Carol Lynn</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>灰島, かり, 1950-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>ささめや, ゆき, 1943-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>平凡社</publisher>
+  <dateIssued>2002-12-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">933.7</classification>
+<abstract>1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)</abstract>
+<note/>
+<identifier type="isbn">9784582831351</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:08:23 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-10 01:42:21 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/2</recordIdentifier>
+</recordInfo>
+<titleInfo>
+  <title>はじめてのRuby on Rails : 話題の「Webアプリケーション・フレームワーク」が使える! : instant rails</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title/>
+</titleInfo>
+<name type="personal">
+  <namePart>清水, 美樹</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>工学社</publisher>
+  <dateIssued>2006-08-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">547.483</classification>
+<abstract/>
+<note/>
+<identifier type="isbn">9784777512324</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:05:32 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-14 23:50:35 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/1</recordIdentifier>
+</recordInfo>
+</modsCollection>
+-----
 
 ==== TSV 形式で書き出し
 
@@ -361,59 +362,60 @@ image::../assets/images/1.1/search_result_full_mods_1.png[MOS]
 
 ===== MOS 形式のファイルがダウンロードできます。
 
-<pre>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;mods version="3.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"&gt;
-&lt;titleInfo&gt;
-  &lt;title&gt;レッスン&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;titleInfo type="alternative"&gt;
-  &lt;title&gt;The lesson&lt;/title&gt;
-&lt;/titleInfo&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;Pearson, Carol Lynn&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;灰島, かり, 1950-&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;name type="personal"&gt;
-  &lt;namePart&gt;ささめや, ゆき, 1943-&lt;/namePart&gt;
-  &lt;role&gt;
-    &lt;roleTerm type="text" authority="marcrelator"&gt;creator&lt;/roleTerm&gt;
-  &lt;/role&gt;
-&lt;/name&gt;
-&lt;typeOfResource&gt;text&lt;/typeOfResource&gt;
-&lt;originInfo&gt;
-  &lt;publisher&gt;平凡社&lt;/publisher&gt;
-  &lt;dateIssued&gt;2002-12-01 00:00:00 +0900&lt;/dateIssued&gt;
-  &lt;frequency&gt;unknown&lt;/frequency&gt;
-&lt;/originInfo&gt;
-&lt;language&gt;
-  &lt;languageTerm authority="iso639-2b" type="code"&gt;jpn&lt;/languageTerm&gt;
-&lt;/language&gt;
-&lt;physicalDescription&gt;
-  &lt;form authority="marcform"&gt;volume&lt;/form&gt;
-  &lt;extent/&gt;
-&lt;/physicalDescription&gt;
-&lt;subject&gt;
-&lt;/subject&gt;
-&lt;classification authority="ndc9"&gt;933.7&lt;/classification&gt;
-&lt;abstract&gt;1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)&lt;/abstract&gt;
-&lt;note/&gt;
-&lt;identifier type="isbn"&gt;9784582831351&lt;/identifier&gt;
-&lt;recordInfo&gt;
-  &lt;recordCreationDate&gt;2015-11-29 12:08:23 +0900&lt;/recordCreationDate&gt;
-  &lt;recordChangeDate&gt;2015-12-10 01:42:21 +0900&lt;/recordChangeDate&gt;
-  &lt;recordIdentifier&gt;http://localhost:8080/manifestations/2&lt;/recordIdentifier&gt;
-&lt;/recordInfo&gt;
-&lt;/mods&gt;
-</pre>
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<mods version="3.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3">
+<titleInfo>
+  <title>レッスン</title>
+</titleInfo>
+<titleInfo type="alternative">
+  <title>The lesson</title>
+</titleInfo>
+<name type="personal">
+  <namePart>Pearson, Carol Lynn</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>灰島, かり, 1950-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<name type="personal">
+  <namePart>ささめや, ゆき, 1943-</namePart>
+  <role>
+    <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+  </role>
+</name>
+<typeOfResource>text</typeOfResource>
+<originInfo>
+  <publisher>平凡社</publisher>
+  <dateIssued>2002-12-01 00:00:00 +0900</dateIssued>
+  <frequency>unknown</frequency>
+</originInfo>
+<language>
+  <languageTerm authority="iso639-2b" type="code">jpn</languageTerm>
+</language>
+<physicalDescription>
+  <form authority="marcform">volume</form>
+  <extent/>
+</physicalDescription>
+<subject>
+</subject>
+<classification authority="ndc9">933.7</classification>
+<abstract>1998年全米で大ベストセラーとなった人生の絵本。レッスンとは,「生きる意味」を探すこと。美しい文章と絵で綴られた心うつ物語。 (日本児童図書出版協会)</abstract>
+<note/>
+<identifier type="isbn">9784582831351</identifier>
+<recordInfo>
+  <recordCreationDate>2015-11-29 12:08:23 +0900</recordCreationDate>
+  <recordChangeDate>2015-12-10 01:42:21 +0900</recordChangeDate>
+  <recordIdentifier>http://localhost:8080/manifestations/2</recordIdentifier>
+</recordInfo>
+</mods>
+----
 
 ==== TSV 形式で書き出し
 

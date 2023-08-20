@@ -6,16 +6,14 @@ group: enju_user
 version: 1.4
 ---
 
-* Contents
-{:toc}
+:toc: macro
 
-第6章 新着資料の一覧を表示する {#section6}
-==========================================
+toc::[]
 
-{::comment} 
-注意！ ここの内容は _includes/enju_newbook.mdの内容を編集してください 
-{:/comment}
+== 新着資料の一覧を表示する
 
-{% include enju_newbooks.md %} 
+// 注意！ ここの内容は _includes/enju_newbook.mdの内容を編集してください 
 
-{% include enju_user/toc.md %}
+include::../_includes/enju_newbooks.adoc[]
+
+include::enju_user_toc.adoc[]

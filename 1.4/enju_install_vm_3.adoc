@@ -32,12 +32,14 @@ Dockerを使うためには，使っているコンピュータのCPUが64bit対
 Windowsが64ビット版であるか，メモリ容量をシステムのプロパティで確認します。※32bit版では動作しません
 
 . ［スタート］ボタンをクリックし，［コンピュータ］を右クリックします。
-. ［プロパティ］をクリックします。 +
+. ［プロパティ］をクリックします。
++
 image::../assets/images/1.1/image_install_004.png[［スタート］ボタンをクリックし，［コンピュータ］を右クリックします]
 
 . 以下の項目を確認します。
 ** システムの種類 : 64bitのオペレーティングシステム
 ** 実装メモリ　　 : 使用可能容量が 4.00GB 以上
++
 image::../assets/images/1.1/image_install_005.png[コンピュータのプロパティ画面から動作環境を確認します]
 
 === ハードディスク空き容量の確認
@@ -45,17 +47,18 @@ image::../assets/images/1.1/image_install_005.png[コンピュータのプロパ
 Enjuコンテナのインストールと動作に必要なハードディスクの空き容量を確認します。
 
 . ［スタート］ボタンをクリックし，［コンピュータ］を選択します。
-![［スタート］ボタンをクリックし，［コンピュータ］を選択します]
-image::../assets/images/1.1/image_install_006.png
++
+image::../assets/images/1.1/image_install_006.png[［スタート］ボタンをクリックし，［コンピュータ］を選択します]
 
 . 以下の項目を確認します。
 * ドライブの空き容量 : 25.0GB以上を推奨
-![ハードディスクの空き容量の確認]image::../assets/images/1.1/image_install_007.png)
++
+image::../assets/images/1.1/image_install_007.png[ハードディスクの空き容量の確認]
 
-<div class="alert alert-info memo">
-<span class="label label-info">Memo</span>
+[NOTE]
+====
 ハードディスクに必要な空き容量は，蔵書規模により異なります。25.0GBは蔵書が20 万件の規模を想定しています。これよりも蔵書規模が大きい場合は，より多くの容量が必要となります。
-</div>
+====
 
 === IPアドレスの確認
 
@@ -67,7 +70,7 @@ image::../assets/images/1.1/image_install_019.png[［スタート］ボタンを
 
 . ［ネットワークとインターネット］をクリックします。
 +
-image::../assets/images/1.1/image_install_020.png)[［ネットワークとインターネット］をクリック]
+image::../assets/images/1.1/image_install_020.png[［ネットワークとインターネット］をクリック]
 
 . ［ネットワークと共有センター］をクリックします。
 +

@@ -15,18 +15,21 @@ Enjuは，以下の手順で，Enjuのソースコードが公開されている
 
 == Enjuの停止
 
-1. 以下のコマンドを入力します。
+以下のコマンドを入力します。
 ```
 $ docker compose down
 ```
 
 == 最新ソースコードの取り込み
 
-1. 以下のコマンドを入力します。
+. 以下のコマンドを入力します。
++
 ```
 $ cd enju_leaf
 ```
-2. 以下のコマンドを入力します。
+
+. 以下のコマンドを入力します。
++
 ```
 $ git pull
 $ docker compose pull
@@ -37,7 +40,7 @@ $ docker compose run --rm web rake assets:precompile
 
 == Enjuを（再）起動
 
-1. 以下のコマンドを入力します。
+以下のコマンドを入力します。
 ```
 $ docker compose up -d
 ```

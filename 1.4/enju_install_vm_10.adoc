@@ -8,7 +8,6 @@ version: 1.4
 
 :toc: macro
 
-
 toc::[]
 
 == Enjuを運用するにあたっての留意点・注意点
@@ -23,100 +22,108 @@ Enjuサーバは，外部からネットワーク経由でアクセスするこ�
 Enju 「条件を詳しく指定して検索」の画面をカスタマイズする方法を説明します。
 設定する画面がないため、これはサーバー上の作業をする必要があります。
 
-1. Enjuをインストールしたディレクトリに移動します。
-    ```
-    cd enju_leaf
-    ```
-1. Enjuを停止します。
-    ```
-    docker compose down
-    ```
-1. 以下のファイルの中身を編集して保存します。
-    ```
-    app/views/page/advanced_search.html.erb
-    ```
-1. Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。
-    ```
-    docker compose up -d
-    ```
+. Enjuをインストールしたディレクトリに移動します。
++
+```
+cd enju_leaf
+```
+. Enjuを停止します。
++
+```
+docker compose down
+```
+. 以下のファイルの中身を編集して保存します。
++
+```
+app/views/page/advanced_search.html.erb
+```
+. Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。
++
+```
+docker compose up -d
+```
 
 == トップの画面の検索フォームをカスタマイズする
 
 Enju トップの画面の検索フォームをカスタマイズする方法を説明します。
 設定する画面がないため、これはサーバー上の作業をする必要があります。
 
-1. Enjuをインストールしたディレクトリに移動します。
-    ```
-    cd enju_leaf
-    ```
-1. Enjuを停止します。
-    ```
-    docker compose down
-    ```
-1. 以下のファイルの中身を編集して保存します。
-    ```
-    app/views/page/_search_form.html.erb
-    ```
-1. Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。
-    ```
-    docker compose up -d
-    ```
+. Enjuをインストールしたディレクトリに移動します。
++
+```
+cd enju_leaf
+```
+. Enjuを停止します。
++
+```
+docker compose down
+```
+. 以下のファイルの中身を編集して保存します。
++
+```
+app/views/page/_search_form.html.erb
+```
+. Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。
++
+```
+docker compose up -d
+```
 
 == 検索結果一覧画面の検索フォームをカスタマイズする
 
 Enju 検索結果一覧画面の検索フォームをカスタマイズする方法を説明します。
 設定する画面がないため、これはサーバー上の作業をする必要があります。
 
-1. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
-1. `app/views/manifestations/_index_form.html.erb`を編集します。
-1. [10-2節](#section10-2) の 4. と同様に、Enjuを起動します。
+. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
+. `app/views/manifestations/_index_form.html.erb`を編集します。
+. [10-2節](#section10-2) の 4. と同様に、Enjuを起動します。
 
 == 検索結果一覧画面に表示項目を追加する
 
 Enju 検索結果一覧画面に表示される書誌情報や所蔵情報の表示内容をカスタマイズする方法を説明します。
 設定する画面がないため、これはサーバー上の作業をする必要があります。
 
-1. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
-1. `app/views/manifestations/_manifestation.html.erb`を編集します。
+. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
+. `app/views/manifestations/_manifestation.html.erb`を編集します。
 例えば、件名などを追加表示したい場合は以下のようなコード片を挿入します:
-    ```ruby
-    <%- manifestation.subjects.each do |subject| -%>
-      <%= link_to "#{subject.subject_heading_type.display_name.localize}: #{subject.term}", manifestations_path(query: "subject_sm:\"#{subject.term}\"") -%>
-    <%- end -%>
-    ```
++
+```ruby
+<%- manifestation.subjects.each do |subject| -%>
+  <%= link_to "#{subject.subject_heading_type.display_name.localize}: #{subject.term}", manifestations_path(query: "subject_sm:\"#{subject.term}\"") -%>
+<%- end -%>
+```
 
-1. [10-2節](#section10-2) の 4. と同様に、Enjuを起動します。
+. [10-2節](#section10-2) の 4. と同様に、Enjuを起動します。
 
 
 == トップ画面やヘルプなどに表示する画像を置く
 
-1. 置きたい画像を用意します。（ここでは例として logo.png とします）
-1. インストールしてあるEnju の app/assets/images/ 以下に画像ファイルを置きます。※ custom フォルダを作成し、その下にファイルを置くことを推奨します。
+. 置きたい画像を用意します。（ここでは例として logo.png とします）
+. インストールしてあるEnju の app/assets/images/ 以下に画像ファイルを置きます。※ custom フォルダを作成し、その下にファイルを置くことを推奨します。
 
-<div class="alert alert-info memo" markdown="1">
-
-【Memo】
-
+[NOTE]
+====
 * フォルダを作成しその下にファイルを置くことも可能です。
 * ファイル名やフォルダ名は任意に作成できます（ただし、Enjuが使用するものと衝突する場合は動作保証しかねます）。
 * customフォルダ以下のファイルはEnjuが用意した画像と衝突しないことが保証されます。
+====
 
-</div>
+. 以下のコマンドを実行します。
++
+```
+$ bundle exec rake assets:precompile
+```
 
-1. 以下のコマンドを実行します。
-
-        $ bundle exec rake assets:precompile
-
-1. 参照するURLについて
-
+. 参照するURLについて
++
 以下のようなURLになりますのでこのURLを使って参照することができます。
 
 * app/assets/images/ 以下に、 custom フォルダを作成して、その下に logo.png を置いた場合
     * URL例（デモサーバー）: https://enju.next-l.jp/assets/custom/logo.png
     * URL例（コンテナ）: http://localhost:8080/assets/custom/logo.png
 
-※ 画像ファイルをブラウザから置けるようにする機能を開発予定です（[詳細 #1133](https://github.com/next-l/enju_leaf/issues/1113)）。
-<!-- 関連 #1144 -->
+※ 画像ファイルをブラウザから置けるようにする機能を開発予定です（link:https://github.com/next-l/enju_leaf/issues/1113[詳細 #1133]）。
+// 関連 #1144 //
  
 == ヘッダーをカスタマイズする
 
@@ -125,17 +132,19 @@ Enju 検索結果一覧画面に表示される書誌情報や所蔵情報の表
 たとえば、バナー画像を使いたい場合などは、
 サーバー上の作業をする必要があります。
 
-1. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
-1. バナー画像があれば、画像ファイルをEnju に置きます。
-
+. [10-2節](#section10-2) の 1. 〜 2. と同様に、Enjuを停止します。
+. バナー画像があれば、画像ファイルをEnju に置きます。
++
 * 画像ファイルを置く方法は、[「10-5　トップ画面やヘルプなどに表示する画像を置く」](#section10-5)を参照してください。
 * 説明で使う例として：置いたファイル：custom/logo.png 
 * バナー画像の大きさは 横：640ピクセル 縦：65ピクセル　にするとちょうどよいです。大きすぎるとはみ出て表示されます。
 
-1. `app/views/page/_header.html.erb`を編集します。
+. `app/views/page/_header.html.erb`を編集します。
 例えば、バナー画像をタイトルの代わりにつけたい場合は、以下の記述を変更します。
-
++
+```
         <h1><%= link_to image_tag('custom/logo.png'), root_path %></h1>
+```
 
 ////
 {::comment}
@@ -155,7 +164,7 @@ Enju 検索結果一覧画面に表示される書誌情報や所蔵情報の表
 {:/comment}
 ////
 
-1. [10-2節](#section10-2) の 4. と同様です。
+. [10-2節](#section10-2) の 4. と同様です。
 
 == Sitemapsを設定する
 

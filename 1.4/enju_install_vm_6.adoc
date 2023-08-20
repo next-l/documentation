@@ -8,7 +8,6 @@ version: 1.4
 
 :toc: macro
 
-
 toc::[]
 
 == 検索における異体字の同一視

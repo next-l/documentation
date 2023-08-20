@@ -326,7 +326,7 @@ image::../assets/images/1.2/search_result_tsv_1.png[TSV]
 * [出力されるTSVの例（Web APIマニュアル1-1-2節参照）](enju_webapi_1.html#bib_tsv_example)
 * [出力される項目の詳細（Web APIマニュアル1-1-3参照）](enju_webapi_1.html#bib_tsv_export)
 
-==== 1-8-4 JSON 形式で書き出し
+==== JSON 形式で書き出し
 
 ===== 書き出しをしたい検索結果画面を表示させます。[JSON]リンクをクリックします
 

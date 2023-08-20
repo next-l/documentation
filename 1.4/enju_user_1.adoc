@@ -313,7 +313,7 @@ image::../assets/images/1.1/search_result_mods_1.png[MOS]
   <recordIdentifier>http://localhost:8080/manifestations/1</recordIdentifier>
 </recordInfo>
 </modsCollection>
------
+----
 
 ==== TSV 形式で書き出し
 

@@ -1,0 +1,3402 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第4章 図書の受入をする - Next-L Enju 運用マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第4章 図書の受入をする - Next-L Enju 運用マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#図書の受入をする">図書の受入をする</a>
+<ul class="sectlevel2">
+<li><a href="#図書を発注する">図書を発注する</a></li>
+<li><a href="#購入リクエストを作成する">購入リクエストを作成する</a></li>
+<li><a href="#発注リストを作成する">発注リストを作成する</a></li>
+<li><a href="#発注したい図書購入リクエストを発注リストに登録する">発注したい図書（購入リクエスト）を発注リストに登録する</a></li>
+<li><a href="#発注リストを確定し発注済みにする">発注リストを確定し「発注済み」にする</a></li>
+<li><a href="#発注済みリストのtsvをダウンロードする">発注済みリストのTSVをダウンロードする</a></li>
+<li><a href="#発注済みリストのrssを表示する">発注済みリストのRSSを表示する</a></li>
+</ul>
+</li>
+<li><a href="#図書を登録する">図書を登録する</a>
+<ul class="sectlevel2">
+<li><a href="#入力項目">入力項目</a></li>
+<li><a href="#tsvファイルを読み込んで登録する">TSVファイルを読み込んで登録する</a></li>
+<li><a href="#isbnファイル国立国会図書館書誌idファイルを読み込んで登録する">ISBNファイル(国立国会図書館書誌IDファイル)を読み込んで登録する</a></li>
+<li><a href="#isbnコードを入力して1件ずつ登録する">ISBNコードを入力して1件ずつ登録する</a></li>
+<li><a href="#ndlサーチを検索して1件ずつ登録する">NDLサーチを検索して1件ずつ登録する</a></li>
+<li><a href="#米国議会図書館を検索して1件ずつ登録する">米国議会図書館を検索して1件ずつ登録する</a></li>
+<li><a href="#cinii_booksを検索して1件ずつ登録する">CiNii Booksを検索して1件ずつ登録する</a></li>
+<li><a href="#手動で資料を登録する">手動で資料を登録する</a></li>
+<li><a href="#図書の書誌を編集修正する">図書の書誌を編集（修正）する</a></li>
+<li><a href="#tsvファイルを読み込んで更新する">TSVファイルを読み込んで更新する</a></li>
+<li><a href="#tsvファイルの作り方図書書誌">TSVファイルの作り方（図書（書誌））</a></li>
+</ul>
+</li>
+<li><a href="#所蔵情報を登録一覧表示する">所蔵情報を登録・一覧表示する</a>
+<ul class="sectlevel2">
+<li><a href="#入力項目_2">入力項目</a></li>
+<li><a href="#所蔵情報を新規登録する">所蔵情報を新規登録する</a></li>
+<li><a href="#すでに登録された所蔵情報を修正登録する">すでに登録された所蔵情報を修正登録する</a></li>
+<li><a href="#所蔵情報を一覧表示する">所蔵情報を一覧表示する</a></li>
+<li><a href="#tsvファイルを読み込んで登録する_2">TSVファイルを読み込んで登録する</a></li>
+<li><a href="#tsvファイルを読み込んで更新する_2">TSVファイルを読み込んで更新する</a></li>
+<li><a href="#tsvファイルを読み込んで所蔵情報を他の書誌につけかえる">TSVファイルを読み込んで所蔵情報を他の書誌につけかえる</a></li>
+<li><a href="#tsvファイルを読み込んで削除する">TSVファイルを読み込んで削除する</a></li>
+<li><a href="#tsvファイルの作り方所蔵情報">TSVファイルの作り方（所蔵情報）</a></li>
+</ul>
+</li>
+<li><a href="#図書を検収する">図書を検収する</a></li>
+<li><a href="#図書を除籍する">図書を除籍する</a>
+<ul class="sectlevel2">
+<li><a href="#連続除籍機能を使う">連続除籍機能を使う</a></li>
+<li><a href="#所蔵情報の編集機能を使う">所蔵情報の編集機能を使う</a></li>
+<li><a href="#tsvファイルを読み込んで更新する_3">TSVファイルを読み込んで更新する</a></li>
+<li><a href="#除籍済みの検索結果一覧での表示のされ方">除籍済みの検索結果一覧での表示のされ方</a></li>
+<li><a href="#除籍した資料のリストをtsv形式のテキストファイルで入手する方法">除籍した資料のリストをTSV形式のテキストファイルで入手する方法</a></li>
+<li><a href="#除籍した資料の一覧を表示する">除籍した資料の一覧を表示する</a></li>
+</ul>
+</li>
+<li><a href="#図書を製本する">図書を製本する</a>
+<ul class="sectlevel2">
+<li><a href="#tsvファイルを使って一括インポートする">TSVファイルを使って一括インポートする</a></li>
+</ul>
+</li>
+<li><a href="#新着資料の一覧を表示する_section4_7">新着資料の一覧を表示する {#section4-7}</a></li>
+<li><a href="#4_8_画像を登録する_section4_8">4-8 画像を登録する {#section4-8}</a>
+<ul class="sectlevel2">
+<li><a href="#画像の登録">画像の登録</a></li>
+<li><a href="#画像の一覧表示">画像の一覧表示</a></li>
+</ul>
+</li>
+<li><a href="#書誌と所蔵のエクスポートをする">書誌と所蔵のエクスポートをする</a>
+<ul class="sectlevel2">
+<li><a href="#columntsvファイルで出力される項目_bib_tsv_export">【Column】TSVファイルで出力される項目 {#bib_tsv_export}</a></li>
+</ul>
+</li>
+<li><a href="#人物団体情報を登録する">人物・団体情報を登録する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目">設定項目</a></li>
+<li><a href="#設定方法">設定方法</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="図書の受入をする">図書の受入をする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>図書の受入では、次のような作業を行えます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>図書を発注する</p>
+</li>
+<li>
+<p>図書を登録する</p>
+</li>
+<li>
+<p>所蔵情報を登録・一覧表示する</p>
+</li>
+<li>
+<p>図書を検収する</p>
+</li>
+<li>
+<p>図書を除籍する</p>
+</li>
+<li>
+<p>新着図書の一覧を表示・印刷する</p>
+</li>
+<li>
+<p>画像を登録する</p>
+</li>
+<li>
+<p>書誌と所蔵をエクスポートする</p>
+</li>
+<li>
+<p>図書に関係する人物・団体情報を登録する</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>また、図書の受入に際し、次のような機能を利用することもできます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>画像を登録する表紙画像のデータを、受入した図書にリンクさせます。</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="図書を発注する">図書を発注する</h3>
+<div class="paragraph">
+<p>この機能を利用するには、
+[enju_purchase_request]モジュールをインストール必要があります。インストール方法については[インストールマニュアル「第5章 モジュールの追加」](enju_install_vm_5.html)の章を参照ください。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="購入リクエストを作成する">購入リクエストを作成する</h3>
+<div class="paragraph">
+<p>購入したい図書の購入リクエストを作成します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館への依頼］メニューから［購入リクエスト］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_purchase_req.png" alt="購入リクエスト">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［購入リクエストの新規作成］をクリックします。
+=
+image::../assets/images/1.1/image_operation_078.png[購入リクエストの新規作成]</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[RSS]をクリックすると購入リクエストをRSS表示します。</p>
+</li>
+<li>
+<p>右メニューの[TSV]をクリックすると購入リクエストをTSV表示します。</p>
+</li>
+<li>
+<p>右メニューの「図書館の購入依頼に追加」は、購入リクエストのためのブックマークレットです。このリンク先のURLをブックマークレットとしてブラウザのブックマークにあらかじめ登録しておきます。amazonなどで購入リクエストしたい図書の画面を出した後、このブックマークレットを使用すると、当該図書の情報が入力された購入リクエスト登録画面が表示されます。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>タイトルや著者などを入力し、［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_079.png" alt="購入リクエスト作成">
+</div>
+</div>
+</li>
+<li>
+<p>購入リクエストが作成されました。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_083.png" alt="購入リクエスト作成結果">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="発注リストを作成する">発注リストを作成する</h3>
+<div class="paragraph">
+<p>複数の購入候補の図書を一つの発注リストにまとめるために、
+まずは、空の発注リストを新規作成します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［発注リスト］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_order.png" alt="発注リスト">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［発注リストの新規作成］をクリックします。
+image::../assets/images/1.1/image_operation_072.png[発注リストの新規作成]</p>
+</li>
+<li>
+<p>リストのタイトルを入力し、書店を選択したら［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_074.png" alt="発注リストを作成">
+</div>
+</div>
+</li>
+<li>
+<p>「発注リストは正常に作成されました。」と表示され、発注リストが作成されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_074_2.png" alt="発注リストを作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="発注したい図書購入リクエストを発注リストに登録する">発注したい図書（購入リクエスト）を発注リストに登録する</h3>
+<div class="paragraph">
+<p>作成した発注リストに、発注したい図書（購入リクエスト）を加えていきます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館への依頼］メニューから［購入リクエスト］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_purchase_req.png" alt="購入リクエスト">
+</div>
+</div>
+</li>
+<li>
+<p>発注リストに登録したい図書のタイトルのリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_078_2.png" alt="購入リクエストの選択">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[発注済み]をクリックすると発注済みの購入リクエストのみを表示します※。</p>
+</li>
+<li>
+<p>右メニューの[未発注]をクリックすると未発注の購入リクエストのみを表示します※。</p>
+</li>
+<li>
+<p>右メニューの[全ての購入依頼]をクリックすると全ての購入リクエストを表示します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>※注意 Enju Leaf 1.1.0 ではこの機能にバグがあり、[未発注]や[発注済み]などの絞り込みは動作しません（ [参照 #issue444](<a href="https://github.com/next-l/enju_leaf/issues/444)）" class="bare">https://github.com/next-l/enju_leaf/issues/444)）</a>
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>購入リクエストの表示画面に切り替わったら、右メニューの［発注リストに追加する］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_083_2.png" alt="発注リストに追加する">
+</div>
+</div>
+</li>
+<li>
+<p>発注リストを選択し、［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_085.png" alt="発注を作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="発注リストを確定し発注済みにする">発注リストを確定し「発注済み」にする</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［発注リスト］を選択します。
+image::../assets/images/1.1/image_operation_order.png[発注リスト]</p>
+</li>
+<li>
+<p>確定したい発注リストの発注リスト名をクリックします。
+image::../assets/images/1.1/image_operation_order_submit_1.png[発注リスト名]</p>
+</li>
+<li>
+<p>右メニューの［購入リクエストの一覧］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_order_submit_2.png" alt="購入リクエストの一覧">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［発注票を作成する］リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_3.png" alt="発注票を作成するリンク">
+</div>
+</div>
+</li>
+<li>
+<p>注記などを入力し［発注票を作成する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_4.png" alt="発注票を作成するボタン">
+</div>
+</div>
+</li>
+<li>
+<p>発注リストが更新されました。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_5.png" alt="発注リストが更新されました">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】この処理をすると発注リストの状態が「発注済み」に変更されます。</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_091_7.png[発注済み]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="発注済みリストのtsvをダウンロードする">発注済みリストのTSVをダウンロードする</h3>
+<div class="paragraph">
+<p>発注が確定した発注リスト（発注済みリスト）は、TSVファイルとしてダウンロードし、印刷等に利用することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［発注リスト］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_order.png" alt="発注リスト">
+</div>
+</div>
+</li>
+<li>
+<p>発注リストをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_088.png" alt="発注リストの選択">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［購入リクエストの一覧］リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_089.png" alt="購入リクエストの一覧">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［TSV］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091.png" alt="TSVリンク">
+</div>
+</div>
+</li>
+<li>
+<p>TSVが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_2.png" alt="TSV">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="発注済みリストのrssを表示する">発注済みリストのRSSを表示する</h3>
+<div class="paragraph">
+<p>発注が確定した発注リスト（発注済みリスト）は、RSSを表示できます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>上述のTSVダウンロードの1～3. を実行します。</p>
+</li>
+<li>
+<p>右メニューの［RSS］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_RSS.png" alt="RSSリンク">
+</div>
+</div>
+</li>
+<li>
+<p>RSSが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_091_2_RSS.png" alt="RSS">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="図書を登録する">図書を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>発注した図書が届いたら、資料としてEnjuに登録します。
+Enjuへの登録は、TSVファイルを読み込んで一括登録する方法、
+ISBNコードで1件ずつ行う方法、
+NDLサーチなどを検索して1件ずつ登録する
+手動ですべての項目を入力する方法などがあります。</p>
+</div>
+<div class="sect2">
+<h3 id="入力項目">入力項目</h3>
+<div class="paragraph">
+<p>注意の必要な項目のみ説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>（カスタム項目）：例えば、「検定年」など自由に設定した入力項目ができます。「内容細目」の上にフォームが表示されます。設定方法などの詳細は[「書誌のカスタム項目を設定する」節](enju_setup_5.html#section-bib-custom)を参照してください。</p>
+</li>
+<li>
+<p>内容細目：目次などを入力します。改行を入れた入力もできます。</p>
+</li>
+<li>
+<p>業務メモ：業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで登録する">TSVファイルを読み込んで登録する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方」](#section4-2-10) を参照してください。</p>
+</li>
+<li>
+<p>［資料の受入］メニューから［TSVファイルからのインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_093.png" alt="TSVファイルからのインポート">
+</div>
+</div>
+</li>
+<li>
+<p>［ファイルを選択］ボタンをクリックしてインポート用のファイルを選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_094.png" alt="ファイルを選択">
+</div>
+</div>
+</li>
+<li>
+<p>[編集モード]が[作成]となっていることを確認し、[文字コード]、[既定の本棚]を選択して［インポートを開始］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095.png" alt="インポートされる資料のファイルを作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】
+他の「編集モード」の使い方は別の章で説明します。</p>
+</div>
+<div class="paragraph">
+<p>【Memo】[文字コード]は基本的には自動判別でよいですが、うまくいかない場合は、文字コードを指定するようにしてください。</p>
+</div>
+<div class="paragraph">
+<p>【Memo】[既定の本棚]は、TSVファイルに[本棚]を指定しない場合やTSVファイルで不正な本棚を指定していた場合に登録される本棚となります。TSVファイルに正しい[本棚]が指定されていた場合はTSVファイルを優先します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「資料のインポート用ファイルは正常に作成されました。」のメッセージが表示され、資料のデータインポートの準備が整いました。右の[資料のインポート用ファイルの一覧]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095_2.png" alt="インポート結果">
+</div>
+</div>
+</li>
+<li>
+<p>今までのインポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>インポートが完了したものは[完了]と表示されます。
+[開始]や[処理待ち]のものは現在、実行中です。
+[失敗]のものは何らかのエラーがありますので、
+[表示]リンクをクリックした先の画面でエラーを確認し、
+エラーの発生した行を修正するなどします。</p>
+</div>
+<div class="paragraph">
+<p>インポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします
+（「インポートが完了しました」というメッセージが送られてきます）。</p>
+</div>
+<div class="paragraph">
+<p>+
+[インポート結果の一覧表示](../assets/images/1.1/image_operation_095_3.png)</p>
+</div>
+<div class="paragraph">
+<p>【Memo】この画面は[資料の受入]メニュー&#8594;[TSVファイルからのインポート]&#8594;
+右メニューの[資料のインポート用ファイルの一覧]とすればいつでも閲覧できます。</p>
+</div>
+<div class="paragraph">
+<p>【Memo】注）Next-L Enju Leaf 1.1.0.rc12以前のバージョンの場合は毎時0分にインポート処理が開始します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>インポートした結果を確かめるために、インポートの結果の一覧を表示させます。そのために、［資料の受入］メニューから［TSVファイルからのインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_093.png" alt="TSVファイルからのインポート">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの[資料のインポート用ファイルの一覧]のリンクをたどります。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095_4.png" alt="インポート結果の一覧表示">
+</div>
+</div>
+</li>
+<li>
+<p>確認したいインポートの[表示]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095_5.png" alt="インポート結果の一覧表示の表示">
+</div>
+</div>
+</li>
+<li>
+<p>結果やエラーメッセージを確認します。表の「資料」の列で2行目以降※で、なにも表示されていない行はエラーのあった行なので[表示]をクリックする。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>（※一行目はヘッダの行なので、資料の列にはなにも表示されていない）</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_095_6.png[インポート結果の一覧表示の表示]</p>
+</div>
+<div class="paragraph">
+<p>【Memo】以下の例は、列名が間違っていて無視された例です。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095_2_2.png" alt="TSVファイルからのインポート">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>エラーメッセージなどを確認して、個別に登録する。個別に登録する方法は次の[「4-2-3 ISBNコードを入力して1件づつ登録する」](#section4-2-3)，[「4-2-7 手動で資料を登録する」](#section4-2-7)などを参照してください。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_095_8.png" alt="資料インポートの結果の表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="isbnファイル国立国会図書館書誌idファイルを読み込んで登録する">ISBNファイル(国立国会図書館書誌IDファイル)を読み込んで登録する</h3>
+<div class="paragraph">
+<p>ISBNコードもしくは国立国会図書館書誌IDが分かっている場合は、
+タイトルや著者などほかのフィールド情報をTSVファイルに入力しておかなくても、
+ISBNコードもしくは国立国会図書館書誌IDから国立国会図書館のデータを参照して、
+自動的に空白の項目が埋められます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ISBNもしくは国立国会図書館書誌IDの項目だけ入力したTSVファイルを用意し、前述の操作に従ってTSVファイルを読み込んで登録します。</p>
+<div class="paragraph">
+<p>ISBNの場合は、列名は「isbn」、国立国会図書館書誌IDの場合は、列名は「ndl_bib_id」とします。TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方」](#section4-2-10) を参照してください。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】
+注：タイトル(original_title)項目がある場合は、国立国会図書館のデータを参照せずに、TSVファイルの内容を優先します。
+タイトル(original_title）項目がなく、ISBNもしくは国立国会図書館書誌IDがある場合は、国立国会図書館のデータを優先してインポートします。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>個々のレコードの登録の成否を確認します。 やり方は [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 6. 以降の手順と同様です。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="isbnコードを入力して1件ずつ登録する">ISBNコードを入力して1件ずつ登録する</h3>
+<div class="paragraph">
+<p>ISBNコードから国立国会図書館のデータを参照して、資料を登録します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［ISBNを入力する］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_106.png" alt="ISBNを入力する">
+</div>
+</div>
+</li>
+<li>
+<p>ISBNコードを入力し、［登録する］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_108.png" alt="インポートのリクエストを作成">
+</div>
+</div>
+</li>
+<li>
+<p>「インポートのリクエストは正常に作成されました。」と表示され、登録が完了します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_109.png" alt="登録完了">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】
+右メニューの[所蔵を編集]の右の[ (新規作成)]リンクをたどることで，
+続けて所蔵情報を登録することができます。
+詳細は [「4-3-1 所蔵情報を新規登録する」](#section4-3-1)を参照ください。</p>
+</div>
+<div class="paragraph">
+<p>【Memo】過去のISBNレコードの登録の成否を確認する方法を紹介します。</p>
+</div>
+<div class="paragraph">
+<p>その場で、画面上で判明することですので、必要になることは基本的にはありません。
+過去の記録※を知りたいときに必要になる機能です。
+※TSVファイルを読み込んで登録する際の記録はこちらには出力されません</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[資料の受入］メニューから［ISBNを入力する］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_106.png" alt="ISBNを入力する">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［ISBNインポートリクエストの一覧］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_109_2.png" alt="ISBNインポートリクエストの一覧">
+</div>
+</div>
+</li>
+<li>
+<p>ISBNインポートのリクエストの一覧が表示されます。</p>
+<div class="paragraph">
+<p>[状態]の列をみれば、登録状況がわかります。[完了]となっていれば、
+登録されたことを示します。
+[処理待ち]や[失敗]は登録されていません。</p>
+</div>
+<div class="paragraph">
+<p>[ISBNインポートリクエストの一覧表示](../assets/images/1.1/image_operation_109_3.png)</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ndlサーチを検索して1件ずつ登録する">NDLサーチを検索して1件ずつ登録する</h3>
+<div class="paragraph">
+<p>NDLサーチ（国立国会図書館サーチ &lt;<a href="https://iss.ndl.go.jp/&gt;）で検索した資料を登録することができます。" class="bare">https://iss.ndl.go.jp/&gt;）で検索した資料を登録することができます。</a>
+ISBNが不明な場合やISBNで登録でできなかった場合などに使用します。
+（ISBNで登録できない例：9784834005288）</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［NDLサーチ検索によるインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_106_ndl.png" alt="NDLサーチ検索によるインポート">
+</div>
+</div>
+</li>
+<li>
+<p>登録したい資料を検索します。検索語に登録したい資料のJP番号などを入力し、［検索］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_107_ndl.png" alt="NDLサーチ検索の検索">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】
+任意のキーワードで検索することもできますが、
+多くヒットしてしまい選びにくいことが想定されますので、
+あらかじめ、NDLサーチ（国立国会図書館サーチ &lt;<a href="https://iss.ndl.go.jp/&gt;）" class="bare">https://iss.ndl.go.jp/&gt;）</a>
+のサービス上で検索して、
+当該資料の「JP番号」を調べておき、
+その「JP番号」を使うとよいでしょう。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>登録したい資料の[追加]をクリックします</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_108_ndl.png" alt="資料の追加">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>原題のリンク先はNDLサーチの書誌詳細画面になっていますので、書誌詳細を確認できます。</p>
+</li>
+<li>
+<p>右メニューの「同じ検索語でNDLサーチを検索する」をたどると、同じ検索語でNDLサーチを検索した結果の画面が表示されますので、たくさんヒットしすぎたときなどに便利です。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>【Memo】
+500件以上ヒットした場合は、500件目以降のレコードを、インポートすることができません(参照：[Issue #624](<a href="https://github.com/next-l/enju_leaf/issues/624)）。" class="bare">https://github.com/next-l/enju_leaf/issues/624)）。</a></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[追加]ボタンが[保存中&#8230;&#8203;]に変わりますので，画面が切り替わるまでしばらく待ちます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_108_2_ndl.png" alt="資料の保存中">
+</div>
+</div>
+</li>
+<li>
+<p>「資料は正常に作成されました。」と表示され、登録が完了します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_109_ndl.png" alt="登録完了">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】
+右メニューの[所蔵を編集]の右の[ (新規作成)]リンクをたどることで，
+続けて所蔵情報を登録することができます。
+詳細は [「4-3-1 所蔵情報を新規登録する」](#section4-3-1)を参照ください。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="米国議会図書館を検索して1件ずつ登録する">米国議会図書館を検索して1件ずつ登録する</h3>
+<div class="paragraph">
+<p>米国議会図書館（&lt;<a href="https://catalog.loc.gov/&gt;）の蔵書を検索した資料を" class="bare">https://catalog.loc.gov/&gt;）の蔵書を検索した資料を</a>
+登録することができます。ISBNやキーワードなどで検索できます。</p>
+</div>
+<div class="paragraph">
+<p>注意：この機能は標準ではインストールされていないため使えません。
+[enju_locモジュールをインストール（インストールマニュアル5-2節参照）](enju_install_vm_5.html#section5-2)
+する必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［米国議会図書館検索によるインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_loc_1.png" alt="米国議会図書館検索によるインポート">
+</div>
+</div>
+</li>
+<li>
+<p>以降は、[「4-2-4 NDLサーチを検索して1件ずつ登録する」](#section4-2-4) の 2. 以降の手順と同様です。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cinii_booksを検索して1件ずつ登録する">CiNii Booksを検索して1件ずつ登録する</h3>
+<div class="paragraph">
+<p>CiNii Books（&lt;<a href="https://ci.nii.ac.jp/books/&gt;）を検索した資料を" class="bare">https://ci.nii.ac.jp/books/&gt;）を検索した資料を</a>
+登録することができます。ISBNやキーワードなどで検索できます。</p>
+</div>
+<div class="paragraph">
+<p>注意：この機能は標準ではインストールされていないため使えません。
+[enju_niiモジュールをインストール（インストールマニュアル 5-1節参照）](enju_install_vm_5.html#section5-1)
+する必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［CiNii Books検索によるインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_nii_1.png" alt="CiNii Books検索によるインポート">
+</div>
+</div>
+</li>
+<li>
+<p>以降は、[「4-2-4 NDLサーチを検索して1件ずつ登録する」](#section4-2-4) の 2.以降の手順と同様です。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="手動で資料を登録する">手動で資料を登録する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［手動で登録する］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_input_manually_manifestation.png" alt="手動で登録する">
+</div>
+</div>
+</li>
+<li>
+<p>原題のほか必要な項目を入力し、[登録する]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_100.png" alt="原題のほか必要な項目を入力し登録">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>「*」のマークが付いた項目は入力必須項目です。</p>
+</li>
+<li>
+<p>「ページ数」と「最初のページ」「最後のページ」の両方を入力した場合、「資料の表示」に表示されるのは「ページ数」になります。</p>
+</li>
+<li>
+<p>「大きさ」と「高さ」の両方を入力した場合、「資料の表示」に表示されるのは「大きさ」になります。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>【Memo】著者については、入力し始めると、すでに登録されている著者の候補が出てくるので、同じものがあれば、そのメニューから選んで決定することができます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_author_auto.png" alt="著者名の自動補完方法">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「資料は正常に作成されました。」のメッセージが表示され、図書が登録されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_100_2.png" alt="原題のほか必要な項目を入力し登録">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="図書の書誌を編集修正する">図書の書誌を編集（修正）する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>書誌を編集したい本の名前を検索語に入力し、［検索］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_bib_ed_1.png" alt="検索">
+</div>
+</div>
+</li>
+<li>
+<p>書誌を編集したい本が検索されたら、［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_bib_ed_2.png" alt="編集">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】ここで、本のタイトルのリンクをたどり、その先の資料の表示画面の右メニュー[編集]をクリックすることでも編集画面に移動します。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_bib_ed_3.png" alt="編集">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>編集をし、［更新する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_bib_ed_4.png" alt="更新する">
+</div>
+</div>
+</li>
+<li>
+<p>「資料は正常に更新されました。」と表示され、書誌が更新されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_bib_ed_5.png" alt="更新されました">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで更新する">TSVファイルを読み込んで更新する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+<div class="paragraph">
+<p>更新したい資料のManifestation ID(manifestation_id)か、 ローカル識別子（manifestation_identifier） と更新したいフィールドの内容が記述されたファイルを作成します。</p>
+</div>
+</li>
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと書誌情報が更新できます。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;h4 class="alert-heading"&gt;【Column】TSVファイルの作り方&lt;/h4&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルの作り方図書書誌">TSVファイルの作り方（図書（書誌））</h3>
+<div class="paragraph">
+<p>TSVとは、Tab-Separated Valuesの略です。
+TSVファイルとは、それぞれのフィールドが、タブ（Tab）で区切られたプレインテキストファイルのことをさします。
+ファイル名に使う拡張子は、 .txt や .tsv のどちらでも良いです。</p>
+</div>
+<div class="paragraph">
+<p>1行目に、それぞれの項目に関わるフィールド名を指定します。
+フィールド名とその意味については次の通りです。</p>
+</div>
+<div class="paragraph">
+<p>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+&lt;caption&gt;図書のフィールド項目名と対応する内容&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+        &lt;th&gt;フィールド名&lt;/th&gt;
+        &lt;th&gt;日本語名称&lt;/th&gt;
+        &lt;th&gt;入力ルール及び説明&lt;/th&gt;
+        &lt;th&gt;例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td&gt;manifestation_id&lt;/td&gt;
+	&lt;td&gt;Manifestation ID&lt;/td&gt;
+	&lt;td&gt;半角数字のみ, システムが自動付与するID, 「資料の表示」画面のURL末尾にある数値。更新や削除に使用します。※新規作成時には使用しないでください。&lt;!-- ( #872 ) いずれ：新規作成時にはこの列は無視されます。-&#8594;&lt;/td&gt;
+	&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;manifestation_identifier&lt;/td&gt;
+	&lt;td&gt;ローカル識別子&lt;/td&gt;
+	&lt;td&gt;文字列、インポート時に付与する書誌に対する任意の識別子。 &lt;!--（#issue372）-&#8594;&lt;/td&gt;
+	&lt;td&gt;999001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;original_title&lt;/td&gt;
+	&lt;td&gt;原題&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;Rによるやさしい統計学&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;title_transcription&lt;/td&gt;
+	&lt;td&gt;タイトルのヨミ&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;R ニ ヨル ヤサシイ トウケイガク&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;title_alternative&lt;/td&gt;
+	&lt;td&gt;代替タイトル&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;Rの操作手順と統計学の基礎が身に付く&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;title_alternative_transcription&lt;/td&gt;
+	&lt;td&gt;代替タイトルのヨミ&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;R ノ ソウサテジュン ト トウケイガク ノ キソ ガ ミ ニ ツク&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;statement_of_responsibility&lt;/td&gt;
+	&lt;td&gt;責任表示&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;山田剛史, 杉澤武俊, 村井潤一郎 共著&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;periodical&lt;/td&gt;
+	&lt;td&gt;逐次刊行物フラグ&lt;/td&gt;
+	&lt;td&gt;フラグ（t または　TRUEなら真）&lt;/td&gt;
+	&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;edition_string&lt;/td&gt;
+	&lt;td&gt;版&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;初版&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;edition&lt;/td&gt;
+	&lt;td&gt;版（数字）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;volume_number_string&lt;/td&gt;
+	&lt;td&gt;巻&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;一&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;volume_number&lt;/td&gt;
+	&lt;td&gt;巻（数字）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;issue_number_string&lt;/td&gt;
+	&lt;td&gt;号&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;二&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;issue_number&lt;/td&gt;
+	&lt;td&gt;号（数字）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;serial_number&lt;/td&gt;
+	&lt;td&gt;通号&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;series_original_title&lt;/td&gt;
+	&lt;td&gt;シリーズ名&lt;/td&gt;
+	&lt;td&gt;文字列（複数ある場合は//で区切る）&lt;/td&gt;
+	&lt;td&gt;理工学専門書シリーズ//数学//1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;series_title_transcription&lt;/td&gt;
+	&lt;td&gt;シリーズ名のヨミ&lt;/td&gt;
+	&lt;td&gt;文字列（複数ある場合は//で区切る）, &lt;a href="#tsv_series_title_transcription"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;リコウガクセンモンショ シリーズ//スウガク//1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;series_volume_number_string&lt;/td&gt;
+	&lt;td&gt;シリーズ巻号&lt;/td&gt;
+	&lt;td&gt;文字列，&lt;a href="#tsv_series_volume_number_string"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;二&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;series_creator_string&lt;/td&gt;
+	&lt;td&gt;シリーズ著者&lt;/td&gt;
+	&lt;td&gt;文字列，&lt;a href="#tsv_series_creator_string"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;統計&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;creator&lt;/td&gt;
+	&lt;td&gt;著者（フルネーム）&lt;/td&gt;
+	&lt;td&gt;文字列&lt;a href="#tsv_creator"&gt;（特定書式：別記）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;山田, 剛史, 1970-||author//杉澤, 武俊||author&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;creator_transcription&lt;/td&gt;
+	&lt;td&gt;著者ヨミ（フルネームヨミ）&lt;/td&gt;
+	&lt;td&gt;文字列（複数ある場合は//で区切る）&lt;/td&gt;
+	&lt;td&gt;ヤマモト, タケシ//スギサワ, タケトシ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;contributor&lt;/td&gt;
+	&lt;td&gt;協力者・編者&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;山田, 剛史&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;contributor_transcription&lt;/td&gt;
+	&lt;td&gt;協力者・編者(ヨミ)&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;ヤマモト, タケシ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;publisher&lt;/td&gt;
+	&lt;td&gt;出版者&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;オーム社&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;publisher_transcription&lt;/td&gt;
+	&lt;td&gt;出版者のヨミ&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;オームシャ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;publication_place&lt;/td&gt;
+	&lt;td&gt;出版地&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;東京&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;pub_date&lt;/td&gt;
+	&lt;td&gt;出版日&lt;/td&gt;
+	&lt;td&gt;ISO8601（年まで、月まででも可）&lt;/td&gt;
+	&lt;td&gt;2014-01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;content_type&lt;/td&gt;
+	&lt;td&gt;資料の内容の種類&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_content_type"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;carrier_type&lt;/td&gt;
+	&lt;td&gt;資料の形態&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_carrier_type"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;volume&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;frequency&lt;/td&gt;
+	&lt;td&gt;発行頻度&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_frequency"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;monthly&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;language&lt;/td&gt;
+	&lt;td&gt;言語&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_language"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;jpn&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;isbn&lt;/td&gt;
+	&lt;td&gt;ISBN&lt;/td&gt;
+	&lt;td&gt;半角文字のみ、ハイフンあり/なし/9桁/13桁はどの形式でも受け付ける。国際標準逐次刊行物番号。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;9784274067105&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;ndl_bib_id&lt;/td&gt;
+	&lt;td&gt;国立国会図書館書誌ID&lt;/td&gt;
+	&lt;td&gt;半角文字のみ。&lt;/td&gt;
+	&lt;td&gt;000002844874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;issn&lt;/td&gt;
+	&lt;td&gt;ISSN&lt;/td&gt;
+	&lt;td&gt;半角文字のみ, ハイフンはあってもなくてもよい。国際標準逐次刊行物番号。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;0917-1436&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;jpno&lt;/td&gt;
+	&lt;td&gt;JPNO&lt;/td&gt;
+	&lt;td&gt;半角文字のみ. 全国書誌番号。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;21366221&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;lccn&lt;/td&gt;
+	&lt;td&gt;LCCN&lt;/td&gt;
+	&lt;td&gt;半角文字のみ. 米国議会図書館管理番号。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;1255667&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+        &lt;td&gt;doi&lt;/td&gt;
+        &lt;td&gt;DOI&lt;/td&gt;
+        &lt;td&gt;文字列，https://doi.org/は記入しない。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;10.2964/jsik.23_219&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;ncid&lt;/td&gt;
+	&lt;td&gt;NCID&lt;/td&gt;
+	&lt;td&gt;半角文字のみ. NCID(NACSIS-CAT ID，NII書誌ID)。&lt;a href="#tsv_id"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;BA84620103&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;subject:[件名標目の種類]&lt;a href="#tsv_subject"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;件名&lt;/td&gt;
+	&lt;td&gt;文字列（複数ある場合は//で区切る）&lt;/td&gt;
+	&lt;td&gt;ウェブアプリケーション//インターネット&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;classification:[分類の種類] &lt;a href="#tsv_classification"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;分類&lt;/td&gt;
+	&lt;td&gt;文字列（複数ある場合は//で区切る）&lt;/td&gt;
+	&lt;td&gt;007//007.58&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;start_page&lt;/td&gt;
+	&lt;td&gt;最初のページ&lt;/td&gt;
+	&lt;td&gt;半角数字のみ(#342)&lt;/td&gt;
+	&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;end_page&lt;/td&gt;
+	&lt;td&gt;最後のページ&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;404&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;extent&lt;/td&gt;
+	&lt;td&gt;ページ数&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;xi, 125 pages&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;dimensions&lt;/td&gt;
+	&lt;td&gt;大きさ&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;21cm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;height&lt;/td&gt;
+	&lt;td&gt;高さ（cm）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;width&lt;/td&gt;
+	&lt;td&gt;幅（cm）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;depth&lt;/td&gt;
+	&lt;td&gt;奥行き（cm）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;1.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;manifestation_price&lt;/td&gt;
+	&lt;td&gt;販売価格&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;2000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;access_address&lt;/td&gt;
+	&lt;td&gt;アクセスアドレス&lt;/td&gt;
+	&lt;td&gt;半角文字のみ&lt;/td&gt;
+	&lt;td&gt;<a href="https://www.amazon.co.jp/dp/4274067106/&lt;/td&gt" class="bare">https://www.amazon.co.jp/dp/4274067106/&lt;/td&gt</a>;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;fulltext_content&lt;/td&gt;
+	&lt;td&gt;リポジトリコンテンツ&lt;/td&gt;
+	&lt;td&gt;フラグ（t または　TRUEなら真）&lt;/td&gt;
+	&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;required_role_name&lt;/td&gt;
+	&lt;td&gt;参照に必要な権限&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_required_role_name"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;Guest&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;abstract&lt;/td&gt;
+	&lt;td&gt;内容細目&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.6よりインポート可能。&lt;/td&gt;
+	&lt;td&gt;1. サイタ&lt;br/&gt;2. ヒラク&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;description&lt;/td&gt;
+	&lt;td&gt;説明&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。&lt;/td&gt;
+	&lt;td&gt;本書は、統計学の理論を簡潔に解説しながら、Rの手順・アウトプットの解釈を丁寧に行う。具体的には&#8230;&#8203;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;note&lt;/td&gt;
+	&lt;td&gt;注記&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。&lt;/td&gt;
+	&lt;td&gt;版表示は奥付より。付属資料: CD-ROM（1枚, 12cm）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;manifestation_memo&lt;/td&gt;
+	&lt;td&gt;業務メモ（書誌）&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.6よりインポート可能。&lt;a href="#tsv_mmemo"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;dummy&lt;/td&gt;
+	&lt;td&gt;インポート省略&lt;/td&gt;
+	&lt;td&gt;文字列。この列に入力されていると、その行全体をインポート対象から除外します。&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!-- &lt;tr&gt;
+	&lt;td&gt;series_statement_identifier&lt;/td&gt;
+	&lt;td&gt;シリーズステイトメントID&lt;/td&gt;
+	&lt;td&gt;半角数字のみ, &lt;a href="#series_statement_identifier"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt; -&#8594;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+</div>
+<div class="paragraph">
+<p>#isbn などの識別子 {#tsv_id}</p>
+</div>
+<div class="paragraph">
+<p>複数の識別子（ISBNなど）がある場合は、// で区切ります。どんな識別子があるかについては、[初期設定マニュアル「6-1 識別子の種類を設定する」](enju_setup_6.html#section6-1) を参照してください。注意！ISBNが複数ある場合、ISBNを用いて国立国会図書館のデータを参照して、 自動的に空白の項目が埋められることはありません。必ず、original_title等を記入しておく必要があります。</p>
+</div>
+<div class="paragraph">
+<p>#series_title_transcription {#tsv_series_title_transcription}</p>
+</div>
+<div class="paragraph">
+<p>シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。</p>
+</div>
+<div class="paragraph">
+<p>#series_volume_number_string {#tsv_series_volume_number_string}</p>
+</div>
+<div class="paragraph">
+<p>シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。</p>
+</div>
+<div class="paragraph">
+<p>#series_creator_string {#tsv_series_creator_string}</p>
+</div>
+<div class="paragraph">
+<p>シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。</p>
+</div>
+<div class="paragraph">
+<p>#creator {#tsv_creator}</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>書式: 著者名||役割//著者名||役割
+例：山田, 剛史, 1970-||author//杉澤, 武俊||author//大木, 太郎||illustrator</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>役割は一括インポート・エクスポート可能になってはいますが、資料の表示画面で表示したり、資料の編集画面で編集できるようにはできていません（開発予定ですが、開発時期は未定です）。 &lt;!-- issue #1520 にて-&#8594;</p>
+</div>
+<div class="paragraph">
+<p>使える役割については、「著者の関係」機能の「名称」にあるものです（注 Enju Leaf 1.3.4 現在、「著者の関係」はどこからもリンクないですがcreate_types をURLに追加するとアクセスできます（例：デモサーバーでは [<a href="https://enju.next-l.jp/create_types" class="bare">https://enju.next-l.jp/create_types</a>](<a href="https://enju.next-l.jp/create_types" class="bare">https://enju.next-l.jp/create_types</a>) ）。ここから新しい役割を追加することもできます。&lt;!-- issue #1522 にて-&#8594;</p>
+</div>
+<div class="paragraph">
+<p>#content_type {#tsv_content_type}</p>
+</div>
+<div class="paragraph">
+<p>「資料の内容の種別」の[名前]を値とします(例：文字であれば"text"など）。見方については、[初期設定マニュアル「5-2 資料の内容の種別の作成」](enju_setup_5.html#section5-2) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#carrier_type {#tsv_carrier_type}</p>
+</div>
+<div class="paragraph">
+<p>「資料の形態」の[名前]を値とします(例：冊子体であれば"volume"など）。見方については、[初期設定マニュアル「5-1 資料の形態の作成」](enju_setup_5.html#section5-1) を参照してください。
+未入力の場合は"text"が設定されます。</p>
+</div>
+<div class="paragraph">
+<p>#frequency {#tsv_frequency}</p>
+</div>
+<div class="paragraph">
+<p>「発行頻度」の[名前]を値とします(例："daily", "monthly"など）。見方については、[初期設定マニュアル「5-7 発行頻度を編集する」](enju_setup_5.html#section5-7) を参照してください。未入力の場合は"unknown"が設定されます。</p>
+</div>
+<div class="paragraph">
+<p>#language {#tsv_language}</p>
+</div>
+<div class="paragraph">
+<p>日本語の場合は jpn, 英語の場合は、engになります。その他の言語については、「言語」の[Iso 639 2]を参照してください。見方については、[初期設定マニュアル「5-3 言語を編集する」](enju_setup_5.html#section5-3) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#subject:[件名標目の種類] {#tsv_subject}</p>
+</div>
+<div class="paragraph">
+<p>件名標目の種類ごとに別の列になります。
+フィールド名は subject:[件名標目の種類] となります。
+例えば、NDLSHについては、subject:ndlshの列に書くことになります。
+フィールド名に使う[件名標目の種類]は、「件名標目の種類」の[名前]を使います
+（詳細：[初期設定マニュアル「4-3 件名標目の種類を設定する」](enju_setup_4.html#section4-3) ） 。</p>
+</div>
+<div class="paragraph">
+<p>同じ件名標目の種類で複数の分類がある場合は、// で区切ります。</p>
+</div>
+<div class="paragraph">
+<p>具体的には以下のように記述します。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>例：NDLSHで、ウェブアプリケーションとインターネットが付与されているレコードの場合
+subject:ndlsh
+ウェブアプリケーション//インターネット</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>例：NDLSHがインターネット、LCSHがInternetのとき
+subject:ndlsh	subject:lcsh
+インターネット	Internet</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>#classification:[分類の種類] {#tsv_classification}</p>
+</div>
+<div class="paragraph">
+<p>分類の種類ごとに別の列になります。
+フィールド名はclassification:[分類の種類] となります。
+例えば、NDC9については、classification:ndc9の列に書くことになります。
+フィールド名に使う[分類の種類]は、「分類の種類」の[名前]を使います
+（詳細：[初期設定マニュアル「4-5 分類の種類を設定する」](enju_setup_4.html#section4-5)） 。</p>
+</div>
+<div class="paragraph">
+<p>同じ分類の種類で複数の分類がある場合は、// で区切ります。</p>
+</div>
+<div class="paragraph">
+<p>具体的には以下のように記述します。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>例：NDC9の分類で、007と007.58が付与されているレコードの場合
+classification:ndc9
+007//007.58</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>例：NDC9が007, NDLCがAZ-463のとき
+classification:ndc9	classification:ndlc
+007	AZ-463</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>#required_role_name {#tsv_required_role_name}</p>
+</div>
+<div class="paragraph">
+<p>この書誌を参照可能な権限を設定します。
+以下の4つから選びます。なにも記入しなければ、Guest になります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrator（管理者）</p>
+</li>
+<li>
+<p>Librarian（図書館員）</p>
+</li>
+<li>
+<p>User（図書館利用者）</p>
+</li>
+<li>
+<p>Guest （誰でも）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>#manifestation_memo {#tsv_mmemo}</p>
+</div>
+<div class="paragraph">
+<p>Administrator権限、Librarian権限のときのみ出力する項目です。
+一般利用者には見せないが、業務上必要なデータを残したい場合などに使用します。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="所蔵情報を登録一覧表示する">所蔵情報を登録・一覧表示する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>登録された資料を、図書館の蔵書として登録します。
+請求記号やバーコード番号（所蔵情報ID）など個々の資料の情報を登録します。</p>
+</div>
+<div class="sect2">
+<h3 id="入力項目_2">入力項目</h3>
+<div class="paragraph">
+<p>注意の必要な項目み説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>URL: URLに入力したURLは「所蔵情報の表示」画面でリンクになります（Enju Leaf 1.3.6より）。</p>
+</li>
+<li>
+<p>業務メモ：業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="所蔵情報を新規登録する">所蔵情報を新規登録する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>登録したい資料を検索します。トップページの検索語に登録したい資料のキーワードを入力し、［検索］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_111.png" alt="検索">
+</div>
+</div>
+</li>
+<li>
+<p>所蔵情報を登録したい資料の[所蔵作成]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_113.png" alt="資料">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>資料のタイトルをクリックした先の画面の右メニューの［（新規作成）］をクリックしてもできます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_119.png" alt="所蔵情報の新規作成">
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>図書館や貸出状態などを設定して、［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_121.png" alt="所蔵情報を作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[戻る]をクリックすると前の画面に戻ります。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-success memo" markdown="1"&gt;
+&lt;h4 class="alert-heading"&gt;【Column】寄贈を受け付ける&lt;/h4&gt;
+資料が寄贈されたものであることを示したい場合は、［予算種別］に「寄贈」種別を登録し、選ぶことで区別できるようになります。予算種別の登録方法は[初期設定マニュアル「3-9 予算種別を設定する」](enju_setup_3.html#section3-9)を参照してください。寄贈者などの情報を残したい場合は注記に入力します。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「所蔵情報は正常に作成されました。」のメッセージが表示され、所蔵情報が登録されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_operation_121_2.png" alt="所蔵情報が正常に作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[所蔵の一覧]をクリックするとEnjuに登録されている全所蔵情報の一覧が表示されます。</p>
+</li>
+<li>
+<p>右メニューの[編集]のリンクをクリックするとこの所蔵情報が編集できます</p>
+</li>
+<li>
+<p>右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。</p>
+</li>
+<li>
+<p>右メニューの[貸出規則の一覧]については後日説明します（[#issue 1047](<a href="https://github.com/next-l/enju_leaf/issues/1047)）。" class="bare">https://github.com/next-l/enju_leaf/issues/1047)）。</a></p>
+</li>
+<li>
+<p>右メニューの[貸出履歴]をクリックするとこの所蔵の貸出履歴の一覧が表示されます。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="すでに登録された所蔵情報を修正登録する">すでに登録された所蔵情報を修正登録する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>修正登録したい資料を検索します。トップページの検索語に登録したい資料の所蔵情報ID（バーコード番号）などを入力し、［検索］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_111_u.png" alt="検索">
+</div>
+</div>
+</li>
+<li>
+<p>所蔵情報を登録したい資料の[（所蔵）]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_112_u.png" alt="（所蔵)">
+</div>
+</div>
+</li>
+<li>
+<p>所蔵情報を修正したい資料の[所蔵情報ID]のリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_113_u.png" alt="所蔵ID">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_operation_114_u.png" alt="所蔵情報の編集">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録
+など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>図書館や貸出状態など修正したい部分を修正して、［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_121_u.png" alt="所蔵情報を登録">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[表示]をクリックするとこの所蔵の表示画面に遷移します。</p>
+</li>
+<li>
+<p>右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。</p>
+</li>
+<li>
+<p>右メニューの[戻る]をクリックすると前の画面に戻ります。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「所蔵情報は正常に更新されました。」のメッセージが表示され、所蔵情報が登録されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_operation_121_2_u.png" alt="所蔵情報が正常に更新">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="所蔵情報を一覧表示する">所蔵情報を一覧表示する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［資料］グループの［全ての所蔵情報］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_124.png" alt="全ての所蔵情報">
+</div>
+</div>
+</li>
+<li>
+<p>所蔵情報の一覧が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_125.png" alt="所蔵情報の一覧">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>検索語に所蔵情報IDを入力して検索すると、所蔵情報IDを使った検索ができます。</p>
+</li>
+<li>
+<p>受入日に受入日を入力して、検索をクリックすると、受入日を指定した検索ができます。</p>
+</li>
+<li>
+<p>所蔵情報IDの列の番号のリンクをクリックすると、クリックした所蔵情報IDの表示画面に遷移します。
+&lt;/div&gt;</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>右メニューの貸出状態（例：[除籍済み]）のリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_125_2.png" alt="所蔵情報の一覧の絞り込み">
+</div>
+</div>
+</li>
+<li>
+<p>クリックした貸出状態のものに絞り込んで表示します。絞り込みを解除し、すべてを表示するには、[この絞り込みを解除する]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_125_3.png" alt="所蔵情報の一覧の絞り込みを解除">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで登録する_2">TSVファイルを読み込んで登録する</h3>
+<div class="paragraph">
+<p>所蔵情報は、TSVファイルを読み込んで一括登録することもできます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>例えば、ISBN と　所蔵情報（所蔵情報のTSVの詳細：[「4-3-8 TSVファイルの作り方（所蔵情報）」](#section4-3-8) ）を書いたTSVを用意します。※Enju Leaf 1.1.2では、item_identifier（所蔵情報ID）かcall_number（請求記号）のどちらかが必ず必要です。ない場合は所蔵情報が登録されません。</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_item_tsv.png[所蔵情報の一覧]</p>
+</div>
+<div class="paragraph">
+<p>ISBNの場合は、書誌が未登録の資料の場合は、国立国会図書館蔵書検索の結果から書誌データをインポートし、かつ所蔵情報を登録することになります。</p>
+</div>
+<div class="paragraph">
+<p>ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能です。この場合は、既にシステムに登録済みの書誌に対して所蔵情報を追加します。</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+所蔵情報と書誌情報を同時に登録することも可能です。 その場合は、所蔵情報と[「4-2-10 TSVファイルの作り方（図書（書誌））」](#section4-2-10)のフィールドを書いたTSVを用意します。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、所蔵情報を登録できます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで更新する_2">TSVファイルを読み込んで更新する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+<div class="paragraph">
+<p>更新したい所蔵情報の 所蔵情報ID（item_identifier）もしくは所蔵データID（item_id システムが自動付与するIDで所蔵情報の表示のURLに使用されるもの） とともに、
+更新したいフィールドの内容が記述されたファイルを作成します。注：item_identifierとitem_idが同時に指定されていた場合、item_identifierが優先されます。</p>
+</div>
+</li>
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと所蔵情報が更新できます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで所蔵情報を他の書誌につけかえる">TSVファイルを読み込んで所蔵情報を他の書誌につけかえる</h3>
+<div class="paragraph">
+<p>間違えて、他の書誌に所蔵情報をつけてしまったときなどに使います。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+<div class="paragraph">
+<p>所蔵情報ID（item_identifier） と、
+つけ替えたい書誌のManifestation ID（manifestation_id） もしくは、
+ローカル識別子（manifestation_identifier）
+のみが記述されたファイルを作成します。</p>
+</div>
+</li>
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[関連を更新する]を選びます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで削除する">TSVファイルを読み込んで削除する</h3>
+<div class="paragraph">
+<p>基本的に、所蔵情報をTSVファイルで一括で削除することはめったにないと想定されますが、TSVを使った一括削除機能も用意されています。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+<div class="paragraph">
+<p>削除したい 所蔵情報ID（item_identifier） のみが記述されたファイルを作成します。</p>
+</div>
+</li>
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[削除]を表示させ、[削除]を選びます。</p>
+<div class="paragraph">
+<p>※ 間違えて[削除]を選択してしまわないよう、通常、[削除]ボタンが表示されていません。ブラウザの開発ツールを使って、[削除]ボタンのコメントアウトを外して[削除]ボタンを表示させて使用してください。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;a name="#remove_button" /&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】[削除]ボタンを表示させるやり方の例（Chromeの例）：</p>
+</div>
+<div class="paragraph">
+<p>関連を更新を選択し、その上で右をクリックし、「要素を検証」を選びます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_item_tsv_rm_001.png" alt="要素を検証">
+</div>
+</div>
+<div class="paragraph">
+<p>+
+「削除」のあたりで右クリックし、「Edit as HTML」を選びます。</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_item_tsv_rm_003.png[Edit as HTML]</p>
+</div>
+<div class="paragraph">
+<p>HTMLのコメントアウトコマンド（赤四角した部分）を消します。</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_item_tsv_rm_005.png[コメントアウトの削除]</p>
+</div>
+<div class="paragraph">
+<p>[削除]ボタンが表示されます</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-success memo" markdown="1"&gt;
+&lt;h4 class="alert-heading"&gt;【Column】TSVファイルの作り方&lt;/h4&gt;
+1行目に、それぞれの項目に関わるフィールド名を指定します。
+フィールド名とその意味については次の通りです。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルの作り方所蔵情報">TSVファイルの作り方（所蔵情報）</h3>
+<table class="tableblock frame-all grid-all stretch alert alert-success memo table table-bordered table-condensed table-striped">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 1, row 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 1, row 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 1, row 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+&lt;caption&gt;所蔵情報のフィールド項目名と対応する内容&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+        &lt;th&gt;フィールド名&lt;/th&gt;
+        &lt;th&gt;日本語名称&lt;/th&gt;
+        &lt;th&gt;入力ルール及び説明&lt;/th&gt;
+        &lt;th&gt;例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_id&lt;/td&gt;
+	&lt;td&gt;所蔵データID(自動付与）&lt;/td&gt;
+	&lt;td&gt;半角数字のみ, システムが自動付与するID, 「所蔵情報の表示」画面のURLにある数値&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;shelf&lt;/td&gt;
+	&lt;td&gt;本棚&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_shelf"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;first_shelf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;checkout_type&lt;/td&gt;
+	&lt;td&gt;貸出区分&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_checkout_type"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;book&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;circulation_status&lt;/td&gt;
+	&lt;td&gt;貸出状態&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_circulation_status"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;Available On Shelf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;use_restriction&lt;/td&gt;
+	&lt;td&gt;利用制限&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_use_restriction"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;Limited Circulation, Normal Loan Period&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;include_supplements&lt;/td&gt;
+	&lt;td&gt;付録を含む&lt;/td&gt;
+	&lt;td&gt;真偽値（t または　TRUEなら真）&lt;/td&gt;
+	&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;call_number&lt;/td&gt;
+	&lt;td&gt;請求記号&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;547.483||A||ル&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;budget_type&lt;/td&gt;
+	&lt;td&gt;予算種別&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_budget_type"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;資料費&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;bookstore&lt;/td&gt;
+	&lt;td&gt;書店&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_bookstore"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;今井書店&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_price&lt;/td&gt;
+	&lt;td&gt;購入価格&lt;/td&gt;
+	&lt;td&gt;半角数字のみ&lt;/td&gt;
+	&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_url&lt;/td&gt;
+	&lt;td&gt;URL（item）&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;<a href="https://www.amazon.co.jp/dp/4274067106/&lt;/td&gt" class="bare">https://www.amazon.co.jp/dp/4274067106/&lt;/td&gt</a>;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;required_role&lt;/td&gt;
+	&lt;td&gt;参照に必要な権限&lt;/td&gt;
+	&lt;td&gt;code&lt;a href="#tsv_required_role"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;User&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;acquired_at&lt;/td&gt;
+	&lt;td&gt;受入日&lt;/td&gt;
+	&lt;td&gt;ISO8601&lt;/td&gt;
+	&lt;td&gt;2014-06-20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;binding_call_number&lt;/td&gt;
+	&lt;td&gt;製本後の請求記号&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;547.483||A||ルs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;binded_at&lt;/td&gt;
+	&lt;td&gt;製本日&lt;/td&gt;
+	&lt;td&gt;ISO8601&lt;/td&gt;
+	&lt;td&gt;2014-08-15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;binding_item_identifier&lt;/td&gt;
+	&lt;td&gt;製本後の所蔵情報ID&lt;/td&gt;
+	&lt;td&gt;文字列&lt;/td&gt;
+	&lt;td&gt;999501&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_note&lt;/td&gt;
+	&lt;td&gt;注記（item)&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。&lt;/td&gt;
+	&lt;td&gt;汚れあり。水濡れあり。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_identifier&lt;/td&gt;
+	&lt;td&gt;所蔵情報ID&lt;/td&gt;
+	&lt;td&gt;半角の数値とアルファベットのみ&lt;/td&gt;
+	&lt;td&gt;100502&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;item_memo&lt;/td&gt;
+	&lt;td&gt;業務メモ（所蔵）&lt;/td&gt;
+	&lt;td&gt;文字列。Enju Leaf 1.3.6よりインポート可能。&lt;a href="#tsv_imemo"&gt;（詳細）&lt;/a&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;dummy&lt;/td&gt;
+	&lt;td&gt;インポート省略&lt;/td&gt;
+	&lt;td&gt;文字列（ここになにかあれば無視する行）&lt;/td&gt;
+	&lt;td&gt;t&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+</div>
+<div class="paragraph">
+<p>#shelf {#tsv_shelf}</p>
+</div>
+<div class="paragraph">
+<p>「本棚」の[名前]を値とします(例："first_shelf"や"web"など）。見方については、[初期設定マニュアル「3-3 本棚を設定する」](enju_setup_3.html#section3-3) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#checkout_type {#tsv_checkout_type}</p>
+</div>
+<div class="paragraph">
+<p>「貸出区分」の[名前]を値とします(例："book"）。見方については、[初期設定マニュアル「3-5 貸出区分を設定する」](enju_setup_3.html#section3-5) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#circulation_status {#tsv_circulation_status}</p>
+</div>
+<div class="paragraph">
+<p>「貸出状態」の[名前]を値とします(例：[在架（利用可能）]なら"Available On Shelf"）。見方については、[初期設定マニュアル「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#use_restriction {#tsv_use_restriction}</p>
+</div>
+<div class="paragraph">
+<p>以下の2種類です。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not For Loan</p>
+</li>
+<li>
+<p>貸出不可</p>
+</li>
+<li>
+<p>Limited Circulation, Normal Loan Period</p>
+</li>
+<li>
+<p>通常期間貸出</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>#budget_type {#tsv_budget_type}</p>
+</div>
+<div class="paragraph">
+<p>「予算種別」の[名前]を値とします。見方については、[初期設定マニュアル「3-9 予算種別を設定する」](enju_setup_3.html#section3-9) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#bookstore {#tsv_bookstore}</p>
+</div>
+<div class="paragraph">
+<p>「書店」の[名前]を値とします。見方については、[初期設定マニュアル「3-10 書店を設定する」](enju_setup_3.html#section3-10) を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>#required_role {#tsv_required_role}</p>
+</div>
+<div class="paragraph">
+<p>所蔵情報を見るために必要な権限を設定します。
+以下の4つから選びます。なにも記入しなければ、Guest になります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrator（管理者アカウント）</p>
+</li>
+<li>
+<p>Librarian（図書館員アカウント）</p>
+</li>
+<li>
+<p>User（図書館利用者アカウント）</p>
+</li>
+<li>
+<p>Guest （誰でも：ログイン不要）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>#item_memo {#tsv_imemo}</p>
+</div>
+<div class="paragraph">
+<p>Administrator権限、Librarian権限のときのみ出力する項目です。
+一般利用者には見せないが、業務上必要なデータを残したい場合などに使用します。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="図書を検収する">図書を検収する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>図書を検収する機能です。
+検収すると、該当資料の以下の所蔵情報が変更になります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[貸出状態]が「作業中」から「在架（利用可能）」に変更される</p>
+</li>
+<li>
+<p>[利用制限]が「貸出不可」から「通常期間貸出」に変更される</p>
+</li>
+<li>
+<p>[検収時刻]が記録される（システムで自動的に[検収]ボタンをクリックした日時を記録します）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>書誌情報や所蔵情報を作業中のステータスとしていったん登録したのちに、
+複数の資料をまとめて利用可能なステータスに変更にする機能です。
+書誌情報や所蔵情報を登録してから、
+書架に並べるまで時間がかかる場合などに便利な機能です。
+書架に並べる直前にこの検収機能を使うことになります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［検収］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_accept.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［所蔵情報ID］を入力し（所蔵情報IDのバーコードをスキャンなど）、[検収]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_accept_1.png" alt="所蔵情報IDの入力と検収">
+</div>
+</div>
+</li>
+<li>
+<p>「この資料は正常に検収されました」と表示され検収が完了します。2 を繰り返すことで、続けて他の資料を検収できます。詳しい内容を確認したい場合は、[所蔵情報ID]のリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_accept_3.png" alt="検収結果">
+</div>
+</div>
+</li>
+<li>
+<p>[貸出情報]、[利用制限]、[検収時刻]が変わったことを確認できます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_accept_4.png" alt="所蔵情報の確認">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】利用者の検索結果一覧で「（所蔵）」や[予約]リンク（User権限以上のみ）が表示されるようになります。[予約]リンクはログインユーザが「延滞」していると表示されません。※Enju 1.1.0時点では、原因不明の理由で、User権限でログインした時に、[予約]リンクが出現しない現象を確認しています。現在、原因究明中です（詳細: [#issue868](<a href="https://github.com/next-l/enju_leaf/issues/868)）。" class="bare">https://github.com/next-l/enju_leaf/issues/868)）。</a>
+   ![検索結果一覧](../assets/images/1.1/image_operation_accept_5.png)
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;!--
+予約が出る条件：
+<a href="https://github.com/next-l/enju_leaf/issues/867#issuecomment-147685332" class="bare">https://github.com/next-l/enju_leaf/issues/867#issuecomment-147685332</a></p>
+</div>
+<div class="paragraph">
+<p>チェックするのは以下の3点です。</p>
+</div>
+<div class="paragraph">
+<p>所蔵の貸出状態が「在架」になっているかどうか
+ユーザの権限が図書館員か一般利用者か
+一般利用者の場合、「対象の資料の所蔵数」と「所蔵数 - そのユーザの延滞冊数」が等しいか
+-&#8594;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="図書を除籍する">図書を除籍する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>所蔵情報が登録された図書を、除籍状態にすることもできます。
+古くなる、破損するなどして、資料を廃棄する場合に使用します。</p>
+</div>
+<div class="paragraph">
+<p>除籍をすると、該当資料の以下の所蔵情報が変更になります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[貸出状態]が「在架（利用可能）」から「除籍済み」に変更される</p>
+</li>
+<li>
+<p>[利用制限]が「通常期間貸出」から「貸出不可」に変更される</p>
+</li>
+<li>
+<p>[所蔵情報の更新日]が記録される（[除籍]ボタンをクリックした日時（もしくは除籍済みに変更した時間）をシステムで自動的に記録します）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>除籍にする方法は3通りあります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>連続除籍機能を使う</p>
+</li>
+<li>
+<p>所蔵情報の編集機能を使う</p>
+</li>
+<li>
+<p>TSVファイルを読み込んで更新する</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="連続除籍機能を使う">連続除籍機能を使う</h3>
+<div class="paragraph">
+<p>複数の資料の所蔵情報IDのバーコードを連続で読み取って除籍する機能です。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>[連続除籍]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_001.png" alt="連続除籍">
+</div>
+</div>
+</li>
+<li>
+<p>［所蔵情報ID］を入力し（所蔵情報IDのバーコードをスキャンなど）、[除籍]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_003.png" alt="所蔵情報IDの入力と除籍">
+</div>
+</div>
+</li>
+<li>
+<p>「この資料は正常に除籍されました」と表示され除籍が完了します。2 を繰り返すことで、続けて他の資料を除籍できます。詳しい内容を確認したい場合は、[所蔵情報ID]のリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_005.png" alt="検収結果">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】「貸出中」や「取り置き中」などのように除籍してはいけない状態だった場合、「更新する」をクリック後に次のようなエラーが表示されます（以下の例は予約されている資料の場合のエラーです）。エラーが出た場合は、資料の状態を除籍ができる処理をしてください（貸出中なら返却処理をするなど）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_operation_withdraw_005_err.png" alt="予約中の本を除籍しようとしてエラーが表示">
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[貸出状態]、[利用制限]、[更新時刻]が変わったことを確認できます。</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_007.png" alt="所蔵情報の確認">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="所蔵情報の編集機能を使う">所蔵情報の編集機能を使う</h3>
+<div class="paragraph">
+<p>「連続除籍機能」で除籍できないときなどに使用します（例：一度、連続除籍機能で除籍した後に、除籍から元に戻して、再度、除籍したいときなど）。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[「4-3-2 すでに登録された所蔵情報を修正登録する」](#section4-3-2)の1～4を実行します。</p>
+<div class="paragraph">
+<p>注意！右メニューで[削除]をクリックしてしまうと、所蔵がもともとなかったことに（完全に削除されてしまう）ので、除籍したという記録が残りません。[削除]は所蔵を間違えてつけてしまったときなどに利用します。</p>
+</div>
+</li>
+<li>
+<p>貸出状態を「除籍済み」に変更し、利用制限を「貸出不可」に変更し、「更新する」をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_132.png" alt="貸出状態と利用制限を修正">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】「貸出中」や「取り置き中」などのように除籍してはいけない状態だった場合、「更新する」をクリック後に次のようなエラーが表示されます（以下の例は予約されている資料の場合のエラーです）。エラーが出た場合は、資料の状態を除籍ができる処理をしてください（貸出中なら返却処理をするなど）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_operation_withdraw_005_err.png" alt="予約中の本を除籍しようとしてエラーが表示">
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを読み込んで更新する_3">TSVファイルを読み込んで更新する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを作成します。</p>
+<div class="paragraph">
+<p>次の3列を記述したTSVファイルを作成します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>「item_identifier」列に、除籍したい図書の所蔵情報ID（資料のバーコードの番号）</p>
+</li>
+<li>
+<p>「use_restriction」列に、「Not For Loan」</p>
+</li>
+<li>
+<p>「circulation_status」列に、「Removed」</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、 [更新]を選ぶと所蔵情報が更新できます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="除籍済みの検索結果一覧での表示のされ方">除籍済みの検索結果一覧での表示のされ方</h3>
+<div class="paragraph">
+<p>AdministratorやLibrarian権限でログインしている場合は、貸出状態が「除籍済み」と表示されるようになり、除籍した資料がわかるようになります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_132-2.png" alt="Librarian権限以上での検索結果一覧での削除済み資料の表示">
+</div>
+</div>
+<div class="paragraph">
+<p>ログインしていない、User権限でログインしている場合は、除籍したものは所蔵が表示されないようになります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_132-3.png" alt="User権限以下での検索結果一覧での削除済み資料の表示">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="除籍した資料のリストをtsv形式のテキストファイルで入手する方法">除籍した資料のリストをTSV形式のテキストファイルで入手する方法</h3>
+<div class="paragraph">
+<div class="title">[「4-9 書誌と所蔵のエクスポートをする」](enju_operation_4.html#section4-9)を実行します。</div>
+<p>+
+全ての書誌と所蔵の情報がTSV形式のテキストファイルとして，
+エクスポートができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>このファイルの「circulation_status」（貸出状態）の列の「Removed」の行を抜き出します。</p>
+<div class="paragraph">
+<p>除籍した資料をリストアップすることができます。
+「item_updated_at」をみれば除籍した日※を知ることができます。</p>
+</div>
+<div class="paragraph">
+<p>※厳密には、所蔵情報を更新した日ですので、除籍したあとに所蔵情報を変更した場合は除籍した日ではなくなりますが、除籍後に所蔵情報を変更することはほとんどないとおもわれますので、所蔵情報の更新した日で代用できる場合がほとんどです。</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="除籍した資料の一覧を表示する">除籍した資料の一覧を表示する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>[連続除籍]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_001.png" alt="連続除籍">
+</div>
+</div>
+</li>
+<li>
+<p>[除籍済みの所蔵情報の一覧]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_009.png" alt="除籍済みの所蔵情報の一覧リンク">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info"&gt;
+【Memo】[連続除籍の一覧]をクリックすると、連続除籍機能で除籍した資料のみの一覧が閲覧できます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>除籍済みの資料の一覧が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_withdraw_011.png" alt="除籍済みの所蔵情報の一覧">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;
+【Memo】
+[「4-3-3 所蔵情報を一覧表示する」](#section4-3-3)で、「所蔵情報の一覧」画面の右メニューの[除籍済み]リンクを使うことでも同じ画面が表示されます。
+&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="図書を製本する">図書を製本する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>複数の図書を製本して1冊にした場合に、製本後の請求記号などを記録しておくことができます。
+Enju Leaf 1.1系では、所蔵データとして「製本後の請求記号」「製本日」「製本後の所蔵情報ID」
+を記録できるようになっています。※記録ができるのみで表示や検索などには対応していません。</p>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルを使って一括インポートする">TSVファイルを使って一括インポートする</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TSVファイルを用意します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>例えば、以下のような項目についてかいてあるTSVファイルを用意します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>所蔵情報ID（item_identifier）・・・製本する雑誌の各号の所蔵情報IDを書きます</p>
+</li>
+<li>
+<p>製本後の請求記号（binding_call_number）・・・製本後の1冊にしたときの請求記号を書きます</p>
+</li>
+<li>
+<p>製本日（binded_at）・・・製本日を書きます</p>
+</li>
+<li>
+<p>製本後の所蔵情報ID（binding_item_identifier）・・・製本後の1冊にしたときの所蔵情報IDを書きます</p>
+</li>
+<li>
+<p>本棚（shelf）・・・製本後に配架する本棚を書きます</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方 」](enju_operation_4.html#section4-2-10)を参照してください。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[「4-2-1 TSVファイルを読み込んで登録する」](enju_operation_4.html#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと製本に関する所蔵情報が更新できます。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="新着資料の一覧を表示する_section4_7">新着資料の一覧を表示する {#section4-7}</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{% include enju_newbooks.md %}</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4_8_画像を登録する_section4_8">4-8 画像を登録する {#section4-8}</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuでは、画像（図書の表紙など）を登録し、資料に関連づけることができます。</p>
+</div>
+<div class="sect2">
+<h3 id="画像の登録">画像の登録</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>画像を登録したい資料を検索します。トップページの検索語に登録したい資料のキーワードを入力し、［検索］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_145.png" alt="検索">
+</div>
+</div>
+</li>
+<li>
+<p>画像をアップロードしたい資料をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_147.png" alt="画像アップロードしたい資料をクリック">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［画像ファイルの新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_149.png" alt="画像ファイルの新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>［ファイルを選択］ボタンをクリックしてアップしたい画像ファイルを選択するか、写真を撮ります（例：iPadやiPhoneでは［ファイルを選択］ボタンをクリックすると「写真またはビデオを撮る」が選択して撮影できます）。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_151_1.png" alt="画像ファイルを選択">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】右メニューの[戻る]をクリックすると前の画面に戻ります。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<div class="title">［登録する］ボタンをクリックします。</div>
+<p>+
+image::../assets/images/1.1/image_operation_151_2.png[画像ファイルを作成]</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「画像ファイルは正常に作成されました。」というメッセージが表示され、画像ファイルが登録されます。[添付先]のリンク(Manifestation/xxx）をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_151_3.png" alt="画像ファイルを作成した結果">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】右メニューの[編集]をクリックすると編集の画面に遷移します。[画像ファイルの一覧]をクリックすると画像ファイルの一覧に遷移します。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>追加した画像が資料の表示の画面に表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_151_4.png" alt="画像ファイルを追加した資料の表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="画像の一覧表示">画像の一覧表示</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>[資料]グループの[画像ファイル]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_151_5.png" alt="画像ファイル">
+</div>
+</div>
+</li>
+<li>
+<p>画像ファイルの一覧が表示されます。添付した画像ファイルの一覧が閲覧できます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_151_6.png" alt="画像ファイル">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;【Memo】設定内容を変更する場合は［編集］を、削除する場合は［削除］をクリックします、詳細を見たい場合は[表示]をクリックします。[添付先]のリンクをたどれば、添付した資料の「資料の表示」画面にいきます。[ファイル名]をクリックすると画像ファイルが閲覧できます。右メニューにはそれぞれの一覧へ遷移するリンクがあります。
+&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="書誌と所蔵のエクスポートをする">書誌と所蔵のエクスポートをする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>登録されている全ての資料の書誌や所蔵情報をTSVとしてエクスポートすることができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［エクスポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export.png" alt="エクスポート">
+</div>
+</div>
+</li>
+<li>
+<p>[書誌と所蔵のエクスポート]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_1.png" alt="書誌と所蔵のエクスポート">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの[書誌と所蔵のエクスポートの新規作成]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_2.png" alt="書誌と所蔵のエクスポートの新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>[エクスポート]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_3.png" alt="エクスポート">
+</div>
+</div>
+</li>
+<li>
+<p>「書誌と所蔵のエクスポート処理は正常に作成されました」のメッセージが表示され、書誌と所蔵のデータエクスポートの準備が整いました。右の[書誌と所蔵のエクスポートの一覧]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_4.png" alt="エクスポートの表示">
+</div>
+</div>
+</li>
+<li>
+<p>今までのエクスポート結果の一覧が表示されます。</p>
+<div class="paragraph">
+<p>[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。[開始]のものは現在、実行中です。エクスポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。[アカウントにメールアドレスの設定（利用者マニュアル「3-2 アカウントにメールアドレスの設定」参照）](enju_user_3.html#section3-2)をしておき、メールサーバーの設定がされていれば、メールでもお知らせが来ます。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_5.png" alt="エクスポート結果の一覧表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】この画面は[図書館の管理]メニュー&#8594;[エクスポート]&#8594;[書誌と所蔵のエクスポート]とすればいつでも閲覧できます。&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ファイル名のリンクから作成されたTSVファイルをダウンロードすることができます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_bib_6.png" alt="エクスポートファイルのダウンロード">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】[削除]とするとこのエクスポートファイルを削除することができます。&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-success memo" markdown="1"&gt;</p>
+</div>
+<div class="sect2">
+<h3 id="columntsvファイルで出力される項目_bib_tsv_export">【Column】TSVファイルで出力される項目 {#bib_tsv_export}</h3>
+<div class="paragraph">
+<p>[Web APIマニュアル 1-1-3節「書誌と所蔵のTSVの項目」](enju_webapi_1.html#bib_tsv_export)を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="人物団体情報を登録する">人物・団体情報を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>人物・団体情報は、書誌を登録するさいに自動的に登録されますので、
+この機能を使って人物・団体情報を新たに作成する必要がでることは基本的にはありません。ここでは，人物・団体情報を修正する方法について説明します。</p>
+</div>
+<div class="sect2">
+<h3 id="設定項目">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>人物・団体の種類：▼をクリックして一覧から選びます。
+ここで表示されるリストは，[初期設定マニュアル「5-5 人物・団体の種類を編集する」](enju_setup_5.html#section5-5)で設定します。</p>
+</li>
+<li>
+<p>姓</p>
+</li>
+<li>
+<p>姓（ヨミ）</p>
+</li>
+<li>
+<p>名</p>
+</li>
+<li>
+<p>名（ヨミ）</p>
+</li>
+<li>
+<p>フルネーム（必須入力）</p>
+</li>
+<li>
+<p>フルネーム（ヨミ）</p>
+</li>
+<li>
+<p>フルネーム（代替）</p>
+</li>
+<li>
+<p>生年月日</p>
+</li>
+<li>
+<p>没年月日</p>
+</li>
+<li>
+<p>言語</p>
+</li>
+<li>
+<p>国と地域</p>
+</li>
+<li>
+<p>電子メール</p>
+</li>
+<li>
+<p>URL</p>
+</li>
+<li>
+<p>参照に必要な権限</p>
+</li>
+<li>
+<p>注記</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法">設定方法</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［人物・団体の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_agent_1.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>修正したい人物もしくは団体の名前を検索語に入力し、［検索］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_agent_2.png" alt="検索">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの［人物・団体を追加する］をクリックすると新規に作成することができます。</p>
+</li>
+<li>
+<p>[派生人物・団体を追加]をクリックすると派生人物・団体の追加登録ができます（詳細な説明については準備中です）。</p>
+</li>
+<li>
+<p>右メニューの[統合する（取り消しはできません）]をクリックすると人物・団体情報の統合ができます。取消はできませんので注意してください（詳細な説明については準備中です）。</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>修正したい人物もしくは団体が検索されたら、［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_agent_3.png" alt="編集">
+</div>
+</div>
+</li>
+<li>
+<p>必要な情報を修正入力し、［更新する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_agent_4.png" alt="更新">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_operation_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_operation_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_3.html">第3章 利用者情報を管理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_4.html">第4章 図書の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_5.html">第5章 雑誌の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_6.html">第6章 貸出・返却・予約を処理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_7.html">第7章 休館日と催し物を登録する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_8.html">第8章 資料を検索する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_9.html">第9章 蔵書点検機能を利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_10.html">第10章 統計機能を利用する</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

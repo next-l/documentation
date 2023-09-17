@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第8章 Enjuのアップデート及び停止・起動 - Next-L Enju インストールマニュアル（Docker編）</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第8章 Enjuのアップデート及び停止・起動 - Next-L Enju インストールマニュアル（Docker編） </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#enjuの停止">Enjuの停止</a></li>
+<li><a href="#最新ソースコードの取り込み">最新ソースコードの取り込み</a></li>
+<li><a href="#enjuを再起動">Enjuを（再）起動</a></li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuは，以下の手順で，Enjuのソースコードが公開されているGitHubから変更されたファイルを取り込み最新版にすることができます。</p>
+</div>
+<div class="sect1">
+<h2 id="enjuの停止">Enjuの停止</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下のコマンドを入力します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>$ docker compose down</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="最新ソースコードの取り込み">最新ソースコードの取り込み</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>以下のコマンドを入力します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>$ cd enju_leaf</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>以下のコマンドを入力します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>$ git pull
+$ docker compose pull
+$ docker compose build
+$ docker compose run --rm web rake db:migrate
+$ docker compose run --rm web rake assets:precompile</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="enjuを再起動">Enjuを（再）起動</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下のコマンドを入力します。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>$ docker compose up -d</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_install_vm_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_2.html">第2章 Enjuを動作させる方法</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_3.html">第3章 動作環境の確認とDockerのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_4.html">第4章 Enjuのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_5.html">第5章 モジュールの追加</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_6.html">第6章 検索エンジンの設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_7.html">第7章 他のコンピュータからの利用設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_8.html">第8章 Enjuのアップデート</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_9.html">第9章 データのバックアップ</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_10.html">第10章 その他（カスタマイズなど）</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_11.html">第11章 トラブルシューティング</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

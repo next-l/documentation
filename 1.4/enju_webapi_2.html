@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1> </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#検索結果詳細を取得する">検索結果詳細を取得する</a>
+<ul class="sectlevel2">
+<li><a href="#tsvを取得する">TSVを取得する</a></li>
+<li><a href="#rdfxml形式のデータを取得する">RDF/XML形式のデータを取得する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="検索結果詳細を取得する">検索結果詳細を取得する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enju は資料の検索結果詳細を好みのフォーマットで取得する機能があります。</p>
+</div>
+<div class="sect2">
+<h3 id="tsvを取得する">TSVを取得する</h3>
+<div class="sect3">
+<h4 id="tsv取得方法">TSV取得方法</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>書き出しをしたい検索結果詳細画面を表示させます。</p>
+</li>
+<li>
+<p>検索結果詳細アドレス欄のURLの後ろに.txtを追加します。</p>
+<div class="literalblock">
+<div class="content">
+<pre>例
+（変更前）：http://localhost:8080/manifestations/5
+（変更後）：http://localhost:8080/manifestations/5.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>にします</p>
+</div>
+<div class="paragraph">
+<p>※ 検索結果詳細画面の右メニューの[TSV]リンクをクリックした先のURLと同様です(詳細：<a href="enju_user_1.html#section1-9-3">利用者マニュアル「1-9-3 TSV 形式で書き出し」</a>）。</p>
+</div>
+</li>
+<li>
+<p>この検索結果詳細画面がTSV形式で表示されます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="書誌と所蔵のtsvの例">書誌と所蔵のTSVの例</h4>
+<div class="literalblock">
+<div class="content">
+<pre>manifestation_id	original_title	title_transcription	creator	contributor	publisher	pub_date	statement_of_responsibility	manifestation_price	manifestation_created_at	manifestation_updated_at	manifestation_identifier	access_address	description	note	extent	dimensions	carrier_type	edition	edition_string	volume_number	volume_number_string	issue_number	issue_number_string	serial_number	isbn	issn	jpno	doi	iss_itemno	lccn	subject:unknown	subject:ndlsh	subject:bsh	subject:lcsh	classification:ndc9	classification:ddc	classification:ndc8	classification:ndc10	item_id	item_identifier	call_number	item_note	item_price	acquired_at	accepted_at	bookstore	budget_type	total_checkouts	circulation_status	shelf	library	item_created_at	item_updated_at
+3	パーフェクトRuby on Rails	パーフェクト ルビー オン レイルズ	すがわら, まさのり, 1982-//前島, 真一//近藤, 宇智朗		技術評論社	2014-07	すがわらまさのり, 前島真一, 近藤宇智朗, 橋立友宏 著	2880	2018-01-08 21:27:20 +0900	2018-01-08 21:27:57 +0900	http://iss.ndl.go.jp/books/R100000002-I025470389-00				431p	23cm	volume								9784774165165		22426486		R100000002-I025470389-00		""	ウェブアプリケーション	""	""	547.483	""	""	""	3	001003	547|ス	""						0	Available On Shelf	first_shelf	yours	2018-01-08 21:27:57 +0900	2018-01-08 21:27:57 +0900</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="書誌と所蔵のtsvの項目">書誌と所蔵のTSVの項目</h4>
+<div class="paragraph">
+<p><a href="enju_webapi_1.html#bib_tsv_export">書誌と所蔵のTSVの項目（1-1-3節参照）</a>を参照してください。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="rdfxml形式のデータを取得する">RDF/XML形式のデータを取得する</h3>
+<div class="sect3">
+<h4 id="rdfxml形式のデータ取得方法">RDF/XML形式のデータ取得方法</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>書き出しをしたい検索結果詳細画面を表示させます。</p>
+</li>
+<li>
+<p>検索結果詳細アドレス欄のURLの後ろに.rdfを追加します。</p>
+<div class="literalblock">
+<div class="content">
+<pre>例
+（変更前）：http://localhost:8080/manifestations/2
+（変更後）：http://localhost:8080/manifestations/2.rdf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>にします</p>
+</div>
+<div class="paragraph">
+<p>※ 検索結果詳細画面の右メニューの[RDF/XML]リンクをクリックした先のURLと同様です(詳細：<a href="enju_user_1.html#section1-9-1">利用者マニュアル「1-9-1 RDF/XML 形式で書き出し」</a>）。</p>
+</div>
+</li>
+<li>
+<p>この検索結果詳細画面がRDF/XML形式で表示されます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="書誌のrdfxml形式のデータの例">書誌のRDF/XML形式のデータの例</h4>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcndl="http://ndl.go.jp/dcndl/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+&lt;title&gt;Ruby on Rails入門 : 優しいRailsの育て方&lt;/title&gt;
+&lt;link&gt;http://localhost:8080/manifestations/1&lt;/link&gt;
+&lt;description&gt;秀和システム; 2006-08&lt;/description&gt;
+&lt;/rdf:RDF&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_webapi.html">Web APIマニュアル</a></p>
+</li>
+<li>
+<p><a href="enju_webapi_1.html">第1章 検索結果一覧を取得する</a></p>
+</li>
+<li>
+<p><a href="enju_webapi_2.html">第2章 検索結果一覧を取得する</a></p>
+</li>
+<li>
+<p><a href="enju_webapi_3.html">第3章 書誌情報をまとめて取得する (OAI-PMH)</a></p>
+</li>
+<li>
+<p><a href="enju_webapi_4.html">第4章 外部システムから書誌情報にリンクする (OpenURL)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  </body>
+</html>
+

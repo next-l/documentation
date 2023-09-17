@@ -1,0 +1,73 @@
+a.active {
+  color: black;
+  font-weight: bolder;
+}
+ul.toc {
+  border: solid 1px gray;
+  padding: 10px;
+  padding-left: 2em;
+  margin-left: 0px;
+}
+ul#markdown-toc {
+  float: right;
+  border: solid 1px gray;
+  padding: 10px;
+  padding-left: 2em;
+  max-width: 25em;
+}
+div.memo {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+/* http://ben.balter.com/2014/03/13/pages-anchor-links/ */
+.header-link {
+  opacity: 0.4;
+  margin-left: 5px;
+  font-size: small;
+  vertical-align: super;
+}
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}
+@media print {
+  .header-link { display: none; }
+}
+
+/* Google Custom Search */
+.gsc-control-cse {
+  width: 300px !important;
+  float: left !important;
+  background-color: inherit !important;
+  border: none !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.gsib_a {
+  padding: 0px !important;
+}
+input.gsc-input {
+  line-height: 1.0 !important;
+  height: 25px !important;
+}
+input {
+  line-height: inherit !important;
+}
+
+#pagefooter {
+  display: none;
+}
+@media print {
+  div.navbar { display: none; }
+  ul.toc { display: none; }
+  img {
+    max-width: 65%
+  }
+  body {
+    zoom: 0.8;
+  }
+}

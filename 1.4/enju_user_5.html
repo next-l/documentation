@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第5章 資料の貸出状況を確認する/貸出延長をする - Next-L Enju 利用者マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第5章 資料の貸出状況を確認する/貸出延長をする - Next-L Enju 利用者マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#資料の貸出状況を確認する貸出延長をする">資料の貸出状況を確認する/貸出延長をする</a>
+<ul class="sectlevel2">
+<li><a href="#資料の貸出状況を確認する">資料の貸出状況を確認する</a></li>
+<li><a href="#貸出延長をする">貸出延長をする</a></li>
+<li><a href="#返却済みの貸出の記録を削除する">返却済みの貸出の記録を削除する</a></li>
+<li><a href="#貸出の一覧のtsvを表示する">貸出の一覧のTSVを表示する</a></li>
+<li><a href="#貸出の一覧のrssを表示する">貸出の一覧のRSSを表示する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="資料の貸出状況を確認する貸出延長をする">資料の貸出状況を確認する/貸出延長をする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>この章では、以下の貸出に関係する機能について説明します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>資料の貸出状況を確認する</p>
+</li>
+<li>
+<p>貸出延長をする</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="資料の貸出状況を確認する">資料の貸出状況を確認する</h3>
+<div class="paragraph">
+<p>現在借りている本を確認することができます。
+また、貸出の履歴を保存する（<a href="enju_user_3.html#_メールアドレスや名前などを変更する">3-2節参照</a>）にチェックを入れておくと、返却した本も記録され、閲覧できるようになります。
+ただし、チェックを入れるまえに返却した本は記録されていないので表示できません。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［貸出と予約］メニューから［貸出履歴］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+<li>
+<p>貸出履歴が表示されます。右メニューの「予約あり」の下の「あり」をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_003.png" alt="貸出履歴">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>この表と同内容を、[アカウント]リンクをたどった先の画面でも見れます。</p>
+</li>
+<li>
+<p>右メニューにある「図書 : 2/ 10」は、「借りている本の数 / 借りられる上限数」を表しています。</p>
+</li>
+<li>
+<p>右メニューの[予約]リンクをたどると、予約の一覧画面へ遷移します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>予約がかかっている資料だけが表示されます。右メニューの[この絞り込みを解除する]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_005.png" alt="絞り込みを解除する">
+</div>
+</div>
+</li>
+<li>
+<p>絞り込みが解除され、すべての貸出履歴が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_007.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="貸出延長をする">貸出延長をする</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［貸出と予約］メニューから［貸出履歴］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+<li>
+<p>貸出履歴が表示されます。[貸出期間の延長]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_009.png" alt="貸出期間の延長リンク">
+</div>
+</div>
+</li>
+<li>
+<p>新しい貸出期間を確認し、[更新する]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_011.png" alt="貸出期間の延長">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>すでに貸出期間が過ぎている資料の場合</p>
+</li>
+<li>
+<p>予約が入っている資料の場合
+は、次のような画面が出て、貸出期間の延長ができません。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_013.png" alt="貸出期間の延長が不可">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="返却済みの貸出の記録を削除する">返却済みの貸出の記録を削除する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［貸出と予約］メニューから［貸出履歴］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+<li>
+<p>［削除]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_015.png" alt="貸出履歴の削除リンク">
+</div>
+</div>
+</li>
+<li>
+<p>［OK]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_alert.png" alt="貸出履歴の削除のOK">
+</div>
+</div>
+</li>
+<li>
+<p>返却済みの記録が削除されました。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_017.png" alt="貸出履歴の削除">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="貸出の一覧のtsvを表示する">貸出の一覧のTSVを表示する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［貸出と予約］メニューから［貸出履歴］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［TSV］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_019.png" alt="貸出履歴のTSVリンク">
+</div>
+</div>
+</li>
+<li>
+<p>TSVが表示されます。</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="tsv">username        user_number        item_identifier        title        checked_out_at        due_date        checked_in_at        (created_at: 2020-01-11 15:07:50 +0900)
+&quot;zuser01&quot;        &quot;z123&quot;        &quot;011645041&quot;        &quot;イェルサレムのアイヒマン : 悪の陳腐さについての報告&quot;        &quot;2020-01-11 15:06:24 +0900&quot;        &quot;2020-02-10 23:59:59 +0900&quot;
+&quot;zuser01&quot;        &quot;z123&quot;        &quot;110333796&quot;        &quot;基本件名標目表&quot;        &quot;2020-01-11 14:55:44 +0900&quot;        &quot;2020-02-10 23:59:59 +0900&quot;        &quot;2020-01-11 14:55:51 +0900&quot;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="貸出の一覧のrssを表示する">貸出の一覧のRSSを表示する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［貸出と予約］メニューから［貸出履歴］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts.png" alt="貸出履歴">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［RSS］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_023.png" alt="貸出履歴のRSSリンク">
+</div>
+</div>
+</li>
+<li>
+<p>RSSが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_user_checkouts_025.png" alt="貸出履歴のRSS表示">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_user_1.html">第1章 資料を検索する</a></p>
+</li>
+<li>
+<p><a href="enju_user_2.html">第2章 ログイン/ログアウトする</a></p>
+</li>
+<li>
+<p><a href="enju_user_3.html">第3章 パスワード/ユーザアカウント情報を変更する</a></p>
+</li>
+<li>
+<p><a href="enju_user_4.html">第4章 資料を予約する</a></p>
+</li>
+<li>
+<p><a href="enju_user_5.html">第5章 資料の貸出状況を確認する/貸出延長をする</a></p>
+</li>
+<li>
+<p><a href="enju_user_6.html">第6章 新着資料の一覧を表示する</a></p>
+</li>
+<li>
+<p><a href="enju_user_7.html">第7章 メッセージを受信する</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

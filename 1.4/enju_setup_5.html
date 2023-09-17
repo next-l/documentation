@@ -1,0 +1,1119 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第5章 各種形態や状態等に関するシステム設定を行う - Next-L Enju初期設定マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第5章 各種形態や状態等に関するシステム設定を行う - Next-L Enju初期設定マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#資料の形態を作成する">資料の形態を作成する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目">設定項目</a></li>
+<li><a href="#設定方法">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#資料の内容の種別を作成する">資料の内容の種別を作成する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_2">設定項目</a></li>
+<li><a href="#設定方法_2">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#貸出状態を編集作成する">貸出状態を編集作成する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_3">設定項目</a></li>
+<li><a href="#設定方法_3">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#利用制限を編集する">利用制限を編集する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_4">設定項目</a></li>
+<li><a href="#設定方法_4">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#人物団体の種類を編集する">人物・団体の種類を編集する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_5">設定項目</a></li>
+<li><a href="#設定方法_5">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#言語を編集する">言語を編集する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_6">設定項目</a></li>
+<li><a href="#設定方法_6">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#発行頻度を編集する">発行頻度を編集する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_7">設定項目</a></li>
+<li><a href="#設定方法_7">設定方法</a></li>
+</ul>
+</li>
+<li><a href="#その他の機能">その他の機能</a>
+<ul class="sectlevel2">
+<li><a href="#国と地域を作成する">国と地域を作成する</a></li>
+</ul>
+</li>
+<li><a href="#書誌のカスタム項目を設定する">書誌のカスタム項目を設定する</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目_8">設定項目</a></li>
+<li><a href="#設定方法_8">設定方法</a></li>
+<li><a href="#所蔵のカスタム項目を設定する">所蔵のカスタム項目を設定する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuの利用を始めるにあたり，形態・状態等に関するシステム設定として，次のような設定作業を行います。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>資料の形態の作成</p>
+</li>
+<li>
+<p>貸出状態の編集</p>
+</li>
+<li>
+<p>言語の編集</p>
+</li>
+<li>
+<p>利用制限の編集作成</p>
+</li>
+<li>
+<p>発行頻度の編集作成</p>
+</li>
+<li>
+<p>資料の関係の種類の作成</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="資料の形態を作成する">資料の形態を作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>資料の形態を設定します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>参考文献：</p>
+</li>
+<li>
+<p>RDA: "3.3.1.3 Recording Carrier Type"</p>
+</li>
+<li>
+<p>LCの ["Term and Code List for RDA Carrier Types"（https://www.loc.gov/standards/valuelist/rdacarrier.html）](<a href="https://www.loc.gov/standards/valuelist/rdacarrier.html" class="bare">https://www.loc.gov/standards/valuelist/rdacarrier.html</a>)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="設定項目">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：資料の形態を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>資料の形態と貸出区分の関係：資料の形態と貸出区分の関係を入力します。（注：新規作成画面では設定できません。いったん、新規作成したあと、編集画面で設定します）</p>
+</li>
+<li>
+<p>ファイル：検索結果などに表示されるアイコンの画像ファイルを登録します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法">設定方法</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>［資料の形態］をクリックします。</p>
+<div class="paragraph">
+<p>![資料の形態の設定](../assets/images/1.1/image_carrier_type.png)</p>
+</div>
+</li>
+<li>
+<p>右メニューの［資料の形態の新規作成］をクリックします。</p>
+<div class="paragraph">
+<p>![資料の形態の設定](../assets/images/1.2/image_carrier_type_1.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】登録済みの資料の形態を修正したい場合は[編集]リンクをクリックします。順序を変更したい場合は、最左列の ![上矢印](../assets/images/1.1/arrow_up.png) や ![下矢印](../assets/images/1.1/arrow_down.png) をクリックすることで変更できます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="paragraph">
+<p>![資料の形態の設定](../assets/images/1.2/image_carrier_type_2.png)</p>
+</div>
+</li>
+<li>
+<p>「資料の形態は正常に作成されました。」とメッセージが表示されます。貸出区分との関連付けを行うために右メニューの[編集]をクリックします（新規作成の場合、貸出区分との関連付けができないため）。</p>
+<div class="paragraph">
+<p>![編集](../assets/images/1.2/image_carrier_type_3.png)</p>
+</div>
+</li>
+<li>
+<p>資料の形態と貸出区分の関係の[追加]リンクをクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![資料の形態と貸出区分の関係の追加](../assets/images/1.2/image_carrier_type_4_0.png)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>貸出区分のメニューを選びます（例では、CDを選んでいます）。</p>
+<div class="paragraph">
+<p>![資料の形態と貸出区分の関係](../assets/images/1.2/image_carrier_type_4.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】メニューに関連付けたい貸出区分がない場合は、貸出区分を新規作成します。作成方法は、[「3-5 貸出区分を設定する」](enju_setup_3.html#section3-5)を参照してください。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>貸出区分に先ほど選択した貸出区分が表示されているのを確認します（例ではCD）。これで、資料の形態が作成できました。</p>
+<div class="paragraph">
+<p>![結果の確認](../assets/images/1.2/image_carrier_type_5.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】資料の形態と貸出区分の関係づけについては、[図書館の管理]-&#8594;[システムの設定]-&#8594;図書館の[資料の形態と貸出区分の関係]リンクをたどった先でもできます（-&#8594; 詳細：[「3-7 資料の形態と貸出区分の関係を設定する」](enju_setup_3.html#section3-7)）。
+&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="資料の内容の種別を作成する">資料の内容の種別を作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>資料の内容の種別を設定します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>参考文献：</p>
+</li>
+<li>
+<p>RDA："6.9.1.3 Recording Content Type"</p>
+</li>
+<li>
+<p>LCの ["Term and Code List for RDA Content Types"（https://www.loc.gov/standards/valuelist/rdacontent.html）](<a href="https://www.loc.gov/standards/valuelist/rdacontent.html" class="bare">https://www.loc.gov/standards/valuelist/rdacontent.html</a>)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="設定項目_2">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：資料の内容の種別を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_2">設定方法</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>［資料の形態］をクリックします。</p>
+<div class="paragraph">
+<p>![資料の内容の種別の設定](../assets/images/1.1/image_content_type.png)</p>
+</div>
+</li>
+<li>
+<p>右メニューの［資料の内容の種別の新規作成］をクリックします。</p>
+<div class="paragraph">
+<p>![資料の内容の種別の設定](../assets/images/1.1/image_content_type_1.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】登録済みの資料の種別を修正したい場合は[編集]リンクをクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。順序を変更したい場合は、最左列の ![上矢印](../assets/images/1.1/arrow_up.png) や ![下矢印](../assets/images/1.1/arrow_down.png) をクリックすることで変更できます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="paragraph">
+<p>![資料の内容の種別の設定](../assets/images/1.1/image_content_type_2.png)</p>
+</div>
+</li>
+<li>
+<p>「資料の内容の種別は正常に作成されました。」とメッセージが表示されます。これで、資料の内容の種別が作成できました</p>
+<div class="paragraph">
+<p>![資料の内容の種別の設定](../assets/images/1.1/image_content_type_3.png)</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="貸出状態を編集作成する">貸出状態を編集作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>システムの標準設定を変更する必要がでることは基本的にはありません。 所蔵情報登録の際に表示される[貸出状態]のメニューで表示される文言や、メニューの表示順序を変更したいときのみ編集の必要がでます。</p>
+</div>
+<div class="sect2">
+<h3 id="設定項目_3">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：貸出状態の名称を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_3">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_貸出状態をクリックします">2. ［貸出状態］をクリックします。</h4>
+<div class="paragraph">
+<p>![貸出状態の設定](../assets/images/1.1/image_initial_058_0.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_設定したい項目の編集をクリックします">3. 設定したい項目の［編集］をクリックします。</h4>
+<div class="paragraph">
+<p>![貸出状態の編集](../assets/images/1.1/image_initial_058.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し更新するボタンをクリックして設定内容を更新します">4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。</h4>
+<div class="paragraph">
+<p>![貸出状態を更新](../assets/images/1.1/image_initial_059.png)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="利用制限を編集する">利用制限を編集する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>システムの標準設定を変更する必要がでることは基本的にはありません。
+所蔵情報登録の際に表示される[利用制限]のメニューで表示される文言や、メニューの表示順序を変更したいときのみ編集の必要がでます。</p>
+</div>
+<div class="sect2">
+<h3 id="設定項目_4">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：利用制限を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。（入力必須）</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_4">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します_2">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_利用制限をクリックします">2. ［利用制限］をクリックします。</h4>
+<div class="paragraph">
+<p>![利用制限の設定](../assets/images/1.1/image_initial_062_0.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_設定したい項目の編集をクリックします_2">3. 設定したい項目の［編集］をクリックします。</h4>
+<div class="paragraph">
+<p>![利用制限の編集](../assets/images/1.1/image_initial_062.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】多くの利用制限が登録されてはいますが、Enju Leaf 1.1.0以下では「通常期間貸出」と「貸出不可」のみが利用できます。
+&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し更新するボタンをクリックして設定内容を更新します_2">4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。</h4>
+<div class="paragraph">
+<p>![利用制限の更新](../assets/images/1.1/image_initial_063.png)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="人物団体の種類を編集する">人物・団体の種類を編集する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>システムの標準設定を変更する必要がでることは基本的にはありません。
+[人物・団体の新規作成や編集（運用マニュアル 4-10節参照）](enju_operation_4.html#section4-10)の際に表示される
+[人物・団体の種類]のメニューで表示される文言や、
+メニューの表示順序を変更したいときのみ編集の必要がでます。</p>
+</div>
+<div class="sect2">
+<h3 id="設定項目_5">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：人物・団体の名称を入力します。（入力必須）</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_5">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します_3">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_人物団体の種類をクリックします">2. ［人物・団体の種類］をクリックします。</h4>
+<div class="paragraph">
+<p>![人物・団体の種類の設定](../assets/images/1.1/image_initial_agenttype_0.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_右メニューの人物団体の種類の新規作成をクリックします">3. 右メニューの[人物・団体の種類の新規作成]をクリックします。</h4>
+<div class="paragraph">
+<p>![人物・団体の種類の新規作成リンク](../assets/images/1.1/image_initial_agenttype_1.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】修正したい場合は[編集]リンクをクリックします。
+削除したい場合は，[削除]リンクをクリックします。
+ただし、この種類を使った「人物・団体」があるものについては[削除]リンクは
+表示されず、削除できません。
+一覧の表示順序を変更するには，
+表の1列目に表示されている↑または↓をクリックして行を入れ替えます。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し登録するボタンをクリックして作成します">4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，作成します。</h4>
+<div class="paragraph">
+<p>![人物・団体の種類の新規作成](../assets/images/1.1/image_initial_agenttype_2.png)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="言語を編集する">言語を編集する</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="設定項目_6">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ネイティブ名：ネイティブ名を入力します。表示言語切り替えのリンクのアンカー名として使用される文字列になります。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。資料の詳細表示の言語で表示される文字列になります。</p>
+</li>
+<li>
+<p>ISO 639-1： ISO 639-1の値を入力します。</p>
+</li>
+<li>
+<p>ISO 639-2： ISO 639-2の値を入力します。</p>
+</li>
+<li>
+<p>ISO 639-3： ISO 639-3の値を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_6">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します_4">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_言語をクリックします">2. ［言語］をクリックします。</h4>
+<div class="paragraph">
+<p>![言語の設定](../assets/images/1.1/image_initial_060_0.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_設定したい項目の編集をクリックします_3">3. 設定したい項目の［編集］をクリックします。</h4>
+<div class="paragraph">
+<p>![言語の編集](../assets/images/1.1/image_initial_060.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し更新するボタンをクリックして設定内容を更新します_3">4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。</h4>
+<div class="paragraph">
+<p>![言語の更新](../assets/images/1.1/image_initial_061.png)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="発行頻度を編集する">発行頻度を編集する</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="設定項目_7">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：発行頻度を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_7">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します_5">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_発行頻度をクリックします">2. ［発行頻度］をクリックします。</h4>
+<div class="paragraph">
+<p>![発行頻度の設定](../assets/images/1.1/image_initial_064_0.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_設定したい項目の編集をクリックします_4">3. 設定したい項目の［編集］をクリックします。</h4>
+<div class="paragraph">
+<p>![発行頻度の編集](../assets/images/1.1/image_initial_064.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】新規に作成したい場合は、右メニューの[発行頻度の新規作成]をクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し更新するボタンをクリックして設定内容を更新します_4">4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。</h4>
+<div class="paragraph">
+<p>![発行頻度の更新](../assets/images/1.1/image_initial_065.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】発行頻度が指定されない場合は，［unknown］が設定されます。&lt;/div&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="その他の機能">その他の機能</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuでは形態の設定として，その他，次の機能を利用できます。</p>
+</div>
+<div class="sect2">
+<h3 id="国と地域を作成する">国と地域を作成する</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+</li>
+<li>
+<p>［国と地域］をクリックして，設定します。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="書誌のカスタム項目を設定する">書誌のカスタム項目を設定する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>主に他システムからの移行時にEnjuの標準の書誌項目にないデータを念のため保存しておきたいといった場合に設定します。
+注：この項目に入力したデータは、Librarian以上の権限でログインしたときのみ表示され、また、検索ではヒットしません。</p>
+</div>
+<div class="sect2">
+<h3 id="設定項目_8">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>項目コード：項目をシステムが識別するためのコードを入力します（注：項目コードには英数小文字・アンダースコアのみ使用できます。最初の文字に数字は使用できません）。</p>
+</li>
+<li>
+<p>項目表示名：画面に表示する名称を入力します。（「ja: 」を入れると日本語表示に、「en: 」を入れると英語表示となります）。</p>
+</li>
+<li>
+<p>注記：注記を入力します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法_8">設定方法</h3>
+<div class="sect3">
+<h4 id="1_図書館の管理メニューからシステムの設定を選択します_6">1. ［図書館の管理］メニューから［システムの設定］を選択します。</h4>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="2_書誌カスタム項目をクリックします">2. [書誌カスタム項目]をクリックします。</h4>
+<div class="paragraph">
+<p>![書誌カスタム項目](../assets/images/1.3/image_initial_bib-custom-howto-top.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3_書誌カスタム項目の新規作成をクリックします">3. [書誌カスタム項目の新規作成]をクリックします。</h4>
+<div class="paragraph">
+<p>![書誌カスタム項目の種類の新規作成](../assets/images/1.3/image_initial_bib-custom-howto-new.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="4_設定項目に必要事項を入力し登録するボタンをクリックして設定内容を登録します">4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</h4>
+<div class="paragraph">
+<p>![書誌カスタム項目の作成](../assets/images/1.3/image_initial_bib-custom-howto_made.png)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="5_書誌カスタム項目は正常に作成されましたと表示されます">5. 書誌カスタム項目は正常に作成されましたと表示されます。</h4>
+<div class="paragraph">
+<p>![書誌カスタム項目の作成完了](../assets/images/1.3/image_initial_bib-custom-howto_result.png)</p>
+</div>
+<div class="paragraph">
+<p>これで、書誌データの新規作成やTSV書誌インポートの際に入力したり、「資料の表示」画面や資料のTSVエクスポートで出力されるようになりました。</p>
+</div>
+<div class="paragraph">
+<p>書誌TSVインポートや書誌TSVエクスポートの列頭の文字列は、「manifestation:項目コード」（例：項目コードが「kenteinen」であれば、「manifestation:keiteinen」となります。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="所蔵のカスタム項目を設定する">所蔵のカスタム項目を設定する</h3>
+<div class="paragraph">
+<p>主に他システムからの移行時にEnjuの標準の所蔵情報項目にないデータを念のため保存しておきたいといった場合に設定します。
+注：この項目に入力したデータは、Librarian以上の権限でログインしたときのみ表示され、また、検索ではヒットしません。</p>
+</div>
+<div class="paragraph">
+<p>やり方は、[「書誌のカスタム項目」](enju_setup_5.html#section-bib-custom)と同様に行います。</p>
+</div>
+<div class="paragraph">
+<p>これで、所蔵データの新規作成やTSV所蔵インポートの際に入力したり、「所蔵情報の表示」画面や所蔵のTSVエクスポートで出力されるようになりました。</p>
+</div>
+<div class="paragraph">
+<p>所蔵情報TSVインポートや所蔵TSVエクスポートの列頭の文字列は、「item:項目コード」（例：項目コードが「kingaku」であれば、「item:kingaku」となります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_setup_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_setup_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_setup_3.html">第3章 図書館のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_4.html">第4章 件名のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_5.html">第5章 各種形態や状態等に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_6.html">第6章 資料に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_7.html">第7章 その他</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

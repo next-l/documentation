@@ -1,0 +1,1781 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第3章　図書館のシステム設定を行う - Next-L Enju初期設定マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第3章　図書館のシステム設定を行う - Next-L Enju初期設定マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#図書館のシステム設定を行う">図書館のシステム設定を行う</a></li>
+<li><a href="#システム全体の設定をする">システム全体の設定をする</a>
+<ul class="sectlevel2">
+<li><a href="#設定項目">設定項目</a></li>
+<li><a href="#設定方法">設定方法</a></li>
+<li><a href="#個々の図書館を設定する">個々の図書館を設定する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="図書館のシステム設定を行う">図書館のシステム設定を行う</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuの利用を始めるにあたり，図書館のシステム設定として，次のような設定作業を行います。入力にはひらがな，カタカナ，漢字，英数字などの文字が利用できます。ただし，半角カナは使用できません。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>システム全体の設定</p>
+</li>
+<li>
+<p>個々の図書館の設定</p>
+</li>
+<li>
+<p>本棚</p>
+</li>
+<li>
+<p>利用者情報・貸出区分とその関係</p>
+</li>
+<li>
+<p>資料の種類と貸出区分との関係</p>
+</li>
+<li>
+<p>催し物の種類</p>
+</li>
+<li>
+<p>書店</p>
+</li>
+<li>
+<p>検索エンジン</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="システム全体の設定をする">システム全体の設定をする</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="設定項目">設定項目</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><em>名前</em>: 本システムで使用する全体名称を入力します。図書館からのお知らせメールのFromなどに使用されます。</p>
+</li>
+<li>
+<p><em>表示名</em>: 画面に表示する名称を入力します。本システムのヘッダなどに表示されます。</p>
+</li>
+<li>
+<p><em>ヘッダーのロゴ</em>: 本システムのヘッダに表示されるロゴの画像ファイルを指定します。画像ファイルは縦80ピクセルに合わせてサイズが変更されて登録されます。</p>
+</li>
+<li>
+<p><em>メール</em>: 図書館のメールアドレスを入力します。図書館からのお知らせメールのFromなどに使用されます。</p>
+</li>
+<li>
+<p><em>URL</em>: 図書館のURLを入力します。資料の表示画面のURLなどに使用します。</p>
+</li>
+<li>
+<p><em>ログイン画面でのメッセージ</em>: ログイン画面で表示したいメッセージを入力します。日本語インタフェース用と英語インタフェース用があります。</p>
+</li>
+<li>
+<p><em>フッターのメッセージ</em>: フッターで表示したいメッセージを入力します。日本語インタフェース用と英語インタフェース用があります。&lt;code&gt;<em>VERSION</em>&lt;/code&gt;と入力すると本システムのバージョン（例：1.2.0）が表示されます。</p>
+</li>
+<li>
+<p><em>検索結果の最大件数</em>: 検索したときに表示する最大の件数を表します。「0」と入力したときは上限なしを表します。検索結果の全レコードIDをブラウザに保存するため、上限を設定できるようにしてます（ブラウザによって5MBや10MBなどと異なりますが、いずれにしても上限が決まっているため）。</p>
+</li>
+<li>
+<p><em>書影の取得元</em>: 書影を取得するサービス（例：「Googleブックス」）を選択します。（※ version 1.2.1現在は、他に、版元ドットコム、openBDを選択可能です）</p>
+</li>
+<li>
+<p><em>色</em> : タイトルの色（標準では青）などを変更する場合に入力します。値はRGBで指定します。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enjuの標準設定の色</p>
+<div class="ulist">
+<ul>
+<li>
+<p>table_border（表の枠線）: 2779aa</p>
+</li>
+<li>
+<p>table_line1（表のセルの塗りつぶし色1）: ffffff</p>
+</li>
+<li>
+<p>table_line0（表のセルの塗りつぶし色2）: d7ebf9</p>
+</li>
+<li>
+<p>header_title（タイトルの色）: 5970B2</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>オレンジ基調の例</p>
+<div class="ulist">
+<ul>
+<li>
+<p>table_border: f8ad6f</p>
+</li>
+<li>
+<p>table_line1: ffffff</p>
+</li>
+<li>
+<p>table_line0: fdefe9</p>
+</li>
+<li>
+<p>header_title: f79646</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>LANとして扱うネットワーク</em> ：ネットワークの名称を入力します。ここで指定することによってこのEnjuにアクセスできるIPアドレスを制限することができるようになります。</p>
+</li>
+<li>
+<p><em>管理用として扱うネットワーク</em> ：ネットワークの名称を入力します。ここで指定することによって特定のIPアドレスからのアクセスのみAdministrator権限やLibrarian権限での作業ができるように制限ができるようになります。</p>
+</li>
+<li>
+<p><em>注記</em> ：注意事項や特記事項などを入力します。</p>
+</li>
+<li>
+<p><em>国と地域</em> ：▼をクリックし，リストから選択します。利用者の住所の国と地域のデフォルトを指定できます。※現在この値は使用していません（Next-L Enju Leaf 1.1.0.rc9）。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="設定方法">設定方法</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_system_setup.png" alt="「システムの設定」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［システム全体の設定］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_initial_014.png" alt="「システム全体の設定」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_initial_015.png" alt="図書館名の編集">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>インストール直後は，仮の名前が入っています。［編集］をクリックして，情報を変更します。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>すべての設定項目に必要事項を入力し、［更新］ボタンをクリックして，設定内容を更新します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_initial_016.png" alt="設定項目の入力">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>［表示名］の前には，日本語名ならば「ja:」，英語名ならば「en:」というように，言語がわかるように先頭に文字を付記します。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>[ログイン画面でのメッセージ]と[フッターのメッセージ]はHTMLやmarkdownを使って、文字装飾したり、リンクをつけたり、画像を表示させたりすることができます。</p>
+</li>
+<li>
+<p>画像をEnjuに置く方法は[インストールマニュアル「10-5 トップ画面やヘルプなどに表示する画像を置く」](enju_install_vm_10.html#section10-5)を参照してください。</p>
+</li>
+<li>
+<p>画像を表示させるmarkdown記述の例：&lt;code&gt;![ロゴ](<a href="http://localhost:8080/assets/logo.html)&lt;/code&gt" class="bare">http://localhost:8080/assets/logo.html)&lt;/code&gt</a>;</p>
+</li>
+<li>
+<p>リンクのmarkdown記述の例: &lt;code&gt;[Porject NextL](<a href="https://www.next-l.jp/)&lt;/code&gt" class="bare">https://www.next-l.jp/)&lt;/code&gt</a>;</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>右メニューの[表示］をクリックすると「システム全体の設定の表示」の画面に遷移します。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>設定が登録され，［システム全体の設定の表示］画面が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.3/image_initial_017.png" alt="設定項目の入力">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="個々の図書館を設定する">個々の図書館を設定する</h3>
+<div class="paragraph">
+<p>図書館の案内ページで表示される情報及び、検索結果等で表示される図書館名を登録します。</p>
+</div>
+<div class="sect3">
+<h4 id="設定項目_2">設定項目</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>名前*：図書館の名称を入力します。TSVファイルを使った所蔵のインポートなどに図書館を表す名前として使用します。</p>
+</li>
+<li>
+<p>短縮表示名：短縮した名称を入力します。短縮して表示したい箇所で使用される表示名です。</p>
+</li>
+<li>
+<p>表示名*：画面に表示する名称を入力します。一般的にはこちらの表示名を使用します。</p>
+</li>
+<li>
+<p>ISIL*：[図書館及び関連組織のための国際標準識別子（https://www.ndl.go.jp/jp/library/isil/）](<a href="https://www.ndl.go.jp/jp/library/isil/)を入力します。" class="bare">https://www.ndl.go.jp/jp/library/isil/)を入力します。</a></p>
+</li>
+<li>
+<p>国と地域：▼をクリックし，リストから選択します。</p>
+</li>
+<li>
+<p>郵便番号*：図書館の所在地の郵便番号を入力します。</p>
+</li>
+<li>
+<p>都道府県*：図書館の所在地の都道府県名を入力します。</p>
+</li>
+<li>
+<p>市町村*：図書館の所在地の市町村名を入力します。</p>
+</li>
+<li>
+<p>番地*：図書館の所在地の番地を入力します。</p>
+</li>
+<li>
+<p>緯度：図書館の所在地の緯度を入力します。図書館の所在地の地図表示に利用します。</p>
+</li>
+<li>
+<p>経度：図書館の所在地の経度を入力します。図書館の所在地の地図表示に利用します。</p>
+</li>
+<li>
+<p>電話番号１*：図書館の電話番号を入力します。</p>
+</li>
+<li>
+<p>電話番号２*：図書館の電話番号を入力します。</p>
+</li>
+<li>
+<p>ファックス番号*：図書館のファックス番号を入力します。</p>
+</li>
+<li>
+<p>請求記号の列数：請求記号で利用する列数を入力します。背ラベルの表示に使用します。</p>
+</li>
+<li>
+<p>請求番号の区切り文字：請求記号に利用する区切り文字を入力します。背ラベルの表示に使用します。</p>
+</li>
+<li>
+<p>開館時間*：図書館の開館時間を選択します。</p>
+</li>
+<li>
+<p>注記*：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>「*」がある項目については、図書館の情報表示のページで表示される情報になります。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="設定方法_2">設定方法</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="「システムの設定」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［図書館］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_019_0.png" alt="「図書館全体の設定」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［図書館の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_019.png" alt="図書館の新規作成">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>入力済みの図書館の設定内容を変更する場合は，［編集］をクリックします。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>設定項目に必要事項を入力し、[登録する]ボタンをクリックして，設定内容を登録します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_020.png" alt="設定項目の入力">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>「＊」のマークが付いた項目は入力必須項目です。[名前]は3文字以上、256文字以内で、半角である必要があります。使用できる文字はアルファベットの小文字、数字、-（ハイフン）、_（アンダースコア）です。ただし、名前の最初はアルファベットの小文字のみが使用でき、名前の最後にはハイフンとアンダースコアは使用できません。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>「図書館は正常に作成されました」と表示され、図書館が作成されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_020_2.png" alt="図書館の作成">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>1.1.0および1.1.1の場合でプロキシ環境でお使いの場合、地図が表示されないことがあります。
+その場合は、以下を実行してください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>$ cd enju
+$ rails g geocoder:config</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>詳細は [issue #727](<a href="https://github.com/next-l/enju_leaf/issues/727)を参照してください。" class="bare">https://github.com/next-l/enju_leaf/issues/727)を参照してください。</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="literalblock">
+<div class="content">
+<pre> [請求記号の列数]、[請求記号の区切り文字]を設定すると
+「資料の表示」の右に請求記号が背ラベルのように表示されます。
+次は、請求記号の列数を **3** 、請求記号の区切り文字を **||** とし、
+請求記号「015.2||ハ||1」を表示した例です。</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>![背ラベル](../assets/images/1.1/image_initial_020_3.png)</p>
+</div>
+<div class="paragraph">
+<p>注：次の条件でのみ、背ラベルが表示されます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ログインしている</p>
+</li>
+<li>
+<p>図書館に請求記号ルールが設定されている</p>
+</li>
+<li>
+<p>当該資料の所蔵が登録されている</p>
+</li>
+<li>
+<p>所蔵資料の「請求記号」が [請求記号の列数]と[請求記号の区切り文字]のルール通りに入力されている</p>
+</li>
+<li>
+<p>所蔵資料の本棚が「World Wide Web」（ブックマーク用）以外である</p>
+</li>
+<li>
+<p>所蔵資料の所蔵のステータスが「在架（利用可能） 」「貸出中」「再配架待ち」のいずれかである</p>
+</li>
+<li>
+<p>所蔵資料の利用制限が「返却不要」「長期期間貸出」「通常期間貸出」「短期期間貸出」「複製不可」
+「一夜貸出のみ」「貸出更新不可」「監督下でのみ利用可」「学期間の貸出」「利用者の署名が必要」のいずれかである</p>
+</li>
+<li>
+<p>ログインしているユーザーの所属図書館のもののみ表示する
+（例：所属図書館Your library　だったらYour libraryのもののみ）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>== 本棚を設定する</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：本棚の名称を入力します。TSVファイルを使った所蔵情報のインポートなどに本棚を表す名前として使用します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>閉架：閉架の場合にチェックを入れます。本棚の一覧画面で「閉架」と表示されるようになります。 &lt;!-- 詳細は #729 参照 -&#8594;</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+<li>
+<p>図書館：▼をクリックし，リストから選択します。</p>
+</li>
+<li>
+<p>ここで表示される図書館のリストは，[「3-2 個々の図書館を設定する」](#section3-2)で設定します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［本棚］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_022.png" alt="「本棚」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［本棚の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_023.png" alt="本棚の新規作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】入力済みの本棚の設定内容を変更する場合は，［編集］をクリックします。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し，［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_024.png" alt="本棚の作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】「＊」のマークが付いた項目は入力必須項目です。[名前]は3文字以上、256文字以内で、半角である必要があります。使用できる文字はアルファベットの小文字、数字、-（ハイフン）、_（アンダースコア）です。ただし、名前の最初はアルファベットの小文字のみが使用でき、名前の最後にはハイフンとアンダースコアは使用できません。
+ &lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;
+【Memo】本棚の一覧の見方</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_024_2.png" alt="背ラベル">
+</div>
+</div>
+<div class="paragraph">
+<p>表の各行が一つの本棚をあらわしています。例えば、「きり閉架1」は本棚の「表示名」を、「kiri_closed」は本棚の「名前」を、「きり図書館」は当該本棚がある図書館の「表示名」を、「kiri」その「名前」をあらわしています。
+「閉架」にチェックを入れた場合は、「図書館」列に「閉架」が表示されます（例　「きり閉架1」に「閉架」を表示）。
+右側に「図書館」で絞り込みをするためのリンクがあります。たとえば、上の画像の例ですと、「きり図書館」のリックをたどると、「きり図書館」の本棚の「きり閉架1」「kiri_default」「きり本棚1」のみが表示されるようになります。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>== 利用者グループを設定する</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：利用者グループ名を入力します。</p>
+</li>
+<li>
+<p>例えば、一般利用者、在勤・在学利用者、団体利用者など利用者をグループに分けて区別したい場合に入力します。</p>
+</li>
+<li>
+<p>[「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。</p>
+</li>
+<li>
+<p>貸出については[「3-5 貸出区分を設定する」](#section3-5)、[「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3)などで設定します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>新規ユーザの有効日数：図書館カードの有効日数を数値で入力します。新規にユーザを作成してからの有効日数になります。標準は0になっており、0は有効期限がなくずっと有効となります。</p>
+</li>
+<li>
+<p>貸出期限の何日前に督促を送るか：「何日後に返却日を通知するか」を数値で入力します。標準は3になっています。</p>
+</li>
+<li>
+<p>貸出期限の何日後に督促を送るか：「返却日を何日過ぎたら通知するか」を数値で入力します。標準は7になっています。</p>
+</li>
+<li>
+<p>貸出期限が切れた後に何回督促を送るか：「返却日を過ぎた通知を何回送るか」を数値で入力します。標準は0になっています。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［利用者グループ］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_025_0.png" alt="「利用者グループ」を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［利用者グループの新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_025.png" alt="利用者グループを作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】入力済みの利用者グループの設定内容を変更する場合は，［編集］をクリックします。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し，［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_026.png" alt="利用者グループの作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>== 貸出区分を設定する</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：貸出区分名を入力します。</p>
+</li>
+<li>
+<p>貸出日数や貸出数の制限などは，[「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［貸出区分］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_027_0.png" alt="貸出区分の設定">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［貸出区分の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_027.png" alt="システムの設定">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】入力済みの貸出区分の設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_028.png" alt="貸出区分の作成">
+</div>
+</div>
+<div class="paragraph">
+<p>== 利用者グループと貸出区分の関係を設定する</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>利用者グループ：▼をクリックし，リストから選択します。ここで表示されるリストは，[「3-4 利用者グループを設定する」](#section3-4)で設定します。</p>
+</li>
+<li>
+<p>貸出区分：▼をクリックし，リストから選択します。ここで表示されるリストは，[「3-5 貸出区分を設定する」](#section3-5)で設定します。</p>
+</li>
+<li>
+<p>貸出数の上限：貸出数を数値で設定します。</p>
+</li>
+<li>
+<p>貸出期間：期間を数値で設定します。</p>
+</li>
+<li>
+<p>貸出更新回数の上限：回数を数値で設定します。</p>
+</li>
+<li>
+<p>予約冊数の上限：冊数を数値で設定します。</p>
+</li>
+<li>
+<p>返却日を閉館日の前日にする：クリックしてon/offを切り替えます。この項目がオンになっている場合、返却日は通常返却日の前日になり、オフになっている場合は通常返却日の翌日に設定されます。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［利用者グループと貸出区分の関係］をクリックします。</p>
+<div class="paragraph">
+<p>![利用者グループと貸出区分の関係の設定](../assets/images/1.1/image_initial_029_0.png)</p>
+</div>
+</li>
+<li>
+<p>右メニューの［利用者グループと貸出区分の関係の新規作成］をクリックします。</p>
+<div class="paragraph">
+<p>![利用者グループと貸出区分の関係](../assets/images/1.1/image_initial_029.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![利用者グループと貸出区分の関係](../assets/images/1.1/image_initial_030.png)</p>
+</div>
+<div class="paragraph">
+<p>== 資料の形態と貸出区分の関係を設定する</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>資料の形態：▼をクリックし，リストから選択します。ここで表示されるリストは，[「5-1 資料の形態を作成する」](enju_setup_5.html#section5-1)で設定します。</p>
+</li>
+<li>
+<p>貸出区分：▼をクリックし，リストから選択します。ここで表示されるリストは，[「3-5 貸出区分を設定する」](#section3-5)で設定します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の形態と貸出区分の関係］をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![資料の形態と貸出区分の関係の設定](../assets/images/1.1/image_initial_031_0.png)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>右メニューの［資料の形態と貸出区分の関係の新規作成］をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![資料の形態と貸出区分の関係の新規作成](../assets/images/1.1/image_initial_031.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info"&gt;
+【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する]ボタンをクリックして，設定内容を登録します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![資料の形態と貸出区分の関係の作成](../assets/images/1.1/image_initial_032.png)</p>
+</div>
+<div class="paragraph">
+<p>== 催し物の種別を設定する</p>
+</div>
+<div class="paragraph">
+<p>催し物（お知らせ）の登録機能およびカレンダー表示機能で、休館日以外の催し物の種別（例：お話会、蔵書点検など）が必要なった場合に必要になる設定です（参照：[運用マニュアル「第7章 休館日と催し物を登録する」](enju_operation_7.html)。</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：催し物名を入力します。</p>
+</li>
+<li>
+<p>表示名：画面に表示する名称を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。
+＊催し物については，既存のデータファイルを指定して読み込むインポート機能が利用できます。[運用マニュアル「7-2-2 催し物のデータをインポートする」](enju_operation_7.html#section7-2-2)を参照してください。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>［催し物の種別］をクリックします。</p>
+<div class="paragraph">
+<p>![催し物の種別設定](../assets/images/1.1/image_initial_033_0.png)</p>
+</div>
+</li>
+<li>
+<p>右メニューの［催し物の種別の新規作成］をクリックします。</p>
+<div class="paragraph">
+<p>![催し物の種別の新規作成](../assets/images/1.1/image_initial_033.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】入力済みの設定内容を変更する場合は［編集］を、削除する場合は［削除］をクリックします。ただし、"unknown"、 "closed"は標準カテゴリとなっており、削除できないため削除リンクはありません。
+一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="paragraph">
+<p>![催し物の種別を作成](../assets/images/1.1/image_initial_034.png)</p>
+</div>
+</li>
+<li>
+<p>「催し物の種別は正常に作成されました。」と表示され、催し物の種別の作成が完了します。</p>
+<div class="paragraph">
+<p>![催し物の種別の作成が完了](../assets/images/1.1/image_initial_034_2.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>== 予算種別を設定する</p>
+</div>
+<div class="paragraph">
+<p>所蔵情報の登録の際に、予算の区別（寄贈など）を登録したい場合に必要になります。詳細は[運用マニュアル「4-3 所蔵情報を登録・一覧表示する」](enju_operation_4.html#section4-3)を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名称：予算種別の名称を入力します。</p>
+</li>
+<li>
+<p>表示名：表示名を入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>［予算種別］をクリックします。</p>
+<div class="paragraph">
+<p>![予算種別の設定](../assets/images/1.1/image_budget_type_0.png)</p>
+</div>
+</li>
+<li>
+<p>右メニューの［予算種別の新規作成］をクリックします。</p>
+<div class="paragraph">
+<p>![予算種別の新規作成](../assets/images/1.1/image_budget_type_1.png)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】入力済みの設定内容を変更する場合は，表の最終列に表示されている「編集」を，削除する場合は「削除」をクリックします。
+一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![新規書店の作成](../assets/images/1.1/image_budget_type_2.png)</p>
+</div>
+<div class="paragraph">
+<p>== 書店を設定する</p>
+</div>
+<div class="paragraph">
+<p>所蔵情報の登録の際に、どの書店から購入したかを登録したい場合に必要になります。詳細は[運用マニュアル「4-3 所蔵情報を登録・一覧表示する」](enju_operation_4.html#section4-3)を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：書店名を入力します。</p>
+</li>
+<li>
+<p>郵便番号：書店の所在地の郵便番号を入力します。</p>
+</li>
+<li>
+<p>住所：書店の所在地の住所を入力します。</p>
+</li>
+<li>
+<p>電話番号：書店の電話番号を入力します。</p>
+</li>
+<li>
+<p>ファックス番号：書店のファックス番号を入力します。</p>
+</li>
+<li>
+<p>URL：書店のWebサイトのURLを入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［書店］をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![書店の設定](../assets/images/1.1/image_initial_038_0.png)</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>右メニューの［書店の新規作成］をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![書店の新規作成](../assets/images/1.1/image_initial_038.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;
+【Memo】入力済みの設定内容を変更する場合は，表の最終列に表示されている[編集]を，削除する場合は[削除]をクリックします。
+一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![新規書店の作成](../assets/images/1.1/image_initial_041.png)</p>
+</div>
+<div class="paragraph">
+<p>== メッセージテンプレートを設定する</p>
+</div>
+<div class="paragraph">
+<p>予約を受け付けた時や、書誌のエクスポートが完了したときなどに、
+システムから送られてくるメッセージの定型文を変更できます。</p>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>状態：メッセージの内容を示す状態を入力します。</p>
+</li>
+<li>
+<p>言語：▼をクリックし，リストから選択します。</p>
+</li>
+<li>
+<p>タイトル：メッセージを表示するときのタイトルを入力します。</p>
+</li>
+<li>
+<p>本文：メッセージの本文を入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+＊メッセージの本文には資料名やユーザー名などの変数を組み込み，送信時に本文中の変数に値を代入して送信できます。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［メッセージテンプレート］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_042_0.png" alt="メッセージテンプレートの設定">
+</div>
+</div>
+</li>
+<li>
+<p>設定したい項目の［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_042.png" alt="メッセージテンプレートの編集">
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info"&gt;
+【Memo】一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+&lt;/div&gt;</p>
+</div>
+</li>
+<li>
+<p>設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_043.png" alt="メッセージテンプレートの更新">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>== 検索エンジンを設定する</p>
+</div>
+<div class="paragraph">
+<p>検索エンジンを設定すると、資料を検索したときにヒット件数が0件だった場合に、同じ検索語で別のデータベース（検索エンジン）に検索をすることができるようになります。
+次の図は、ヒット件数が0件だったときの画面を表しています。ここでは、3つの検索エンジン（NDL Search, amazon.co.jp, CiNii Books）を表示しています。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_044_00.png" alt="0件ヒットと検索エンジン">
+</div>
+</div>
+<div class="paragraph">
+<p>=== 設定項目</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前：検索エンジンの名称を入力します。</p>
+</li>
+<li>
+<p>URL：URLを入力します。（入力必須）</p>
+</li>
+<li>
+<p>ベースURL：ベースURLを入力します。</p>
+</li>
+<li>
+<p>HTTPメソッド：▼をクリックし，リストから選択します。</p>
+</li>
+<li>
+<p>クエリパラメータ：URLに追加するパラメータを入力します。</p>
+</li>
+<li>
+<p>追加のパラメータ：URLに追加するパラメータを入力します。</p>
+</li>
+<li>
+<p>注記：注意事項や特記事項などを入力します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>=== 設定方法</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_system_setup.png" alt="システムの設定">
+</div>
+</div>
+</li>
+<li>
+<p>［検索エンジン］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_044_0.png" alt="検索エンジンの設定">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［検索エンジンの新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_search_engine_create.png" alt="検索エンジンの設定">
+</div>
+</div>
+</li>
+<li>
+<p>設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_search_engine_input.png" alt="検索エンジンの設定">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】CiNii Booksの登録例（検索語がflowerであれば：https://ci.nii.ac.jp/books/search?q=flower&amp;format=html というリクエストになる）を示しています。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>以下はその他の検索エンジンの設定例です。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>名前: NDL Search</p>
+</li>
+<li>
+<p>URL: <a href="https://iss.ndl.go.jp/" class="bare">https://iss.ndl.go.jp/</a></p>
+</li>
+<li>
+<p>ベースURL: <a href="https://iss.ndl.go.jp/books" class="bare">https://iss.ndl.go.jp/books</a></p>
+</li>
+<li>
+<p>HTTPメソッド: get</p>
+</li>
+<li>
+<p>クエリパラメータ: any</p>
+</li>
+<li>
+<p>名前: amazon.co.jp</p>
+</li>
+<li>
+<p>URL: <a href="https://www.amazon.co.jp/" class="bare">https://www.amazon.co.jp/</a></p>
+</li>
+<li>
+<p>ベースURL: <a href="https://www.amazon.co.jp/s" class="bare">https://www.amazon.co.jp/s</a>?</p>
+</li>
+<li>
+<p>HTTPメソッド: get</p>
+</li>
+<li>
+<p>クエリパラメータ: field-keywords</p>
+</li>
+<li>
+<p>追加のパラメータ: url=search-alias=aps</p>
+</li>
+<li>
+<p>名前: CiNii Books</p>
+<div class="ulist">
+<ul>
+<li>
+<p>URL: <a href="https://ci.nii.ac.jp/books/" class="bare">https://ci.nii.ac.jp/books/</a></p>
+</li>
+<li>
+<p>ベースURL: <a href="https://ci.nii.ac.jp/books/opensearch/search" class="bare">https://ci.nii.ac.jp/books/opensearch/search</a></p>
+</li>
+<li>
+<p>HTTPメソッド: get</p>
+</li>
+<li>
+<p>クエリパラメータ: q</p>
+</li>
+<li>
+<p>追加のパラメータ: format=html</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>== その他の機能</p>
+</div>
+<div class="paragraph">
+<p>Enjuでは，システムの設定は管理者権限を持つアカウントで設定します。システムの設定以外にも，個人情報に関わることなどは，管理者権限で行うように設定されています。</p>
+</div>
+<div class="paragraph">
+<p>管理者権限では，次のような設定・閲覧機能を持っています。</p>
+</div>
+<div class="paragraph">
+<p>=== システムの設定以外でも管理者権限で設定・閲覧する機能</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>返却済み貸出履歴の一覧</p>
+</li>
+<li>
+<p>図書館員のプロフィール変更</p>
+</li>
+<li>
+<p>権限変更</p>
+</li>
+<li>
+<p>操作履歴一覧の表示</p>
+</li>
+<li>
+<p><a href="enju_setup_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_setup_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_setup_3.html">第3章 図書館のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_4.html">第4章 件名のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_5.html">第5章 各種形態や状態等に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_6.html">第6章 資料に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_7.html">第7章 その他</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

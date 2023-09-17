@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第3章 動作環境の確認とDockerのインストール - Next-L Enju インストールマニュアル（Docker編）</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第3章 動作環境の確認とDockerのインストール - Next-L Enju インストールマニュアル（Docker編） </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#動作環境を確認する">動作環境を確認する</a>
+<ul class="sectlevel2">
+<li><a href="#windowsが64bit版であるかの確認使用可能メモリ容量の確認">Windowsが64bit版であるかの確認，使用可能メモリ容量の確認</a></li>
+<li><a href="#ハードディスク空き容量の確認">ハードディスク空き容量の確認</a></li>
+<li><a href="#ipアドレスの確認">IPアドレスの確認</a></li>
+</ul>
+</li>
+<li><a href="#dockerのダウンロードとインストール">Dockerのダウンロードとインストール</a>
+<ul class="sectlevel2">
+<li><a href="#dockerのダウンロード">Dockerのダウンロード</a></li>
+<li><a href="#dockerのインストール">Dockerのインストール</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="動作環境を確認する">動作環境を確認する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>作業を開始する前に，Enjuをインストールするコンピュータの環境を確認します。
+この文書では，Windows 10 でのやり方について説明します。</p>
+</div>
+<div class="sect2">
+<h3 id="windowsが64bit版であるかの確認使用可能メモリ容量の確認">Windowsが64bit版であるかの確認，使用可能メモリ容量の確認</h3>
+<div class="paragraph">
+<p>Windowsが64ビット版であるか，メモリ容量をシステムのプロパティで確認します。※32bit版では動作しません</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［スタート］ボタンをクリックし，［コンピュータ］を右クリックします。</p>
+</li>
+<li>
+<p>［プロパティ］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_004.png" alt="［スタート］ボタンをクリックし，［コンピュータ］を右クリックします">
+</div>
+</div>
+</li>
+<li>
+<p>以下の項目を確認します。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>システムの種類 : 64bitのオペレーティングシステム</p>
+</li>
+<li>
+<p>実装メモリ　　 : 使用可能容量が 4.00GB 以上</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_005.png" alt="コンピュータのプロパティ画面から動作環境を確認します">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ハードディスク空き容量の確認">ハードディスク空き容量の確認</h3>
+<div class="paragraph">
+<p>Enjuコンテナのインストールと動作に必要なハードディスクの空き容量を確認します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［スタート］ボタンをクリックし，［コンピュータ］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_006.png" alt="［スタート］ボタンをクリックし，［コンピュータ］を選択します">
+</div>
+</div>
+</li>
+<li>
+<p>以下の項目を確認します。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ドライブの空き容量 : 25.0GB以上を推奨</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_007.png" alt="ハードディスクの空き容量の確認">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>ハードディスクに必要な空き容量は，蔵書規模により異なります。25.0GBは蔵書が20 万件の規模を想定しています。これよりも蔵書規模が大きい場合は，より多くの容量が必要となります。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ipアドレスの確認">IPアドレスの確認</h3>
+<div class="paragraph">
+<p>ホストOSのIPアドレスを確認します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［スタート］ボタンをクリックし，［コントロールパネル］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_019.png" alt="［スタート］ボタンをクリックし，［コントロールパネル］を選択">
+</div>
+</div>
+</li>
+<li>
+<p>［ネットワークとインターネット］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_020.png" alt="［ネットワークとインターネット］をクリック">
+</div>
+</div>
+</li>
+<li>
+<p>［ネットワークと共有センター］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_021.png" alt="［ネットワークと共有センター］をクリック">
+</div>
+</div>
+</li>
+<li>
+<p>［アクティブネットワークの表示］で［ローカルエリア接続］または［ワイヤレスネットワーク接続］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_022.png" alt="［アクティブネットワークの表示］で［ローカルエリア接続］または［ワイヤレスネットワーク接続］をクリック">
+</div>
+</div>
+</li>
+<li>
+<p>［詳細］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_023.png" alt="［詳細］をクリック">
+</div>
+</div>
+</li>
+<li>
+<p>表示された画面で，以下の情報をメモなどに記録します。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>DHCPの状態</p>
+</li>
+<li>
+<p>IPv4アドレス</p>
+</li>
+<li>
+<p>IPv4サブネットマスク</p>
+</li>
+<li>
+<p>IPv4デフォルトゲートウェイ</p>
+</li>
+<li>
+<p>IPv4 DNSサーバ</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_024.png" alt="表示された画面で，情報をメモ">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="dockerのダウンロードとインストール">Dockerのダウンロードとインストール</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ここでは Windows の場合を説明しますが，Mac，Linuxなど様々なOS上で動きます。</p>
+</div>
+<div class="sect2">
+<h3 id="dockerのダウンロード">Dockerのダウンロード</h3>
+<div class="paragraph">
+<p>Docker DesktopをDocker社のWebサイトからダウンロードします。
+次のWebページで<a href="https://www.docker.com/products/docker-desktop/">Downloads</a>をクリックします。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dockerのインストール">Dockerのインストール</h3>
+<div class="paragraph">
+<p>前項でダウンロードしたファイルを実行し，Docker Desktopをインストールします。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_install_vm_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_2.html">第2章 Enjuを動作させる方法</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_3.html">第3章 動作環境の確認とDockerのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_4.html">第4章 Enjuのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_5.html">第5章 モジュールの追加</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_6.html">第6章 検索エンジンの設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_7.html">第7章 他のコンピュータからの利用設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_8.html">第8章 Enjuのアップデート</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_9.html">第9章 データのバックアップ</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_10.html">第10章 その他（カスタマイズなど）</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_11.html">第11章 トラブルシューティング</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

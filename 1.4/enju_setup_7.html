@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7章 その他 - Next-L Enju初期設定マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第7章 その他 - Next-L Enju初期設定マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#システムの基本的な情報の表示機能">システムの基本的な情報の表示機能</a></li>
+<li><a href="#非同期処理の状態確認機能resque">非同期処理の状態確認機能（Resque）</a></li>
+<li><a href="#運用マニュアルにおいて説明する機能">運用マニュアルにおいて説明する機能</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="システムの基本的な情報の表示機能">システムの基本的な情報の表示機能</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>システムの基本的な情報を確認できる機能があります。不具合の報告時などに、こちらの情報をシステム担当者にお知らせください。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![「システムの設定」を選択](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>システムの[システムの基本的な情報の表示]リンクをたどります。</p>
+<div class="paragraph">
+<p>![システムの基本的な情報の表示のリンク](../assets/images/1.1/image_initial_systemdisp01.png)</p>
+</div>
+</li>
+<li>
+<p>システムの基本的な情報を確認できます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ruby： Ruby のバージョンが表示されます。（例： ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux-gnu])</p>
+</li>
+<li>
+<p>Environment: システムの環境が表示されます（例：production）</p>
+</li>
+<li>
+<p>Gems：Enju の詳細なバージョン等が表示されます（例：enju_leaf: 1.1.0.rc21，enju_circulation: 0.1.0.pre48）</p>
+</li>
+<li>
+<p>Languages：使用言語が表示されます（例：ja: 日本語 (既定の言語)）</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>![システムの基本的な情報の表示結果](../assets/images/1.1/image_initial_systemdisp03.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】
+* リリース前のパッケージを使用している場合にはコミットのハッシュを表示します。</p>
+</div>
+<div class="paragraph">
+<p>![システムの基本的な情報のコミットのハッシュを表示](../assets/images/1.3/image_initial_systemdisp03-hash.png)</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>リリース前のパッケージを使用している場合。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="非同期処理の状態確認機能resque">非同期処理の状態確認機能（Resque）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>資料等のインポートやエクスポート、自動メール送信などの非同期処理の状態を確認できる機能があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［システムの設定］を選択します。</p>
+<div class="paragraph">
+<p>![「システムの設定」を選択](../assets/images/1.1/image_system_setup.png)</p>
+</div>
+</li>
+<li>
+<p>システムの[Resque]リンクをたどります。</p>
+<div class="paragraph">
+<p>![Resqueリンク](../assets/images/1.1/image_initial_resque.png)</p>
+</div>
+</li>
+<li>
+<p>Resque の画面で非同期処理の状態を確認できます。エラーを確認するには[failed]リンクをたどります。</p>
+<div class="paragraph">
+<p>![failedリンク](../assets/images/1.1/image_initial_resque2.png)</p>
+</div>
+</li>
+<li>
+<p>詳細なエラーを確認するために、閲覧したいエラーのリンクをたどります。</p>
+<div class="paragraph">
+<p>![詳細なエラーへのリンク](../assets/images/1.1/image_initial_resque_3.png)</p>
+</div>
+</li>
+<li>
+<p>詳細なエラーが表示されます。</p>
+<div class="paragraph">
+<p>![詳細なエラー](../assets/images/1.1/image_initial_resque_4.png)</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="運用マニュアルにおいて説明する機能">運用マニュアルにおいて説明する機能</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>［図書館の管理］メニューから［システムの設定］を選択し表示される画面のうち、
+次にあげるメニューについては、運用時に使用するメニューですので、
+運用マニュアルにて説明します。</p>
+</div>
+<div class="paragraph">
+<p>![システムの設定](../assets/images/1.1/image_initial_085.png)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[開館日と催し物]</p>
+</li>
+<li>
+<p>[開館日と催し物]メニューから[全ての催し物]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「第7章 休館日と催し物を登録する」](enju_operation_7.html)</p>
+</li>
+<li>
+<p>[利用者]　</p>
+</li>
+<li>
+<p>[図書館の管理]メニューから[利用者の管理]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「第3章 利用者情報を管理する」](enju_operation_3.html)</p>
+</li>
+<li>
+<p>[利用者のインポート用ファイル]</p>
+</li>
+<li>
+<p>[図書館の管理]メニューから[インポート]をたどり、[利用者]リンクをたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「3-2 既存のデータから利用者情報をインポートする」](enju_operation_3.html#section3-2)</p>
+</li>
+<li>
+<p>[催し物のインポート用ファイルの新規作成]</p>
+</li>
+<li>
+<p>[開催日と催し物]メニューから[インポート]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「7-2-2 催し物のデータをインポートする」](enju_operation_7.html#section7-2-2)</p>
+</li>
+<li>
+<p>[資料]</p>
+</li>
+<li>
+<p>トップ画面において検索式を何もいれずに[検索]ボタンをクリックしたときにいける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「第9章 資料を検索する」](enju_operation_9.html)</p>
+</li>
+<li>
+<p>[全ての所蔵情報]</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-3 所蔵情報を登録・一覧表示する」](enju_operation_4.html#section4-3)</p>
+</li>
+<li>
+<p>[資料のインポート用ファイル]</p>
+</li>
+<li>
+<p>[資料の受入]メニューから「TSVファイルからのインポート]をたどり、右メニューの[資料のインポート用ファイルの一覧]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-2-1 TSVファイルを読み込んで登録する」](enju_operation_4.html#section4-2-1)</p>
+</li>
+<li>
+<p>[ISBNインポートのリクエスト]</p>
+</li>
+<li>
+<p>[資料の受入]メニューから[ISBNを入力]をたどり、[ISBNインポートリクエストの一覧]リンクをたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-2-3 ISBNコードを入力して1件ずつ登録する」](enju_operation_4.html#section4-2-3)</p>
+</li>
+<li>
+<p>[シリーズ情報]</p>
+</li>
+<li>
+<p>(現在、運用マニュアル作成中です）</p>
+</li>
+<li>
+<p>[画像ファイル]</p>
+</li>
+<li>
+<p>画像を登録した資料の「資料の表示」画面の右メニューにある[画像ファイルの一覧]リンクをたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-8-2 画像の一覧表示」](enju_operation_4.html#section4-8-2)</p>
+</li>
+<li>
+<p>[購入リクエスト]</p>
+</li>
+<li>
+<p>[図書館への依頼]メニューから[購入リクエスト]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-1-2 発注したい図書（購入リクエスト）を発注リストに登録する」](enju_operation_4.html#section4-1-2)</p>
+</li>
+<li>
+<p>[発注リスト]</p>
+</li>
+<li>
+<p>[図書館の管理]メニューから[発注リスト]をたどっていける画面と同じ</p>
+</li>
+<li>
+<p>参照：[運用マニュアル「4-1-1 発注リストを作成する」](enju_operation_4.html#section4-1-1)</p>
+</li>
+<li>
+<p><a href="enju_setup_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_setup_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_setup_3.html">第3章 図書館のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_4.html">第4章 件名のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_5.html">第5章 各種形態や状態等に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_6.html">第6章 資料に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_7.html">第7章 その他</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

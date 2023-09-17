@@ -1,0 +1,1178 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7章 休館日と催し物を登録する - Next-L Enju 運用マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第7章 休館日と催し物を登録する - Next-L Enju 運用マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#休館日を登録する">休館日を登録する</a></li>
+<li><a href="#催し物を登録する">催し物を登録する</a>
+<ul class="sectlevel2">
+<li><a href="#手動で催し物を登録する">手動で催し物を登録する</a></li>
+<li><a href="#催し物のデータをインポートする">催し物のデータをインポートする</a></li>
+<li><a href="#カレンダーを利用する">カレンダーを利用する</a></li>
+<li><a href="#休館日や催し物を表示する">休館日や催し物を表示する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuでは、休館日の登録に関して、次のような機能があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>休館日を登録する
+図書館の休館日を登録します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>催し物（お知らせ）の登録には、次のような機能があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>催し物（お知らせ）を登録する</p>
+</li>
+<li>
+<p>カレンダーを表示する</p>
+</li>
+<li>
+<p>休館日や催し物を表示する</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="休館日を登録する">休館日を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuでは、図書館の休館日を登録することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［開館日と催し物］メニューから［全ての催し物］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event.png" alt="全ての催し物">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】他の行き方：［図書館の管理］メニューから［システムの設定］を選択し、[開館日と催し物]のリンクをクリックでも可。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>右メニューの［開催日と催し物の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_new.png" alt="開催日と催し物の新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>催し物の種別で「休館日」を選択し、開始時刻で休館日の年・月・日を選択、名前に「休館日」と入力し、［終日］にチェックを入れて［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_edit.png" alt="開催日と催し物の新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>「開館日と催し物は正常に作成されました。」のメッセージが表示され、休館日が登録されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_new_success.png" alt="休館日登録">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】休館日を登録しておくことにより、資料を貸し出す際の返却日を1日ずらすよう設定できます。設定方法は[初期設定マニュアル「3-6 利用者グループと貸出区分の関係を設定する」](enju_setup_3.html#section3-6)をご覧ください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="催し物を登録する">催し物を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuでは、図書館で行われるさまざまな催し物を登録し、カレンダーに表示できます。</p>
+</div>
+<div class="sect2">
+<h3 id="手動で催し物を登録する">手動で催し物を登録する</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［開館日と催し物］メニューから［全ての催し物］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event.png" alt="全ての催し物">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】他の行き方：［図書館の管理］メニューから［システムの設定］を選択し、[開館日と催し物]のリンクをクリックでも可。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>右メニューの［開催日と催し物の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_new.png" alt="開催日と催し物の新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>催し物の種別で「不明」を選択し、名前や開始時刻、終了時刻などを設定して、［登録する］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_other_new.png" alt="開催日と催し物の新規作成">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】催し物の種別を追加する方法は[初期設定マニュアル「3-8 催し物の種類を設定する」](enju_setup_3.html#section3-8)をご覧ください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>「開館日と催し物は正常に作成されました。」のメッセージが表示され、催し物が登録されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_other_new_success.png" alt="催し物登録">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="催し物のデータをインポートする">催し物のデータをインポートする</h3>
+<div class="paragraph">
+<p>既存のデータファイルを指定して読み込む「インポート」を行うと，一度に複数のデータを登録することができます。インポートするには，あらかじめデータファイルをTSV形式で作成しておきます(参照：[「TSV形式のデータファイルの作り方」](#section7_import_tsv)（本節の最後に記載）)。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［開館日と催し物］メニューから［インポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_220.png" alt="インポート">
+</div>
+</div>
+</li>
+<li>
+<p>［ファイルを選択］ボタンをクリックしてインポートしたいファイルを選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_222_1.png" alt="催し物ファイルのの選択">
+</div>
+</div>
+</li>
+<li>
+<p>[編集モード]、[文字コード]、[既定の催し物の種別]、[既定の図書館]を選択して［インポートを開始］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_222_2.png" alt="催し物ファイルのインポートを作成">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】［編集］モードで［更新］を選択すると、TSVファイルで催し物情報をまとめて更新できます。TSVファイルに必要なのは、更新したい催し物のID（id）と、更新したいフィールドの内容になります。また、［削除］を選択すると、TSVファイルで催し物情報をまとめて削除できます。この場合は、TSVファイルに必要なのは、削除したい催し物のID（&lt;code&gt;id&lt;/code&gt;）のみです。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】[文字コード]は基本的には自動判別でよいですが、うまくいかない場合は、文字コードを指定するようにしてください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】[既定の図書館]は、TSVファイルに[図書館]（library列）の値がない場合やTSVファイルで当該値に無効な値を指定していた場合に登録される値となります。TSVファイルに有効な値が指定されていた場合はTSVファイルを優先します。プルダウンメニューのデフォルト値は、現在ログイン中のユーザの図書館です。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>「催し物のインポート用ファイルは正常に作成されました。」のメッセージが表示され、催し物のデータがインポート準備が整います。右の[催し物のインポート用ファイルの一覧] をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_223.png" alt="催し物ファイルのインポート">
+</div>
+</div>
+</li>
+<li>
+<p>今までのインポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。インポートが完了したものは[完了]と表示されます。[処理待ち]のものは現在、実行中です。インポート完了時にはEnjuのメッセージ機能にてお知らせします（「インポートが完了しました」いうメッセージが送られてきます）。注）Next-L Enju Leaf 1.1.0.rc12以前のバージョンの場合は毎時0分にインポート処理が開始します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_223_2.png" alt="催し物ファイルのインポート一覧">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】この画面は[図書館の管理]メニュー→[インポート]→[開催日と催し物]とすればいつでも閲覧できます。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>=== 【Column】TSV形式のデータファイルの作り方 {#section7_import_tsv}
+  &lt;p&gt;TSV形式のデータファイル（TSVファイル）とは、項目をタブで区切ったテキストファイルです。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として &ldquo; &ldquo; で囲みます。
+フィールド名とその意味については次の通りです。&lt;/p&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+  &lt;caption&gt;開館日や催し物などの情報に関わる項目&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;必須/任意&lt;/th&gt;
+      &lt;th&gt;フィールド名&lt;/th&gt;
+      &lt;th&gt;データ形式&lt;/th&gt;
+      &lt;th&gt;内容&lt;/th&gt;
+      &lt;th&gt;未入力の場合（確認中）&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;id&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;ID(新規作成のときは無視される、更新・削除では必須)&lt;/td&gt;
+      &lt;td&gt;自動設定&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;必須&lt;/td&gt;
+      &lt;td&gt;name&lt;/td&gt;
+      &lt;td&gt;utf8&lt;/td&gt;
+      &lt;td&gt;名前（イベントの名称）&lt;/td&gt;
+      &lt;td&gt;インポートが「失敗」になる&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;display_name&lt;/td&gt;
+      &lt;td&gt;utf8&lt;/td&gt;
+      &lt;td&gt;イベントの表示名&lt;/td&gt;
+      &lt;td&gt;nameに入力したものが使用される&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;event_category&lt;/td&gt;
+      &lt;td&gt;code&lt;/td&gt;
+      &lt;td&gt;催し物の種別。「催し物の種別」の[名前]を値とします(例：休館日であれば"closed"など）。見方については、&lt;a href="enju_setup_3.html#section3-8"&gt;初期設定マニュアル「3-8 催し物の種別を設定する」&lt;/a&gt; を参照してください。&lt;/td&gt;
+      &lt;td&gt;インポート時に「既定の催し物の種別」として指定した種別&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;library&lt;/td&gt;
+      &lt;td&gt;code&lt;/td&gt;
+      &lt;td&gt;図書館。「図書館の一覧」の[名前]を値とします(例："yours"など）。見方については、&lt;a href="enju_setup_3.html#section3-2"&gt;初期設定マニュアル「3-2 個々の図書館を設定する」&lt;/a&gt;を参照してください。&lt;/td&gt;
+      &lt;td&gt;インポート時に「既定の図書館」として指定した図書館&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;必須&lt;/td&gt;
+      &lt;td&gt;start_at&lt;/td&gt;
+      &lt;td&gt;ISO8601&lt;/td&gt;
+      &lt;td&gt;開始時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合は時刻が無視される。&lt;/td&gt;
+      &lt;td&gt;インポートが「失敗」になる&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;必須&lt;/td&gt;
+       &lt;td&gt;end_at&lt;/td&gt;
+       &lt;td&gt;ISO8601&lt;/td&gt;
+       &lt;td&gt;終了時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合時刻は無視される。&lt;/td&gt;
+       &lt;td&gt;インポートが「失敗」になる&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;任意&lt;/td&gt;
+       &lt;td&gt;all_day&lt;/td&gt;
+       &lt;td&gt;真偽&lt;/td&gt;
+       &lt;td&gt;終日かどうか。TRUE or FALSE&lt;/td&gt;
+       &lt;td&gt;FALSE&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;任意&lt;/td&gt;
+       &lt;td&gt;note&lt;/td&gt;
+       &lt;td&gt;utf8&lt;/td&gt;
+       &lt;td&gt;注記&lt;/td&gt;
+       &lt;td&gt;未設定&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+       &lt;td&gt;任意&lt;/td&gt;
+       &lt;td&gt;dummy&lt;/td&gt;
+       &lt;td&gt;utf8&lt;/td&gt;
+       &lt;td&gt;ダミー行（なにかを書いていると無視する行）&lt;/td&gt;
+       &lt;td&gt;(読み込む行だと判定される）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+  &lt;caption&gt;＊設定例&lt;/caption&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;"name"      &lt;/td&gt;
+      &lt;td&gt;"event_category"&lt;/td&gt;
+      &lt;td&gt;"library"&lt;/td&gt;
+      &lt;td&gt;"start_at"&lt;/td&gt;
+      &lt;td&gt;"end_at"&lt;/td&gt;
+      &lt;td&gt;"all_day"&lt;/td&gt;
+      &lt;td&gt;"note"&lt;/td&gt;
+      &lt;td&gt;"dummy"&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;"名前（イベントの名称）"&lt;/td&gt;
+      &lt;td&gt;"催し物の種別"&lt;/td&gt;
+      &lt;td&gt;"図書館"&lt;/td&gt;
+      &lt;td&gt;"開始時刻"&lt;/td&gt;
+      &lt;td&gt;"終了時刻"&lt;/td&gt;
+      &lt;td&gt;"終日"&lt;/td&gt;
+      &lt;td&gt;"注記"&lt;/td&gt;
+      &lt;td&gt;この行はダミー行&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;必須&lt;/td&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;必須&lt;/td&gt;
+      &lt;td&gt;必須&lt;/td&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;任意&lt;/td&gt;
+      &lt;td&gt;任意&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;"おはなし会"  &lt;/td&gt;
+      &lt;td&gt;"story_telling"     &lt;/td&gt;
+      &lt;td&gt;"kiri"&lt;/td&gt;
+      &lt;td&gt;"2009-04-05 15:00:00 +0900"&lt;/td&gt;
+      &lt;td&gt;"2009-04-05 16:00:00 +0900"&lt;/td&gt;
+      &lt;td&gt;FALSE&lt;/td&gt;
+      &lt;td&gt;短めのお話会です&lt;/td&gt;
+      &lt;td&gt;　&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;"蔵書点検"  &lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;"tachibana"&lt;/td&gt;
+      &lt;td&gt;"2009-04-01"&lt;/td&gt;
+      &lt;td&gt;"2009-04-02"&lt;/td&gt;
+      &lt;td&gt;  &lt;/td&gt;
+      &lt;td&gt;  &lt;/td&gt;
+      &lt;td&gt;　&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;"休館日"    &lt;/td&gt;
+      &lt;td&gt;"closed"         &lt;/td&gt;
+      &lt;td&gt;"tachibana"&lt;/td&gt;
+      &lt;td&gt;"2011-04-01"&lt;/td&gt;
+      &lt;td&gt;"2011-04-03"&lt;/td&gt;
+      &lt;td&gt;  &lt;/td&gt;
+      &lt;td&gt;蔵書点検のため長めです&lt;/td&gt;
+      &lt;td&gt;　&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="カレンダーを利用する">カレンダーを利用する</h3>
+<div class="paragraph">
+<p>開館日や催し物などの情報を、カレンダーとして表示することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［開館日と催し物］メニューから［カレンダー］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_224.png" alt="カレンダー">
+</div>
+</div>
+</li>
+<li>
+<p>カレンダーが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_225.png" alt="カレンダー表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>各催し物をクリックするとその催し物の詳細が表示されます。</p>
+</li>
+<li>
+<p>[今日]をクリックすると今日のカレンダーに移動します。</p>
+</li>
+<li>
+<p>[＜]をクリックすると前の月に移動します。</p>
+</li>
+<li>
+<p>[＞]をクリックすると次の月に移動します。</p>
+</li>
+<li>
+<p>右メニューの[一覧表示]をクリックすると休館日や催し物を一覧表示します。</p>
+</li>
+<li>
+<p>その他の右メニューについては、[「7-4  休館日や催し物を表示する」](#section7-4)と同様です。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="休館日や催し物を表示する">休館日や催し物を表示する</h3>
+<div class="paragraph">
+<p>図書館の休館日や催し物を表示することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［開館日と催し物］メニューから［全ての催し物］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event.png" alt="全ての催し物">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】他の行き方：［図書館の管理］メニューから［システムの設定］を選択し、[開館日と催し物]のリンクをクリックでも可。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>詳細をみたい休館日や催し物の名前のリンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_browse.png" alt="開催日と催し物の名前のリンク">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>この画面では、すでに登録済みの休館日や催し物が一覧されています。</p>
+</li>
+<li>
+<p>[編集]リンクをクリックすると、登録済みの休館日や催し物を修正できます。</p>
+</li>
+<li>
+<p>[削除]リンクをクリックすると、登録済みの休館日や催し物を削除できます。</p>
+</li>
+<li>
+<p>検索語にキーワードを入れて、検索ボタンをクリックするとヒットした休館日や催し物のみを表示します。</p>
+</li>
+<li>
+<p>[今後の催し物]をクリックすると、今後の休館日や催し物のみを表示します。</p>
+</li>
+<li>
+<p>[過去の催し物]をクリックすると、過去のの休館日や催し物のみを表示します。</p>
+</li>
+<li>
+<p>図書館のリンクをたどるとその図書館の情報ページを表示します。</p>
+</li>
+<li>
+<p>名前のリンクをたどるとその休館日や催し物の詳細を表示します。</p>
+</li>
+<li>
+<p>右メニューの[カレンダー表示]をクリックすると登録済みの休館日や催し物をカレンダー形式で表示します。</p>
+</li>
+<li>
+<p>右メニューの[催し物のインポート]をクリックすると催し物のインポートファイルの一覧の画面に遷移します（参照：[「7-2-2 催し物のデータをインポートする」](#section7-2-2)の5.の画面）</p>
+</li>
+<li>
+<p>右メニューの図書館名のリンクをクリックするとその図書館の休館日や催し物のみを表示します。</p>
+</li>
+<li>
+<p>右メニューの[RSS]リンクをクリックするとRSS形式で登録済みの休館日や催し物を表示します(参照：[「【Column】 休館日や催し物のRSS」（本節の最後に記載）](#section7_rss))。</p>
+</li>
+<li>
+<p>右メニューの[TSV]リンクをクリックするとTSV形式で登録済みの休館日や催し物を表示します(参照：[「【Column】 休館日や催し物のTSV」（本節の最後に記載）](#section7_tsv))。</p>
+</li>
+<li>
+<p>右メニューの[iCalendar]リンクをクリックするとiCalendar形式で登録済みの休館日や催し物をダウンロードできます(参照：[「【Column】 休館日や催し物のiCalendar」（本節の最後に記載）](#section7_icalendar))。他のカレンダーソフトやカレンダーサービスに登録済みの休館日や催し物を読み込むことができます。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>休館日や催し物の詳細が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_event_browse_2.png" alt="開催日と催し物の詳細">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[編集]リンクをクリックすると、登録済みの休館日や催し物を修正できます。</p>
+</li>
+<li>
+<p>右メニューの[削除]リンクをクリックすると、登録済みの休館日や催し物を削除できます。</p>
+</li>
+<li>
+<p>右メニューの[開催日と催し物の一覧]リンクをクリックすると、登録済みの休館日や催し物の一覧を表示します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>== 【Column】 休館日や催し物のRSS</p>
+</div>
+<div class="paragraph">
+<p>+
+image::../assets/images/1.1/image_operation_event_browse_rss.png[開催日と催し物の詳細]</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>== 【Column】 休館日や催し物のTSV</p>
+</div>
+<div class="paragraph">
+<p>&lt;pre&gt;
+library	name	note	start_at	end_at
+"Your Library"	"休館日"	""	"2015-12-07 00:00:00 +0900"	"2015-12-07 23:59:59 +0900"
+"Your Library"	"休館日"	""	"2015-11-05 00:00:00 +0900"	"2015-11-05 23:59:59 +0900"
+&lt;/pre&gt;</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>== 【Column】 休館日や催し物のiCalendar</p>
+</div>
+<div class="paragraph">
+<p>&lt;pre&gt;
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:Asia/Tokyo
+BEGIN:STANDARD
+DTSTART:19510908T020000
+RDATE:19510908T020000
+TZOFFSETFROM:+1000
+TZOFFSETTO:+0900
+TZNAME:JST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=Asia/Tokyo;VALUE=DATE-TIME:20151207T235959
+DTSTART;TZID=Asia/Tokyo;VALUE=DATE-TIME:20151207T000000
+DESCRIPTION:休館日
+LOCATION:IbarakiTsukuba
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Asia/Tokyo;VALUE=DATE-TIME:20151105T235959
+DTSTART;TZID=Asia/Tokyo;VALUE=DATE-TIME:20151105T000000
+DESCRIPTION:休館日
+LOCATION:IbarakiTsukuba
+END:VEVENT
+END:VCALENDAR
+&lt;/pre&gt;</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_operation_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_operation_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_3.html">第3章 利用者情報を管理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_4.html">第4章 図書の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_5.html">第5章 雑誌の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_6.html">第6章 貸出・返却・予約を処理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_7.html">第7章 休館日と催し物を登録する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_8.html">第8章 資料を検索する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_9.html">第9章 蔵書点検機能を利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_10.html">第10章 統計機能を利用する</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

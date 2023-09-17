@@ -1,0 +1,1348 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第3章 利用者情報を管理する - Next-L Enju 運用マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第3章 利用者情報を管理する - Next-L Enju 運用マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#利用者情報を新規作成する">利用者情報を新規作成する</a></li>
+<li><a href="#既存のデータから利用者情報をインポートする">既存のデータから利用者情報をインポートする</a>
+<ul class="sectlevel2">
+<li><a href="#tsvファイルの作成">TSVファイルの作成</a></li>
+<li><a href="#tsvファイルのインポート">TSVファイルのインポート</a></li>
+<li><a href="#失敗した場合について">失敗した場合について</a></li>
+</ul>
+</li>
+<li><a href="#利用者情報を変更する編集する">利用者情報を変更する（編集する）</a>
+<ul class="sectlevel2">
+<li><a href="#利用者情報を削除する">利用者情報を削除する</a></li>
+<li><a href="#利用者情報を表示する">利用者情報を表示する</a></li>
+<li><a href="#利用者を検索する">利用者を検索する</a></li>
+<li><a href="#3_7_利用者情報を別システムで管理する">3-7 利用者情報を別システムで管理する</a></li>
+<li><a href="#利用者情報のエクスポートをする">利用者情報のエクスポートをする</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>図書館の利用者情報管理には、次のような機能があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>利用者情報を新規作成する</p>
+</li>
+<li>
+<p>既存のデータから利用者情報をインポートする</p>
+</li>
+<li>
+<p>利用者情報を変更する（編集する）</p>
+</li>
+<li>
+<p>利用者情報を削除する</p>
+</li>
+<li>
+<p>利用者情報を表示する</p>
+</li>
+<li>
+<p>利用者を検索する</p>
+</li>
+<li>
+<p>利用者情報を別システムで管理する</p>
+</li>
+<li>
+<p>利用者情報のエクスポートをする</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>利用者情報で入力できる項目は、次の表に示す通りです。
+表の「新規」列に○があるものは新規作成で入力できる項目です。
+「編集」列に○や◎があるものは変更（編集）の際に入力できる項目です。
+◎があるものは一般ユーザーが自身の利用者情報編集機能で入力できる項目です。
+「権限」項目はAdministrator権限でログインした時のみ入力できる項目なので△になっています。</p>
+</div>
+<div class="paragraph">
+<p>&lt;!--
+* アカウント情報
+  利用者番号、ユーザ名、有効期限、利用者グループ、権限、既定の図書館、情報参照権限、言語
+* プロフィール情報（バージョンによっては入力できないものもあります）
+  メールアドレス、フルネーム（漢字）、フルネーム（ヨミ）、生年月日、住所等（郵便番号、住所、電話番号、FAX番号
+-&#8594;</p>
+</div>
+<div class="paragraph">
+<p>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+&lt;caption&gt;利用者情報&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th&gt;新規&lt;/th&gt;&lt;th&gt;編集&lt;/th&gt;&lt;th&gt;項目名&lt;/th&gt;&lt;th&gt;説明&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;ユーザ名&lt;/td&gt;&lt;td&gt;任意のユーザ名です。半角英数で入力します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;メールアドレス&lt;/td&gt;&lt;td&gt;連絡先メールアドレスを入力します。メールアドレスを登録しておくと、パスワードを忘れた時に、再設定されたパスワードを送信する機能が使えるようになります。予約の取り置きのメールのお知らせがくるようになります(※ Enju Leaf 1.1.0 ではこの機能は動作しません（詳細 &lt;a href="https://github.com/next-l/enju_leaf/issues/1016"&gt;issue #1016&lt;/a&gt;)。 書誌詳細（「書誌情報を電子メールで送信する」リンク）で書誌をメールに送れるようになります。インポート・エクスポート・利用統計の集計の完了通知が来るようになります（管理者権限のみ）。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;パスワードの自動生成&lt;/td&gt;&lt;td&gt;自動生成したパスワードを設定するかどうか。チェックをいれて[更新する]とすると、自動生成したパスワードを設定し、更新後の画面で表示します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;有効期限&lt;/td&gt;&lt;td&gt;ユーザの有効期限です。書式：yyyy-mm-dd&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;利用不可&lt;/td&gt;&lt;td&gt;ユーザアカウントを有効にするかどうかです。チェックを入れると利用不可になります。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;△&lt;/td&gt;&lt;td&gt;権限&lt;/td&gt;&lt;td&gt;User, Librarian, Administratorがあります。Administrator権限でログインしたときのみ権限の変更ができます。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;フルネーム&lt;/td&gt;&lt;td&gt;利用者の氏名を入力します。表示に使われます（主に、図書館職員の管理用に用いられます）。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;フルネーム（ヨミ）&lt;/td&gt;&lt;td&gt;利用者の氏名のヨミをカタカナで入力します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;利用者グループ&lt;/td&gt;&lt;td&gt;貸出冊数や期間などの条件を設定した利用者グループです。利用者グループを選択します。例えば、一般利用者、在勤・在学利用者、団体利用者など。利用者グループの作成や詳細については、&lt;a href="enju_setup_3.html#section3-4"&gt;初期設定マニュアル「3-4 利用者グループを設定する」&lt;/a&gt;を参照してください。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;利用者番号&lt;/td&gt;&lt;td&gt;利用者番号です。一般的には、利用者カードのバーコード番号などに利用します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;図書館&lt;/td&gt;&lt;td&gt;利用者既定の図書館名を設定します。書誌詳細で請求記号の背ラベル表示の際に使用されます。Librarian権限以上の場合は、書誌・所蔵・イベント・利用者情報等のインポートファイルのデフォルト所属図書館の指定に利用されます。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;参照に必要な情報&lt;/td&gt;&lt;td&gt;プロフィールをどの権限の利用者にまで公開するかを指定します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;言語&lt;/td&gt;&lt;td&gt;表示する言語を選ぶことができます。標準では、日本語と英語が選択可能です。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;キーワードリスト&lt;/td&gt;&lt;td&gt;ログインしたときに表示される「ピックアップ」資料は、このキーワードリストに入れたキーワードに関連したものを優先して表示します。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;貸出期限通知用のicalendar url&lt;/td&gt;&lt;td&gt;貸出期限通知に利用するicalendarのURL（リセットまたは削除）。デフォルトは未設定です。こちらを「リセット」して表示して表示したURLを使うことで、自身のカレンダーソフトに「貸出期限」などが表示されるように設定できます。アクセスに認証をともなわないので、このURLを他者に知られないように注意する必要があります。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;◎&lt;/td&gt;&lt;td&gt;貸出の履歴を保存する&lt;/td&gt;&lt;td&gt;チェックを入れると、現在借りている本だけでなく、返却した本の記録を閲覧できるようになります。ただし、チェックを入れる前の返却本は表示されません。&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;○&lt;/td&gt;&lt;td&gt;注記&lt;/td&gt;&lt;td&gt;注記です。備考等を入力します。&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+</div>
+<div class="paragraph">
+<p>{::comment}3-1  enju_operation/user_new.md {:/comment}
+{::comment}3-2  enju_operation/user_import.md {:/comment}
+{::comment}3-3  enju_operation/user_edit.md {:/comment}
+{::comment}3-4  enju_operation/user_profile.md {:/comment}
+{::comment}3-5  enju_operation/user_delete.md {:/comment}
+{::comment}3-6  enju_operation/user_search.md {:/comment}
+{::comment}3-7  enju_operation/user.md {:/comment}</p>
+</div>
+<div class="sect1">
+<h2 id="利用者情報を新規作成する">利用者情報を新規作成する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>利用者情報を１件ずつ登録するには、利用者の新規作成を行います。［図書館の管理］メニューから行います。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［利用者の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_user.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［利用者の新規作成］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_031.png" alt="利用者の新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>必要事項を入力して［利用者を登録する（取り消しはできません）］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_033.png" alt="利用者を登録する">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;【Memo】「*」のマークが付いた項目は入力必須項目です。また、登録の取り消しはできません。取り消しを行いたい場合は、利用者の削除を行います。（参照：[「3-4 利用者情報を削除する」](#section3-4)）
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>利用者が作成され、仮パスワードが発行されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_034.png" alt="仮パスワードが発行">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="既存のデータから利用者情報をインポートする">既存のデータから利用者情報をインポートする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>既存の利用者データがファイルで存在する場合は、インポートと呼ぶ読み込みを行い、利用者情報に取り込めます。インポートするには、あらかじめファイルをTSV形式で作成しておく必要があります。</p>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルの作成">TSVファイルの作成</h3>
+<div class="paragraph">
+<p>TSVファイルとは、項目をタブで区切ったテキストファイルです。サンプルファイルは、[<a href="https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv" class="bare">https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv</a>](<a href="https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv)を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として" class="bare">https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv)を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として</a> " " で囲みます。
+フィールド名とその意味については次の通りです。</p>
+</div>
+<div class="paragraph">
+<p>■利用者情報の項目</p>
+</div>
+<div class="paragraph">
+<p>&lt;table class="table table-bordered table-condensed table-striped"&gt;
+&lt;caption&gt;利用者情報の項目&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;フィールド名&lt;/th&gt;
+&lt;th&gt;データ形式&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;th&gt;未入力の場合（作成時）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;username&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;ユーザ名（入力必須）&lt;/td&gt;&lt;td&gt;（インポートが「失敗」になる）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;password&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;パスワード（入力推奨）：登録しなければ、登録
+直後は利用不能／後日adminが指定するしかない&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;full_name&lt;/td&gt;&lt;td&gt;utf8&lt;/td&gt;&lt;td&gt;フルネーム&lt;/td&gt;&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;full_name_transcription&lt;/td&gt;&lt;td&gt;utf8&lt;/td&gt;&lt;td&gt;フルネーム（ヨミ）&lt;/td&gt;&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;user_number&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;利用者番号（数字以外にアルファベットも使用可能）&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;email&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;メールアドレス：2つ以上入力したい場合は注記（note）に書くしかない&lt;/td&gt;&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;library&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;既定の図書館&lt;/td&gt;
+&lt;td&gt;インポート時に「既定の図書館」として指定した図書館&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;user_group&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;利用者グループ※1&lt;/td&gt;&lt;td&gt;インポート時に「既定の利用者グループ」として指定した利用者グループ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;locale&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;（使用）言語(日本語の場合：ja,　英語の場合：en) ※2&lt;/td&gt;&lt;td&gt;ja&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;role&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;権限（Guest, User, Librarian, Administrator ）&lt;/td&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;expired_at&lt;/td&gt;&lt;td&gt;ISO8601&lt;/td&gt;&lt;td&gt;有効期限（2011-01-30　のような形式）&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;checkout_icalendar_token&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;貸出期限のicalendar urlに使うトークン&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;save_checkout_history&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;貸出の履歴を保存するかどうか。t または　TRUE または trueなら真（保存する）。&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;locked&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;利用不可のアカウントにするかどうか。t または　TRUE または trueなら真（利用不可にする）。&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;required_role&lt;/td&gt;&lt;td&gt;code&lt;/td&gt;&lt;td&gt;参照に必要な権限（Guest, User, Librarian, Administrator ）&lt;/td&gt;
+&lt;td&gt;Librarian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keyword_list&lt;/td&gt;&lt;td&gt;utf8&lt;/td&gt;&lt;td&gt;キーワードリスト。//で区切る。&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;save_search_history&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;資料の検索履歴をデータベースに保存するかどうか。t または　TRUE または trueなら真（保存にする）。 ※3&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;share_bookmarks&lt;/td&gt;&lt;td&gt;ascii&lt;/td&gt;&lt;td&gt;ブックマークが他のユーザから参照できるかどうか。t または　TRUE または trueなら真（参照可にする）。※4&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;note&lt;/td&gt;&lt;td&gt;utf8&lt;/td&gt;&lt;td&gt;注記&lt;/td&gt;
+&lt;td&gt;未設定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;dummy&lt;/td&gt;&lt;td&gt;utf8&lt;/td&gt;&lt;td&gt;ダミー行の指定（なにかを書いているとその行は無視する行と判定される）&lt;/td&gt;
+&lt;td&gt;（読み込まれる行と判定される）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</p>
+</div>
+<div class="paragraph">
+<p>※1 利用者のグループの[名前]については[初期設定マニュアル「3-4 利用者グループを設定する」](enju_setup_3.html#section3-4)を参照ください。</p>
+</div>
+<div class="paragraph">
+<p>※2 環境によっては異なることがあります。
+使用できるものに何があるかは，[初期設定マニュアル「7-1 システムの基本的な情報の表示」](enju_setup_7.html#section7-1)機能でわかります。</p>
+</div>
+<div class="paragraph">
+<p>※3 注意：モジュール enju_search_log をインストールした場合（[インストールマニュアル 5-6節](enju_install_vm_5.html#section5-6)参照）にのみ使用できます。インストールしていない場合は、無視されます。</p>
+</div>
+<div class="paragraph">
+<p>※4 注意：モジュール enju_bookmark をインストールした場合（[インストールマニュアル 5-5節](enju_install_vm_5.html#section5-5)参照）にのみ使用できます。インストールしていない場合は、無視されます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tsvファイルのインポート">TSVファイルのインポート</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［インポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_import.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>［利用者アカウント］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_037.png" alt="利用者のTSVファイルからのインポート">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの[利用者のインポート用ファイルの新規作成]を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_037_2.png" alt="利用者のTSVファイルからのインポート（新規作成）">
+</div>
+</div>
+</li>
+<li>
+<p>［ファイルを選択］ボタンをクリックしてインポート用のファイルを選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_039_1.png" alt="利用者のTSVファイルを選択">
+</div>
+</div>
+</li>
+<li>
+<p>[編集モード]、[文字コード]、[既定の利用者グループ]、[既定の図書館]を選択して［インポートを開始］ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_039_2.png" alt="利用者のTSVファイルファイルを作成">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】［編集］モードで［更新］を選択すると、TSVファイルで利用者情報をまとめて更新できます。TSVファイルに必要なのは、更新したい利用者のユーザ名（&lt;code&gt;username&lt;/code&gt;）と、更新したいフィールドの内容になります。また、［削除］を選択すると、TSVファイルで利用者情報をまとめて削除できます。この場合は、TSVファイルに必要なのは、削除したい利用者のユーザ名（&lt;code&gt;username&lt;/code&gt;）のみです。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】[文字コード]は基本的には自動判別でよいですが、うまくいかない場合は、文字コードを指定するようにしてください。
+&lt;/div&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】[既定の利用者グループ]や[既定の図書館]は、TSVファイルに[利用者グループ]（user_group列）や[図書館]（library列）の値がない場合やTSVファイルで当該値に無効な値を指定していた場合に登録される値となります。TSVファイルに有効な値が指定されていた場合はTSVファイルを優先します。プルダウンメニューのデフォルト値は、現在ログイン中のユーザの利用者グループと図書館です。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「利用者のインポート用ファイルは正常に作成されました。」のメッセージが表示され、利用者のデータがインポートの準備が整います。 右の[利用者のインポート用ファイルの一覧] をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_040_2.png" alt="利用者のインポート用ファイルの表示">
+</div>
+</div>
+</li>
+<li>
+<p>今までのインポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。インポートが完了したものは[完了]と表示されます。[処理待ち]のものは現在、実行中です。インポート完了時にはEnjuのメッセージ機能にてお知らせします（「インポートが完了しました」というメッセージが送られてきます）。注）Next-L Enju Leaf 1.1.0.rc12以前のバージョンの場合は毎時0分にインポート処理が開始します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_040_3.png" alt="利用者のインポート結果の一覧">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】この画面は[図書館の管理]メニュー→[インポート]→[利用者アカウント]とすればいつでも閲覧できます。
+&lt;/div&gt;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="失敗した場合について">失敗した場合について</h3>
+<div class="paragraph">
+<p>TSVファイルになんらかのエラーがありインポートの状態が[失敗]となることがあります。状態が[失敗]となった場合は、[表示]をクリックしてエラーメッセージを確認してください。「エラーメッセージ」にエラーのあった行とその理由が記述されています。エラーのあった行のレコードは登録されていませんので、エラーのあった行のみを抜き出してエラーを修正して再度登録する必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［インポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_import.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>［利用者アカウント］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_037.png" alt="利用者のTSVファイルからのインポート">
+</div>
+</div>
+</li>
+<li>
+<p>インポートの状態が[失敗]の[表示]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_041_2.png" alt="TSVインポートに失敗">
+</div>
+</div>
+</li>
+<li>
+<p>[エラーメッセージ]にエラーの行とエラーの内容が表示されていますので、内容を確認します。次の例では3行目のレコードにどこか問題があるようです。[ファイル名]をクリックしてTSVファイルをダウンロードします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_041_3.png" alt="エラーメッセージ">
+</div>
+</div>
+</li>
+<li>
+<p>該当行のエラーを修正し、ヘッダ行とエラーのあった行以降のレコードが入ったTSVファイルを作成し、インポートをします。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="利用者情報を変更する編集する">利用者情報を変更する（編集する）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>登録した利用者情報は、必要に応じてあとから変更できます。ただし、Librarian権限でログインしている場合は権限の変更は行えません。</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】編集したい利用者情報が書かれたTSVファイルを用いて、複数の利用者情報をまとめて編集することもできます。TSVを用いた利用者情報の編集のやり方の詳細については、[「3-2 既存のデータから利用者情報をインポートする 」](#section3-2)を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［利用者の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_user.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>情報を変更したい利用者の［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_045.png" alt="利用者情報の編集">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】利用者番号や、[表示]をクリックした先の画面の右メニューの[編集]をクリックすることでも編集画面に遷移します。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>属性を編集し［更新する］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_047.png" alt="利用者情報を更新">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info"&gt;【Memo】「*」のマークが付いた項目は入力必須項目です。
+&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「利用者は正常に更新されました。」のメッセージが表示され、利用者の情報が変更されます。 [自動生成したパスワードを設定する]にチェックをいれていた場合は、自動生成したパスワードが表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_048.png" alt="利用者情報の更新結果">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="利用者情報を削除する">利用者情報を削除する</h3>
+<div class="paragraph">
+<p>登録した利用者情報は、不要になった際に削除できます。</p>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info" markdown="1"&gt;</p>
+</div>
+<div class="paragraph">
+<p>【Memo】削除したい利用者情報が書かれたTSVファイルを用いて、複数の利用者情報をまとめて削除することもできます。TSVを用いた利用者情報の削除のやり方の詳細については、[「3-2 既存のデータから利用者情報をインポートする 」](#section3-2)を参照してください。</p>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［利用者の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_user.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>削除したい利用者の［編集］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_057.png" alt="利用者情報の編集">
+</div>
+</div>
+</li>
+<li>
+<p>右メニューの［削除］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_059.png" alt="削除">
+</div>
+</div>
+</li>
+<li>
+<p>メッセージが表示されたら［OK］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_alert.png" alt="OK">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="利用者情報を表示する">利用者情報を表示する</h3>
+<div class="paragraph">
+<p>利用者の一覧を、画面上で表示し、利用者情報を表示することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［利用者の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_user.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>利用者一覧が表示されます。詳細を知りたい利用者の[利用者番号]のリンクをクリックします。一覧に利用者が表示されない場合は、検索することもできます。検索する方法は 次の節を参照してください。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_068.png" alt="利用者一覧">
+</div>
+</div>
+</li>
+<li>
+<p>当該利用者の利用者情報が表示されます。 {#user_info_page}</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_068_2.png" alt="利用者の詳細情報">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo" markdown="1"&gt;
+【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>貸出の表には、貸出情報が表示されます。「貸出の履歴を保存する」にチェックが入っていた場合は、返却後の貸出履歴も表示されます。</p>
+</li>
+<li>
+<p>右メニューにある「図書 : 1/ 10」は、「借りている本の数 / 借りられる上限数」を表しています。</p>
+</li>
+<li>
+<p>右メニューの[編集]リンクをたどると、編集画面へ遷移します。本表示画面に表示されていない項目（メールアドレスなど）も編集画面で内容を確かめることができるものがあります。</p>
+</li>
+<li>
+<p>右メニューの[利用者の一覧]リンクをたどると、「利用者の一覧画面」に遷移します。</p>
+</li>
+<li>
+<p>右メニューの[貸出の新規作成]をクリックするとこの利用者の利用者番号が入った状態の貸出の新規作成画面に遷移し、すぐに貸出処理を進めることができます。※利用者番号が入力されていない場合はこのリンクが出現しません。</p>
+</li>
+<li>
+<p>右メニューの[メッセージを送信する]リンクをたどると、当該利用者へのメッセージ送信画面へ遷移します。</p>
+</li>
+<li>
+<p>右メニューの[利用者の新規作成]リンクをたどると、利用者の新規作成画面へ遷移します。</p>
+</li>
+<li>
+<p>右メニューの[削除]リンクをたどると、当該利用者情報を削除します。貸出中の資料がある利用者情報の表示の場合は[削除]リンクは表示されません。</p>
+</li>
+<li>
+<p>右メニューの[貸出の一覧]リンクをたどると、貸出の一覧画面へ遷移します。</p>
+</li>
+<li>
+<p>右メニューの[予約の一覧]リンクをたどると、予約の一覧画面へ遷移します。</p>
+</li>
+<li>
+<p>右メニューの[購入リクエストの一覧]リンクをたどると、購入リクエストの一覧画面へ遷移します。
+&lt;/div&gt;</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="利用者を検索する">利用者を検索する</h3>
+<div class="paragraph">
+<p>Enjuに登録されている利用者は、検索語（キーワード）で検索することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［利用者の管理］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_user.png" alt="利用者の管理">
+</div>
+</div>
+</li>
+<li>
+<p>検索語を入力して［検索］をクリックします（ユーザ名や利用者番号は完全一致するものがヒットします。フルネームは部分一致するものがヒットします）。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_064.png" alt="検索">
+</div>
+</div>
+</li>
+<li>
+<p>該当する利用者が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_066.png" alt="利用者の表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3_7_利用者情報を別システムで管理する">3-7 利用者情報を別システムで管理する</h3>
+<div class="paragraph">
+<p>Enjuで扱えない利用者情報を別のシステムで管理して、別システムで検索した利用者情報から、Enjuの利用者詳細画面につなげる方法を説明します。
+Enjuのカスタマイズをすることなく、必要な利用者情報を管理できるようになります。</p>
+</div>
+<div class="paragraph">
+<p>ここでは簡便なやり方として、MS Excelを使ったやり方を説明しますが、Accessや他のアプリケーションでも同様にできます。（注意：Excelファイルにパスワードを掛けるなど、漏えい対策に気を付けてください）</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>利用者情報のExcel ファイルを作ります。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>例えば、Excelでこのようなファイルを作ります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_userinfo_local_001.png" alt="Excelファイルの例">
+</div>
+</div>
+<div class="paragraph">
+<p>このファイルで、生年月日や住所などEnjuに入力していない情報で利用者の情報を検索して、本人確認のための利用者情報を調べることができますし、URLのリンクをたどれば、その利用者のページにたどりつけます。</p>
+</div>
+<div class="paragraph">
+<p>サンプルファイルは、
+[Next-L公式サイト（https://www.next-l.jp/?page=etc%5Ffiles&amp;file=userinfo%5Flocalfile%5Fsample%2Exlsx&amp;action=ATTACH）](<a href="https://www.next-l.jp/?page=etc%5Ffiles&amp;file=userinfo%5Flocalfile%5Fsample%2Exlsx&amp;action=ATTACH" class="bare">https://www.next-l.jp/?page=etc%5Ffiles&amp;file=userinfo%5Flocalfile%5Fsample%2Exlsx&amp;action=ATTACH</a>)
+にありますので、参考にしてください。ここで用いている情報は架空のものです。</p>
+</div>
+<div class="paragraph">
+<p>例えば、「ユーザ名」が 「u550001」 であれば、以下のようなURLを書けば
+そのユーザ名の詳細画面に行くリンクになります。「localhost:8080」のところは適宜、書き換えてください。
+（例えば、デモサーバーであれば、 「enju.next-l.jp」になります。）</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>http://localhost:8080/profiles?username=u550001</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>作成したExcelファイルを使い、利用者情報の閲覧し、リンクをたどる</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>作成した、Excelファイルを使って、利用者の生年月日等で本人確認を行い、
+ユーザ名を知ることができます。</p>
+</div>
+<div class="paragraph">
+<p>「リンク」列の当該「ユーザ名」のリンクをたどります。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_userinfo_local_001_2.png" alt="リンクをたどる">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enjuの当該利用者の情報の画面に遷移できます。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>右メニューの[貸出の新規作成]をクリックして
+当該利用者の利用者番号の入った貸出画面に行くこともできます
+（詳細：[「3-5 利用者情報を表示する」の 3.](#user_info_page)）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_userinfo_local_002.png" alt="該当利用者のページ">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>トラブルシューティング：リンクをクリックしてもトップページに飛んでしまう場合</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Enjuのサーバーの設定が必要です。1回だけ必要です。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ cd enju
+$ vi Gemfile</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>として、Gemfile の最後に以下の行を追加</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gem "fix_microsoft_links"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ファイルを保存</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ bundle update
+$ sudo restart enju_leaf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>として、Enjuを再起動。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="利用者情報のエクスポートをする">利用者情報のエクスポートをする</h3>
+<div class="paragraph">
+<p>Administrator権限のユーザーでログインしている場合は、
+登録されている全ての利用者情報をTSVとしてエクスポートすることができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［図書館の管理］メニューから［エクスポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_admin.png" alt="エクスポート">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>※ Administrator 権限でログインしておく必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>[利用者情報のエクスポート]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_1.png" alt="利用者情報のエクスポート">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>※　Administrator 権限ログインしていない場合は[利用者情報のエクスポート]リンクが表示されません。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>右メニューの[利用者情報のエクスポートの新規作成]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_2.png" alt="利用者情報のエクスポートの新規作成">
+</div>
+</div>
+</li>
+<li>
+<p>[エクスポート]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_3.png" alt="エクスポート">
+</div>
+</div>
+</li>
+<li>
+<p>「利用者情報のエクスポート処理は正常に作成されました」のメッセージが表示され、利用者情報のデータエクスポートの準備が整いました。右の[利用者情報蔵のエクスポートの一覧]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_4.png" alt="エクスポートの表示">
+</div>
+</div>
+</li>
+<li>
+<p>今までのエクスポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。[開始]のものは現在、実行中です。エクスポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_5.png" alt="エクスポート結果の一覧表示">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;【Memo】この画面は[図書館の管理]メニュー&#8594;[エクスポート]&#8594;[利用者情報のエクスポート]とすればいつでも閲覧できます。&lt;/div&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ファイル名のリンクから作成されたTSVファイルをダウンロードすることができます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_export_user_6.png" alt="エクスポートファイルのダウンロード">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>&lt;div class="alert alert-success memo" markdown="1"&gt;
+&lt;h4 class="alert-heading"&gt;【Column】TSVファイル&lt;/h4&gt;</p>
+</div>
+<div class="paragraph">
+<p>次の項目が入っています(Enju Leaf 1.1.0)。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>username</p>
+</li>
+<li>
+<p>full_name</p>
+</li>
+<li>
+<p>full_name_transcription</p>
+</li>
+<li>
+<p>email</p>
+</li>
+<li>
+<p>user_number</p>
+</li>
+<li>
+<p>role</p>
+</li>
+<li>
+<p>user_group</p>
+</li>
+<li>
+<p>library</p>
+</li>
+<li>
+<p>locale</p>
+</li>
+<li>
+<p>locked</p>
+</li>
+<li>
+<p>required_role</p>
+</li>
+<li>
+<p>created_at</p>
+</li>
+<li>
+<p>updated_at</p>
+</li>
+<li>
+<p>expired_at</p>
+</li>
+<li>
+<p>keyword_list</p>
+</li>
+<li>
+<p>note</p>
+</li>
+<li>
+<p>checkout_icalendar_token</p>
+</li>
+<li>
+<p>save_checkout_history</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&lt;/div&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_operation_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_operation_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_3.html">第3章 利用者情報を管理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_4.html">第4章 図書の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_5.html">第5章 雑誌の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_6.html">第6章 貸出・返却・予約を処理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_7.html">第7章 休館日と催し物を登録する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_8.html">第8章 資料を検索する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_9.html">第9章 蔵書点検機能を利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_10.html">第10章 統計機能を利用する</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

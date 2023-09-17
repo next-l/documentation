@@ -1,0 +1,825 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第5章 雑誌の受入をする - Next-L Enju 運用マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第5章 雑誌の受入をする - Next-L Enju 運用マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#雑誌登録の基本的な仕組み">雑誌登録の基本的な仕組み</a></li>
+<li><a href="#雑誌シリーズを登録する">雑誌（シリーズ）を登録する</a>
+<ul class="sectlevel2">
+<li><a href="#ndlサーチを検索して登録する">NDLサーチを検索して登録する</a></li>
+<li><a href="#手動で資料を登録する">手動で資料を登録する</a></li>
+</ul>
+</li>
+<li><a href="#個々の雑誌を登録する">個々の雑誌を登録する</a></li>
+<li><a href="#tsvファイルを読み込んで登録する">TSVファイルを読み込んで登録する</a></li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuを使い、雑誌の受入に関して、次のような作業が行えます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>雑誌のタイトル単位の書誌を登録する</p>
+</li>
+<li>
+<p>雑誌の各号の書誌を登録する</p>
+</li>
+<li>
+<p>雑誌の各号の所蔵を登録する</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuにおける雑誌情報は，「逐次刊行物」フラッグと「シリーズ情報」の2つで管理しています。</p>
+</div>
+<div class="paragraph">
+<p>書誌を登録する際に「逐次刊行物」フラグが付いた雑誌の各号にあたる書誌は，検索結果において各号単位ではなく，雑誌タイトル単位で表示されることになります。
+雑誌タイトル単位の情報は，各号にあたる書誌情報では「シリーズ情報」として追加登録されます。
+Enjuへの雑誌登録を行う際はこれらの基本的な仕組みを理解しておく必要があります。</p>
+</div>
+<div class="sect1">
+<h2 id="雑誌登録の基本的な仕組み">雑誌登録の基本的な仕組み</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>次の図は，検索結果一覧を示しています。検索結果一覧では，雑誌タイトル単位でまとめて一行として表示されます（例：「情報の科学と技術」）。ここである雑誌タイトルを選んでみます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/serials_searchresults.png" alt="逐次刊行物としてまとめて検索表示される雑誌タイトル">
+</div>
+</div>
+</li>
+<li>
+<p>すると選んだ雑誌タイトルの各号単位の書誌が一覧されます。どれか特定の号のリンクをクリックしてみます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/serials_series_parent.png" alt="逐次刊行物の1タイトルにおいて各号単位でリストされる画面">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[資料の新規作成]をクリックすると個々の雑誌の号を登録する画面に遷移します。</p>
+</li>
+<li>
+<p>右メニューの[編集]をクリックするとこの雑誌の情報を編集できます。</p>
+</li>
+<li>
+<p>右メニューの図書館、言語、出版日、予約可能については、[利用者マニュアル 「1-4 検索結果を絞り込む」](enju_user_1.html#section1-4)を参照ください。</p>
+</li>
+<li>
+<p>右メニューの検索結果のフィード、書き出しについては、[Web APIマニュアル 「1章 検索結果一覧を取得する」](enju_webapi_1.html)を参照ください。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>各号の情報が表示されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/serials_series_child.png" alt="各号単位の情報が表示される画面">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの画像ファイルの新規作成は表紙画像が登録できます（詳細 [「4-8 画像を登録する」](enju_operation_4.html#section4-8)）</p>
+</li>
+<li>
+<p>右メニューの[この資料を予約する]はこの資料の予約画面へ遷移します。</p>
+</li>
+<li>
+<p>右メニューの[(x人の予約待ち)]はこの資料の予約の一覧が表示されます。</p>
+</li>
+<li>
+<p>右メニューの[編集]はこの資料を編集できます。</p>
+</li>
+<li>
+<p>右メニューの[所蔵を編集]はこの資料の所蔵の一覧を表示します。</p>
+</li>
+<li>
+<p>右メニューの[（新規作成）]はこの資料の所蔵を新規作成します。</p>
+</li>
+<li>
+<p>右メニューの[派生資料を追加]はこの資料の派生資料を追加します（この説明の詳細は準備中です [issue #1060](<a href="https://github.com/next-l/enju_leaf/issues/1060)）" class="bare">https://github.com/next-l/enju_leaf/issues/1060)）</a></p>
+</li>
+<li>
+<p>右メニューの書き出しについては[Web API マニュアル「第2 章　検索結果詳細を取得する」](enju_webapi_2.html)を参照してください。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="雑誌シリーズを登録する">雑誌（シリーズ）を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>雑誌を登録する場合は、まず雑誌タイトル単位のシリーズ情報を登録しておきます。</p>
+</div>
+<div class="paragraph">
+<p>登録の方法は次の2種類があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>（推奨）NDLサーチを検索して登録する方法 （詳細：[5-1-1節](#section5-1-1)）</p>
+</li>
+<li>
+<p>手動で資料を登録する方法（詳細：[5-1-2節](#section5-1-2)）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>があります。</p>
+</div>
+<div class="sect2">
+<h3 id="ndlサーチを検索して登録する">NDLサーチを検索して登録する</h3>
+<div class="paragraph">
+<p>NDLサーチ（国立国会図書館サーチ &lt;<a href="https://iss.ndl.go.jp/&gt;）で" class="bare">https://iss.ndl.go.jp/&gt;）で</a>
+検索した資料を登録することができます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［NDLサーチ検索によるインポート］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_106_ndl.png" alt="NDLサーチ検索によるインポート">
+</div>
+</div>
+</li>
+<li>
+<p>登録したい資料を検索します。検索語に登録したい資料の「JP番号」などを入力し、［検索］ボタンをクリックします。</p>
+<div class="paragraph">
+<p>&lt;div class="alert alert-info memo"&gt;
+【Memo】
+多くヒットしてしまい選びにくいことが想定されますので、
+あらかじめ、NDLサーチ（国立国会図書館サーチ &lt; [<a href="https://iss.ndl.go.jp/" class="bare">https://iss.ndl.go.jp/</a>](<a href="https://iss.ndl.go.jp/" class="bare">https://iss.ndl.go.jp/</a>) &gt;）
+のサービス上で検索して、
+当該資料の「JP番号」を調べておき、
+その「JP番号」を使うとよいでしょう。
+&lt;/div&gt;</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_107_ndl_m.png" alt="NDLサーチ検索の検索">
+</div>
+</div>
+</li>
+<li>
+<p>登録したい資料の[追加]をクリックします</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_108_ndl_m.png" alt="資料の追加">
+</div>
+</div>
+</li>
+<li>
+<p>「資料は正常に作成されました。」と表示され、登録が完了します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_109_ndl_m.png" alt="登録完了">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="手動で資料を登録する">手動で資料を登録する</h3>
+<div class="paragraph">
+<p>国立国会図書館に納本されていない雑誌など、[5-1-1節](#section5-1-1)の方法が使えない場合には、
+手動で資料を登録します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［手動で登録する］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_input_manually_manifestation.png" alt="手動で登録する">
+</div>
+</div>
+</li>
+<li>
+<p>原題にタイトル名称等を入力し、[逐次刊行物]にチェックを入れます。ここで入力した原題は検索結果一覧で表示されるものになります。[シリーズ情報]下の[別のシリーズ情報を追加する]リンクをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_operation_155.png" alt="逐次刊行物の記述を作成">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[戻る]をクリックすると資料の検索結果が表示されます（検索語になにもいれずに検索ボタンをクリックしたときの画面）。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>シリーズ情報を入力するためのテキストボックスが表示されるので、[シリーズ情報]内の[シリーズ名]等を入力し(シリーズ名は基本的には原題と同じものを入力します)、「マスタ」にチェックを入れ、[更新する]ボタンをクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/serials_add_master.png" alt="逐次刊行物の雑誌マスタを作成">
+</div>
+</div>
+</li>
+<li>
+<p>雑誌タイトル単位のシリーズ情報が作成されます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/serials_master.png" alt="逐次刊行物の雑誌マスタ">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>右メニューの[資料の新規作成]をクリックすると個々の雑誌を登録する画面に遷移します。</p>
+</li>
+<li>
+<p>右メニューの[編集]をクリックするとこの雑誌の情報を編集できます。</p>
+</li>
+<li>
+<p>右メニューの[削除]をクリックするとこの雑誌の情報を削除できます。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="個々の雑誌を登録する">個々の雑誌を登録する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>雑誌マスタ（シリーズ）を登録したら、各号単位の雑誌を登録します。
+ここでは例として，雑誌「情報の科学と技術」の64巻1号を登録するものとして説明します。</p>
+</div>
+<div class="paragraph">
+<p>追加したい雑誌のマスタレコードを探します。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［資料の受入］メニューから［雑誌・定期刊行物］を選択します。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/serials_add_manifestation.png" alt="雑誌・定期刊行物">
+</div>
+</div>
+</li>
+<li>
+<p>登録したい雑誌（シリーズ）の[新規受入]をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/serials_manifestations.png" alt="雑誌・定期刊行物の一覧">
+</div>
+</div>
+</li>
+<li>
+<p>シリーズ名や原題などは雑誌マスタの情報がコピーされるので、巻数や号など追加で必要な情報を入力し、[登録する]ボタンをクリックします。</p>
+<div class="paragraph">
+<p>※ コピーされる項目：原題、タイトルのヨミ、代替タイトル、責任表示、
+逐次刊行物フラグ、著者、協力者・編者、出版者、出版地、発行頻度、
+言語、件名、分類、高さ、幅、奥行き、価格、アクセスアドレス、参照に必要な権限</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/image_operation_158.png" alt="巻号、通号等を入力">
+</div>
+</div>
+</li>
+<li>
+<p>「資料は正常に作成されました。」のメッセージが表示され、雑誌が資料として登録されます。右メニューの「（新規作成）」のリンクをクッリクして所蔵情報の登録に進みます。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.2/serials_manifestation_added.png" alt="資料は正常に作成されました">
+</div>
+</div>
+</li>
+<li>
+<p>[「4-3 所蔵情報を登録・一覧表示する」](enju_operation_4.html#section4-3)の「4. 図書館や貸出状態などを設定して、［登録する］ボタンをクリックします。」からの手順に従い、資料の所蔵情報を登録します。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tsvファイルを読み込んで登録する">TSVファイルを読み込んで登録する</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】Next-L Enju Leaf 1.1.0 現在、
+雑誌情報のTSVファイルを通じたインポート機能は
+未実装です(開発予定はあります）（[issue #721](<a href="https://github.com/next-l/enju_leaf/issues/721" class="bare">https://github.com/next-l/enju_leaf/issues/721</a>) [issue #731](<a href="https://github.com/next-l/enju_leaf/issues/731)）。" class="bare">https://github.com/next-l/enju_leaf/issues/731)）。</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_operation_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_operation_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_3.html">第3章 利用者情報を管理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_4.html">第4章 図書の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_5.html">第5章 雑誌の受入をする</a></p>
+</li>
+<li>
+<p><a href="enju_operation_6.html">第6章 貸出・返却・予約を処理する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_7.html">第7章 休館日と催し物を登録する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_8.html">第8章 資料を検索する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_9.html">第9章 蔵書点検機能を利用する</a></p>
+</li>
+<li>
+<p><a href="enju_operation_10.html">第10章 統計機能を利用する</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

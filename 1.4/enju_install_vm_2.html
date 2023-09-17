@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2章 Enjuを動作させる方法 - Next-L Enju インストールマニュアル（Docker編）</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第2章 Enjuを動作させる方法 - Next-L Enju インストールマニュアル（Docker編） </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#概要">概要</a></li>
+<li><a href="#dockerについて">Dockerについて</a>
+<ul class="sectlevel2">
+<li><a href="#dockerの概要">Dockerの概要</a></li>
+<li><a href="#dockerを利用するメリット">Dockerを利用するメリット</a></li>
+</ul>
+</li>
+<li><a href="#インストールの流れ">インストールの流れ</a>
+<ul class="sectlevel2">
+<li><a href="#インストールの全体">インストールの全体</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuを動作させる方法について説明します。</p>
+</div>
+<div class="sect1">
+<h2 id="概要">概要</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuを実行させるために、Project Next-LではGitHub上でソースコードを公開しているほか、Docker環境用のコンテナも作成・提供しています。これに対応してEnjuをインストールする方法としては、いくつか方法がありますが、ここでは2つ紹介します(下図を参照)。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enjuを動作させるのに必要な各種ミドルウェアやモジュール群をインストールし、Enjuのプログラムを実行</p>
+</li>
+<li>
+<p><strong>Dockerがインストールされたコンピュータで、EnjuのDockerコンテナを実行</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>各図書館の状況や開発形態によって、これらの手法から最適な手法を選択することが必要となります。</p>
+</div>
+<div class="paragraph">
+<p>1.の方法はEnjuが動作する環境整備から行っていこうとするもので、実行することができるコンピュータの範囲も広く、取り込むモジュールの選択なども行えるなど最も自由度が高い方法です。コンピュータの能力に応じたパフォーマンスも発揮することができます。その反面、インストールのためにはOSや、Ruby on Railsの開発環境、ネットワークに関わる比較的高度な知識などが必要となります。初心者には、かなりハードルが高いということもできます。各図書館の状況などにあわせ、Enjuの標準的な環境から大幅に手をいれる必要がある場合などには、この方法をとることが必要となることもあると思われます。</p>
+</div>
+<div class="paragraph">
+<p>2.の方法はWindowsやLinuxなどのような普段使っているOSの上のアプリケーションのひとつとして動くOSの上でEnjuを動かそうとするものです。普段使っているOSの上で異なるOSとアプリケーションを実行するためのソフトウェアを動作させ(これがDockerということになります)、その上でEnjuを動作させることになります。Docker上で動作するEnju(Enjuコンテナと呼びます)は、Enju本体だけではなく動作環境まで含めた形で提供されるため、Dockerさえ動作するようにすれば、<strong>つまり、2.の方法を用いれば、高いITスキルがない人でも、比較的簡単な作業でEnjuを動かすことができます</strong>。すなわち、Dockerを利用することにより、基礎的なOS(Windowsなど)の操作と、初歩的なネットワークに関する知識があればインストールが可能です。また、普段は別の用途で使っているPCを必要な時だけEnjuが動作するサーバとして使用することもできます。</p>
+</div>
+<div class="paragraph">
+<p>さらに、Windows上のWebブラウザ(Microsoft EdgeやGoogle Chrome, Firefoxなど)からDocker上のNext-L Enjuを利用することで、<strong>2.の方法を用いれば使い慣れた１台のコンピュータのみで、統合図書館システムNext-L Enjuを運用する</strong>こともできます。</p>
+</div>
+<div class="paragraph">
+<p><strong>本マニュアルでは、「2. Dockerを用いる方法」について述べます。</strong></p>
+</div>
+<div class="paragraph">
+<p>まず、第4章において、簡便にNext-L Enjuを利用する手法として、１台のコンピュータ上のみでNext-L Enjuを利用する(同じコンピュータ上でサーバとクライアントの両方を動作させる)方法について述べます。もちろん、使用するコンピュータはデスクトップではなくノートブックでも問題ありません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_000.png" alt="1台のコンピュータでEnjuを動作させる">
+</div>
+</div>
+<div class="paragraph">
+<p>さらに第5章において、設定したNext-L Enjuをネットワークを介して別のコンピュータからも利用する方法について説明していきます。</p>
+</div>
+<div class="paragraph">
+<p>Next-L Enjuがインストールされたサーバコンピュータにクライアントコンピュータから接続して利用する際、クライアントコンピュータからはブラウザーソフトを利用してNext-L Enjuのデータにアクセスします。したがってクライアントコンピュータのOSは問わず、またEnjuの動作はクライアントコンピュータの環境に依存しません。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_install_001.png" alt="Next-L Enjuの利用イメージ">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="dockerについて">Dockerについて</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dockerは、広く利用されているコンテナ実行環境構築・運用ソフトウェアです。</p>
+</div>
+<div class="sect2">
+<h3 id="dockerの概要">Dockerの概要</h3>
+<div class="paragraph">
+<p>Dockerは、Docker社によって提供されているアプリケーション実行環境構築・運用ソフトウェアです。Dockerでは、アプリケーションの入った「コンテナ」を実行することができます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dockerを利用するメリット">Dockerを利用するメリット</h3>
+<div class="paragraph">
+<p>Dockerを用いた場合、その上で動作するアプリケーションを「コンテナ」、つまりセットアップ済みのファイルとして提供できるメリットがあります。これに対してDockerを使用しない場合は、LinuxなどのOSのインストールからはじめて、Ruby, Ruby on Rails、さらにSolrのようなミドルウェアのインストールが必要になります。またコンテナ環境では、他のパッケージシステムとの競合などに注意を払う必要もありません。比較的簡単に行えるDockerのインストールを行うだけで、Enjuの動作環境の構築を大幅に簡略化することができます。</p>
+</div>
+<div class="paragraph">
+<p>またDockerは個人用途では無償で提供されており、追加費用なしで動作環境を構築できることも大きなメリットです。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="インストールの流れ">インストールの流れ</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="インストールの全体">インストールの全体</h3>
+<div class="paragraph">
+<p>Dockerを使ったEnjuのインストールは以下の手順で行います。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>動作環境の確認</p>
+</li>
+<li>
+<p>Dockerのダウンロード</p>
+</li>
+<li>
+<p>Dockerのインストール</p>
+</li>
+<li>
+<p>Enjuコンテナのダウンロード</p>
+</li>
+<li>
+<p>Enjuコンテナのインストール</p>
+</li>
+<li>
+<p>Enjuコンテナの動作確認</p>
+</li>
+<li>
+<p>Enjuコンテナのネットワーク設定</p>
+</li>
+<li>
+<p>Enjuコンテナの起動</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_install_vm_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_2.html">第2章 Enjuを動作させる方法</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_3.html">第3章 動作環境の確認とDockerのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_4.html">第4章 Enjuのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_5.html">第5章 モジュールの追加</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_6.html">第6章 検索エンジンの設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_7.html">第7章 他のコンピュータからの利用設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_8.html">第8章 Enjuのアップデート</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_9.html">第9章 データのバックアップ</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_10.html">第10章 その他（カスタマイズなど）</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_11.html">第11章 トラブルシューティング</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

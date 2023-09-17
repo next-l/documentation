@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第10章 その他（カスタマイズなど） - Next-L Enju インストールマニュアル（Docker編）</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第10章 その他（カスタマイズなど） - Next-L Enju インストールマニュアル（Docker編） </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#enjuを運用するにあたっての留意点注意点">Enjuを運用するにあたっての留意点・注意点</a></li>
+<li><a href="#条件を詳しく指定して検索の画面をカスタマイズする">「条件を詳しく指定して検索」の画面をカスタマイズする</a></li>
+<li><a href="#トップの画面の検索フォームをカスタマイズする">トップの画面の検索フォームをカスタマイズする</a></li>
+<li><a href="#検索結果一覧画面の検索フォームをカスタマイズする">検索結果一覧画面の検索フォームをカスタマイズする</a></li>
+<li><a href="#検索結果一覧画面に表示項目を追加する">検索結果一覧画面に表示項目を追加する</a></li>
+<li><a href="#トップ画面やヘルプなどに表示する画像を置く">トップ画面やヘルプなどに表示する画像を置く</a></li>
+<li><a href="#ヘッダーをカスタマイズする">ヘッダーをカスタマイズする</a></li>
+<li><a href="#sitemapsを設定する">Sitemapsを設定する</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="enjuを運用するにあたっての留意点注意点">Enjuを運用するにあたっての留意点・注意点</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuサーバは，外部からネットワーク経由でアクセスすることができるサービスとして運用されます。したがって，そのセキュリティ管理などには十分に気を配る必要があります。Enjuサーバ自体は，配付時点での最新の状況に対応できるようにセキュリティ対策を講じていますが，日進月歩のネットワーク環境では，新しいネットワーク上の脅威が発生する可能性もあります。このような状況に対応するため，運用に際しては，特に以下の２つにご注意ください。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>最新の配付パッケージを使用すること：Enjuコンテナについても，今後，バージョンアップを重ねるたびに配付を予定しています。機能面での充実というだけではなく，セキュリティ面からも最新のパッケージを使用ください。</p>
+</li>
+<li>
+<p>不必要な外部からのアクセスを禁止すること：場合によっては，ファイアウォールの導入やリモートルータでのフィルタリングについても検討した方が良いこともあるでしょう。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="条件を詳しく指定して検索の画面をカスタマイズする">「条件を詳しく指定して検索」の画面をカスタマイズする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enju 「条件を詳しく指定して検索」の画面をカスタマイズする方法を説明します。
+設定する画面がないため、これはサーバー上の作業をする必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enjuをインストールしたディレクトリに移動します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd enju_leaf</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enjuを停止します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker compose down</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>以下のファイルの中身を編集して保存します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>app/views/page/advanced_search.html.erb</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker compose up -d</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="トップの画面の検索フォームをカスタマイズする">トップの画面の検索フォームをカスタマイズする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enju トップの画面の検索フォームをカスタマイズする方法を説明します。
+設定する画面がないため、これはサーバー上の作業をする必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enjuをインストールしたディレクトリに移動します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>cd enju_leaf</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enjuを停止します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker compose down</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>以下のファイルの中身を編集して保存します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>app/views/page/_search_form.html.erb</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Enjuを再起動し、詳細検索画面をリロードして確認します。修正が必要なら 2. と3. の手順を行います。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>docker compose up -d</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="検索結果一覧画面の検索フォームをカスタマイズする">検索結果一覧画面の検索フォームをカスタマイズする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enju 検索結果一覧画面の検索フォームをカスタマイズする方法を説明します。
+設定する画面がないため、これはサーバー上の作業をする必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 1. 〜 2. と同様に、Enjuを停止します。</p>
+</li>
+<li>
+<p>`app/views/manifestations/_index_form.html.erb`を編集します。</p>
+</li>
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 4. と同様に、Enjuを起動します。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="検索結果一覧画面に表示項目を追加する">検索結果一覧画面に表示項目を追加する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enju 検索結果一覧画面に表示される書誌情報や所蔵情報の表示内容をカスタマイズする方法を説明します。
+設定する画面がないため、これはサーバー上の作業をする必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 1. 〜 2. と同様に、Enjuを停止します。</p>
+</li>
+<li>
+<p>`app/views/manifestations/_manifestation.html.erb`を編集します。
+例えば、件名などを追加表示したい場合は以下のようなコード片を挿入します:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby">&lt;<span class="string"><span class="delimiter">%-</span><span class="content"> manifestation.subjects.each do |subject| </span><span class="delimiter">-</span></span>%&gt;
+  &lt;<span class="string"><span class="delimiter">%=</span><span class="content"> link_to &quot;</span><span class="inline"><span class="inline-delimiter">#{</span>subject.subject_heading_type.display_name.localize<span class="inline-delimiter">}</span></span><span class="content">: </span><span class="inline"><span class="inline-delimiter">#{</span>subject.term<span class="inline-delimiter">}</span></span><span class="content">&quot;, manifestations_path(query: &quot;subject_sm:</span><span class="char">\&quot;</span><span class="inline"><span class="inline-delimiter">#{</span>subject.term<span class="inline-delimiter">}</span></span><span class="char">\&quot;</span><span class="content">&quot;) -%&gt;
+&lt;%- end -%&gt;</span></span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 4. と同様に、Enjuを起動します。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="トップ画面やヘルプなどに表示する画像を置く">トップ画面やヘルプなどに表示する画像を置く</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>置きたい画像を用意します。（ここでは例として logo.png とします）</p>
+</li>
+<li>
+<p>インストールしてあるEnju の app/assets/images/ 以下に画像ファイルを置きます。※ custom フォルダを作成し、その下にファイルを置くことを推奨します。</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>フォルダを作成しその下にファイルを置くことも可能です。</p>
+</li>
+<li>
+<p>ファイル名やフォルダ名は任意に作成できます（ただし、Enjuが使用するものと衝突する場合は動作保証しかねます）。</p>
+</li>
+<li>
+<p>customフォルダ以下のファイルはEnjuが用意した画像と衝突しないことが保証されます。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>以下のコマンドを実行します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>$ bundle exec rake assets:precompile</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>参照するURLについて</p>
+<div class="paragraph">
+<p>以下のようなURLになりますのでこのURLを使って参照することができます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>app/assets/images/ 以下に、 custom フォルダを作成して、その下に logo.png を置いた場合</p>
+</li>
+<li>
+<p>URL例（デモサーバー）: <a href="https://enju.next-l.jp/assets/custom/logo.png" class="bare">https://enju.next-l.jp/assets/custom/logo.png</a></p>
+</li>
+<li>
+<p>URL例（コンテナ）: <a href="http://localhost:8080/assets/custom/logo.png" class="bare">http://localhost:8080/assets/custom/logo.png</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>※ 画像ファイルをブラウザから置けるようにする機能を開発予定です（<a href="https://github.com/next-l/enju_leaf/issues/1113">詳細 #1133</a>）。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ヘッダーをカスタマイズする">ヘッダーをカスタマイズする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ヘッダーをカスタマイズする方法を説明します。
+現在は、ヘッダーに表示されるタイトルしか変更できないため、
+たとえば、バナー画像を使いたい場合などは、
+サーバー上の作業をする必要があります。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 1. 〜 2. と同様に、Enjuを停止します。</p>
+</li>
+<li>
+<p>バナー画像があれば、画像ファイルをEnju に置きます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>画像ファイルを置く方法は、<a href="#_トップ画面やヘルプなどに表示する画像を置く">「10-5　トップ画面やヘルプなどに表示する画像を置く」</a>を参照してください。</p>
+</li>
+<li>
+<p>説明で使う例として：置いたファイル：custom/logo.png</p>
+</li>
+<li>
+<p>バナー画像の大きさは 横：640ピクセル 縦：65ピクセル　にするとちょうどよいです。大きすぎるとはみ出て表示されます。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>`app/views/page/_header.html.erb`を編集します。
+例えば、バナー画像をタイトルの代わりにつけたい場合は、以下の記述を変更します。</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>        &lt;h1&gt;&lt;%= link_to image_tag('custom/logo.png'), root_path %&gt;&lt;/h1&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#_条件を詳しく指定して検索の画面をカスタマイズする">10-2節</a> の 4. と同様です。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sitemapsを設定する">Sitemapsを設定する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下のコマンドでサイトマップを作成・更新します。ファイルは`public/sitemap.xml.gz`に作成されます。定期的にサイトマップを更新する場合、以下のコマンドをcronなどに登録してください。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="sh">docker compose run --rm web rake sitemap:create</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>サイトマップは以下のようなURLでアクセスできます。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://enju.example.jp/sitemap.xml.gz" class="bare">https://enju.example.jp/sitemap.xml.gz</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_install_vm_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_2.html">第2章 Enjuを動作させる方法</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_3.html">第3章 動作環境の確認とDockerのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_4.html">第4章 Enjuのインストール</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_5.html">第5章 モジュールの追加</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_6.html">第6章 検索エンジンの設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_7.html">第7章 他のコンピュータからの利用設定</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_8.html">第8章 Enjuのアップデート</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_9.html">第9章 データのバックアップ</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_10.html">第10章 その他（カスタマイズなど）</a></p>
+</li>
+<li>
+<p><a href="enju_install_vm_11.html">第11章 トラブルシューティング</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

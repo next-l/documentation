@@ -1,0 +1,678 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2章 Enjuを利用する - Next-L Enju初期設定マニュアル</title>
+    
+    <meta name="author" content="Project Next-L">
+
+    <!-- Le styles -->
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/enju-manual-patch.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://next-l.github.io/documentation/assets/themes/twitter/css/highlight.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="https://next-l.github.io/documentation"><img src="https://next-l.github.io/documentation/assets/themes/twitter/../../images/logo.gif" alt="" />Documentation for Next-L Enju 1.4</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_install_vm.html">インストール</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_operation.html">運用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_setup.html">初期設定</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_user.html">利用</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+    
+    
+    
+      
+      	
+      	<li><a href="https://next-l.github.io/documentation/1.4/enju_webapi.html">Web API</a></li>
+      	
+      
+    
+  
+
+  
+    
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    
+  
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+          </ul>
+          <script async src="https://cse.google.com/cse.js?cx=010401064499935159628:008mzix-v_g"></script>
+<div class="gcse-search"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        
+
+<div class="page-header">
+  <h1>第2章 Enjuを利用する - Next-L Enju初期設定マニュアル </h1>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#enjuを利用する">Enjuを利用する</a>
+<ul class="sectlevel2">
+<li><a href="#ユーザーアカウントの種類を知る">ユーザーアカウントの種類を知る</a></li>
+<li><a href="#アカウントを編集する">アカウントを編集する</a></li>
+<li><a href="#ログインログアウトする">ログイン／ログアウトする</a></li>
+<li><a href="#ログアウトする">ログアウトする</a></li>
+</ul>
+</li>
+<li><a href="#メッセージをやり取りする">メッセージをやり取りする</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="enjuを利用する">Enjuを利用する</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuの利用を始めるには，次の作業をします。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ユーザーアカウントの作成</p>
+</li>
+<li>
+<p>ログイン／ログアウト</p>
+</li>
+<li>
+<p>ユーザーアカウントの編集</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Enjuは，利用者同士のコミュニケーション機能も搭載されています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>メッセージの送信</p>
+</li>
+<li>
+<p>メッセージのログの一覧表示・印刷</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="ユーザーアカウントの種類を知る">ユーザーアカウントの種類を知る</h3>
+<div class="sect3">
+<h4 id="アカウントユーザーの種類">アカウント（ユーザー）の種類</h4>
+<div class="paragraph">
+<p>Enjuを利用するには，アカウントを取得し，ログインします。アカウント（ユーザー）には次の3種類があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrator（管理者）</p>
+</li>
+<li>
+<p>Librarian（図書館員）</p>
+</li>
+<li>
+<p>User（図書館利用者）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>注：この3種類のことを、3つの権限と呼ぶこともあります。</p>
+</div>
+<div class="paragraph">
+<p>注：検索するだけであれば、ログインしなくても、Enjuを利用可能です。
+Enju ではそのようなログインしないユーザーの権限のことをGuest権限と呼んでいます。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="administrator管理者の権限で利用できる機能">Administrator（管理者）の権限で利用できる機能</h4>
+<div class="paragraph">
+<p>Administrator（管理者）の権限を持つアカウントでログインすると，Enjuで次の機能を利用することができます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>図書館利用者としてのすべての機能</p>
+</li>
+<li>
+<p>図書館利用者の登録</p>
+</li>
+<li>
+<p>資料の受入</p>
+</li>
+<li>
+<p>資料の貸出／返却／予約</p>
+</li>
+<li>
+<p>催し物（お知らせ）の登録</p>
+</li>
+<li>
+<p>開館日（休館日）の登録</p>
+</li>
+<li>
+<p>レファレンスの処理</p>
+</li>
+<li>
+<p>統計機能</p>
+</li>
+<li>
+<p>印刷その他の機能</p>
+</li>
+<li>
+<p>アカウントの権限の変更</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="アカウントを編集する">アカウントを編集する</h3>
+<div class="paragraph">
+<p>アカウントの権限以外の項目の編集は，Librarian（図書館員）でも行うことができます。操作の方法については，<a href="enju_operation_3.html#_利用者情報を変更する（編集する）">運用マニュアル「利用者情報を変更する（編集する）」</a>を参照してください。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ログインログアウトする">ログイン／ログアウトする</h3>
+<div class="paragraph">
+<p>Enjuを利用するには，まずシステムにログインします。</p>
+</div>
+<div class="sect3">
+<h4 id="ログインする">ログインする</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enjuにアクセスし，［ログイン］をクリックします。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_001.png" alt="Enju初期画面">
+</div>
+</div>
+</li>
+<li>
+<p>ユーザ名とパスワードを入力し［ログイン］をクリックします。</p>
+<div class="paragraph">
+<p>インストール直後の場合には，Enjuのユーザとしては 「 enjuadmin 」 もしくは 「 admin 」だけが登録されており，その初期パスワードは「 adminpassword 」です。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../assets/images/1.1/image_initial_002.png" alt="Enjuにログイン">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>【Memo】ブラウザを閉じてもログイン状態を保持したい場合は，［ウィンドウを閉じてもログインしたままにする］をオンにします。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>自分のアカウントでログインされていることを確認します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_003.png" alt="Enjuログイン中"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="パスワードを変更する">パスワードを変更する</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［アカウント］をクリックします。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_070.png" alt="Enjuアカウント"></span></p>
+</div>
+</li>
+<li>
+<p>右メニューの［パスワード変更］をクリックします。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_072.png" alt="アカウントの編集"></span></p>
+</div>
+</li>
+<li>
+<p>［現在のパスワード］と「パスワード」「パスワード(確認)」を入力します。パスワードは画面には表示されません。また「パスワード」と「パスワード(確認)」は同じものを入れてください。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_073.png" alt="アカウントの編集"></span></p>
+</div>
+</li>
+<li>
+<p>［更新］ボタンを押します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_073_2.png" alt="アカウントの編集"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ログアウトする">ログアウトする</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>［ログアウト］をクリックします。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_003_2.png" alt="Enjuログアウト"></span></p>
+</div>
+</li>
+<li>
+<p>ログアウトされたこと（［ログイン］の表示に変わったこと）を画面で確認します。</p>
+<div class="paragraph">
+<p><span class="image"><img src="../assets/images/1.1/image_initial_001.png" alt="Enjuログイン"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>時間の経過にともなって自動ログアウトする機能は用意されていません。Administrator（管理者）は利用者の個人情報などを閲覧できる権限を持っているので，パソコンを共有する時や離席時などには，必ずログアウトしてください。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="メッセージをやり取りする">メッセージをやり取りする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enjuのメッセージ機能を利用して，利用者にメッセージを送信することができます。
+詳細については，
+<a href="enju_operation_2.html#_メッセージをやり取りする">運用マニュアル「メッセージをやり取りする」</a>
+を参照してください。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="enju_setup_1.html">第1章 Enju概要</a></p>
+</li>
+<li>
+<p><a href="enju_setup_2.html">第2章 Enjuを利用する</a></p>
+</li>
+<li>
+<p><a href="enju_setup_3.html">第3章 図書館のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_4.html">第4章 件名のシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_5.html">第5章 各種形態や状態等に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_6.html">第6章 資料に関するシステム設定を行う</a></p>
+</li>
+<li>
+<p><a href="enju_setup_7.html">第7章 その他</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; 2007-2023 <a href="https://www.next-l.jp">Project Next-L</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+    
+  <script type="text/javascript">
+  $(function() {
+    return $("h2, h3, h4, h5, h6").each(function(i, el) {
+      var $el, icon, id;
+      $el = $(el);
+      id = $el.attr('id');
+      icon = '<i title="Permalink to this section" class="fa fa-share-alt"></i>';
+      if (id) {
+        return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+      }
+    });
+  });
+  </script>
+    
+  </body>
+</html>
+

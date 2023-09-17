@@ -16,5 +16,9 @@ if $0 == __FILE__
     content_adoc = content_adoc.gsub(toc_regex, "")
     open(file, "w"){|io| io.print(content_adoc) }
   end
+  system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, "enju_install_vm.adoc")}")
+  system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, "enju_setup_all.adoc")}")
+  system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, "enju_operation_all.adoc")}")
   system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, "enju_user_all.adoc")}")
+  system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, "enju_webapi_all.adoc")}")
 end

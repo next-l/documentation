@@ -13,13 +13,12 @@ toc::[]
 
 //{::comment}10-1,2  enju_operation/inventory.md {:/comment}
 
-<a name="9" />
-
 書架のバーコードなどを読み込んで作成した蔵書点検用のファイルを、Enjuに登録されたデータと照合し、蔵書点検を行うことができます。
 
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】現在、開発中の機能です。リリースの目途はたっていません。
-//</div>
+====
 
 ////
 {::comment}

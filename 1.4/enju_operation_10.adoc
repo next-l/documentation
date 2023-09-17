@@ -36,7 +36,7 @@ toc::[]
 ////
 {::comment}
 
-10-x ブックマーク回数の統計を取る {#section10-x}
+10-x ブックマーク回数の統計を取る
 ---------------------------------
 
 Enjuでは、ブックマークの回数の統計を取ることができます。
@@ -49,12 +49,13 @@ image::../assets/images/1.1/image_operation_statistics.png[統計]
 
 image::../assets/images/1.1/image_operation_257.png[ブックマーク回数]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】もし、[ブックマーク回数]がない場合は、[enju_bookmark]モジュールを
 インストール必要があります。
 インストール方法については[インストールマニュアル「5-2 [enju_bookmark]モジュール（ブックマーク機能）」](enju_install_vm.html#section5-2)
 の章を参照ください。
-</div>
+====
 
 ==== 3. 右メニューの［ブックマーク統計の新規作成］をクリックします。  
 
@@ -75,7 +76,7 @@ image::../assets/images/1.1/image_operation_263.png[統計データを保存]
 
 Enjuでは、利用者別と資料別で貸出の統計を取ることができます。
 
-=== 10-1-1 利用者別貸出統計を取る {#section10-1-1}
+=== 10-1-1 利用者別貸出統計を取る
 
 ※この機能は1.1.1, 1.1.2では動作しません。1.1.2から動作します。
 
@@ -103,22 +104,23 @@ image::../assets/images/1.1/image_operation_269.png[統計データ出力タス�
 
 image::../assets/images/1.1/image_operation_269_2.png[統計データの一覧]
 
-<div class="alert alert-info memo" markdown="1">【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、[利用者の貸出回数]リンクをクリックすればでいつでも行けます。
-</div>
+[NOTE]
+====
+【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、[利用者の貸出回数]リンクをクリックすればでいつでも行けます。
+====
 
 ==== 7. 統計結果が表示されます。右メニューの［TSV］をクリックし、統計データを保存します。  
 
 image::../assets/images/1.1/image_operation_269_3.png[統計データを保存]
 
-<div class="alert alert-info memo" markdown="1">
-
+[NOTE]
+====
 【Memo】TSVファイルの例
 
 image::../assets/images/1.1/image_operation_269_3_tsv.png[TSV 統計データを保存]
+====
 
-</div>
-
-=== 10-1-2 資料別貸出統計を取る {#section10-12}
+=== 10-1-2 資料別貸出統計を取る
 
 ==== 1. ［図書館の管理］メニューから［統計］を選択します。  
 
@@ -148,22 +150,20 @@ image::../assets/images/1.1/image_operation_272_2_c.png[統計データを保存
 
 image::../assets/images/1.1/image_operation_272_2_c_2.png[統計データを保存]
 
-<div class="alert alert-info memo" markdown="1">
-
+[NOTE]
+====
 【Memo】TSVファイルの例
 
 image::../assets/images/1.1/image_operation_272_2_tsv.png[TSV 統計データを保存]
 
 ※どのタブを選択していても必ず[書誌別]のデータをTSVダウンロードすることになります。
+====
 
-</div>
-
-10-2 予約の統計を取る {#section10-2}
-------------------------------------
+== 10-2 予約の統計を取る
 
 Enjuでは、利用者別と資料別に、予約の統計を取ることができます。
 
-=== 10-2-1 利用者別予約統計を取る {#section10-2-1}
+=== 10-2-1 利用者別予約統計を取る
 
 ※この機能は1.1.1, 1.1.2では動作しません。1.1.2から動作します。
 
@@ -197,22 +197,22 @@ image::../assets/images/1.1/image_operation_277.png[統計データ出力タス�
 
 image::../assets/images/1.1/image_operation_277_2.png[統計データの一覧]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
 [利用者の予約回数]リンクをクリックすればでいつでも行けます。
-</div>
+====
 
 ==== 7. 統計結果が表示されます。右メニューの［TSV］をクリックし、統計データを保存します。
 
 image::../assets/images/1.1/image_operation_277_3.png[統計データを保存]
 
-<div class="alert alert-info memo" markdown="1">
-
+[NOTE]
+====
 【Memo】TSVファイルの例
 
 image::../assets/images/1.1/image_operation_277_3_tsv.png[TSV 統計データを保存]
-
-</div>
+====
 
 === 資料別予約統計を取る
 
@@ -248,21 +248,21 @@ image::../assets/images/1.1/image_operation_280_2.png[統計データ出力タ�
 
 image::../assets/images/1.1/image_operation_280_3.png[統計データの一覧]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
 [資料の予約回数]リンクをクリックすればでいつでも行けます。
-</div>
+====
 
 ==== 7. 統計結果が表示されます。右メニューの［TSV］をクリックし、統計データを保存します。
 
-![統計データを保存](../assets/images/1.1/image_operation_280_4.png) 
+image:../assets/images/1.1/image_operation_280_4.png[統計データを保存]
 
-<div class="alert alert-info memo" markdown="1">
-
+[NOTE]
+====
 【Memo】TSVファイルの例
 
 image::../assets/images/1.1/image_operation_280_4_tsv.png[TSV 統計データを保存]
-
-</div>
+====
 
 include::enju_operation_toc.adoc[]

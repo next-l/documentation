@@ -1,8 +1,12 @@
 = Next-L Enju 運用マニュアル
-
+:doctype: book
 :toc:
-:toc-placement!:
-:toclevels: 2
+:toclevels: 3
+// :toc-placement!:
+:sectnums:
+:author: Project Next-L
+:version-label: 1.4.x
+:title-logo-image: image:../assets/images/logo.gif[]
 
 include::enju_operation.adoc[]
 

@@ -195,12 +195,9 @@ image::../assets/images/1.1/image_initial_020_2.png[図書館の作成]
 ====
 1.1.0および1.1.1の場合でプロキシ環境でお使いの場合、地図が表示されないことがあります。
 その場合は、以下を実行してください。
-
 [source,console]
-====
 $ cd enju
 $ rails g geocoder:config
-====
 
 詳細は [issue #727](https://github.com/next-l/enju_leaf/issues/727)を参照してください。
 ====
@@ -211,11 +208,11 @@ $ rails g geocoder:config
 「資料の表示」の右に請求記号が背ラベルのように表示されます。
 次は、請求記号の列数を **3** 、請求記号の区切り文字を **||** とし、
 請求記号「015.2||ハ||1」を表示した例です。
-
-![背ラベル](../assets/images/1.1/image_initial_020_3.png)
-
++
+image::../assets/images/1.1/image_initial_020_3.png[背ラベル]
++
 注：次の条件でのみ、背ラベルが表示されます。
-
++
 * ログインしている
 * 図書館に請求記号ルールが設定されている
 * 当該資料の所蔵が登録されている
@@ -224,10 +221,8 @@ $ rails g geocoder:config
 * 所蔵資料の所蔵のステータスが「在架（利用可能） 」「貸出中」「再配架待ち」のいずれかである
 * 所蔵資料の利用制限が「返却不要」「長期期間貸出」「通常期間貸出」「短期期間貸出」「複製不可」
 「一夜貸出のみ」「貸出更新不可」「監督下でのみ利用可」「学期間の貸出」「利用者の署名が必要」のいずれかである
-* ログインしているユーザーの所属図書館のもののみ表示する
-（例：所属図書館Your library　だったらYour libraryのもののみ）
-
-</div>
+* ログインしているユーザーの所属図書館のもののみ表示する（例：所属図書館Your library　だったらYour libraryのもののみ）
+====
 
 == 本棚を設定する
 
@@ -238,53 +233,55 @@ $ rails g geocoder:config
 * 閉架：閉架の場合にチェックを入れます。本棚の一覧画面で「閉架」と表示されるようになります。 <!-- 詳細は #729 参照 -->
 * 注記：注意事項や特記事項などを入力します。
 * 図書館：▼をクリックし，リストから選択します。
-  * ここで表示される図書館のリストは，[「3-2 個々の図書館を設定する」](#section3-2)で設定します。
+** ここで表示される図書館のリストは，[「3-2 個々の図書館を設定する」](#section3-2)で設定します。
 
 === 設定方法
 
 1. ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
 image::../assets/images/1.1/image_system_setup.png[システムの設定]
-
++
 2. ［本棚］をクリックします。  
 +
 image::../assets/images/1.1/image_initial_022.png[「本棚」を選択]
-
++
 3. ［本棚の新規作成］をクリックします。  
 +
 image::../assets/images/1.1/image_initial_023.png[本棚の新規作成]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】入力済みの本棚の設定内容を変更する場合は，［編集］をクリックします。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力し，［登録する］ボタンをクリックして，設定内容を登録します。  
 +
 image::../assets/images/1.1/image_initial_024.png[本棚の作成]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】「＊」のマークが付いた項目は入力必須項目です。[名前]は3文字以上、256文字以内で、半角である必要があります。使用できる文字はアルファベットの小文字、数字、-（ハイフン）、_（アンダースコア）です。ただし、名前の最初はアルファベットの小文字のみが使用でき、名前の最後にはハイフンとアンダースコアは使用できません。 
- </div>
-
-<div class="alert alert-info" markdown="1">
+====
++
+[NOTE]
+====
 【Memo】本棚の一覧の見方
-
++
 image::../assets/images/1.1/image_initial_024_2.png[背ラベル]
-
++
 表の各行が一つの本棚をあらわしています。例えば、「きり閉架1」は本棚の「表示名」を、「kiri_closed」は本棚の「名前」を、「きり図書館」は当該本棚がある図書館の「表示名」を、「kiri」その「名前」をあらわしています。
 「閉架」にチェックを入れた場合は、「図書館」列に「閉架」が表示されます（例　「きり閉架1」に「閉架」を表示）。
 右側に「図書館」で絞り込みをするためのリンクがあります。たとえば、上の画像の例ですと、「きり図書館」のリックをたどると、「きり図書館」の本棚の「きり閉架1」「kiri_default」「きり本棚1」のみが表示されるようになります。
-
-</div>
+====
 
 == 利用者グループを設定する
 
 === 設定項目
 
 * 名前：利用者グループ名を入力します。
-  * 例えば、一般利用者、在勤・在学利用者、団体利用者など利用者をグループに分けて区別したい場合に入力します。
-  * [「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。  
-  * 貸出については[「3-5 貸出区分を設定する」](#section3-5)、[「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3)などで設定します。
+** 例えば、一般利用者、在勤・在学利用者、団体利用者など利用者をグループに分けて区別したい場合に入力します。
+** [「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。  
+** 貸出については[「3-5 貸出区分を設定する」](#section3-5)、[「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3)などで設定します。
 * 表示名：画面に表示する名称を入力します。
 * 新規ユーザの有効日数：図書館カードの有効日数を数値で入力します。新規にユーザを作成してからの有効日数になります。標準は0になっており、0は有効期限がなくずっと有効となります。
 * 貸出期限の何日前に督促を送るか：「何日後に返却日を通知するか」を数値で入力します。標準は3になっています。
@@ -305,11 +302,12 @@ image::../assets/images/1.1/image_initial_025_0.png[「利用者グループ」�
 3. ［利用者グループの新規作成］をクリックします。  
 +
 image::../assets/images/1.1/image_initial_025.png[利用者グループを作成]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】入力済みの利用者グループの設定内容を変更する場合は，［編集］をクリックします。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力し，［登録する］ボタンをクリックして，設定内容を登録します。  
 +
 image::../assets/images/1.1/image_initial_026.png[利用者グループの作成]
@@ -319,7 +317,7 @@ image::../assets/images/1.1/image_initial_026.png[利用者グループの作成
 === 設定項目
 
 * 名前：貸出区分名を入力します。
-  * 貸出日数や貸出数の制限などは，[「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。
+** 貸出日数や貸出数の制限などは，[「3-6 利用者グループと貸出区分の関係を設定する」](#section3-6)で，利用者グループごとに貸出の設定などを設定することができます。
 * 表示名：画面に表示する名称を入力します。
 * 注記：注意事項や特記事項などを入力します。
 
@@ -336,11 +334,12 @@ image::../assets/images/1.1/image_initial_027_0.png[貸出区分の設定]
 3. 右メニューの［貸出区分の新規作成］をクリックします。  
 +
 image::../assets/images/1.1/image_initial_027.png[システムの設定]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】入力済みの貸出区分の設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力、［登録する］ボタンをクリックして，設定内容を登録します。  
 
 image::../assets/images/1.1/image_initial_028.png[貸出区分の作成]
@@ -363,22 +362,23 @@ image::../assets/images/1.1/image_initial_028.png[貸出区分の作成]
 . ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
 image::../assets/images/1.1/image_system_setup.png[システムの設定]
-
++
 . ［利用者グループと貸出区分の関係］をクリックします。  
 +
-![利用者グループと貸出区分の関係の設定](../assets/images/1.1/image_initial_029_0.png)
+image::../assets/images/1.1/image_initial_029_0.png[利用者グループと貸出区分の関係の設定]
 
 . 右メニューの［利用者グループと貸出区分の関係の新規作成］をクリックします。  
 +
-![利用者グループと貸出区分の関係](../assets/images/1.1/image_initial_029.png)
-
-<div class="alert alert-info memo">
+image::../assets/images/1.1/image_initial_029.png[利用者グループと貸出区分の関係]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
-</div>
-
-4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。  
-
-![利用者グループと貸出区分の関係](../assets/images/1.1/image_initial_030.png)
+====
++
+. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。  
++
+image::../assets/images/1.1/image_initial_030.png[利用者グループと貸出区分の関係]
 
 == 資料の形態と貸出区分の関係を設定する
 
@@ -391,24 +391,25 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 === 設定方法
 
 1. ［図書館の管理］メニューから［システムの設定］を選択します。  
-
-![システムの設定](../assets/images/1.1/image_system_setup.png)
-
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
++
 2. ［資料の形態と貸出区分の関係］をクリックします。  
-
-![資料の形態と貸出区分の関係の設定](../assets/images/1.1/image_initial_031_0.png)
-
++
+image::../assets/images/1.1/image_initial_031_0.png[資料の形態と貸出区分の関係の設定]
++
 3. 右メニューの［資料の形態と貸出区分の関係の新規作成］をクリックします。  
-   
-![資料の形態と貸出区分の関係の新規作成](../assets/images/1.1/image_initial_031.png)
-
-<div class="alert alert-info">
++
+image::../assets/images/1.1/image_initial_031.png[資料の形態と貸出区分の関係の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力し、［登録する]ボタンをクリックして，設定内容を登録します。  
 
-![資料の形態と貸出区分の関係の作成](../assets/images/1.1/image_initial_032.png)
+image::../assets/images/1.1/image_initial_032.png[資料の形態と貸出区分の関係の作成]
 
 == 催し物の種別を設定する
 
@@ -425,28 +426,29 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［催し物の種別］をクリックします。  
 +
-![催し物の種別設定](../assets/images/1.1/image_initial_033_0.png)
+image::../assets/images/1.1/image_initial_033_0.png[催し物の種別設定]
 
 . 右メニューの［催し物の種別の新規作成］をクリックします。  
 +
-![催し物の種別の新規作成](../assets/images/1.1/image_initial_033.png)  
+image::../assets/images/1.1/image_initial_033.png[催し物の種別の新規作成]
 
-<div class="alert alert-info memo">
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を、削除する場合は［削除］をクリックします。ただし、"unknown"、 "closed"は標準カテゴリとなっており、削除できないため削除リンクはありません。  
 一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-</div>
+====
 
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。  
 +
-![催し物の種別を作成](../assets/images/1.1/image_initial_034.png)
+image::../assets/images/1.1/image_initial_034.png[催し物の種別を作成]
 
 . 「催し物の種別は正常に作成されました。」と表示され、催し物の種別の作成が完了します。
 +
-![催し物の種別の作成が完了](../assets/images/1.1/image_initial_034_2.png)
+image::../assets/images/1.1/image_initial_034_2.png[催し物の種別の作成が完了]
 
 == 予算種別を設定する
 
@@ -460,26 +462,27 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 === 設定方法
 
-. ［図書館の管理］メニューから［システムの設定］を選択します。  
+1. ［図書館の管理］メニューから［システムの設定］を選択します。  
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
-
-. ［予算種別］をクリックします。  
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 +
-![予算種別の設定](../assets/images/1.1/image_budget_type_0.png)
-
-. 右メニューの［予算種別の新規作成］をクリックします。  
+2. ［予算種別］をクリックします。  
 +
-![予算種別の新規作成](../assets/images/1.1/image_budget_type_1.png)
-
-<div class="alert alert-info memo" markdown="1">
+image::../assets/images/1.1/image_budget_type_0.png[予算種別の設定]
++
+3. 右メニューの［予算種別の新規作成］をクリックします。  
++
+image::../assets/images/1.1/image_budget_type_1.png[予算種別の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は，表の最終列に表示されている「編集」を，削除する場合は「削除」をクリックします。
 一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。  
-
-![新規書店の作成](../assets/images/1.1/image_budget_type_2.png)
++
+image::../assets/images/1.1/image_budget_type_2.png[新規書店の作成]
 
 == 書店を設定する
 
@@ -498,25 +501,26 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 === 設定方法
 
 1. ［図書館の管理］メニューから［システムの設定］を選択します。  
-
-![システムの設定](../assets/images/1.1/image_system_setup.png)
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 2. ［書店］をクリックします。  
-
-![書店の設定](../assets/images/1.1/image_initial_038_0.png)
++
+image::../assets/images/1.1/image_initial_038_0.png[書店の設定]
 
 3. 右メニューの［書店の新規作成］をクリックします。  
-
-![書店の新規作成](../assets/images/1.1/image_initial_038.png)
-
-<div class="alert alert-info" markdown="1">
++
+image::../assets/images/1.1/image_initial_038.png[書店の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は，表の最終列に表示されている[編集]を，削除する場合は[削除]をクリックします。
 一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-</div>
-
+====
++
 4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。  
-
-![新規書店の作成](../assets/images/1.1/image_initial_041.png)
++
+image::../assets/images/1.1/image_initial_041.png[新規書店の作成]
 
 == メッセージテンプレートを設定する
 
@@ -530,9 +534,10 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 * タイトル：メッセージを表示するときのタイトルを入力します。
 * 本文：メッセージの本文を入力します。
 
-<div class="alert alert-info memo">
+[NOTE]
+====
 ＊メッセージの本文には資料名やユーザー名などの変数を組み込み，送信時に本文中の変数に値を代入して送信できます。
-</div>
+====
 
 === 設定方法
 
@@ -591,23 +596,24 @@ image::../assets/images/1.1/image_search_engine_create.png[検索エンジンの
 +
 image::../assets/images/1.1/image_search_engine_input.png[検索エンジンの設定]
 
-<div class="alert alert-info memo">
+[NOTE]
+====
 【Memo】CiNii Booksの登録例（検索語がflowerであれば：https://ci.nii.ac.jp/books/search?q=flower&format=html というリクエストになる）を示しています。
-</div>
+====
 
 以下はその他の検索エンジンの設定例です。
 
 * 名前: NDL Search
-    * URL: https://iss.ndl.go.jp/
-    * ベースURL: https://iss.ndl.go.jp/books
-    * HTTPメソッド: get
-    * クエリパラメータ: any
+** URL: https://ndlsearch.ndl.go.jp/
+** ベースURL: https://ndlsearch.ndl.go.jp/books
+** HTTPメソッド: get
+** クエリパラメータ: any
 * 名前: amazon.co.jp
-    * URL: https://www.amazon.co.jp/
-    * ベースURL: https://www.amazon.co.jp/s?
-    * HTTPメソッド: get
-    * クエリパラメータ: field-keywords
-    * 追加のパラメータ: url=search-alias=aps
+** URL: https://www.amazon.co.jp/
+** ベースURL: https://www.amazon.co.jp/s?
+** HTTPメソッド: get
+** クエリパラメータ: field-keywords
+** 追加のパラメータ: url=search-alias=aps
 * 名前: CiNii Books
 ** URL: https://ci.nii.ac.jp/books/
 ** ベースURL: https://ci.nii.ac.jp/books/opensearch/search

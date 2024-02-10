@@ -35,15 +35,15 @@ Enjuの利用を始めるにあたり，資料の主題情報を扱う件名と�
 
 件名は、書誌を登録するさいに自動的に登録されますので、
 この機能を使って件名を新たに作成する必要がでることは基本的にはありません。
-ここでは、書誌を登録する前に、あらかじめ件名を登録ておきたい場合
+ここでは、書誌を登録する前に、あらかじめ件名を登録しておきたい場合
 の方法について説明します。
 
 === 設定項目
 
 * 件名標目の種類：▼をクリックして一覧から選びます。
-ここで表示されるリストは，[「4-3 件名標目の種類を設定する」](#section4-3)で設定します。
+ここで表示されるリストは，<<_件名標目の種類を設定する>>で設定します。
 * 件名の種類：▼をクリックして一覧から選びます。
-ここで表示されるリストは，[「4-2 件名の種類を設定する」](#section4-2)で設定します。
+ここで表示されるリストは，<<_件名の種類を設定する>>で設定します。
 * 用語：件名に利用する用語を入力します。
 * 用語よみ：件名に利用する用語のよみを入力します。
 * 注記：注意事項や特記事項などを入力します。
@@ -56,23 +56,24 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［件名］をクリックします。
 +
-![件名の設定](../assets/images/1.1/image_initial_048_0.png)
+image::../assets/images/1.1/image_initial_048_0.png[件名の設定]
 
 . 右メニューの［件名の新規作成］をクリックします。
 +
-![件名の新規作成](../assets/images/1.1/image_initial_048.png)
-
-<div class="alert alert-info memo">
+image::../assets/images/1.1/image_initial_048.png[件名の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
-</div>
-
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![件名の作成](../assets/images/1.1/image_initial_049.png)
+image::../assets/images/1.1/image_initial_049.png[件名の作成]
 
 . 「件名は正常に作成されました」と表示され、件名が作成されます。
 +
-![件名の作成](../assets/images/1.1/image_initial_049_2.png)
+image::../assets/images/1.1/image_initial_049_2.png[件名の作成]
 
 == 件名の種類を設定する
 
@@ -86,24 +87,25 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［件名の種類］をクリックします。
 +
-![件名の種類の設定](../assets/images/1.1/image_initial_050_0.png)
+image::../assets/images/1.1/image_initial_050_0.png[件名の種類の設定]
 
 . 右メニューの［編集］をクリックします。
 +
-![件名の種類の編集](../assets/images/1.1/image_initial_050.png)
-
-<div class="alert alert-info memo" markdown="1">
+image::../assets/images/1.1/image_initial_050.png[件名の種類の編集]
++
+[NOTE]
+====
 【Memo】新規に登録する場合は、[件名の種類の新規作成]を，入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
-一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。[「4-1 件名を設定する」](#section4-1)際や、[運用マニュアル「4-2-7 手動で資料を登録する」](enju_operation_4.html#section4-2-7)際などに表示される件名の種類のメニューの順序も同期して変わります。
-</div>
-
+一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。<<_件名を設定する>>際や、xref:enju_operation_4.adoc#_手動で資料を登録する[運用マニュアル「手動で資料を登録する」]際などに表示される件名の種類のメニューの順序も同期して変わります。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![件名の種類の作成](../assets/images/1.1/image_initial_051.png)
+image::../assets/images/1.1/image_initial_051.png[件名の種類の作成]
 
 == 件名標目の種類を設定する
 
@@ -117,58 +119,61 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［件名標目の種類］をクリックします。
 +
-![件名標目の種類の設定](../assets/images/1.1/image_initial_052_0.png)
+image::../assets/images/1.1/image_initial_052_0.png[件名標目の種類の設定]
 
 . 右メニューの［件名標目の種類の新規作成］をクリックします。
 +
-![件名標目の種類の新規作成](../assets/images/1.2/image_initial_052.png)
-
-<div class="alert alert-info memo" markdown="1">
+image::../assets/images/1.2/image_initial_052.png[件名標目の種類の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
 一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-[「4-1 件名を設定する」](#section4-1)際や、[運用マニュアル「4-2-7 手動で資料を登録する」](enju_operation_4.html#section4-2-7)際などに表示される件名標目の種類のメニューの順序も同期して変わります。
-</div>
-
+<<_件名を設定する>>際や、xref:enju_operation_4.adoc#_手動で資料を登録する[運用マニュアル「手動で資料を登録する」]際などに表示される件名標目の種類のメニューの順序も同期して変わります。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![件名標目の種類の作成](../assets/images/1.1/image_initial_053.png)
+image::../assets/images/1.1/image_initial_053.png[件名標目の種類の作成]
 
 == 分類を設定する
 
 === 設定項目
 
-* 分類の種類：▼をクリックし，リストから選択します。ここで表示されるリストは，[「4-5 分類の種類を設定する」](#section4-5)で設定します。
+* 分類の種類：▼をクリックし，リストから選択します。ここで表示されるリストは，<<_分類の種類を設定する>>で設定します。
 * 分類記号：分類記号を入力します。
 * 分類項目名：分類項目名を入力します。
-* URL：分類のURLを入力します。（例：[https://udcdata.info/015008](https://udcdata.info/015008)）
+* URL：分類のURLを入力します。（例: https://udcdata.info/015008[]）
 * 注記：注意事項や特記事項などを入力します。
 
 === 設定方法
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［分類］をクリックします。
 +
-![分類の設定](../assets/images/1.1/image_initial_054_0.png)
+image::../assets/images/1.1/image_initial_054_0.png[分類の設定]
 
 . 右メニューの［分類の新規作成］をクリックします。
 +
-![分類の新規作成](../assets/images/1.1/image_initial_054.png)
+image::../assets/images/1.1/image_initial_054.png[分類の新規作成]
++
+[NOTE]
+====
+【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
 
-<div class="alert alert-info memo" markdown="1">【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
-
-注意：Enju Leaf 1.1.0 時点では、同じ分類記号のものが複数登録されてしまうバグがあります。参照：[issue #758](https://github.com/next-l/enju_leaf/issues/758)。
-</div>
-
+注意：Enju Leaf 1.1.0 時点では、同じ分類記号のものが複数登録されてしまうバグがあります。参照: https://github.com/next-l/enju_leaf/issues/758[issue #758])。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![分類の作成](../assets/images/1.1/image_initial_055.png)
+image::../assets/images/1.1/image_initial_055.png[分類の作成]
 
 == 分類の種類を設定する
 
@@ -182,26 +187,27 @@ image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［分類の種類］をクリックします。
 +
-![分類iの種類の設定](../assets/images/1.1/image_initial_056_0.png)
+image::../assets/images/1.1/image_initial_056_0.png[分類iの種類の設定]
 
 . 右メニューの［分類の種類の新規作成］をクリックします。
 +
-![分類の種類の新規作成](../assets/images/1.2/image_initial_056.png)
-
-<div class="alert alert-info memo" markdown="1">
+image::../assets/images/1.2/image_initial_056.png[分類の種類の新規作成]
++
+[NOTE]
+====
 【Memo】入力済みの設定内容を変更する場合は［編集］を，削除する場合は［削除］をクリックします。
 1つでも登録されている書誌レコードがある「分類の種類」には、[削除]リンクは表示されません。
 一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-[「4-4 分類を設定する」](#section4-4)際や、[運用マニュアル「4-2-7 手動で資料を登録する」](enju_operation_4.html#section4-2-7)際などに表示される分類の種類のメニューの順序も同期して変わります。
-</div>
-
+<<_分類を設定する>>際や、xref:enju_operation_4.adoc#_手動で資料を登録する[運用マニュアル「手動で資料を登録する」]際などに表示される分類の種類のメニューの順序も同期して変わります。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![分類の種類の作成](../assets/images/1.1/image_initial_057.png)
+image::../assets/images/1.1/image_initial_057.png[分類の種類の作成]
 
 ////
 {::comment}

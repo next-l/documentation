@@ -7,6 +7,8 @@
 :author: Project Next-L
 :version-label: 1.4.x
 :title-logo-image: image:../assets/images/logo.gif[]
+:xrefstyle: full
+:!section-refsig:
 
 include::enju_setup.adoc[]
 

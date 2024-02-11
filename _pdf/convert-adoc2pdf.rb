@@ -9,11 +9,13 @@ if $0 == __FILE__
   FileUtils.cp(files, d)
   header_regex = /\A---.*?---/m
   toc_regex = /^include::.*_toc.*$/
+  xref_regex = /(xref:enju_\w+)_\d+\.adoc/
   Dir.glob(File.join(d, "*.adoc")).each do |file|
     #STDERR.puts file
     cont = open(file).read
     content_adoc = cont.sub(header_regex, "").strip
     content_adoc = content_adoc.gsub(toc_regex, "")
+    content_adoc = content_adoc.gsub(xref_regex, '\1_all.adoc')
     open(file, "w"){|io| io.print(content_adoc) }
   end
   %w[ enju_install_vm.adoc

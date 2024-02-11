@@ -136,8 +136,12 @@ image::../assets/images/1.2/search_result_number_2.png[検索結果表示]
 
 検索結果のRSSを取得することができます。
 検索結果の最初の10件（最近登録された10件）を得ることができます。
-※検索結果が複数の画面にわたる場合でも、
+
+[NOTE]
+====
+検索結果が複数の画面にわたる場合でも、
 どの画面の[検索結果フィード]でもかならず最近登録された10件のみとなります。
+====
 
 . 右メニューの[検索結果のフィード]をクリックします。
 +
@@ -155,21 +159,30 @@ image::../assets/images/1.1/search_result_rss_2.png[RSS]
 +
 image::../assets/images/1.1/search_result_rdf_1.png[RDF/XML]
 +
-※　現在、画面でみえている結果の分だけが書き出しができます。
-
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
++
 . RDF/XML 形式のファイルがダウンロードできます。
 
-* xref:enju_webapi_1.adoc# RDF/XML形式のデータを取得する[Web APIマニュアル「RDF/XML形式のデータを取得する」参照）]
+* xref:enju_webapi_1.adoc# RDF/XML形式のデータを取得する[Web APIマニュアル「RDF/XML形式のデータを取得する」参照]
 
-==== MOS 形式で書き出し
+==== MODS 形式で書き出し
+
+Metadata Object Description Schema (MODS) は、米国議会図書館が策定したXMLにもとづく標準的なメタデータ形式のひとつです。
+* https://www.loc.gov/standards/mods/[MODS公式サイト]
 
 . 書き出しをしたい検索結果画面を表示させます。[MODS]リンクをクリックします
 +
-image::../assets/images/1.1/search_result_mods_1.png[MOS]
+image::../assets/images/1.1/search_result_mods_1.png[MODS]
 +
-※　現在、画面でみえている結果の分だけが書き出しができます。
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
 +
-. MOS 形式のファイルがダウンロードできます。
+. MODS 形式のファイルがダウンロードできます。
 +
 [source,xml]
 ----
@@ -310,8 +323,11 @@ image::../assets/images/1.1/search_result_mods_1.png[MOS]
 +
 image::../assets/images/1.2/search_result_tsv_1.png[TSV]
 +
-※　現在、画面でみえている結果の分だけが書き出しができます。
-
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
++
 . TSV 形式のファイルがダウンロードできます。
 
 * xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの例[出力されるTSVの例（Web APIマニュアル）]
@@ -323,8 +339,11 @@ image::../assets/images/1.2/search_result_tsv_1.png[TSV]
 +
 image::../assets/images/1.3/search_result_json_1.png[TSV]
 +
-※　現在、画面でみえている結果の分だけが書き出しができます。
-
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
++
 . JSON 形式のファイルがダウンロードできます。
 +
 * xref:enju_webapi_1.adoc#_書誌と所蔵のJSON形式のデータの例[出力されるJSONの例（Web APIマニュアル「書誌と所蔵のJSON形式のデータの例」参照）]
@@ -340,7 +359,7 @@ image::../assets/images/1.1/search_result_full_rdf_1.png[RDF/XML]
 
 . RDF/XML 形式のファイルがダウンロードできます。
 
-* xref:enju_webapi_2#_書誌のRDF/XML形式のデータの例[出力されるRDF/XMLの例（Web API マニュアル2-2-2節参照）]
+* xref:enju_webapi_2#_書誌のRDF/XML形式のデータの例[出力されるRDF/XMLの例（Web APIマニュアル参照）]
 
 ==== MODS 形式で書き出し
 
@@ -418,10 +437,9 @@ image::../assets/images/1.1/search_result_full_tsv_1.png[TSV]
 
 === 検索結果詳細を電子メールで送る
 
-メールアドレスを登録しており、ログインしていると、
-検索結果詳細を電子メールで送ることができます。
+メールアドレスを登録しており、ログインしていると、検索結果詳細を電子メールで送ることができます。
 
-※メールアドレスの登録方法はxref:enju_user_3.adoc#_メールアドレスや名前などを変更する[利用者マニュアル「メールアドレスや名前などを変更する」]を参照してください。
+メールアドレスの登録方法はxref:enju_user_3.adoc#_メールアドレスや名前などを変更する[利用者マニュアル「メールアドレスや名前などを変更する」]を参照してください。
 
 . 電子メールで送りたい検索結果詳細画面を表示させます。[書誌情報を電子メールで送信する]リンクをクリックします
 +

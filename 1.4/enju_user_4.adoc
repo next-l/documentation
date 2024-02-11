@@ -59,7 +59,10 @@ image::../assets/images/1.1/image_user_reserve_003.png[検索]
 +
 2. 予約したい本が検索されたら、［予約］をクリックします。  
 +
-※ ログインしていないと[予約]リンクは表示されません
+[NOTE]
+====
+ログインしていないと[予約]リンクは表示されません
+====
 +
 image::../assets/images/1.1/image_user_reserve_005.png[予約]
 +
@@ -109,8 +112,11 @@ image::../assets/images/1.1/image_user_reserve_019.png[予約の編集リンク]
 3. 有効期限（この日以降は不要）や受取館を修正します。
 +
 image::../assets/images/1.1/image_user_reserve_021.png[予約の編集画面]
-
-※現在、取置済みの予約でも編集できますが、いずれはできないようにする予定です（参照： https://github.com/next-l/enju_leaf/issues/839[#839]）。
++
+[NOTE]
+====
+現在、取置済みの予約でも編集できますが、いずれはできないようになる可能性があります（参照： https://github.com/next-l/enju_leaf/issues/839[ issue #839]）。
+====
 
 === 予約の取消（キャンセル）をする
 
@@ -154,10 +160,13 @@ image::../assets/images/1.1/image_user_reserve_029.png[予約の削除のOK]
 
 === 予約した資料が用意されたことを知る
 
-※ Enju Leaf 1.1.0 時点ではこの機能にバグがあり、メッセージ機能、メール通知機能ともに動作していません(詳細 https://github.com/next-l/enju_leaf/issues/1016[#1016])。
+[NOTE]
+====
+現行のEnju Leafではこの機能にバグがあり、メッセージ機能、メール通知機能ともに動作していません(詳細 https://github.com/next-l/enju_leaf/issues/1016[issue #1016])。
+====
 
 * メッセージ機能を使って知ることができます。
-* [メールアドレスを設定（3-2節参照）](enju_user_3.html#section3-2)している場合は、メールでも通知が来ます。
+* xref:enju_user_3.adoc#_メールアドレスを設定[メールアドレスを設定]している場合は、メールでも通知が来ます。
 
 === 予約の一覧をTSVを表示する
 

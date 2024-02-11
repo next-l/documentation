@@ -24,59 +24,53 @@ Enjuを利用した資料の検索方法には、演算子やフィールド名�
 
 資料を指定したキーワードで検索できます。
 
-==== トップページの検索語にキーワードを入力し、［検索］ボタンをクリックします。  
-
+. トップページの検索語にキーワードを入力し、［検索］ボタンをクリックします。  
++
 image::../assets/images/1.1/image_operation_242.png[キーワードを入力]
-// <div class="alert alert-info memo" markdown="1">
-----
++
+[NOTE]
+====
 【Memo】
 * スペースで区切りながらキーワードを入力すると、複数のキーワードに一致する資料を検索できます。
 * ISBNでも検索できます。ハイフンありでも、なしでも、10桁でも13桁でも検索可能です。
-----
-// </div>
+====
 
-==== キーワードに該当する資料が検索されます。詳細を知りたい資料のタイトルをクリックします。  
-
+. キーワードに該当する資料が検索されます。詳細を知りたい資料のタイトルをクリックします。  
++
 image::../assets/images/1.1/image_operation_244.png[該当する資料が検索される]
 
-==== 資料の詳細が表示されます。
-
+. 資料の詳細が表示されます。
++
 image::../assets/images/1.3/image_operation_244_2.png[該当する資料の表示]
 
 === 条件を詳しく指定して検索する
 
-
 条件を詳しく指定して、資料を検索することもできます。
 
-==== トップページの［（条件を詳しく指定して検索）］をクリックします。  
-
+. トップページの［（条件を詳しく指定して検索）］をクリックします。  
++
 image::../assets/images/1.1/image_operation_245.png[（条件を詳しく指定して検索）クリック]
 
-==== 複数の条件を指定して［検索］ボタンをクリックします。  
-
+. 複数の条件を指定して［検索］ボタンをクリックします。  
++
 image::../assets/images/1.2/advanced_search_1.png[複数の条件を指定]
-
-//<div class="alert alert-info memo" markdown="1">
-
++
 [NOTE]
 ====
 * ISBN はハイフンありでもハイフンなしでも検索できます
 * 請求記号は前方一致検索します。
 * 分類は前方一致検索します。 
 ====
-//</div>
 
 === フィールド名や演算子を使って検索する
 
+「``and``」や「``or``」や 「``()``」 などの演算子と、フィールド名を組み合わせた検索式を作成できます。
 
-「and」や「or」や 「()」 などの演算子と、フィールド名を組み合わせた検索式を作成できます。
+検索式の例：``ruby and (Web or ライブラリ)``
 
-検索式の例：ruby and (Web or ライブラリ)
-
-より詳しい説明については、 [issue #130](https://github.com/next-l/enju_leaf/issues/130)　を参照してください。
+より詳しい説明については https://github.com/next-l/enju_leaf/issues/130[issue #130]を参照してください。
 
 === 検索結果を絞り込む
-
 
 検索結果の画面に表示された資料の情報は、画面右側のメニューにある絞込みメニュー（ファセット）を使って絞り込めます。
 絞り込める項目は標準では以下の5つが用意されています：
@@ -87,23 +81,21 @@ image::../assets/images/1.2/advanced_search_1.png[複数の条件を指定]
 * 出版年
 * 予約可能の可否
 
-==== 検索結果を表示する。
-
+. 検索結果を表示する。
++
 image::../assets/images/1.1/search_result_facet_1.png[検索結果を表示]
 
-==== 出版日の項目から「2010 - 2019」と書かれたリンクをクリックします。
-
+. 出版日の項目から「2010 - 2019」と書かれたリンクをクリックします。
++
 image::../assets/images/1.1/search_result_facet_2.png[出版年を使って絞り込む]
-
-//<div class="alert alert-info memo">
++
 [NOTE]
 ====
 * それぞれの絞り込みリンクの表記、たとえば「2010 - 2019 (7)」のうち、カッコ内の数字（7）は、この絞り込みにより該当する資料のヒット件数を示しています。参考にしてみてください。
 ====
-//</div>
-
-==== 出版年が2010年以降の範囲に絞り込まれた検索結果に移ります。
-
++
+. 出版年が2010年以降の範囲に絞り込まれた検索結果に移ります。
++
 image::../assets/images/1.1/search_result_facet_3.png[出版年 2010 - 2019 での絞り込み結果]
 
 右側の絞り込みリンクが選択した部分（出版日: 2010 - 2019）だけになり、「この絞り込みを解除する」というリンクが付きます。
@@ -114,17 +106,16 @@ image::../assets/images/1.1/search_result_facet_3.png[出版年 2010 - 2019 で�
 
 === 検索結果一覧のソート方法を変更する
 
-
 検索結果一覧の表示順序のソート方法を変更することができます。
 書誌作成日の新しさ、出版日の新しさ、適合度（昇順のみ）、タイトルの五十音で、
 ソート方法を変更することができます。
 
-==== ソート方法を選び、[表示]ボタンをクリックします。
-
+. ソート方法を選び、[表示]ボタンをクリックします。
++
 image::../assets/images/1.2/search_result_sort_1.png[ソート方法を選ぶ]
 
-==== 選んだソート方法の順序で表示されます。
-
+. 選んだソート方法の順序で表示されます。
++
 image::../assets/images/1.2/search_result_sort_2.png[ソート結果]
 
 === 検索結果一覧の表示件数を変更する
@@ -133,55 +124,53 @@ image::../assets/images/1.2/search_result_sort_2.png[ソート結果]
 検索結果一覧の表示件数を変更することができます。
 10件、20件、50件、100件から選ぶことができます。
 
-==== 表示件数を選び、[表示]ボタンをクリックします。
-
+. 表示件数を選び、[表示]ボタンをクリックします。
++
 image::../assets/images/1.2/search_result_number_1.png[表示件数を選ぶ]
 
-==== 選んだ表示件数分の検索結果が表示されます。
-
+. 選んだ表示件数分の検索結果が表示されます。
++
 image::../assets/images/1.2/search_result_number_2.png[検索結果表示]
 
 === 検索結果のフィード(RSS)を取得する
-
 
 検索結果のRSSを取得することができます。
 検索結果の最初の10件（最近登録された10件）を得ることができます。
 ※検索結果が複数の画面にわたる場合でも、
 どの画面の[検索結果フィード]でもかならず最近登録された10件のみとなります。
 
-==== 右メニューの[検索結果のフィード]をクリックします。
-
+. 右メニューの[検索結果のフィード]をクリックします。
++
 image::../assets/images/1.1/search_result_rss_1.png[検索結果のフィード]
 
-==== 最近登録された10件のRSSが表示されます。
-
+. 最近登録された10件のRSSが表示されます。
++
 image::../assets/images/1.1/search_result_rss_2.png[RSS]
 
 === 検索結果一覧の書き出し
 
-
 ==== RDF/XML 形式で書き出し
 
-===== 書き出しをしたい検索結果画面を表示させます。[RDF/XML]リンクをクリックします
-
+. 書き出しをしたい検索結果画面を表示させます。[RDF/XML]リンクをクリックします
++
 image::../assets/images/1.1/search_result_rdf_1.png[RDF/XML]
-
++
 ※　現在、画面でみえている結果の分だけが書き出しができます。
 
-===== RDF/XML 形式のファイルがダウンロードできます。
+. RDF/XML 形式のファイルがダウンロードできます。
 
-* [出力されるRDF/XMLの例（Web APIマニュアル1-2-2節参照）](enju_webapi_1.html#bib_rdf_example)
+* xref:enju_webapi_1.adoc# RDF/XML形式のデータを取得する[Web APIマニュアル「RDF/XML形式のデータを取得する」参照）]
 
 ==== MOS 形式で書き出し
 
-===== 書き出しをしたい検索結果画面を表示させます。[MODS]リンクをクリックします
-
+. 書き出しをしたい検索結果画面を表示させます。[MODS]リンクをクリックします
++
 image::../assets/images/1.1/search_result_mods_1.png[MOS]
-
++
 ※　現在、画面でみえている結果の分だけが書き出しができます。
-
-===== MOS 形式のファイルがダウンロードできます。
-
++
+. MOS 形式のファイルがダウンロードできます。
++
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -317,51 +306,50 @@ image::../assets/images/1.1/search_result_mods_1.png[MOS]
 
 ==== TSV 形式で書き出し
 
-===== 書き出しをしたい検索結果画面を表示させます。[TSV]リンクをクリックします
-
+. 書き出しをしたい検索結果画面を表示させます。[TSV]リンクをクリックします
++
 image::../assets/images/1.2/search_result_tsv_1.png[TSV]
-
++
 ※　現在、画面でみえている結果の分だけが書き出しができます。
 
-===== TSV 形式のファイルがダウンロードできます。 {#bib_tsv}
+. TSV 形式のファイルがダウンロードできます。
 
-* [出力されるTSVの例（Web APIマニュアル1-1-2節参照）](enju_webapi_1.html#bib_tsv_example)
-* [出力される項目の詳細（Web APIマニュアル1-1-3参照）](enju_webapi_1.html#bib_tsv_export)
+* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの例[出力されるTSVの例（Web APIマニュアル）]
+* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの項目[出力される項目の詳細（Web APIマニュアル）]
 
 ==== JSON 形式で書き出し
 
-===== 書き出しをしたい検索結果画面を表示させます。[JSON]リンクをクリックします
-
+. 書き出しをしたい検索結果画面を表示させます。[JSON]リンクをクリックします
++
 image::../assets/images/1.3/search_result_json_1.png[TSV]
-
++
 ※　現在、画面でみえている結果の分だけが書き出しができます。
 
-===== JSON 形式のファイルがダウンロードできます。 {#bib_json}
-
-* [出力されるJSONの例（Web APIマニュアル「書誌と所蔵のJSON形式のデータの例」参照）](enju_webapi_1.html#bib_json_example)
-* [出力される項目の詳細（Web APIマニュアル「書誌と所蔵のJSON形式の項目」参照）](enju_webapi_1.html#bib_json_export)
+. JSON 形式のファイルがダウンロードできます。
++
+* xref:enju_webapi_1.adoc#_書誌と所蔵のJSON形式のデータの例[出力されるJSONの例（Web APIマニュアル「書誌と所蔵のJSON形式のデータの例」参照）]
+* xref:enju_webapi_1.adoc#_書誌と所蔵のJSON形式の項目[出力される項目の詳細（Web APIマニュアル「書誌と所蔵のJSON形式の項目」参照）]
 
 === 検索結果詳細の書き出し
 
 ==== RDF/XML 形式で書き出し
 
-===== 書き出しをしたい検索結果詳細画面を表示させます。[RDF/XML]リンクをクリックし
-ます
-
+. 書き出しをしたい検索結果詳細画面を表示させます。[RDF/XML]リンクをクリックします
++
 image::../assets/images/1.1/search_result_full_rdf_1.png[RDF/XML]
 
-===== RDF/XML 形式のファイルがダウンロードできます。
+. RDF/XML 形式のファイルがダウンロードできます。
 
-* [出力されるRDF/XMLの例（Web API マニュアル2-2-2節参照）](enju_webapi_2.html#bib_rdf_example_simple)
+* xref:enju_webapi_2#_書誌のRDF/XML形式のデータの例[出力されるRDF/XMLの例（Web API マニュアル2-2-2節参照）]
 
-==== MOS 形式で書き出し
+==== MODS 形式で書き出し
 
-===== 書き出しをしたい検索結果詳細画面を表示させます。[MODS]リンクをクリックします
+. 書き出しをしたい検索結果詳細画面を表示させます。[MODS]リンクをクリックします
++
+image::../assets/images/1.1/search_result_full_mods_1.png[MODS]
 
-image::../assets/images/1.1/search_result_full_mods_1.png[MOS]
-
-===== MOS 形式のファイルがダウンロードできます。
-
+. MODS 形式のファイルがダウンロードできます。
++
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
@@ -419,32 +407,32 @@ image::../assets/images/1.1/search_result_full_mods_1.png[MOS]
 
 ==== TSV 形式で書き出し
 
-===== 書き出しをしたい検索結果詳細画面を表示させます。[TSV]リンクをクリックします
-
+. 書き出しをしたい検索結果詳細画面を表示させます。[TSV]リンクをクリックします
++
 image::../assets/images/1.1/search_result_full_tsv_1.png[TSV]
 
-===== TSV 形式のファイルがダウンロードできます。
-
-* [出力されるTSVの例（Web APIマニュアル2-1-2節参照）](enju_webapi_2.html#bib_tsv_example_simple)
-* [出力される項目の詳細（Web APIマニュアル2-1-3参照）](enju_webapi_2.html#bib_tsv_export_simple)
+. TSV 形式のファイルがダウンロードできます。
++
+* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの例[出力されるTSVの例（Web APIマニュアル）]
+* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの項目[出力される項目の詳細（Web APIマニュアル）]
 
 === 検索結果詳細を電子メールで送る
 
 メールアドレスを登録しており、ログインしていると、
 検索結果詳細を電子メールで送ることができます。
 
-※　メールアドレスの登録方法は[「3-2メールアドレスや名前などを変更する」](enju_user_3.html#section3-2)を参照してください。
+※メールアドレスの登録方法はxref:enju_user_3.adoc#_メールアドレスや名前などを変更する[利用者マニュアル「メールアドレスや名前などを変更する」]を参照してください。
 
-==== 電子メールで送りたい検索結果詳細画面を表示させます。[書誌情報を電子メールで送信する]リンクをクリックします
-
+. 電子メールで送りたい検索結果詳細画面を表示させます。[書誌情報を電子メールで送信する]リンクをクリックします
++
 image::../assets/images/1.1/search_result_full_mail_1.png[mail]
 
-==== [OK]をクリックします。
-
+. [OK]をクリックします。
++
 image::../assets/images/1.2/image_alert.png[ok]
 
-==== 電子メールで送られてきます。
-
+. 電子メールで送られてきます。
++
 image::../assets/images/1.1/search_result_full_mail_3.png[mail_body]
 
-{% include enju_user/toc.md %}
+include::enju_user_toc.adoc[]

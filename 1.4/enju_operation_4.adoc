@@ -1637,7 +1637,7 @@ TSVファイルの作り方の詳細については、[「4-2-10 TSVファイル
 注意！ ここの内容は _includes/enju_newbook.mdの内容を編集してください 
 ////
 
-include::../_includes/enju_newbooks.adoc[]
+include::enju_newbooks.adoc
 
 ////
 {::comment}

@@ -17,11 +17,11 @@ toc::[]
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![「システムの設定」を選択](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[「システムの設定」を選択]
 
 . システムの[システムの基本的な情報の表示]リンクをたどります。
 +
-![システムの基本的な情報の表示のリンク](../assets/images/1.1/image_initial_systemdisp01.png)
+image::../assets/images/1.1/image_initial_systemdisp01.png[システムの基本的な情報の表示のリンク]
 
 . システムの基本的な情報を確認できます。
 
@@ -30,13 +30,13 @@ toc::[]
 * Gems：Enju の詳細なバージョン等が表示されます（例：enju_leaf: 1.1.0.rc21，enju_circulation: 0.1.0.pre48）
 * Languages：使用言語が表示されます（例：ja: 日本語 (既定の言語)）
 
-![システムの基本的な情報の表示結果](../assets/images/1.1/image_initial_systemdisp03.png)
+image::../assets/images/1.1/image_initial_systemdisp03.png[システムの基本的な情報の表示結果]
 
 <div class="alert alert-info memo" markdown="1">
 【Memo】
 * リリース前のパッケージを使用している場合にはコミットのハッシュを表示します。
 
-![システムの基本的な情報のコミットのハッシュを表示](../assets/images/1.3/image_initial_systemdisp03-hash.png)
+image::../assets/images/1.3/image_initial_systemdisp03-hash.png[システムの基本的な情報のコミットのハッシュを表示]
 
 </div>
 
@@ -52,19 +52,19 @@ toc::[]
 
 . システムの[Resque]リンクをたどります。
 +
-![Resqueリンク](../assets/images/1.1/image_initial_resque.png)
+image::../assets/images/1.1/image_initial_resque.png[Resqueリンク]
 
 . Resque の画面で非同期処理の状態を確認できます。エラーを確認するには[failed]リンクをたどります。
 +
-![failedリンク](../assets/images/1.1/image_initial_resque2.png)
+image::../assets/images/1.1/image_initial_resque2.png[failedリンク]
 
 . 詳細なエラーを確認するために、閲覧したいエラーのリンクをたどります。
 +
-![詳細なエラーへのリンク](../assets/images/1.1/image_initial_resque_3.png)
+image::../assets/images/1.1/image_initial_resque_3.png[詳細なエラーへのリンク]
 
 . 詳細なエラーが表示されます。
 +
-![詳細なエラー](../assets/images/1.1/image_initial_resque_4.png)
+image::../assets/images/1.1/image_initial_resque_4.png[詳細なエラー]
 
 == 運用マニュアルにおいて説明する機能
 
@@ -72,7 +72,7 @@ toc::[]
 次にあげるメニューについては、運用時に使用するメニューですので、
 運用マニュアルにて説明します。
 
-![システムの設定](../assets/images/1.1/image_initial_085.png)
+image::../assets/images/1.1/image_initial_085.png[システムの設定]
 
 * [開館日と催し物] 
     * [開館日と催し物]メニューから[全ての催し物]をたどっていける画面と同じ

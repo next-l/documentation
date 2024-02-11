@@ -8,7 +8,6 @@ version: 1.4
 
 :toc: macro
 
-
 toc::[]
 
 Enjuの利用を始めるにあたり，形態・状態等に関するシステム設定として，次のような設定作業を行います。
@@ -39,8 +38,8 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 資料の形態を設定します。
 
 * 参考文献：
-* RDA: "3.3.1.3 Recording Carrier Type"
-* LCの ["Term and Code List for RDA Carrier Types"（https://www.loc.gov/standards/valuelist/rdacarrier.html）](https://www.loc.gov/standards/valuelist/rdacarrier.html)
+** RDA: "3.3.1.3 Recording Carrier Type"
+** LCの https://www.loc.gov/standards/valuelist/rdacarrier.html["Term and Code List for RDA Carrier Types"]
 
 === 設定項目
 
@@ -54,56 +53,58 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［資料の形態］をクリックします。
 +
-![資料の形態の設定](../assets/images/1.1/image_carrier_type.png)
+image::../assets/images/1.1/image_carrier_type.png[資料の形態の設定]
 
 . 右メニューの［資料の形態の新規作成］をクリックします。
 +
-![資料の形態の設定](../assets/images/1.2/image_carrier_type_1.png)
-
-<div class="alert alert-info memo" markdown="1">
-【Memo】登録済みの資料の形態を修正したい場合は[編集]リンクをクリックします。順序を変更したい場合は、最左列の ![上矢印](../assets/images/1.1/arrow_up.png) や ![下矢印](../assets/images/1.1/arrow_down.png) をクリックすることで変更できます。
-</div>
-
+image::../assets/images/1.2/image_carrier_type_1.png[資料の形態の設定]
++
+[NOTE]
+====
+【Memo】登録済みの資料の形態を修正したい場合は[編集]リンクをクリックします。順序を変更したい場合は、最左列の image:../assets/images/1.1/arrow_up.png[上矢印] や image:../assets/images/1.1/arrow_down.png[下矢印] をクリックすることで変更できます。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![資料の形態の設定](../assets/images/1.2/image_carrier_type_2.png)
+image::../assets/images/1.2/image_carrier_type_2.png[資料の形態の設定]
 
 . 「資料の形態は正常に作成されました。」とメッセージが表示されます。貸出区分との関連付けを行うために右メニューの[編集]をクリックします（新規作成の場合、貸出区分との関連付けができないため）。
 +
-![編集](../assets/images/1.2/image_carrier_type_3.png)
+image::../assets/images/1.2/image_carrier_type_3.png[編集]
 
 . 資料の形態と貸出区分の関係の[追加]リンクをクリックします。
-
-![資料の形態と貸出区分の関係の追加](../assets/images/1.2/image_carrier_type_4_0.png)
++
+image::../assets/images/1.2/image_carrier_type_4_0.png[資料の形態と貸出区分の関係の追加]
 
 . 貸出区分のメニューを選びます（例では、CDを選んでいます）。
 +
-![資料の形態と貸出区分の関係](../assets/images/1.2/image_carrier_type_4.png)
-
-<div class="alert alert-info memo" markdown="1">
-【Memo】メニューに関連付けたい貸出区分がない場合は、貸出区分を新規作成します。作成方法は、[「3-5 貸出区分を設定する」](enju_setup_3.html#section3-5)を参照してください。
-</div>
-
+image::../assets/images/1.2/image_carrier_type_4.png[資料の形態と貸出区分の関係]
++
+[NOTE]
+====
+【Memo】メニューに関連付けたい貸出区分がない場合は、貸出区分を新規作成します。作成方法は、xref:enju_setup_3.adoc#_貸出区分を設定する[]を参照してください。
+====
++
 . 貸出区分に先ほど選択した貸出区分が表示されているのを確認します（例ではCD）。これで、資料の形態が作成できました。
 +
-![結果の確認](../assets/images/1.2/image_carrier_type_5.png)
-
-<div class="alert alert-info memo" markdown="1">
-【Memo】資料の形態と貸出区分の関係づけについては、[図書館の管理]-->[システムの設定]-->図書館の[資料の形態と貸出区分の関係]リンクをたどった先でもできます（--> 詳細：[「3-7 資料の形態と貸出区分の関係を設定する」](enju_setup_3.html#section3-7)）。
-</div>
+image::../assets/images/1.2/image_carrier_type_5.png[結果の確認]
++
+[NOTE]
+====
+【Memo】資料の形態と貸出区分の関係づけについては、[図書館の管理]->[システムの設定]->図書館の[資料の形態と貸出区分の関係]リンクをたどった先でもできます（-> 詳細：xref:enju_setup_3.adoc#_資料の形態と貸出区分の関係を設定する[資料の形態と貸出区分の関係を設定する]）。
+====
 
 == 資料の内容の種別を作成する
 
 資料の内容の種別を設定します。
 
 * 参考文献：
-* RDA："6.9.1.3 Recording Content Type"
-* LCの ["Term and Code List for RDA Content Types"（https://www.loc.gov/standards/valuelist/rdacontent.html）](https://www.loc.gov/standards/valuelist/rdacontent.html)
-
+** RDA："6.9.1.3 Recording Content Type"
+** LCの https://www.loc.gov/standards/valuelist/rdacontent.html["Term and Code List for RDA Content Types"]
 
 === 設定項目
 
@@ -115,27 +116,28 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
 +
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
 . ［資料の形態］をクリックします。
 +
-![資料の内容の種別の設定](../assets/images/1.1/image_content_type.png)
+image::../assets/images/1.1/image_content_type.png[資料の内容の種別の設定]
 
 . 右メニューの［資料の内容の種別の新規作成］をクリックします。
 +
-![資料の内容の種別の設定](../assets/images/1.1/image_content_type_1.png)
-
-<div class="alert alert-info memo" markdown="1">
-【Memo】登録済みの資料の種別を修正したい場合は[編集]リンクをクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。順序を変更したい場合は、最左列の ![上矢印](../assets/images/1.1/arrow_up.png) や ![下矢印](../assets/images/1.1/arrow_down.png) をクリックすることで変更できます。
-</div>
-
+image::../assets/images/1.1/image_content_type_1.png[資料の内容の種別の設定]
++
+[NOTE]
+====
+【Memo】登録済みの資料の種別を修正したい場合は[編集]リンクをクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。順序を変更したい場合は、最左列の image:../assets/images/1.1/arrow_up.png[上矢印] や image:../assets/images/1.1/arrow_down.png[下矢印] をクリックすることで変更できます。
+====
++
 . 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
 +
-![資料の内容の種別の設定](../assets/images/1.1/image_content_type_2.png)
+image::../assets/images/1.1/image_content_type_2.png[資料の内容の種別の設定]
 
 . 「資料の内容の種別は正常に作成されました。」とメッセージが表示されます。これで、資料の内容の種別が作成できました
 +
-![資料の内容の種別の設定](../assets/images/1.1/image_content_type_3.png)
+image::../assets/images/1.1/image_content_type_3.png[資料の内容の種別の設定]
 
 == 貸出状態を編集作成する
 
@@ -149,23 +151,26 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. ［貸出状態］をクリックします。
++
+image::../assets/images/1.1/image_initial_058_0.png[貸出状態の設定]
 
-==== 2. ［貸出状態］をクリックします。
-
-![貸出状態の設定](../assets/images/1.1/image_initial_058_0.png)
-
-==== 3. 設定したい項目の［編集］をクリックします。
-
-![貸出状態の編集](../assets/images/1.1/image_initial_058.png)
-
-<div class="alert alert-info memo">【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。</div>
-
-==== 4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
-
-![貸出状態を更新](../assets/images/1.1/image_initial_059.png)
+3. 設定したい項目の［編集］をクリックします。
++
+image::../assets/images/1.1/image_initial_058.png[貸出状態の編集]
++
+[NOTE]
+====
+【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+====
++
+4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
++
+image::../assets/images/1.1/image_initial_059.png[貸出状態を更新]
 
 == 利用制限を編集する
 
@@ -180,34 +185,36 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. ［利用制限］をクリックします。
++
+image::../assets/images/1.1/image_initial_062_0.png[利用制限の設定]
 
-==== 2. ［利用制限］をクリックします。
-
-![利用制限の設定](../assets/images/1.1/image_initial_062_0.png)
-
-==== 3. 設定したい項目の［編集］をクリックします。
-
-![利用制限の編集](../assets/images/1.1/image_initial_062.png)
-
-<div class="alert alert-info memo">
+3. 設定したい項目の［編集］をクリックします。
++
+image::../assets/images/1.1/image_initial_062.png[利用制限の編集]
++
+[NOTE]
+====
 【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-</div>
-
-<div class="alert alert-info memo">
+====
++
+[NOTE]
+====
 【Memo】多くの利用制限が登録されてはいますが、Enju Leaf 1.1.0以下では「通常期間貸出」と「貸出不可」のみが利用できます。
-</div>
+====
 
-==== 4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
-
-![利用制限の更新](../assets/images/1.1/image_initial_063.png)
+4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
++
+image::../assets/images/1.1/image_initial_063.png[利用制限の更新]
 
 == 人物・団体の種類を編集する
 
 システムの標準設定を変更する必要がでることは基本的にはありません。
-[人物・団体の新規作成や編集（運用マニュアル 4-10節参照）](enju_operation_4.html#section4-10)の際に表示される
+xref:enju_operation_4.adoc#_人物・団体情報を登録する[]の際に表示される
 [人物・団体の種類]のメニューで表示される文言や、
 メニューの表示順序を変更したいときのみ編集の必要がでます。
 
@@ -219,32 +226,31 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. ［人物・団体の種類］をクリックします。
++
+image::../assets/images/1.1/image_initial_agenttype_0.png[人物・団体の種類の設定]
 
-==== 2. ［人物・団体の種類］をクリックします。
-
-![人物・団体の種類の設定](../assets/images/1.1/image_initial_agenttype_0.png)
-
-==== 3. 右メニューの[人物・団体の種類の新規作成]をクリックします。
-
-![人物・団体の種類の新規作成リンク](../assets/images/1.1/image_initial_agenttype_1.png)
-
-<div class="alert alert-info memo" markdown="1">
-
+3. 右メニューの[人物・団体の種類の新規作成]をクリックします。
++
+image::../assets/images/1.1/image_initial_agenttype_1.png[人物・団体の種類の新規作成リンク]
++
+[NOTE]
+====
 【Memo】修正したい場合は[編集]リンクをクリックします。
 削除したい場合は，[削除]リンクをクリックします。
 ただし、この種類を使った「人物・団体」があるものについては[削除]リンクは
 表示されず、削除できません。 
 一覧の表示順序を変更するには，
 表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-
-</div>
-
-==== 4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，作成します。
-
-![人物・団体の種類の新規作成](../assets/images/1.1/image_initial_agenttype_2.png) 
+====
++
+4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，作成します。
++
+image::../assets/images/1.1/image_initial_agenttype_2.png[人物・団体の種類の新規作成]
 
 == 言語を編集する
 
@@ -259,23 +265,26 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. ［言語］をクリックします。
++
+image::../assets/images/1.1/image_initial_060_0.png[言語の設定]
 
-==== 2. ［言語］をクリックします。
-
-![言語の設定](../assets/images/1.1/image_initial_060_0.png)
-
-==== 3. 設定したい項目の［編集］をクリックします。
-
-![言語の編集](../assets/images/1.1/image_initial_060.png)
-
-<div class="alert alert-info memo">【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。</div>
-
-==== 4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
-
-![言語の更新](../assets/images/1.1/image_initial_061.png)
+3. 設定したい項目の［編集］をクリックします。
++
+image::../assets/images/1.1/image_initial_060.png[言語の編集]
++
+[NOTE]
+====
+【Memo】一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+====
++
+4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
++
+image::../assets/images/1.1/image_initial_061.png[言語の更新]
 
 == 発行頻度を編集する
 
@@ -287,25 +296,31 @@ Enjuの利用を始めるにあたり，形態・状態等に関するシステ�
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. ［発行頻度］をクリックします。
++
+image::../assets/images/1.1/image_initial_064_0.png[発行頻度の設定]
 
-==== 2. ［発行頻度］をクリックします。
-
-![発行頻度の設定](../assets/images/1.1/image_initial_064_0.png)
-
-==== 3. 設定したい項目の［編集］をクリックします。
-
-![発行頻度の編集](../assets/images/1.1/image_initial_064.png)
-
-<div class="alert alert-info memo">【Memo】新規に作成したい場合は、右メニューの[発行頻度の新規作成]をクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。</div>
-
-==== 4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
-
-![発行頻度の更新](../assets/images/1.1/image_initial_065.png)
-
-<div class="alert alert-info memo">【Memo】発行頻度が指定されない場合は，［unknown］が設定されます。</div>
+3. 設定したい項目の［編集］をクリックします。
++
+image::../assets/images/1.1/image_initial_064.png[発行頻度の編集]
++
+[NOTE]
+====
+【Memo】新規に作成したい場合は、右メニューの[発行頻度の新規作成]をクリックします。削除したい場合は、[削除]リンクをクリックします。ただし、関連する書誌レコードがあるものについては[削除]リンクは表示されず、削除できません。一覧の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
+====
++
+4. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。
++
+image::../assets/images/1.1/image_initial_065.png[発行頻度の更新]
++
+[NOTE]
+====
+【Memo】発行頻度が指定されない場合は，［unknown］が設定されます。
+====
 
 == その他の機能
 
@@ -324,44 +339,44 @@ Enjuでは形態の設定として，その他，次の機能を利用できま�
 === 設定項目
 
 * 項目コード：項目をシステムが識別するためのコードを入力します（注：項目コードには英数小文字・アンダースコアのみ使用できます。最初の文字に数字は使用できません）。
-* 項目表示名：画面に表示する名称を入力します。（「ja: 」を入れると日本語表示に、「en: 」を入れると英語表示となります）。
+* 項目表示名：画面に表示する名称を入力します。（「``ja: ``」を入れると日本語表示に、「``en: ``」を入れると英語表示となります）。
 * 注記：注記を入力します。
 
 === 設定方法
 
-==== 1. ［図書館の管理］メニューから［システムの設定］を選択します。
+1. ［図書館の管理］メニューから［システムの設定］を選択します。
++
+image::../assets/images/1.1/image_system_setup.png[システムの設定]
 
-![システムの設定](../assets/images/1.1/image_system_setup.png)
+2. [書誌カスタム項目]をクリックします。
++
+image::../assets/images/1.3/image_initial_bib-custom-howto-top.png[書誌カスタム項目]
 
-==== 2. [書誌カスタム項目]をクリックします。
+3. [書誌カスタム項目の新規作成]をクリックします。
++
+image::../assets/images/1.3/image_initial_bib-custom-howto-new.png[書誌カスタム項目の種類の新規作成]
 
-![書誌カスタム項目](../assets/images/1.3/image_initial_bib-custom-howto-top.png)
+4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
++
+image::../assets/images/1.3/image_initial_bib-custom-howto_made.png[書誌カスタム項目の作成]
 
-==== 3. [書誌カスタム項目の新規作成]をクリックします。
-
-![書誌カスタム項目の種類の新規作成](../assets/images/1.3/image_initial_bib-custom-howto-new.png)
-
-==== 4. 設定項目に必要事項を入力し、［登録する］ボタンをクリックして，設定内容を登録します。
-
-![書誌カスタム項目の作成](../assets/images/1.3/image_initial_bib-custom-howto_made.png)
-
-==== 5. 書誌カスタム項目は正常に作成されましたと表示されます。
-
-![書誌カスタム項目の作成完了](../assets/images/1.3/image_initial_bib-custom-howto_result.png) 
+5. 書誌カスタム項目は正常に作成されましたと表示されます。
++
+image::../assets/images/1.3/image_initial_bib-custom-howto_result.png[書誌カスタム項目の作成完了]
 
 これで、書誌データの新規作成やTSV書誌インポートの際に入力したり、「資料の表示」画面や資料のTSVエクスポートで出力されるようになりました。
 
-書誌TSVインポートや書誌TSVエクスポートの列頭の文字列は、「manifestation:項目コード」（例：項目コードが「kenteinen」であれば、「manifestation:keiteinen」となります。
+書誌TSVインポートや書誌TSVエクスポートの列頭の文字列は、「``manifestation:項目コード``」（例：項目コードが「``kenteinen``」であれば、「``manifestation:keiteinen``」となります。
 
-=== 所蔵のカスタム項目を設定する
+== 所蔵のカスタム項目を設定する
 
 主に他システムからの移行時にEnjuの標準の所蔵情報項目にないデータを念のため保存しておきたいといった場合に設定します。
 注：この項目に入力したデータは、Librarian以上の権限でログインしたときのみ表示され、また、検索ではヒットしません。
 
-やり方は、[「書誌のカスタム項目」](enju_setup_5.html#section-bib-custom)と同様に行います。
+設定方法は、<<_書誌のカスタム項目を設定する>>と同様に行います。
 
 これで、所蔵データの新規作成やTSV所蔵インポートの際に入力したり、「所蔵情報の表示」画面や所蔵のTSVエクスポートで出力されるようになりました。
 
-所蔵情報TSVインポートや所蔵TSVエクスポートの列頭の文字列は、「item:項目コード」（例：項目コードが「kingaku」であれば、「item:kingaku」となります。
+所蔵情報TSVインポートや所蔵TSVエクスポートの列頭の文字列は、「``item:項目コード``」（例：項目コードが「``kingaku``」であれば、「``item:kingaku``」となります。
 
 include::enju_setup_toc.adoc[]

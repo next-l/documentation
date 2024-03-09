@@ -18,7 +18,7 @@ if $0 == __FILE__
     content_adoc = content_adoc.gsub(xref_regex, '\1_all.adoc')
     open(file, "w"){|io| io.print(content_adoc) }
   end
-  %w[ enju_install_vm.adoc
+  %w[ enju_install_vm_all.adoc
       enju_setup_all.adoc
       enju_operation_all.adoc
       enju_user_all.adoc

@@ -16,6 +16,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install GraphicMagick
         run: |
+          sudo apt update
           sudo apt-get install -y build-essential libgraphicsmagick1-dev
           sudo apt-get install -y graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat
       - name: Install Ruby and Jekyll

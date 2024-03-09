@@ -8,34 +8,39 @@
 = Enjuマニュアル一覧
 
 [.span4]
-== link:enju_install_vm.html[インストールマニュアル, class="btn btn-inverse btn-large"]
+== link:enju_install_vm.html[インストールマニュアル, class="btn btn-inverse btn-large"] 
 include::enju_install_vm_toc.adoc[]
 
-link:enju_install_vm_all.pdf[インストールマニュアルPDF版]icon:file-pdf-o[]
+icon:file-pdf-o[]
+link:enju_install_vm_all.pdf[インストールマニュアルPDF版]
 
 [.span4]
 == link:enju_setup.html[初期設定マニュアル, class="btn btn-success btn-large"]
 include::enju_setup_toc.adoc[]
 
-link:enju_setup_all.pdf[初期設定マニュアルPDF版]icon:file-pdf-o[]
+icon:file-pdf-o[]
+link:enju_setup_all.pdf[初期設定マニュアルPDF版]
 
 [.span4]
 == link:enju_operation.html[運用マニュアル, class="btn btn-primary btn-large"]
 include::enju_operation_toc.adoc[]
 
-link:enju_operation_all.pdf[運用マニュアルPDF版]icon:file-pdf-o[]
+icon:file-pdf-o[]
+link:enju_operation_all.pdf[運用マニュアルPDF版]
 
 [.span4]
 == link:enju_user.html[利用者マニュアル, class="btn btn-info btn-large"]
 include::enju_user_toc.adoc[]
 
-link:enju_user_all.pdf[利用者マニュアルPDF版]icon:file-pdf-o[]
+icon:file-pdf-o[]
+link:enju_user_all.pdf[利用者マニュアルPDF版]
 
 [.span4]
 == link:enju_webapi.html[Web APIマニュアル, class="btn btn-info btn-large"]
 include::enju_webapi_toc.adoc[]
 
-link:enju_webapi_all.pdf[Web APIマニュアルPDF版]icon:file-pdf-o[]
+icon:file-pdf-o[]
+link:enju_webapi_all.pdf[Web APIマニュアルPDF版]
 
 ////
 == 一括ダウンロード

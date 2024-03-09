@@ -20,6 +20,10 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
           cache-version: 0
+      - name: Install GraphicMagick
+        run: |
+          sudo apt-get install -y build-essential libgraphicsmagick1-dev
+          sudo apt-get install -y graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat
       - name: Generate Site
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:

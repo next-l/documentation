@@ -24,6 +24,10 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Generate PDFs
+        run: |
+          bundle exec _pdf/convert-adoc2pdf.rb
+          mv _pdf/enju_*_all.pdf _site/1.4/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   deploy:

@@ -6,4 +6,6 @@ gem 'rake-jekyll', '~> 1.1.0'
 
 group :jekyll_plugins do
   gem 'jekyll-asciidoc', '~> 3.0.0'
+  gem 'asciidoctor-pdf'
+  gem 'prawn-gmagick'
 end

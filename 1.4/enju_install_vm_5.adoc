@@ -8,8 +8,9 @@ version: 1.4
 
 :toc: macro
 
-
 toc::[]
+
+== モジュールの追加
 
 Next-L Enju Leaf 1.4では、モジュールによる機能には対応しなくなりました。
 

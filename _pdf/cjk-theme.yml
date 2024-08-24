@@ -1,0 +1,17 @@
+extends: default
+font:
+  catalog:
+    merge: true
+    Noto Sans JP: NotoSansCJKjp-VF.ttf
+    Noto Sans Mono JP: NotoSansMonoCJKjp-VF.ttf
+  fallbacks:
+  - Noto Serif
+base:
+  text-align: left
+  font-family: Noto Sans JP
+codespan:
+  font-family: Noto Sans Mono JP
+kbd:
+  font-family: $codespan-font-family
+code:
+  font-family: $codespan-font-family

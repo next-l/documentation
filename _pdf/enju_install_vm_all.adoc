@@ -5,8 +5,9 @@
 // :toc-placement!:
 :sectnums:
 :author: Project Next-L
-:version-label: 1.4.x
-:title-logo-image: image:../assets/images/logo.gif[]
+:revnumber: 1.4.x
+:title-logo-image: image:../assets/images/logo.png[]
+:scripts: cjk
 
 include::enju_install_vm.adoc[]
 

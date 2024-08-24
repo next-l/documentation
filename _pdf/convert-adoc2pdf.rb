@@ -24,6 +24,6 @@ if $0 == __FILE__
       enju_user_all.adoc
       enju_webapi_all.adoc ].each do |file|
     STDERR.puts file
-    system("asciidoctor-pdf -a pdf-theme=default-with-fallback-font #{File.join(d, file)}")
+    system("asciidoctor-pdf -v -a scripts=cjk -a pdf-theme=./cjk-theme.yml -a pdf-fontsdir=./fonts -r asciidoctor/pdf/nogmagick #{File.join(d, file)}")
   end
 end

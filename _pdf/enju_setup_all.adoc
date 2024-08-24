@@ -6,7 +6,7 @@
 :sectnums:
 :author: Project Next-L
 :version-label: 1.4.x
-:title-logo-image: image:../assets/images/logo.gif[]
+:title-logo-image: image:../assets/images/logo.png[]
 :xrefstyle: full
 :!section-refsig:
 

@@ -461,21 +461,21 @@ image::../assets/images/1.1/image_operation_input_manually_manifestation.png[手
 +
 image::../assets/images/1.2/image_operation_100.png[原題のほか必要な項目を入力し登録]
 
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】
 
 * 「*」のマークが付いた項目は入力必須項目です。
 * 「ページ数」と「最初のページ」「最後のページ」の両方を入力した場合、「資料の表示」に表示されるのは「ページ数」になります。
 * 「大きさ」と「高さ」の両方を入力した場合、「資料の表示」に表示されるのは「大きさ」になります。
+====
 
-//</div>
-
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】著者については、入力し始めると、すでに登録されている著者の候補が出てくるので、同じものがあれば、そのメニューから選んで決定することができます。
 
 image::../assets/images/1.2/image_operation_author_auto.png[著者名の自動補完方法]
-
-//</div>
+====
 
 . 「資料は正常に作成されました。」のメッセージが表示され、図書が登録されます。
 +
@@ -491,11 +491,12 @@ image::../assets/images/1.1/image_operation_bib_ed_1.png[検索]
 +
 image::../assets/images/1.1/image_operation_bib_ed_2.png[編集]
 
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】ここで、本のタイトルのリンクをたどり、その先の資料の表示画面の右メニュー[編集]をクリックすることでも編集画面に移動します。
 
 image::../assets/images/1.2/image_operation_bib_ed_3.png[編集]
-//</div>
+====
 
 . 編集をし、［更新する］ボタンをクリックします。
 +
@@ -534,7 +535,10 @@ image::../assets/images/1.2/image_operation_bib_ed_5.png[更新されました]
 ////
 
 // <div class="alert alert-success memo" markdown="1">
-<h4 class="alert-heading">【Column】TSVファイルの作り方</h4>
+
+[NOTE]
+====
+【Column】TSVファイルの作り方
 
 ==== TSVファイルの作り方（図書（書誌））
 
@@ -545,379 +549,313 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 1行目に、それぞれの項目に関わるフィールド名を指定します。
 フィールド名とその意味については次の通りです。
 
-<table class="table table-bordered table-condensed table-striped">
-<caption>図書のフィールド項目名と対応する内容</caption>
-<thead>
-<tr>
-        <th>フィールド名</th>
-        <th>日本語名称</th>
-        <th>入力ルール及び説明</th>
-        <th>例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>manifestation_id</td>
-	<td>Manifestation ID</td>
-	<td>半角数字のみ, システムが自動付与するID, 「資料の表示」画面のURL末尾にある数値。更新や削除に使用します。※新規作成時には使用しないでください。<!-- ( #872 ) いずれ：新規作成時にはこの列は無視されます。--></td>
-	<td>4</td>
-</tr>
-<tr>
-	<td>manifestation_identifier</td>
-	<td>ローカル識別子</td>
-	<td>文字列、インポート時に付与する書誌に対する任意の識別子。 <!--（#issue372）--></td>
-	<td>999001</td>
-</tr>
-<tr>
-	<td>original_title</td>
-	<td>原題</td>
-	<td>文字列</td>
-	<td>Rによるやさしい統計学</td>
-</tr>
-<tr>
-	<td>title_transcription</td>
-	<td>タイトルのヨミ</td>
-	<td>文字列</td>
-	<td>R ニ ヨル ヤサシイ トウケイガク</td>
-</tr>
-<tr>
-	<td>title_alternative</td>
-	<td>代替タイトル</td>
-	<td>文字列</td>
-	<td>Rの操作手順と統計学の基礎が身に付く</td>
-</tr>
-<tr>
-	<td>title_alternative_transcription</td>
-	<td>代替タイトルのヨミ</td>
-	<td>文字列</td>
-	<td>R ノ ソウサテジュン ト トウケイガク ノ キソ ガ ミ ニ ツク</td>
-</tr>
-<tr>
-	<td>statement_of_responsibility</td>
-	<td>責任表示</td>
-	<td>文字列</td>
-	<td>山田剛史, 杉澤武俊, 村井潤一郎 共著</td>
-</tr>
-<tr>
-	<td>periodical</td>
-	<td>逐次刊行物フラグ</td>
-	<td>フラグ（t または　TRUEなら真）</td>
-	<td>TRUE</td>
-</tr>
-<tr>
-	<td>edition_string</td>
-	<td>版</td>
-	<td>文字列</td>
-	<td>初版</td>
-</tr>
-<tr>
-	<td>edition</td>
-	<td>版（数字）</td>
-	<td>半角数字のみ</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>volume_number_string</td>
-	<td>巻</td>
-	<td>文字列</td>
-	<td>一</td>
-</tr>
-<tr>
-	<td>volume_number</td>
-	<td>巻（数字）</td>
-	<td>半角数字のみ</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>issue_number_string</td>
-	<td>号</td>
-	<td>文字列</td>
-	<td>二</td>
-</tr>
-<tr>
-	<td>issue_number</td>
-	<td>号（数字）</td>
-	<td>半角数字のみ</td>
-	<td>3</td>
-</tr>
-<tr>
-	<td>serial_number</td>
-	<td>通号</td>
-	<td>半角数字のみ</td>
-	<td>2</td>
-</tr>
-<tr>
-	<td>series_original_title</td>
-	<td>シリーズ名</td>
-	<td>文字列（複数ある場合は//で区切る）</td>
-	<td>理工学専門書シリーズ//数学//1</td>
-</tr>
-<tr>
-	<td>series_title_transcription</td>
-	<td>シリーズ名のヨミ</td>
-	<td>文字列（複数ある場合は//で区切る）, <a href="#tsv_series_title_transcription">（詳細）</a></td>
-	<td>リコウガクセンモンショ シリーズ//スウガク//1</td>
-</tr>
-<tr>
-	<td>series_volume_number_string</td>
-	<td>シリーズ巻号</td>
-	<td>文字列，<a href="#tsv_series_volume_number_string">（詳細）</a></td>
-	<td>二</td>
-</tr>
-<tr>
-	<td>series_creator_string</td>
-	<td>シリーズ著者</td>
-	<td>文字列，<a href="#tsv_series_creator_string">（詳細）</a></td>
-	<td>統計</td>
-</tr>
-<tr>
-	<td>creator</td>
-	<td>著者（フルネーム）</td>
-	<td>文字列<a href="#tsv_creator">（特定書式：別記）</a></td>
-	<td>山田, 剛史, 1970-||author//杉澤, 武俊||author</td>
-</tr>
-<tr>
-	<td>creator_transcription</td>
-	<td>著者ヨミ（フルネームヨミ）</td>
-	<td>文字列（複数ある場合は//で区切る）</td>
-	<td>ヤマモト, タケシ//スギサワ, タケトシ</td>
-</tr>
-<tr>
-	<td>contributor</td>
-	<td>協力者・編者</td>
-	<td>文字列</td>
-	<td>山田, 剛史</td>
-</tr>
-<tr>
-	<td>contributor_transcription</td>
-	<td>協力者・編者(ヨミ)</td>
-	<td>文字列</td>
-	<td>ヤマモト, タケシ</td>
-</tr>
-<tr>
-	<td>publisher</td>
-	<td>出版者</td>
-	<td>文字列</td>
-	<td>オーム社</td>
-</tr>
-<tr>
-	<td>publisher_transcription</td>
-	<td>出版者のヨミ</td>
-	<td>文字列</td>
-	<td>オームシャ</td>
-</tr>
-<tr>
-	<td>publication_place</td>
-	<td>出版地</td>
-	<td>文字列</td>
-	<td>東京</td>
-</tr>
-<tr>
-	<td>pub_date</td>
-	<td>出版日</td>
-	<td>ISO8601（年まで、月まででも可）</td>
-	<td>2014-01</td>
-</tr>
-<tr>
-	<td>content_type</td>
-	<td>資料の内容の種類</td>
-	<td>code<a href="#tsv_content_type">（詳細）</a></td>
-	<td>text</td>
-</tr>
-<tr>
-	<td>carrier_type</td>
-	<td>資料の形態</td>
-	<td>code<a href="#tsv_carrier_type">（詳細）</a></td>
-	<td>volume</td>
-</tr>
-<tr>
-	<td>frequency</td>
-	<td>発行頻度</td>
-	<td>code<a href="#tsv_frequency">（詳細）</a></td>
-	<td>monthly</td>
-</tr>
-<tr>
-	<td>language</td>
-	<td>言語</td>
-	<td>code<a href="#tsv_language">（詳細）</a></td>
-	<td>jpn</td>
-</tr>
-<tr>
-	<td>isbn</td>
-	<td>ISBN</td>
-	<td>半角文字のみ、ハイフンあり/なし/9桁/13桁はどの形式でも受け付ける。国際標準逐次刊行物番号。<a href="#tsv_id">（詳細）</a></td>
-	<td>9784274067105</td>
-</tr>
-<tr>
-	<td>ndl_bib_id</td>
-	<td>国立国会図書館書誌ID</td>
-	<td>半角文字のみ。</td>
-	<td>000002844874</td>
-</tr>
-<tr>
-	<td>issn</td>
-	<td>ISSN</td>
-	<td>半角文字のみ, ハイフンはあってもなくてもよい。国際標準逐次刊行物番号。<a href="#tsv_id">（詳細）</a></td>
-	<td>0917-1436</td>
-</tr>
-<tr>
-	<td>jpno</td>
-	<td>JPNO</td>
-	<td>半角文字のみ. 全国書誌番号。<a href="#tsv_id">（詳細）</a></td>
-	<td>21366221</td>
-</tr>
-<tr>
-	<td>lccn</td>
-	<td>LCCN</td>
-	<td>半角文字のみ. 米国議会図書館管理番号。<a href="#tsv_id">（詳細）</a></td>
-	<td>1255667</td>
-</tr>
-<tr>
-        <td>doi</td>
-        <td>DOI</td>
-        <td>文字列，https://doi.org/は記入しない。<a href="#tsv_id">（詳細）</a></td>
-        <td>10.2964/jsik.23_219</td>
-</tr>
-<tr>
-	<td>ncid</td>
-	<td>NCID</td>
-	<td>半角文字のみ. NCID(NACSIS-CAT ID，NII書誌ID)。<a href="#tsv_id">（詳細）</a></td>
-	<td>BA84620103</td>
-</tr>
-<tr>
-	<td>subject:[件名標目の種類]<a href="#tsv_subject">（詳細）</a></td>
-	<td>件名</td>
-	<td>文字列（複数ある場合は//で区切る）</td>
-	<td>ウェブアプリケーション//インターネット</td>
-</tr>
-<tr>
-	<td>classification:[分類の種類] <a href="#tsv_classification">（詳細）</a></td>
-	<td>分類</td>
-	<td>文字列（複数ある場合は//で区切る）</td>
-	<td>007//007.58</td>
-</tr>
-<tr>
-	<td>start_page</td>
-	<td>最初のページ</td>
-	<td>半角数字のみ(#342)</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>end_page</td>
-	<td>最後のページ</td>
-	<td>半角数字のみ</td>
-	<td>404</td>
-</tr>
-<tr>
-	<td>extent</td>
-	<td>ページ数</td>
-	<td>文字列</td>
-	<td>xi, 125 pages</td>
-</tr>
-<tr>
-	<td>dimensions</td>
-	<td>大きさ</td>
-	<td>文字列</td>
-	<td>21cm</td>
-</tr>
-<tr>
-	<td>height</td>
-	<td>高さ（cm）</td>
-	<td>半角数字のみ</td>
-	<td>20</td>
-</tr>
-<tr>
-	<td>width</td>
-	<td>幅（cm）</td>
-	<td>半角数字のみ</td>
-	<td>15</td>
-</tr>
-<tr>
-	<td>depth</td>
-	<td>奥行き（cm）</td>
-	<td>半角数字のみ</td>
-	<td>1.5</td>
-</tr>
-<tr>
-	<td>manifestation_price</td>
-	<td>販売価格</td>
-	<td>半角数字のみ</td>
-	<td>2000</td>
-</tr>
-<tr>
-	<td>access_address</td>
-	<td>アクセスアドレス</td>
-	<td>半角文字のみ</td>
-	<td>https://www.amazon.co.jp/dp/4274067106/</td>
-</tr>
-<tr>
-	<td>fulltext_content</td>
-	<td>リポジトリコンテンツ</td>
-	<td>フラグ（t または　TRUEなら真）</td>
-	<td>TRUE</td>
-</tr>
-<tr>
-	<td>required_role_name</td>
-	<td>参照に必要な権限</td>
-	<td>code<a href="#tsv_required_role_name">（詳細）</a></td>
-	<td>Guest</td>
-</tr>
-<tr>
-	<td>abstract</td>
-	<td>内容細目</td>
-	<td>文字列。Enju Leaf 1.3.6よりインポート可能。</td>
-	<td>1. サイタ<br/>2. ヒラク</td>
-</tr>
-<tr>
-	<td>description</td>
-	<td>説明</td>
-	<td>文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。</td>
-	<td>本書は、統計学の理論を簡潔に解説しながら、Rの手順・アウトプットの解釈を丁寧に行う。具体的には...</td>
-</tr>
-<tr>
-	<td>note</td>
-	<td>注記</td>
-	<td>文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。</td>
-	<td>版表示は奥付より。付属資料: CD-ROM（1枚, 12cm）</td>
-</tr>
-<tr>
-	<td>manifestation_memo</td>
-	<td>業務メモ（書誌）</td>
-	<td>文字列。Enju Leaf 1.3.6よりインポート可能。<a href="#tsv_mmemo">（詳細）</a></td>
-	<td></td>
-</tr>
-<tr>
-	<td>dummy</td>
-	<td>インポート省略</td>
-	<td>文字列。この列に入力されていると、その行全体をインポート対象から除外します。</td>
-	<td></td>
-</tr>
-<!-- <tr>
-	<td>series_statement_identifier</td>
-	<td>シリーズステイトメントID</td>
-	<td>半角数字のみ, <a href="#series_statement_identifier">（詳細）</a></td>
-	<td>2</td>
-</tr> -->
-</tbody>
-</table>
+.図書のフィールド項目名と対応する内容
+[cols="1,1,2,2",frame=ends,stripes=even]
+|===
+|フィールド名 | 日本語名称 | 入力ルール及び説明 | 例
 
-#isbn などの識別子 {#tsv_id}
+|manifestation_id
+|Manifestation ID
+|半角数字のみ。システムが自動付与するID。「資料の表示」画面のURL末尾にある数値。更新や削除に使用します。※新規作成時には使用しないでください。
+// <!-- ( #872 ) いずれ：新規作成時にはこの列は無視されます。--></td>
+|4
+
+|manifestation_identifier
+|ローカル識別子
+|文字列、インポート時に付与する書誌に対する任意の識別子。
+|999001
+//<!--（#issue372）-->
+
+|original_title
+|原題
+|文字列
+|Rによるやさしい統計学
+
+|title_transcription
+|タイトルのヨミ
+|文字列
+|R ニ ヨル ヤサシイ トウケイガク
+
+|title_alternative
+|代替タイトル
+|文字列
+|Rの操作手順と統計学の基礎が身に付く
+
+|title_alternative_transcription
+|代替タイトルのヨミ
+|文字列
+|R ノ ソウサテジュン ト トウケイガク ノ キソ ガ ミ ニ ツク
+
+|statement_of_responsibility
+|責任表示
+|文字列
+|山田剛史, 杉澤武俊, 村井潤一郎 共著
+
+|periodical
+|逐次刊行物フラグ
+|フラグ（t または TRUEなら真）
+|TRUE
+
+|edition_string
+|版
+|文字列
+|初版
+
+|edition
+|版（数字）
+|半角数字のみ
+|1
+
+|volume_number_string
+|巻
+|文字列
+|一
+
+|volume_number
+|巻（数字）
+|半角数字のみ
+|1
+
+|issue_number_string
+|号
+|文字列
+|二
+
+|issue_number
+|号（数字）
+|半角数字のみ
+|3
+
+|serial_number
+|通号
+|半角数字のみ
+|2
+
+|series_original_title
+|シリーズ名
+|文字列（複数ある場合は//で区切る）
+|理工学専門書シリーズ//数学//1
+
+|series_title_transcription
+|シリーズ名のヨミ
+|文字列（複数ある場合は//で区切る）, <<tsv_series_title_transcription,（詳細）>>
+|リコウガクセンモンショ シリーズ//スウガク//1
+
+|series_volume_number_string
+|シリーズ巻号
+|文字列，<<tsv_series_volume_number_string,（詳細）>>
+|二
+
+|series_creator_string
+|シリーズ著者
+|文字列，<<tsv_series_creator_string,（詳細）>>
+|統計
+
+|creator
+|著者（フルネーム）
+|文字列<<creator,（特定書式：別記）>>
+|山田, 剛史, 1970-||author//杉澤, 武俊||author
+
+|creator_transcription
+|著者ヨミ（フルネームヨミ）
+|文字列（複数ある場合は//で区切る）
+|ヤマモト, タケシ//スギサワ, タケトシ
+
+|contributor
+|協力者・編者
+|文字列
+|山田, 剛史
+
+|contributor_transcription
+|協力者・編者(ヨミ)
+|文字列
+|ヤマモト, タケシ
+
+|publisher
+|出版者
+|文字列
+|オーム社
+
+|publisher_transcription
+|出版者のヨミ
+|文字列
+|オームシャ
+
+|publication_place
+|出版地
+|文字列
+|東京
+
+|pub_date
+|出版日
+|ISO8601（年まで、月まででも可）
+|2014-01
+
+|content_type
+|資料の内容の種類
+|code<<content_type,（詳細）>>
+|text
+
+|carrier_type
+|資料の形態
+|code<<carrier_type,（詳細）>>
+|volume
+
+|frequency
+|発行頻度
+|code<<frequency,（詳細）>>
+|monthly
+
+|language
+|言語
+|code<<language,（詳細）>>
+|jpn
+
+|isbn
+|ISBN
+|半角文字のみ、ハイフンあり/なし/9桁/13桁はどの形式でも受け付ける。国際標準逐次刊行物番号。<<tsv_id,（詳細）>>
+|9784274067105
+
+|ndl_bib_id
+|国立国会図書館書誌ID
+|半角文字のみ。
+|000002844874
+
+|issn
+|ISSN
+|半角文字のみ, ハイフンはあってもなくてもよい。国際標準逐次刊行物番号。<<tsv_id,（詳細）>>
+|0917-1436
+
+|jpno
+|JPNO
+|半角文字のみ. 全国書誌番号。<<tsv_id,（詳細）>>
+|21366221
+
+|lccn
+|LCCN
+|半角文字のみ. 米国議会図書館管理番号。<<tsv_id,（詳細）>>
+|1255667
+
+|doi
+|DOI
+|文字列，https://doi.org/は記入しない。<<tsv_id,（詳細）>>
+|10.2964/jsik.23_219
+
+|ncid
+|NCID
+|半角文字のみ. NCID(NACSIS-CAT ID，NII書誌ID)。<<tsv_id,（詳細）>>
+|BA84620103
+
+|subject:[件名標目の種類]<<tsv_subject,（詳細）>>
+|件名
+|文字列（複数ある場合は//で区切る）
+|ウェブアプリケーション//インターネット
+
+|classification:[分類の種類] <<tsv_classification,（詳細）>>
+|分類
+|文字列（複数ある場合は//で区切る）
+|007//007.58
+
+|start_page
+|最初のページ
+|半角数字のみ(#342)
+|1
+
+|end_page
+|最後のページ
+|半角数字のみ
+|404
+
+|extent
+|ページ数
+|文字列
+|xi, 125 pages
+
+|dimensions
+|大きさ
+|文字列
+|21cm
+
+|height
+|高さ（cm）
+|半角数字のみ
+|20
+
+|width
+|幅（cm）
+|半角数字のみ
+|15
+
+|depth
+|奥行き（cm）
+|半角数字のみ
+|1.5
+
+|manifestation_price
+|販売価格
+|半角数字のみ
+|2000
+
+|access_address
+|アクセスアドレス
+|半角文字のみ
+|https://www.amazon.co.jp/dp/4274067106/
+
+|fulltext_content
+|リポジトリコンテンツ
+|フラグ（t または　TRUEなら真）
+|TRUE
+
+|required_role_name
+|参照に必要な権限
+|code<<required_role_name,（詳細）>>
+|Guest
+
+|abstract
+|内容細目
+|文字列。Enju Leaf 1.3.6よりインポート可能。
+|1. サイタ +
+2. ヒラク
+
+|description
+|説明
+|文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。
+|本書は、統計学の理論を簡潔に解説しながら、Rの手順・アウトプットの解釈を丁寧に行う。具体的には...
+
+|note
+|注記
+|文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。
+|版表示は奥付より。付属資料: CD-ROM（1枚, 12cm）
+
+|manifestation_memo
+|業務メモ（書誌）
+|文字列。Enju Leaf 1.3.6よりインポート可能。<a href="#tsv_mmemo">（詳細）</a>
+|
+
+|dummy
+|インポート省略
+|文字列。この列に入力されていると、その行全体をインポート対象から除外します。
+|
+|===
+
+[[tsv_id]]
+===== isbn などの識別子
 
 複数の識別子（ISBNなど）がある場合は、// で区切ります。どんな識別子があるかについては、[初期設定マニュアル「6-1 識別子の種類を設定する」](enju_setup_6.html#section6-1) を参照してください。注意！ISBNが複数ある場合、ISBNを用いて国立国会図書館のデータを参照して、 自動的に空白の項目が埋められることはありません。必ず、original_title等を記入しておく必要があります。
 
-#series_title_transcription {#tsv_series_title_transcription}
+===== series_title_transcription
 
 シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
 
-#series_volume_number_string {#tsv_series_volume_number_string}
+===== series_volume_number_string
 
 シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
 
-#series_creator_string {#tsv_series_creator_string}
+===== series_creator_string
 
 シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
 
-#creator {#tsv_creator}
+===== creator
 
 	書式: 著者名||役割//著者名||役割
 	例：山田, 剛史, 1970-||author//杉澤, 武俊||author//大木, 太郎||illustrator
@@ -926,25 +864,25 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 
 使える役割については、「著者の関係」機能の「名称」にあるものです（注 Enju Leaf 1.3.4 現在、「著者の関係」はどこからもリンクないですがcreate_types をURLに追加するとアクセスできます（例：デモサーバーでは [https://enju.next-l.jp/create_types](https://enju.next-l.jp/create_types) ）。ここから新しい役割を追加することもできます。<!-- issue #1522 にて-->
 
-#content_type {#tsv_content_type}
+===== content_type
 
 「資料の内容の種別」の[名前]を値とします(例：文字であれば"text"など）。見方については、[初期設定マニュアル「5-2 資料の内容の種別の作成」](enju_setup_5.html#section5-2) を参照してください。
 
-#carrier_type {#tsv_carrier_type}
+===== carrier_type
 
 「資料の形態」の[名前]を値とします(例：冊子体であれば"volume"など）。見方については、[初期設定マニュアル「5-1 資料の形態の作成」](enju_setup_5.html#section5-1) を参照してください。
 未入力の場合は"text"が設定されます。
 
-#frequency {#tsv_frequency}
+===== frequency
 
 「発行頻度」の[名前]を値とします(例："daily", "monthly"など）。見方については、[初期設定マニュアル「5-7 発行頻度を編集する」](enju_setup_5.html#section5-7) を参照してください。未入力の場合は"unknown"が設定されます。
 
-
-#language {#tsv_language}
+===== language
 
 日本語の場合は jpn, 英語の場合は、engになります。その他の言語については、「言語」の[Iso 639 2]を参照してください。見方については、[初期設定マニュアル「5-3 言語を編集する」](enju_setup_5.html#section5-3) を参照してください。
 
-#subject:[件名標目の種類] {#tsv_subject}
+[[tsv_subject]]
+===== subject:[件名標目の種類]
 
 件名標目の種類ごとに別の列になります。
 フィールド名は subject:[件名標目の種類] となります。
@@ -964,7 +902,8 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 	subject:ndlsh	subject:lcsh
 	インターネット	Internet
 
-#classification:[分類の種類] {#tsv_classification}
+[[tsv_classification]]
+===== classification:[分類の種類]
 
 分類の種類ごとに別の列になります。
 フィールド名はclassification:[分類の種類] となります。
@@ -984,7 +923,7 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 	classification:ndc9	classification:ndlc
 	007	AZ-463
 
-#required_role_name {#tsv_required_role_name}
+===== required_role_name
 
 この書誌を参照可能な権限を設定します。
 以下の4つから選びます。なにも記入しなければ、Guest になります。
@@ -994,23 +933,12 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 * User（図書館利用者）
 * Guest （誰でも）
 
-#manifestation_memo {#tsv_mmemo}
+===== manifestation_memo
 
 Administrator権限、Librarian権限のときのみ出力する項目です。
 一般利用者には見せないが、業務上必要なデータを残したい場合などに使用します。
 
-////
-<!--
-参照： https://github.com/next-l/enju_leaf/issues/337
-
-#series_statement_identifier {#series_statement_identifier}
-
-（工事中）
-
-「xxxxx」の[xxx]を値とします。見方については、[xx-xx xxxxxxx](enju_setup_x.html#sectionxx-xx) を参照してください。
--->
-////
-</div>
+====
 
 === 所蔵情報を登録・一覧表示する
 

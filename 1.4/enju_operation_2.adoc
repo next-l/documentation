@@ -127,6 +127,7 @@ Librarian（図書館員Librarian）は，
 [「3-3 利用者情報を変更する」](enju_operation_3.html#section3-3)
 を参照してください。
 
+[[message-function]]
 === メッセージをやり取りする
 
 Enjuのメッセージ機能を利用して、利用者にメッセージを送信することができます。

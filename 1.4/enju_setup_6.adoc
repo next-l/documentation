@@ -12,6 +12,7 @@ version: 1.4
 
 toc::[]
 
+[[setup-identifiers]]
 === 識別子の種類を設定する
 
 xref:enju_operation_4.adoc#_手動で資料を登録する[運用マニュアル「手動で資料を登録する」]ときや、xref:enju_operation_4#_図書の書誌を編集修正する

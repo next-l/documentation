@@ -12,7 +12,7 @@ toc::[]
 
 == モジュールの追加
 
-Next-L Enju Leaf 1.4では、モジュールによる機能には対応しなくなりました。
+Next-L Enju Leaf 1.4から、モジュール追加による機能追加の方法は廃止しました。
 
 include::enju_install_vm_toc.adoc[]
 

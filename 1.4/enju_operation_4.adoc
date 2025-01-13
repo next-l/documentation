@@ -7,7 +7,7 @@ version: 1.4
 ---
 
 :toc: macro
-
+:toclevels: 3
 
 toc::[]
 
@@ -47,9 +47,6 @@ toc::[]
 
 === 図書を発注する
 
-この機能を利用するには、
-[enju_purchase_request]モジュールをインストール必要があります。インストール方法については[インストールマニュアル「第5章 モジュールの追加」](enju_install_vm_5.html)の章を参照ください。
-
 ==== 購入リクエストを作成する
 
 購入したい図書の購入リクエストを作成します。
@@ -59,17 +56,17 @@ toc::[]
 image::../assets/images/1.1/image_operation_purchase_req.png[購入リクエスト]
 
 . 右メニューの［購入リクエストの新規作成］をクリックします。
-=
++
 image::../assets/images/1.1/image_operation_078.png[購入リクエストの新規作成]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[RSS]をクリックすると購入リクエストをRSS表示します。
 * 右メニューの[TSV]をクリックすると購入リクエストをTSV表示します。
 * 右メニューの「図書館の購入依頼に追加」は、購入リクエストのためのブックマークレットです。このリンク先のURLをブックマークレットとしてブラウザのブックマークにあらかじめ登録しておきます。amazonなどで購入リクエストしたい図書の画面を出した後、このブックマークレットを使用すると、当該図書の情報が入力された購入リクエスト登録画面が表示されます。
-
-</div>
+====
 
 . タイトルや著者などを入力し、［登録する］ボタンをクリックします。
 +
@@ -89,6 +86,7 @@ image::../assets/images/1.1/image_operation_083.png[購入リクエスト作成�
 image::../assets/images/1.1/image_operation_order.png[発注リスト]
 
 . 右メニューの［発注リストの新規作成］をクリックします。
++
 image::../assets/images/1.1/image_operation_072.png[発注リストの新規作成]
 
 . リストのタイトルを入力し、書店を選択したら［登録する］ボタンをクリックします。
@@ -111,15 +109,16 @@ image::../assets/images/1.1/image_operation_purchase_req.png[購入リクエス�
 +
 image::../assets/images/1.1/image_operation_078_2.png[購入リクエストの選択]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[発注済み]をクリックすると発注済みの購入リクエストのみを表示します※。
 * 右メニューの[未発注]をクリックすると未発注の購入リクエストのみを表示します※。
 * 右メニューの[全ての購入依頼]をクリックすると全ての購入リクエストを表示します。
 
-※注意 Enju Leaf 1.1.0 ではこの機能にバグがあり、[未発注]や[発注済み]などの絞り込みは動作しません（ [参照 #issue444](https://github.com/next-l/enju_leaf/issues/444)）
-</div>
+※注意 2025年1月現在、この機能にバグがあり、[未発注]や[発注済み]などの絞り込みは動作しません（link:https://github.com/next-l/enju_leaf/issues/444[参照 #issue444]）
+====
 
 . 購入リクエストの表示画面に切り替わったら、右メニューの［発注リストに追加する］をクリックします。
 +
@@ -132,9 +131,11 @@ image::../assets/images/1.1/image_operation_085.png[発注を作成]
 ==== 発注リストを確定し「発注済み」にする
 
 . ［図書館の管理］メニューから［発注リスト］を選択します。
++
 image::../assets/images/1.1/image_operation_order.png[発注リスト]
 
 . 確定したい発注リストの発注リスト名をクリックします。
++
 image::../assets/images/1.1/image_operation_order_submit_1.png[発注リスト名]
 
 . 右メニューの［購入リクエストの一覧］をクリックします。
@@ -153,12 +154,12 @@ image::../assets/images/1.1/image_operation_091_4.png[発注票を作成する�
 +
 image::../assets/images/1.1/image_operation_091_5.png[発注リストが更新されました]
 
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】この処理をすると発注リストの状態が「発注済み」に変更されます。
-+
-image::../assets/images/1.1/image_operation_091_7.png[発注済み]
 
-//</div>
+image::../assets/images/1.1/image_operation_091_7.png[発注済み]
+====
 
 ==== 発注済みリストのTSVをダウンロードする
 
@@ -210,13 +211,13 @@ NDLサーチなどを検索して1件ずつ登録する
 
 注意の必要な項目のみ説明します。
 
-* （カスタム項目）：例えば、「検定年」など自由に設定した入力項目ができます。「内容細目」の上にフォームが表示されます。設定方法などの詳細は[「書誌のカスタム項目を設定する」節](enju_setup_5.html#section-bib-custom)を参照してください。
+* （カスタム項目）：例えば、「検定年」など自由に設定した入力項目ができます。「内容細目」の上にフォームが表示されます。設定方法などの詳細は xref:enju_setup_5#section-bib-custom[「書誌のカスタム項目を設定する」節]を参照してください。
 * 内容細目：目次などを入力します。改行を入れた入力もできます。
 * 業務メモ：業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。
 
 ==== TSVファイルを読み込んで登録する
 
-. TSVファイルを用意します。TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方」](#section4-2-10) を参照してください。
+. TSVファイルを用意します。TSVファイルの作り方の詳細については、<<manifestation-import-format,「TSVファイルの作り方」>>を参照してください。
 
 . ［資料の受入］メニューから［TSVファイルからのインポート］を選択します。
 +
@@ -229,45 +230,50 @@ image::../assets/images/1.1/image_operation_094.png[ファイルを選択]
 . [編集モード]が[作成]となっていることを確認し、[文字コード]、[既定の本棚]を選択して［インポートを開始］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_095.png[インポートされる資料のファイルを作成]
-
-//<div class="alert alert-info memo" markdown="1">
++
+[NOTE]
+====
 【Memo】
 他の「編集モード」の使い方は別の章で説明します。
-//</div>
-
-//<div class="alert alert-info memo">
+====
++
+[NOTE]
+====
 【Memo】[文字コード]は基本的には自動判別でよいですが、うまくいかない場合は、文字コードを指定するようにしてください。
-//</div>
-
-//<div class="alert alert-info memo">
+====
++
+[NOTE]
+====
 【Memo】[既定の本棚]は、TSVファイルに[本棚]を指定しない場合やTSVファイルで不正な本棚を指定していた場合に登録される本棚となります。TSVファイルに正しい[本棚]が指定されていた場合はTSVファイルを優先します。
-//</div>
+====
 
 . 「資料のインポート用ファイルは正常に作成されました。」のメッセージが表示され、資料のデータインポートの準備が整いました。右の[資料のインポート用ファイルの一覧]をクリックします。
 +
 image::../assets/images/1.1/image_operation_095_2.png[インポート結果]
 
 . 今までのインポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。
-
++
 インポートが完了したものは[完了]と表示されます。
 [開始]や[処理待ち]のものは現在、実行中です。
 [失敗]のものは何らかのエラーがありますので、
 [表示]リンクをクリックした先の画面でエラーを確認し、
 エラーの発生した行を修正するなどします。
-
-インポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします
++
+インポート完了時にはxref:enju_operation_2#message-function[メッセージ機能]にてお知らせします
 （「インポートが完了しました」というメッセージが送られてきます）。
 +
-[インポート結果の一覧表示](../assets/images/1.1/image_operation_095_3.png)
-
-//<div class="alert alert-info memo">
+image:../assets/images/1.1/image_operation_095_3.png[インポート結果の一覧表示]
++
+[NOTE]
+====
 【Memo】この画面は[資料の受入]メニュー->[TSVファイルからのインポート]->
 右メニューの[資料のインポート用ファイルの一覧]とすればいつでも閲覧できます。
-//</div>
-
-//<div class="alert alert-info memo">
+====
++
+[NOTE]
+====
 【Memo】注）Next-L Enju Leaf 1.1.0.rc12以前のバージョンの場合は毎時0分にインポート処理が開始します。
-//</div>
+====
 
 . インポートした結果を確かめるために、インポートの結果の一覧を表示させます。そのために、［資料の受入］メニューから［TSVファイルからのインポート］を選択します。
 +
@@ -282,22 +288,23 @@ image::../assets/images/1.1/image_operation_095_4.png[インポート結果の�
 image::../assets/images/1.1/image_operation_095_5.png[インポート結果の一覧表示の表示]
 
 . 結果やエラーメッセージを確認します。表の「資料」の列で2行目以降※で、なにも表示されていない行はエラーのあった行なので[表示]をクリックする。
-
++
 （※一行目はヘッダの行なので、資料の列にはなにも表示されていない）
 +
 image::../assets/images/1.1/image_operation_095_6.png[インポート結果の一覧表示の表示]
-
-//<div class="alert alert-info memo" markdown="1">
++
+[NOTE]
+====
 【Memo】以下の例は、列名が間違っていて無視された例です。
 
 image::../assets/images/1.1/image_operation_095_2_2.png[TSVファイルからのインポート]
-//</div>
+====
 
-. エラーメッセージなどを確認して、個別に登録する。個別に登録する方法は次の[「4-2-3 ISBNコードを入力して1件づつ登録する」](#section4-2-3)，[「4-2-7 手動で資料を登録する」](#section4-2-7)などを参照してください。
+. エラーメッセージなどを確認して、個別に登録する。個別に登録する方法は次の<<isbn-import,「ISBNコードを入力して1件づつ登録する」節>>や<<manual-import,「手動で資料を登録する」節>>の方法などを参照してください。
 +
 image::../assets/images/1.1/image_operation_095_8.png[資料インポートの結果の表示]
 
-==== ISBNファイル(国立国会図書館書誌IDファイル)を読み込んで登録する
+==== ISBNファイル（または国立国会図書館書誌IDファイル）を読み込んで登録する
 
 ISBNコードもしくは国立国会図書館書誌IDが分かっている場合は、
 タイトルや著者などほかのフィールド情報をTSVファイルに入力しておかなくても、
@@ -306,16 +313,18 @@ ISBNコードもしくは国立国会図書館書誌IDから国立国会図書�
 
 . ISBNもしくは国立国会図書館書誌IDの項目だけ入力したTSVファイルを用意し、前述の操作に従ってTSVファイルを読み込んで登録します。
 +
-ISBNの場合は、列名は「isbn」、国立国会図書館書誌IDの場合は、列名は「ndl_bib_id」とします。TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方」](#section4-2-10) を参照してください。
-
-//<div class="alert alert-info memo">
+ISBNの場合は、列名は「`isbn`」、国立国会図書館書誌IDの場合は、列名は「`ndl_bib_id`」とします。TSVファイルの作り方の詳細については、<<manifestation-import-format,「TSVファイルの作り方」>> を参照してください。
++
+[NOTE]
+====
 【Memo】
-注：タイトル(original_title)項目がある場合は、国立国会図書館のデータを参照せずに、TSVファイルの内容を優先します。
-タイトル(original_title）項目がなく、ISBNもしくは国立国会図書館書誌IDがある場合は、国立国会図書館のデータを優先してインポートします。
-//</div>
+注：タイトル(`original_title`)項目がある場合は、国立国会図書館のデータを参照せずに、TSVファイルの内容を優先します。
+タイトル(`original_title`）項目がなく、ISBNもしくは国立国会図書館書誌IDがある場合は、国立国会図書館のデータを優先してインポートします。
+====
 
-. 個々のレコードの登録の成否を確認します。 やり方は [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 6. 以降の手順と同様です。
+. 個々のレコードの登録の成否を確認します。 やり方は <<tsv-import,「TSVファイルを読み込んで登録する」>> の 6. 以降の手順と同様です。
 
+[[isbn-import]]
 ==== ISBNコードを入力して1件ずつ登録する
 
 ISBNコードから国立国会図書館のデータを参照して、資料を登録します。
@@ -331,15 +340,17 @@ image::../assets/images/1.2/image_operation_108.png[インポートのリクエ�
 . 「インポートのリクエストは正常に作成されました。」と表示され、登録が完了します。
 +
 image::../assets/images/1.2/image_operation_109.png[登録完了]
-
-//<div class="alert alert-info memo" markdown="1">
++
+[NOTE]
+====
 【Memo】
 右メニューの[所蔵を編集]の右の[ (新規作成)]リンクをたどることで，
 続けて所蔵情報を登録することができます。
-詳細は [「4-3-1 所蔵情報を新規登録する」](#section4-3-1)を参照ください。
-//</div>
-
-//<div class="alert alert-info memo" markdown="1">
+詳細は <<add-item,「所蔵情報を新規登録する」>>を参照ください。
+====
++
+[NOTE]
+====
 【Memo】過去のISBNレコードの登録の成否を確認する方法を紹介します。
 
 その場で、画面上で判明することですので、必要になることは基本的にはありません。
@@ -360,13 +371,13 @@ image::../assets/images/1.1/image_operation_109_2.png[ISBNインポートリク�
 登録されたことを示します。
 [処理待ち]や[失敗]は登録されていません。
 +
-[ISBNインポートリクエストの一覧表示](../assets/images/1.1/image_operation_109_3.png)
+image::../assets/images/1.1/image_operation_109_3.png[ISBNインポートリクエストの一覧表示]
+====
 
-//</div>
-
+[[ndl-search-import]]
 ==== NDLサーチを検索して1件ずつ登録する
 
-NDLサーチ（国立国会図書館サーチ <https://iss.ndl.go.jp/>）で検索した資料を登録することができます。
+NDLサーチ（国立国会図書館サーチ <https://ndlsearch.ndl.go.jp/>）で検索した資料を登録することができます。
 ISBNが不明な場合やISBNで登録でできなかった場合などに使用します。
 （ISBNで登録できない例：9784834005288）
 
@@ -377,34 +388,36 @@ image::../assets/images/1.1/image_operation_106_ndl.png[NDLサーチ検索によ
 . 登録したい資料を検索します。検索語に登録したい資料のJP番号などを入力し、［検索］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_107_ndl.png[NDLサーチ検索の検索]
-
-//<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】
 任意のキーワードで検索することもできますが、
 多くヒットしてしまい選びにくいことが想定されますので、
-あらかじめ、NDLサーチ（国立国会図書館サーチ <https://iss.ndl.go.jp/>）
+あらかじめ、NDLサーチ（国立国会図書館サーチ <https://ndlsearch.ndl.go.jp/>）
 のサービス上で検索して、
 当該資料の「JP番号」を調べておき、
 その「JP番号」を使うとよいでしょう。
-//</div>
+====
 
 . 登録したい資料の[追加]をクリックします
 +
 image::../assets/images/1.2/image_operation_108_ndl.png[資料の追加]
-
-//<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 【Memo】
 
 * 原題のリンク先はNDLサーチの書誌詳細画面になっていますので、書誌詳細を確認できます。
 * 右メニューの「同じ検索語でNDLサーチを検索する」をたどると、同じ検索語でNDLサーチを検索した結果の画面が表示されますので、たくさんヒットしすぎたときなどに便利です。
-
-//</div>
-
-//<div class="alert alert-info memo" markdown="1">
+====
++
+[NOTE]
+====
 【Memo】
-500件以上ヒットした場合は、500件目以降のレコードを、インポートすることができません(参照：[Issue #624](https://github.com/next-l/enju_leaf/issues/624)）。
-//</div>
+500件以上ヒットした場合は、500件目以降のレコードを、インポートすることができません
+（参照：link:https://github.com/next-l/enju_leaf/issues/624[Issue #624]）。
+====
 
 . [追加]ボタンが[保存中...]に変わりますので，画面が切り替わるまでしばらく待ちます。
 +
@@ -414,43 +427,37 @@ image::../assets/images/1.2/image_operation_108_2_ndl.png[資料の保存中]
 +
 image::../assets/images/1.2/image_operation_109_ndl.png[登録完了]
 
-//<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】
 右メニューの[所蔵を編集]の右の[ (新規作成)]リンクをたどることで，
 続けて所蔵情報を登録することができます。
-詳細は [「4-3-1 所蔵情報を新規登録する」](#section4-3-1)を参照ください。
-//</div>
+詳細は <<add-item,「所蔵情報を新規登録する」>>を参照ください。
+====
 
 ==== 米国議会図書館を検索して1件ずつ登録する
 
 米国議会図書館（<https://catalog.loc.gov/>）の蔵書を検索した資料を
 登録することができます。ISBNやキーワードなどで検索できます。
 
-注意：この機能は標準ではインストールされていないため使えません。
-[enju_locモジュールをインストール（インストールマニュアル5-2節参照）](enju_install_vm_5.html#section5-2)
-する必要があります。
-
 . ［資料の受入］メニューから［米国議会図書館検索によるインポート］を選択します。
 +
 image::../assets/images/1.1/image_operation_loc_1.png[米国議会図書館検索によるインポート]
 
-. 以降は、[「4-2-4 NDLサーチを検索して1件ずつ登録する」](#section4-2-4) の 2. 以降の手順と同様です。
+. 以降は、<<ndl-search-import,「NDLサーチを検索して1件ずつ登録する」節>> の 2. 以降の手順と同様です。
 
 ==== CiNii Booksを検索して1件ずつ登録する
 
 CiNii Books（<https://ci.nii.ac.jp/books/>）を検索した資料を
 登録することができます。ISBNやキーワードなどで検索できます。
 
-注意：この機能は標準ではインストールされていないため使えません。
-[enju_niiモジュールをインストール（インストールマニュアル 5-1節参照）](enju_install_vm_5.html#section5-1)
-する必要があります。
-
 . ［資料の受入］メニューから［CiNii Books検索によるインポート］を選択します。
 +
 image::../assets/images/1.1/image_operation_nii_1.png[CiNii Books検索によるインポート]
 
-. 以降は、[「4-2-4 NDLサーチを検索して1件ずつ登録する」](#section4-2-4) の 2.以降の手順と同様です。
+. 以降は、<<ndl-search-import,「NDLサーチを検索して1件ずつ登録する」節>> の 2.以降の手順と同様です。
 
+[[manual-import]]
 ==== 手動で資料を登録する
 
 . ［資料の受入］メニューから［手動で登録する］を選択します。
@@ -460,7 +467,7 @@ image::../assets/images/1.1/image_operation_input_manually_manifestation.png[手
 . 原題のほか必要な項目を入力し、[登録する]ボタンをクリックします。
 +
 image::../assets/images/1.2/image_operation_100.png[原題のほか必要な項目を入力し登録]
-
++
 [NOTE]
 ====
 【Memo】
@@ -469,7 +476,7 @@ image::../assets/images/1.2/image_operation_100.png[原題のほか必要な項�
 * 「ページ数」と「最初のページ」「最後のページ」の両方を入力した場合、「資料の表示」に表示されるのは「ページ数」になります。
 * 「大きさ」と「高さ」の両方を入力した場合、「資料の表示」に表示されるのは「大きさ」になります。
 ====
-
++
 [NOTE]
 ====
 【Memo】著者については、入力し始めると、すでに登録されている著者の候補が出てくるので、同じものがあれば、そのメニューから選んで決定することができます。
@@ -490,7 +497,7 @@ image::../assets/images/1.1/image_operation_bib_ed_1.png[検索]
 . 書誌を編集したい本が検索されたら、［編集］をクリックします。
 +
 image::../assets/images/1.1/image_operation_bib_ed_2.png[編集]
-
++
 [NOTE]
 ====
 【Memo】ここで、本のタイトルのリンクをたどり、その先の資料の表示画面の右メニュー[編集]をクリックすることでも編集画面に移動します。
@@ -510,9 +517,9 @@ image::../assets/images/1.2/image_operation_bib_ed_5.png[更新されました]
 
 . TSVファイルを用意します。
 +
-更新したい資料のManifestation ID(manifestation_id)か、 ローカル識別子（manifestation_identifier） と更新したいフィールドの内容が記述されたファイルを作成します。
+更新したい資料のManifestation ID(`manifestation_id`)か、 ローカル識別子（`manifestation_identifier`） と更新したいフィールドの内容が記述されたファイルを作成します。
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと書誌情報が更新できます。
+. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと書誌情報が更新できます。
 
 ////
 {::comment} 
@@ -536,7 +543,8 @@ image::../assets/images/1.2/image_operation_bib_ed_5.png[更新されました]
 
 // <div class="alert alert-success memo" markdown="1">
 
-==== TSVファイルの作り方（図書（書誌））
+[[manifestation-import-format]]
+==== ※TSVファイルの作り方（書誌（図書）情報）
 
 TSVとは、Tab-Separated Valuesの略です。
 TSVファイルとは、それぞれのフィールドが、タブ（Tab）で区切られたプレインテキストファイルのことをさします。
@@ -635,23 +643,23 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 
 |series_title_transcription
 |シリーズ名のヨミ
-|文字列（複数ある場合は//で区切る）, <<tsv_series_title_transcription,（詳細）>>
+|文字列（複数ある場合は//で区切る）, <<tsv_series_titles,（詳細）>>
 |リコウガクセンモンショ シリーズ//スウガク//1
 
 |series_volume_number_string
 |シリーズ巻号
-|文字列，<<tsv_series_volume_number_string,（詳細）>>
+|文字列，<<tsv_series_titles,（詳細）>>
 |二
 
 |series_creator_string
 |シリーズ著者
-|文字列，<<tsv_series_creator_string,（詳細）>>
+|文字列，<<tsv_series_titles,（詳細）>>
 |統計
 
 |creator
 |著者（フルネーム）
 |文字列<<creator,（特定書式：別記）>>
-|山田, 剛史, 1970-||author//杉澤, 武俊||author
+|山田, 剛史, 1970-\|\|author//杉澤, 武俊\|\|author
 
 |creator_transcription
 |著者ヨミ（フルネームヨミ）
@@ -816,17 +824,17 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 
 |description
 |説明
-|文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。
+|文字列。
 |本書は、統計学の理論を簡潔に解説しながら、Rの手順・アウトプットの解釈を丁寧に行う。具体的には...
 
 |note
 |注記
-|文字列。Enju Leaf 1.3.3以前の場合、改行は「\n」とする。
+|文字列。改行は「\n」とする。
 |版表示は奥付より。付属資料: CD-ROM（1枚, 12cm）
 
 |manifestation_memo
 |業務メモ（書誌）
-|文字列。Enju Leaf 1.3.6よりインポート可能。<<memo,（詳細）>>
+|文字列。Enju Leaf 1.3.6よりインポート可能。<<manifestation_memo,（詳細）>>
 |
 
 |dummy
@@ -838,64 +846,80 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 [[tsv_id]]
 ===== isbn などの識別子
 
-複数の識別子（ISBNなど）がある場合は、// で区切ります。どんな識別子があるかについては、[初期設定マニュアル「6-1 識別子の種類を設定する」](enju_setup_6.html#section6-1) を参照してください。注意！ISBNが複数ある場合、ISBNを用いて国立国会図書館のデータを参照して、 自動的に空白の項目が埋められることはありません。必ず、original_title等を記入しておく必要があります。
+複数の識別子（ISBNなど）がある場合は、`//` で区切ります。どんな識別子があるかについては、xref:enju_setup_6#setup-identifiers[初期設定マニュアル「識別子の種類を設定する」] を参照してください。
 
-===== series_title_transcription
+[NOTE]
+====
+注意！ISBNが複数ある場合、ISBNを用いて国立国会図書館のデータを参照して、 自動的に空白の項目が埋められることはありません。必ず、`original_title`等の項目を記入しておく必要があります。
+====
 
-シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
+[[tsv_series_titles]]
+===== シリーズタイトル関連情報
 
-===== series_volume_number_string
+シリーズのタイトル(`series_original_title`)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
 
-シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
-
-===== series_creator_string
-
-シリーズのタイトル(series_original_title)がTSVファイルで指定されている必要があります。指定されていない場合はこの項目の値は無視されます。
-
+[[creator]]
 ===== creator
 
 	書式: 著者名||役割//著者名||役割
 	例：山田, 剛史, 1970-||author//杉澤, 武俊||author//大木, 太郎||illustrator
 
-役割は一括インポート・エクスポート可能になってはいますが、資料の表示画面で表示したり、資料の編集画面で編集できるようにはできていません（開発予定ですが、開発時期は未定です）。 <!-- issue #1520 にて-->
+役割は一括インポート・エクスポート可能になってはいますが、資料の表示画面で表示したり、資料の編集画面で編集できるようにはできていません（開発予定ですが、開発時期は未定です）。 
+//<!-- issue #1520 にて-->
 
-使える役割については、「著者の関係」機能の「名称」にあるものです（注 Enju Leaf 1.3.4 現在、「著者の関係」はどこからもリンクないですがcreate_types をURLに追加するとアクセスできます（例：デモサーバーでは [https://enju.next-l.jp/create_types](https://enju.next-l.jp/create_types) ）。ここから新しい役割を追加することもできます。<!-- issue #1522 にて-->
+[NOTE]
+====
+Enjuで利用できる使える役割については、「著者の関係」機能の「名称」に一覧されています。
 
+Enju Leaf 1.3.4 現在、「著者の関係」はどこからもリンクないですが `/create_types` をEnjuが稼働するサーバのベースURLに追加するとアクセスできます（例：デモサーバーでは https://enju.next-l.jp/create_types ）。ここから新しい役割を追加することもできます。
+//<!-- issue #1522 にて-->
+====
+
+[[content_type]]
 ===== content_type
 
-「資料の内容の種別」の[名前]を値とします(例：文字であれば"text"など）。見方については、[初期設定マニュアル「5-2 資料の内容の種別の作成」](enju_setup_5.html#section5-2) を参照してください。
+「資料の内容の種別」の[名前]を値とします（例：文字であれば `text` など）。
+設定値やその内容について、xref:enju_setup_5#content_type[初期設定マニュアル「資料の内容の種別の作成」] を参照してください。
 
+[[carrier_type]]
 ===== carrier_type
 
-「資料の形態」の[名前]を値とします(例：冊子体であれば"volume"など）。見方については、[初期設定マニュアル「5-1 資料の形態の作成」](enju_setup_5.html#section5-1) を参照してください。
-未入力の場合は"text"が設定されます。
+「資料の形態」の[名前]を値とします（例：冊子体であれば `volume` など）。
+設定値やその内容について、xref:enju_setup_5#carrier_type[初期設定マニュアル「資料の形態の作成」] を参照してください。
+未入力の場合は `valume` が設定されます。
 
+[[frequency]]
 ===== frequency
 
-「発行頻度」の[名前]を値とします(例："daily", "monthly"など）。見方については、[初期設定マニュアル「5-7 発行頻度を編集する」](enju_setup_5.html#section5-7) を参照してください。未入力の場合は"unknown"が設定されます。
+「発行頻度」の[名前]を値とします（例： `daily`, `monthly` など）。
+設定値やその内容について、xref:enju_setup_5#frequency[初期設定マニュアル「発行頻度を編集する」] を参照してください。未入力の場合は `unknown` が設定されます。
 
+[[language]]
 ===== language
 
-日本語の場合は jpn, 英語の場合は、engになります。その他の言語については、「言語」の[Iso 639 2]を参照してください。見方については、[初期設定マニュアル「5-3 言語を編集する」](enju_setup_5.html#section5-3) を参照してください。
+日本語の場合は `jpn`, 英語の場合は `eng` になります。その他の言語については、「言語」の[Iso 639 2]を参照してください。
+設定値やその内容について、xref:enju_setup_5#language[初期設定マニュアル「言語を編集する」] を参照してください。
 
 [[tsv_subject]]
 ===== subject:[件名標目の種類]
 
 件名標目の種類ごとに別の列になります。
 フィールド名は subject:[件名標目の種類] となります。
-例えば、NDLSHについては、subject:ndlshの列に書くことになります。
+例えば、件名標目NDLSHの値は、subject:ndlshの列に書くことになります。
 フィールド名に使う[件名標目の種類]は、「件名標目の種類」の[名前]を使います
-（詳細：[初期設定マニュアル「4-3 件名標目の種類を設定する」](enju_setup_4.html#section4-3) ） 。
+件名標目の種類については、xref:enju_setup_4#setup-subject[初期設定マニュアル「件名標目の種類を設定する」]を参照してください 。
 
-同じ件名標目の種類で複数の分類がある場合は、// で区切ります。
+同じ件名標目で複数の件名を割り当てる場合は、`//` で区切ります。
 
 具体的には以下のように記述します。
 
-	例：NDLSHで、ウェブアプリケーションとインターネットが付与されているレコードの場合
+* 例：NDLSHで「ウェブアプリケーション」と「インターネット」が付与されている書誌レコードの場合:
+
 	subject:ndlsh
 	ウェブアプリケーション//インターネット
 	
-	例：NDLSHがインターネット、LCSHがInternetのとき
+* 例：NDLSHが「インターネット」、LCSHが "Internet" のとき:
+
 	subject:ndlsh	subject:lcsh
 	インターネット	Internet
 
@@ -904,22 +928,25 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 
 分類の種類ごとに別の列になります。
 フィールド名はclassification:[分類の種類] となります。
-例えば、NDC9については、classification:ndc9の列に書くことになります。
+例えば、NDC9の分類記号は、`classification:ndc9` の列に書くことになります。
 フィールド名に使う[分類の種類]は、「分類の種類」の[名前]を使います
-（詳細：[初期設定マニュアル「4-5 分類の種類を設定する」](enju_setup_4.html#section4-5)） 。
+分類の種類については、xref:enju_setup_4#setup-classification[初期設定マニュアル「分類の種類を設定する」]を参照してください。
 
-同じ分類の種類で複数の分類がある場合は、// で区切ります。
+同じ分類の種類で複数の分類がある場合は、`//` で区切ります。
 
 具体的には以下のように記述します。
 
-	例：NDC9の分類で、007と007.58が付与されているレコードの場合	
+* 例：NDC9の分類で、007と007.58が付与されているレコードの場合:
+
 	classification:ndc9
 	007//007.58
 	
-	例：NDC9が007, NDLCがAZ-463のとき
+* 例：NDC9が"007", NDLCが"AZ-463"のとき:
+
 	classification:ndc9	classification:ndlc
 	007	AZ-463
 
+[[required_role_name]]
 ===== required_role_name
 
 この書誌を参照可能な権限を設定します。
@@ -930,6 +957,7 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 * User（図書館利用者）
 * Guest （誰でも）
 
+[[manifestation_memo]]
 ===== manifestation_memo
 
 Administrator権限、Librarian権限のときのみ出力する項目です。
@@ -943,11 +971,12 @@ Administrator権限、Librarian権限のときのみ出力する項目です。
 
 ==== 入力項目
 
-注意の必要な項目み説明します。
+注意の必要な項目のみ説明します。
 
-* URL: URLに入力したURLは「所蔵情報の表示」画面でリンクになります（Enju Leaf 1.3.6より）。
-* 業務メモ：業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。
+* 「URL」項目: URLに入力したアドレスは「所蔵情報の表示」画面からリンクされます（Enju Leaf 1.3.6より）。
+* 「業務メモ」項目: 業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。
 
+[[add-item]]
 ==== 所蔵情報を新規登録する
 
 . 登録したい資料を検索します。トップページの検索語に登録したい資料のキーワードを入力し、［検索］ボタンをクリックします。
@@ -1076,10 +1105,10 @@ image::../assets/images/1.1/image_operation_125_2.png[所蔵情報の一覧の�
 +
 image::../assets/images/1.1/image_operation_125_3.png[所蔵情報の一覧の絞り込みを解除]
 
+[[tsv-import]]
 ==== TSVファイルを読み込んで登録する
 
 所蔵情報は、TSVファイルを読み込んで一括登録することもできます。
-
 
 . TSVファイルを用意します。
 
@@ -1095,7 +1124,7 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 所蔵情報と書誌情報を同時に登録することも可能です。 その場合は、所蔵情報と[「4-2-10 TSVファイルの作り方（図書（書誌））」](#section4-2-10)のフィールドを書いたTSVを用意します。
 </div>
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、所蔵情報を登録できます。
+. <<tsv-import,「TSVファイルを読み込んで登録する」節>>]の 1. 以降と同じ手順を実行し、所蔵情報を登録できます。
 
 ==== TSVファイルを読み込んで更新する
 
@@ -1104,7 +1133,7 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 更新したい所蔵情報の 所蔵情報ID（item_identifier）もしくは所蔵データID（item_id システムが自動付与するIDで所蔵情報の表示のURLに使用されるもの） とともに、
 更新したいフィールドの内容が記述されたファイルを作成します。注：item_identifierとitem_idが同時に指定されていた場合、item_identifierが優先されます。
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと所蔵情報が更新できます。
+. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと所蔵情報が更新できます。
 
 ==== TSVファイルを読み込んで所蔵情報を他の書誌につけかえる
 
@@ -1112,12 +1141,12 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 
 . TSVファイルを用意します。
 +
-所蔵情報ID（item_identifier） と、
-つけ替えたい書誌のManifestation ID（manifestation_id） もしくは、
-ローカル識別子（manifestation_identifier） 
+所蔵情報ID（`item_identifier`） と、
+つけ替えたい書誌のManifestation ID（`manifestation_id`） もしくは、
+ローカル識別子（`manifestation_identifier`） 
 のみが記述されたファイルを作成します。
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[関連を更新する]を選びます。
+. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[関連を更新する]を選びます。
 
 ==== TSVファイルを読み込んで削除する
 
@@ -1131,9 +1160,8 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 +
 ※ 間違えて[削除]を選択してしまわないよう、通常、[削除]ボタンが表示されていません。ブラウザの開発ツールを使って、[削除]ボタンのコメントアウトを外して[削除]ボタンを表示させて使用してください。
 
-[remove_button]
-[NOTE]
-----
+[NOTE,remove_button]
+====
 【Memo】[削除]ボタンを表示させるやり方の例（Chromeの例）：
 
 関連を更新を選択し、その上で右をクリックし、「要素を検証」を選びます。
@@ -1151,8 +1179,7 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_005.png[コメントア�
 [削除]ボタンが表示されます
 +
 image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
-
-----
+====
 
 ==== TSVファイルの作り方（所蔵情報）
 
@@ -1250,8 +1277,7 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 
 |item_note
 |注記（item)
-|文字列。
-//Enju Leaf 1.3.3以前の場合、改行は「\n」とする。
+|文字列。改行は「\n」とする。
 |汚れあり。水濡れあり。
 
 |item_identifier
@@ -1261,8 +1287,7 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 
 |item_memo
 |業務メモ（所蔵）
-|文字列。
-//Enju Leaf 1.3.6よりインポート可能。<<imemo,（詳細）>>
+|文字列。Enju Leaf 1.3.6よりインポート可能。<<item_memo,（詳細）>>
 |
 
 |dummy
@@ -1271,19 +1296,23 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 |t
 |===
 
+[[shelf]]
 ===== shelf
 
 「本棚」の[名前]を値とします(例："first_shelf"や"web"など）。見方については、[初期設定マニュアル「3-3 本棚を設定する」](enju_setup_3.html#section3-3) を参照してください。
 
+[[checkout_type]]
 ===== checkout_type
 
 「貸出区分」の[名前]を値とします(例："book"）。見方については、[初期設定マニュアル「3-5 貸出区分を設定する」](enju_setup_3.html#section3-5) を参照してください。
 
+[[circulation_status]]
 ===== circulation_status
 
 「貸出状態」の[名前]を値とします(例：[在架（利用可能）]なら"Available On Shelf"）。見方については、[初期設定マニュアル「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3) を参照してください。
 
-===== #use_restriction
+[[use_restriction]]
+===== use_restriction
 
 以下の2種類のいずれかを指定します。
 
@@ -1292,14 +1321,17 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 * Limited Circulation, Normal Loan Period
   * 通常期間貸出
 
+[[budget_type]]
 ===== budget_type
 
 「予算種別」の[名前]を値とします。見方については、[初期設定マニュアル「3-9 予算種別を設定する」](enju_setup_3.html#section3-9) を参照してください。
 
+[[bookstore]]
 ===== bookstore
 
 「書店」の[名前]を値とします。見方については、[初期設定マニュアル「3-10 書店を設定する」](enju_setup_3.html#section3-10) を参照してください。
 
+[[required_role]]
 ===== required_role
 
 所蔵情報を見るために必要な権限を設定します。
@@ -1310,6 +1342,7 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 * User（図書館利用者アカウント）
 * Guest （誰でも：ログイン不要）
 
+[[item_memo]]
 ===== item_memo
 
 Administrator権限、Librarian権限のときのみ出力する項目です。

@@ -387,6 +387,7 @@ image::../assets/images/1.1/image_initial_029.png[利用者グループと貸出
 +
 image::../assets/images/1.1/image_initial_030.png[利用者グループと貸出区分の関係]
 
+[[setup-carrier_type-checkup_type]]
 === 資料の形態と貸出区分の関係を設定する
 
 ==== 設定項目

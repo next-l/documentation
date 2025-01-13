@@ -1742,7 +1742,7 @@ image::../assets/images/1.1/image_operation_export_bib_6.png[エクスポート�
 
 xref:enju_webapi_1.adoc#bib_tsv_export[Web APIマニュアル「書誌と所蔵のTSVの項目」]を参照してください。
 
-
+[[add-agent]]
 === 人物・団体情報を登録する
 
 人物・団体情報は、書誌を登録するさいに自動的に登録されますので、

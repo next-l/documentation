@@ -91,6 +91,7 @@ image::../assets/images/1.1/image_operation_event_other_new.png[開催日と催�
 +
 image::../assets/images/1.1/image_operation_event_other_new_success.png[催し物登録]
 
+[[import-event-data]]
 ==== 催し物のデータをインポートする
 
 既存のデータファイルを指定して読み込む「インポート」を行うと，一度に複数のデータを登録することができます。インポートするには，あらかじめデータファイルをTSV形式で作成しておきます(参照：[「TSV形式のデータファイルの作り方」](#section7_import_tsv)（本節の最後に記載）)。

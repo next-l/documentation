@@ -15,8 +15,7 @@ toc::[]
 [[setup-identifiers]]
 === 識別子の種類を設定する
 
-xref:enju_operation_4.adoc#_手動で資料を登録する[運用マニュアル「手動で資料を登録する」]ときや、xref:enju_operation_4#_図書の書誌を編集修正する
-[運用マニュアル「図書の書誌を編集（修正）する」]ときに入力する「識別子」の種類（例: ISBN, DOIなど）を登録できます。
+xref:enju_operation_4.adoc#manual-import[運用マニュアル「手動で資料を登録する」]ときや、xref:enju_operation_4#update-bib[運用マニュアル「図書の書誌を編集（修正）する」]ときに入力する「識別子」の種類（例: ISBN, DOIなど）を登録できます。
 Enju Leaf 1.3.4からこの識別子で入力した値も検索でヒットするようになっています。。
 
 ==== 設定項目

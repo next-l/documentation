@@ -11,6 +11,7 @@ version: 1.4
 
 toc::[]
 
+[[remote-access-setup]]
 == 他のコンピュータからの利用設定
 
 以下のWebサイトをごらんください。  

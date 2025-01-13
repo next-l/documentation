@@ -108,7 +108,7 @@ solr/conf ディレクトリーの中に schema.xml というXMLファイルが�
 
 ====== 参考サイト
 
-[https://cwiki.apache.org/confluence/display/solr/CharFilterFactories#CharFilterFactories-solr.MappingCharFilterFactory](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories#CharFilterFactories-solr.MappingCharFilterFactory)
+https://cwiki.apache.org/confluence/display/solr/CharFilterFactories#CharFilterFactories-solr.MappingCharFilterFactory[solr.MappingCharFilterFactory]
 
 上記ページにCharFilterの仕様などが詳しく書かれています。公式サイトです。
 

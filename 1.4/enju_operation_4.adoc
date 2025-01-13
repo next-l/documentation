@@ -215,6 +215,7 @@ NDLサーチなどを検索して1件ずつ登録する
 * 内容細目：目次などを入力します。改行を入れた入力もできます。
 * 業務メモ：業務上必要なメモを入力します。利用者には表示されません（AdministratorかLibrarian権限時にのみ表示されます）。
 
+[[manifestation-tsv-import]]
 ==== TSVファイルを読み込んで登録する
 
 . TSVファイルを用意します。TSVファイルの作り方の詳細については、<<manifestation-import-format,「TSVファイルの作り方」>>を参照してください。
@@ -519,7 +520,7 @@ image::../assets/images/1.2/image_operation_bib_ed_5.png[更新されました]
 +
 更新したい資料のManifestation ID(`manifestation_id`)か、 ローカル識別子（`manifestation_identifier`） と更新したいフィールドの内容が記述されたファイルを作成します。
 
-. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと書誌情報が更新できます。
+. <<manifestation-tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと書誌情報が更新できます。
 
 ////
 {::comment} 
@@ -986,48 +987,48 @@ image::../assets/images/1.1/image_operation_111.png[検索]
 . 所蔵情報を登録したい資料の[所蔵作成]をクリックします。
 +
 image::../assets/images/1.2/image_operation_113.png[資料]
-
-<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 資料のタイトルをクリックした先の画面の右メニューの［（新規作成）］をクリックしてもできます。 
 
 image::../assets/images/1.1/image_operation_119.png[所蔵情報の新規作成]
-
-</div>
+====
 
 . 図書館や貸出状態などを設定して、［登録する］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_121.png[所蔵情報を作成]
-
-<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[戻る]をクリックすると前の画面に戻ります。
+====
++
+[NOTE]
+====
+【Column】寄贈を受け付ける
 
-</div>
-
-<div class="alert alert-success memo" markdown="1">
-<h4 class="alert-heading">【Column】寄贈を受け付ける</h4>
-資料が寄贈されたものであることを示したい場合は、［予算種別］に「寄贈」種別を登録し、選ぶことで区別できるようになります。予算種別の登録方法は[初期設定マニュアル「3-9 予算種別を設定する」](enju_setup_3.html#section3-9)を参照してください。寄贈者などの情報を残したい場合は注記に入力します。
-</div>
+資料が寄贈されたものであることを示したい場合は、［予算種別］に「寄贈」種別を登録し、選ぶことで区別できるようになります。
+予算種別の登録方法は xref:enju_setup_3#setup-budget[初期設定マニュアル「予算種別を設定する」]を参照してください。
+寄贈者などの情報を残したい場合は注記に入力します。
+====
 
 . 「所蔵情報は正常に作成されました。」のメッセージが表示され、所蔵情報が登録されます。
 +
 image::../assets/images/1.3/image_operation_121_2.png[所蔵情報が正常に作成]
 
-<div class="alert alert-info memo" markdown="1">
-
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[所蔵の一覧]をクリックするとEnjuに登録されている全所蔵情報の一覧が表示されます。
 * 右メニューの[編集]のリンクをクリックするとこの所蔵情報が編集できます
 * 右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。
-* 右メニューの[貸出規則の一覧]については後日説明します（[#issue 1047](https://github.com/next-l/enju_leaf/issues/1047)）。
+// * 右メニューの[貸出規則の一覧]については後日説明します（[#issue 1047](https://github.com/next-l/enju_leaf/issues/1047)）。
 * 右メニューの[貸出履歴]をクリックするとこの所蔵の貸出履歴の一覧が表示されます。
-
-</div>
-
+====
 
 ==== すでに登録された所蔵情報を修正登録する
 
@@ -1046,34 +1047,33 @@ image::../assets/images/1.1/image_operation_113_u.png[所蔵ID]
 . 右メニューの［編集］をクリックします。
 +
 image::../assets/images/1.3/image_operation_114_u.png[所蔵情報の編集]
-
-<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録
 など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。
-
-</div>
+====
 
 . 図書館や貸出状態など修正したい部分を修正して、［登録する］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_121_u.png[所蔵情報を登録]
-
-<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 【Memo】
 
 * 右メニューの[表示]をクリックするとこの所蔵の表示画面に遷移します。
 * 右メニューの[削除]をクリックすると、この所蔵情報を削除することができます。削除は、重複登録など、本入力そのものが間違いだったときなどに使います。除籍のばあいには除籍機能を使います。
 * 右メニューの[戻る]をクリックすると前の画面に戻ります。
-
-</div>
+====
 
 . 「所蔵情報は正常に更新されました。」のメッセージが表示され、所蔵情報が登録されます。
 +
 image::../assets/images/1.3/image_operation_121_2_u.png[所蔵情報が正常に更新]
 
+[[list-items]]
 ==== 所蔵情報を一覧表示する
 
 . ［図書館の管理］メニューから［システムの設定］を選択します。
@@ -1087,15 +1087,15 @@ image::../assets/images/1.1/image_operation_124.png[全ての所蔵情報]
 . 所蔵情報の一覧が表示されます。
 +
 image::../assets/images/1.1/image_operation_125.png[所蔵情報の一覧]
-
-<div class="alert alert-info memo" markdown="1">
-
++
+[NOTE]
+====
 【Memo】
 
 * 検索語に所蔵情報IDを入力して検索すると、所蔵情報IDを使った検索ができます。
 * 受入日に受入日を入力して、検索をクリックすると、受入日を指定した検索ができます。
 * 所蔵情報IDの列の番号のリンクをクリックすると、クリックした所蔵情報IDの表示画面に遷移します。
-</div>
+====
 
 . 右メニューの貸出状態（例：[除籍済み]）のリンクをクリックします。
 +
@@ -1105,35 +1105,47 @@ image::../assets/images/1.1/image_operation_125_2.png[所蔵情報の一覧の�
 +
 image::../assets/images/1.1/image_operation_125_3.png[所蔵情報の一覧の絞り込みを解除]
 
-[[tsv-import]]
+[[item-tsv-import]]
 ==== TSVファイルを読み込んで登録する
 
 所蔵情報は、TSVファイルを読み込んで一括登録することもできます。
 
 . TSVファイルを用意します。
-
-例えば、ISBN と　所蔵情報（所蔵情報のTSVの詳細：[「4-3-8 TSVファイルの作り方（所蔵情報）」](#section4-3-8) ）を書いたTSVを用意します。※Enju Leaf 1.1.2では、item_identifier（所蔵情報ID）かcall_number（請求記号）のどちらかが必ず必要です。ない場合は所蔵情報が登録されません。
++
+例えば、ISBN と 所蔵情報（所蔵情報のTSVの詳細：<<item-import-format,「TSVファイルの作り方（所蔵情報）」>>）を書いたTSVを用意します。
 +
 image::../assets/images/1.1/image_operation_item_tsv.png[所蔵情報の一覧]
++
+[NOTE]
+====
+Enju Leafでは、`item_identifier` （所蔵情報ID）か `call_number` （請求記号）のどちらかが必ず必要です。
+これらの項目が無い場合は所蔵情報が登録されません。
+====
++
+ISBNが入力されている場合で、かつ、書誌情報が未登録の資料の場合は、国立国会図書館蔵書検索の結果から書誌データをインポートし、かつ所蔵情報を登録することになります。
++
+ISBNの代わりに、`manifestation_id` や `manifestation_identifier` を入力することでも対応できます。
+この場合は、既にシステムに登録済みの書誌情報に対して所蔵情報を追加します。
++
+[NOTE]
+====
+所蔵情報と書誌情報を同時に登録することも可能です。 その場合は、所蔵情報と<<manifestation-import-format,「TSVファイルの作り方（書誌）」>>のフィールドを書いたTSVを用意します。
+====
 
-ISBNの場合は、書誌が未登録の資料の場合は、国立国会図書館蔵書検索の結果から書誌データをインポートし、かつ所蔵情報を登録することになります。
-
-ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能です。この場合は、既にシステムに登録済みの書誌に対して所蔵情報を追加します。
-
-<div class="alert alert-info memo" markdown="1">
-所蔵情報と書誌情報を同時に登録することも可能です。 その場合は、所蔵情報と[「4-2-10 TSVファイルの作り方（図書（書誌））」](#section4-2-10)のフィールドを書いたTSVを用意します。
-</div>
-
-. <<tsv-import,「TSVファイルを読み込んで登録する」節>>]の 1. 以降と同じ手順を実行し、所蔵情報を登録できます。
+. <<item-tsv-import,「TSVファイルを読み込んで登録する」節>>の 1. 以降と同じ手順を実行し、所蔵情報を登録できます。
 
 ==== TSVファイルを読み込んで更新する
 
 . TSVファイルを用意します。
 +
-更新したい所蔵情報の 所蔵情報ID（item_identifier）もしくは所蔵データID（item_id システムが自動付与するIDで所蔵情報の表示のURLに使用されるもの） とともに、
-更新したいフィールドの内容が記述されたファイルを作成します。注：item_identifierとitem_idが同時に指定されていた場合、item_identifierが優先されます。
+更新したい所蔵情報の 所蔵情報ID（`item_identifier`）もしくは所蔵データID（`item_id` : システムが自動付与するIDで所蔵情報の表示のURLに使用されるもの） とともに、更新したいフィールドの内容が記述されたファイルを作成します。
++
+[NOTE]
+====
+注：`item_identifier` と `item_id` が同時に指定されていた場合、`item_identifier` が優先されます。
+====
 
-. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと所蔵情報が更新できます。
+. <<item-tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと所蔵情報が更新できます。
 
 ==== TSVファイルを読み込んで所蔵情報を他の書誌につけかえる
 
@@ -1146,7 +1158,7 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 ローカル識別子（`manifestation_identifier`） 
 のみが記述されたファイルを作成します。
 
-. <<tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[関連を更新する]を選びます。
+. <<item-tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[関連を更新する]を選びます。
 
 ==== TSVファイルを読み込んで削除する
 
@@ -1154,9 +1166,9 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 
 . TSVファイルを用意します。
 +
-削除したい 所蔵情報ID（item_identifier） のみが記述されたファイルを作成します。
+削除したい 所蔵情報ID（`item_identifier`） のみが記述されたファイルを作成します。
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[削除]を表示させ、[削除]を選びます。
+. <<add-item,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[削除]を表示させ、[削除]を選びます。
 +
 ※ 間違えて[削除]を選択してしまわないよう、通常、[削除]ボタンが表示されていません。ブラウザの開発ツールを使って、[削除]ボタンのコメントアウトを外して[削除]ボタンを表示させて使用してください。
 
@@ -1167,20 +1179,21 @@ ISBNの代わりに、manifestation_idやmanifestation_identifierでも可能で
 関連を更新を選択し、その上で右をクリックし、「要素を検証」を選びます。
 
 image::../assets/images/1.1/image_operation_item_tsv_rm_001.png[要素を検証]
-+
+
 「削除」のあたりで右クリックし、「Edit as HTML」を選びます。
-+
+
 image::../assets/images/1.1/image_operation_item_tsv_rm_003.png[Edit as HTML]
 
 HTMLのコメントアウトコマンド（赤四角した部分）を消します。
-+
+
 image::../assets/images/1.1/image_operation_item_tsv_rm_005.png[コメントアウトの削除]
 
 [削除]ボタンが表示されます
-+
+
 image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 ====
 
+[[item-import-format]]
 ==== TSVファイルの作り方（所蔵情報）
 
 1行目に、それぞれの項目に関わるフィールド名を指定します。
@@ -1299,17 +1312,17 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 [[shelf]]
 ===== shelf
 
-「本棚」の[名前]を値とします(例："first_shelf"や"web"など）。見方については、[初期設定マニュアル「3-3 本棚を設定する」](enju_setup_3.html#section3-3) を参照してください。
+「本棚」の[名前]を値とします（例："first_shelf"や"web"など）。見方については、xref:enju_setup_3#setup-shelf[初期設定マニュアル「本棚を設定する」]を参照してください。
 
 [[checkout_type]]
 ===== checkout_type
 
-「貸出区分」の[名前]を値とします(例："book"）。見方については、[初期設定マニュアル「3-5 貸出区分を設定する」](enju_setup_3.html#section3-5) を参照してください。
+「貸出区分」の[名前]を値とします（例："book"）。見方については、xref:enju_setup_3#setup-checkup_type[初期設定マニュアル「貸出区分を設定する」] を参照してください。
 
 [[circulation_status]]
 ===== circulation_status
 
-「貸出状態」の[名前]を値とします(例：[在架（利用可能）]なら"Available On Shelf"）。見方については、[初期設定マニュアル「5-3 貸出状態を編集作成する」](enju_setup_5.html#section5-3) を参照してください。
+「貸出状態」の[名前]を値とします（例：[在架（利用可能）]なら"Available On Shelf"）。見方については、xref:enju_setup_5#setup-circulation_status[初期設定マニュアル「貸出状態を編集作成する」] を参照してください。
 
 [[use_restriction]]
 ===== use_restriction
@@ -1324,12 +1337,12 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 [[budget_type]]
 ===== budget_type
 
-「予算種別」の[名前]を値とします。見方については、[初期設定マニュアル「3-9 予算種別を設定する」](enju_setup_3.html#section3-9) を参照してください。
+「予算種別」の[名前]を値とします。見方については、xref:enju_setup_3#setup-budget[初期設定マニュアル「予算種別を設定する」] を参照してください。
 
 [[bookstore]]
 ===== bookstore
 
-「書店」の[名前]を値とします。見方については、[初期設定マニュアル「3-10 書店を設定する」](enju_setup_3.html#section3-10) を参照してください。
+「書店」の[名前]を値とします。見方については、xref:enju_setup_3#setup-bookstore[初期設定マニュアル「書店を設定する」] を参照してください。
 
 [[required_role]]
 ===== required_role
@@ -1347,7 +1360,6 @@ image::../assets/images/1.1/image_operation_item_tsv_rm_007.png[削除ボタン]
 
 Administrator権限、Librarian権限のときのみ出力する項目です。
 一般利用者には見せないが、業務上必要なデータを残したい場合などに使用します。
-
 
 === 図書を検収する
 
@@ -1381,21 +1393,24 @@ image::../assets/images/1.1/image_operation_accept_3.png[検収結果]
 +
 image::../assets/images/1.1/image_operation_accept_4.png[所蔵情報の確認]
 
-<div class="alert alert-info memo" markdown="1">
-【Memo】利用者の検索結果一覧で「（所蔵）」や[予約]リンク（User権限以上のみ）が表示されるようになります。[予約]リンクはログインユーザが「延滞」していると表示されません。※Enju 1.1.0時点では、原因不明の理由で、User権限でログインした時に、[予約]リンクが出現しない現象を確認しています。現在、原因究明中です（詳細: [#issue868](https://github.com/next-l/enju_leaf/issues/868)）。
-   ![検索結果一覧](../assets/images/1.1/image_operation_accept_5.png)
-</div>
+[NOTE]
+====
+【Memo】
+利用者の検索結果一覧で「（所蔵）」や[予約]リンク（User権限以上のみ）が表示されるようになります。
+[予約]リンクはログインユーザが「延滞」していると表示されません。
 
-<!--
-予約が出る条件：
-https://github.com/next-l/enju_leaf/issues/867#issuecomment-147685332
+// ※Enju 1.1.0時点では、原因不明の理由で、User権限でログインした時に、[予約]リンクが出現しない現象を確認しています。現在、原因究明中です（詳細: link:https://github.com/next-l/enju_leaf/issues/868[#issue868]）。
 
-チェックするのは以下の3点です。
+image::../assets/images/1.1/image_operation_accept_5.png[検索結果一覧]
 
-所蔵の貸出状態が「在架」になっているかどうか
-ユーザの権限が図書館員か一般利用者か
-一般利用者の場合、「対象の資料の所蔵数」と「所蔵数 - そのユーザの延滞冊数」が等しいか
--->
+なお、予約が出る条件は以下の3点によります：
+
+チェックするのは以下の3点です（参照 link:https://github.com/next-l/enju_leaf/issues/867#issuecomment-147685332[Issue #867]）。
+
+* 所蔵の貸出状態が「在架」になっているかどうか
+* ユーザの権限が図書館員か一般利用者か
+* 一般利用者の場合、「対象の資料の所蔵数」と「所蔵数 - そのユーザの延滞冊数」が等しいか
+====
 
 === 図書を除籍する
 
@@ -1433,16 +1448,16 @@ image::../assets/images/1.1/image_operation_withdraw_003.png[所蔵情報IDの�
 . 「この資料は正常に除籍されました」と表示され除籍が完了します。2 を繰り返すことで、続けて他の資料を除籍できます。詳しい内容を確認したい場合は、[所蔵情報ID]のリンクをクリックします。
 +
 image::../assets/images/1.1/image_operation_withdraw_005.png[検収結果]
-
-<div class="alert alert-info memo" markdown="1">
++
+[NOTE]
+====
 【Memo】「貸出中」や「取り置き中」などのように除籍してはいけない状態だった場合、「更新する」をクリック後に次のようなエラーが表示されます（以下の例は予約されている資料の場合のエラーです）。エラーが出た場合は、資料の状態を除籍ができる処理をしてください（貸出中なら返却処理をするなど）。
 
 image::../assets/images/1.3/image_operation_withdraw_005_err.png[予約中の本を除籍しようとしてエラーが表示]
-
-</div>
+====
 
 . [貸出状態]、[利用制限]、[更新時刻]が変わったことを確認できます。 
-
++
 image::../assets/images/1.1/image_operation_withdraw_007.png[所蔵情報の確認]
 
 ==== 所蔵情報の編集機能を使う
@@ -1457,13 +1472,12 @@ image::../assets/images/1.1/image_operation_withdraw_007.png[所蔵情報の確�
 +
 image::../assets/images/1.1/image_operation_132.png[貸出状態と利用制限を修正]
 
-<div class="alert alert-info memo" markdown="1">
+[NOTE]
+====
 【Memo】「貸出中」や「取り置き中」などのように除籍してはいけない状態だった場合、「更新する」をクリック後に次のようなエラーが表示されます（以下の例は予約されている資料の場合のエラーです）。エラーが出た場合は、資料の状態を除籍ができる処理をしてください（貸出中なら返却処理をするなど）。
 
 image::../assets/images/1.3/image_operation_withdraw_005_err.png[予約中の本を除籍しようとしてエラーが表示]
-
-</div>
-
+====
 
 ==== TSVファイルを読み込んで更新する
 
@@ -1475,7 +1489,7 @@ image::../assets/images/1.3/image_operation_withdraw_005_err.png[予約中の本
 * 「use_restriction」列に、「Not For Loan」
 * 「circulation_status」列に、「Removed」
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、 [更新]を選ぶと所蔵情報が更新できます。
+. <<item-tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、 [更新]を選ぶと所蔵情報が更新できます。
 
 ==== 除籍済みの検索結果一覧での表示のされ方
 
@@ -1489,7 +1503,7 @@ image::../assets/images/1.1/image_operation_132-3.png[User権限以下での検�
 
 ==== 除籍した資料のリストをTSV形式のテキストファイルで入手する方法
 
-.[「4-9 書誌と所蔵のエクスポートをする」](enju_operation_4.html#section4-9)を実行します。
+. <<export,「書誌と所蔵のエクスポートをする」>> を実行します。
 +
 全ての書誌と所蔵の情報がTSV形式のテキストファイルとして，
 エクスポートができます。
@@ -1514,19 +1528,21 @@ image::../assets/images/1.1/image_operation_withdraw_001.png[連続除籍]
 . [除籍済みの所蔵情報の一覧]をクリックします。
 +
 image::../assets/images/1.1/image_operation_withdraw_009.png[除籍済みの所蔵情報の一覧リンク]
-
-<div class="alert alert-info">
++
+[NOTE]
+====
 【Memo】[連続除籍の一覧]をクリックすると、連続除籍機能で除籍した資料のみの一覧が閲覧できます。
-</div>
+====
 
 . 除籍済みの資料の一覧が表示されます。
 +
 image::../assets/images/1.1/image_operation_withdraw_011.png[除籍済みの所蔵情報の一覧]
-
-<div class="alert alert-info" markdown="1">
++
+[NOTE]
+====
 【Memo】
-[「4-3-3 所蔵情報を一覧表示する」](#section4-3-3)で、「所蔵情報の一覧」画面の右メニューの[除籍済み]リンクを使うことでも同じ画面が表示されます。
-</div>
+<<list-items,「所蔵情報を一覧表示する」>> で、「所蔵情報の一覧」画面の右メニューの[除籍済み]リンクを使うことでも同じ画面が表示されます。
+====
 
 === 図書を製本する
 
@@ -1537,26 +1553,26 @@ Enju Leaf 1.1系では、所蔵データとして「製本後の請求記号」�
 ==== TSVファイルを使って一括インポートする
 
 . TSVファイルを用意します。
-
++
 例えば、以下のような項目についてかいてあるTSVファイルを用意します。
-
++
 * 所蔵情報ID（item_identifier）・・・製本する雑誌の各号の所蔵情報IDを書きます
 * 製本後の請求記号（binding_call_number）・・・製本後の1冊にしたときの請求記号を書きます
 * 製本日（binded_at）・・・製本日を書きます
 * 製本後の所蔵情報ID（binding_item_identifier）・・・製本後の1冊にしたときの所蔵情報IDを書きます
 * 本棚（shelf）・・・製本後に配架する本棚を書きます
++
+TSVファイルの作り方の詳細については、<<manifestation-import-format,「TSVファイルの作り方 」>>を参照してください。
 
-TSVファイルの作り方の詳細については、[「4-2-10 TSVファイルの作り方 」](enju_operation_4.html#section4-2-10)を参照してください。
+. <<item-tsv-import,「TSVファイルを読み込んで登録する」>> の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと製本に関する所蔵情報が更新できます。
 
-. [「4-2-1 TSVファイルを読み込んで登録する」](enju_operation_4.html#section4-2-1)の 1. 以降と同じ手順を実行し、3. の時に、[更新]を選ぶと製本に関する所蔵情報が更新できます。
-
-=== 新着資料の一覧を表示する {#section4-7}
+=== 新着資料の一覧を表示する
 
 ////
 注意！ ここの内容は _includes/enju_newbook.mdの内容を編集してください 
 ////
 
-include::enju_newbooks.adoc
+include::../_includes/enju_newbooks.adoc[]
 
 ////
 {::comment}
@@ -1612,7 +1628,7 @@ image::../assets/images/1.1/image_operation_142_3.png[削除]
 {:/comment}
 ////
 
-=== 4-8 画像を登録する {#section4-8}
+=== 画像を登録する
 
 Enjuでは、画像（図書の表紙など）を登録し、資料に関連づけることができます。
 
@@ -1633,22 +1649,24 @@ image::../assets/images/1.1/image_operation_149.png[画像ファイルの新規�
 . ［ファイルを選択］ボタンをクリックしてアップしたい画像ファイルを選択するか、写真を撮ります（例：iPadやiPhoneでは［ファイルを選択］ボタンをクリックすると「写真またはビデオを撮る」が選択して撮影できます）。
 +
 image::../assets/images/1.1/image_operation_151_1.png[画像ファイルを選択]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】右メニューの[戻る]をクリックすると前の画面に戻ります。
-</div>
+====
 
-.［登録する］ボタンをクリックします。
+. ［登録する］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_151_2.png[画像ファイルを作成]
 
 . 「画像ファイルは正常に作成されました。」というメッセージが表示され、画像ファイルが登録されます。[添付先]のリンク(Manifestation/xxx）をクリックします。
 +
 image::../assets/images/1.1/image_operation_151_3.png[画像ファイルを作成した結果]
-
-<div class="alert alert-info memo">
++
+[NOTE]
+====
 【Memo】右メニューの[編集]をクリックすると編集の画面に遷移します。[画像ファイルの一覧]をクリックすると画像ファイルの一覧に遷移します。
-</div>
+====
 
 . 追加した画像が資料の表示の画面に表示されます。
 +
@@ -1668,8 +1686,10 @@ image::../assets/images/1.1/image_operation_151_5.png[画像ファイル]
 +
 image::../assets/images/1.1/image_operation_151_6.png[画像ファイル]
 
-<div class="alert alert-info memo" markdown="1">【Memo】設定内容を変更する場合は［編集］を、削除する場合は［削除］をクリックします、詳細を見たい場合は[表示]をクリックします。[添付先]のリンクをたどれば、添付した資料の「資料の表示」画面にいきます。[ファイル名]をクリックすると画像ファイルが閲覧できます。右メニューにはそれぞれの一覧へ遷移するリンクがあります。
-</div>
+[NOTE]
+====
+【Memo】設定内容を変更する場合は［編集］を、削除する場合は［削除］をクリックします、詳細を見たい場合は[表示]をクリックします。[添付先]のリンクをたどれば、添付した資料の「資料の表示」画面にいきます。[ファイル名]をクリックすると画像ファイルが閲覧できます。右メニューにはそれぞれの一覧へ遷移するリンクがあります。
+====
 
 === 書誌と所蔵のエクスポートをする
 
@@ -1697,25 +1717,30 @@ image::../assets/images/1.1/image_operation_export_bib_4.png[エクスポート�
 
 . 今までのエクスポート結果の一覧が表示されます。
 +
-[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。[開始]のものは現在、実行中です。エクスポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。[アカウントにメールアドレスの設定（利用者マニュアル「3-2 アカウントにメールアドレスの設定」参照）](enju_user_3.html#section3-2)をしておき、メールサーバーの設定がされていれば、メールでもお知らせが来ます。
+[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。
+[開始]のものは現在、実行中です。エクスポート完了時には xref:enju_operation_2#message-function[メッセージ機能] にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。xref:enju_user_3#profile-info[アカウントにメールアドレスの設定（利用者マニュアル「アカウントにメールアドレスの設定」参照）]をしておき、メールサーバーの設定がされていれば、メールでもお知らせが来ます。
 +
 image::../assets/images/1.1/image_operation_export_bib_5.png[エクスポート結果の一覧表示]
-
-<div class="alert alert-info memo">【Memo】この画面は[図書館の管理]メニュー->[エクスポート]->[書誌と所蔵のエクスポート]とすればいつでも閲覧できます。</div>
++
+[NOTE]
+====
+【Memo】この画面は[図書館の管理]メニュー->[エクスポート]->[書誌と所蔵のエクスポート]とすればいつでも閲覧できます。
+====
 
 . ファイル名のリンクから作成されたTSVファイルをダウンロードすることができます。
 +
 image::../assets/images/1.1/image_operation_export_bib_6.png[エクスポートファイルのダウンロード]
++
+[NOTE]
+====
+【Memo】[削除]とするとこのエクスポートファイルを削除することができます。
+====
 
-<div class="alert alert-info memo">【Memo】[削除]とするとこのエクスポートファイルを削除することができます。</div>
+[[bib_tsv_export]]
+==== 【Column】TSVファイルで出力される項目
 
-<div class="alert alert-success memo" markdown="1">
+xref:enju_webapi_1.adoc#bib_tsv_export[Web APIマニュアル「書誌と所蔵のTSVの項目」]を参照してください。
 
-==== 【Column】TSVファイルで出力される項目 {#bib_tsv_export}
-
-[Web APIマニュアル 1-1-3節「書誌と所蔵のTSVの項目」](enju_webapi_1.html#bib_tsv_export)を参照してください。
-
-</div>
 
 === 人物・団体情報を登録する
 
@@ -1725,7 +1750,7 @@ image::../assets/images/1.1/image_operation_export_bib_6.png[エクスポート�
 ==== 設定項目
 
 * 人物・団体の種類：▼をクリックして一覧から選びます。
-ここで表示されるリストは，[初期設定マニュアル「5-5 人物・団体の種類を編集する」](enju_setup_5.html#section5-5)で設定します。
+ここで表示されるリストは、xref:enju_setup_5.adoc#setup-agent[初期設定マニュアル「人物・団体の種類を編集する」]で設定します。
 * 姓
 * 姓（ヨミ）
 * 名
@@ -1751,15 +1776,15 @@ image::../assets/images/1.1/image_operation_agent_1.png[システムの設定]
 . 修正したい人物もしくは団体の名前を検索語に入力し、［検索］をクリックします。
 +
 image::../assets/images/1.1/image_operation_agent_2.png[検索]
-
-//<div class="alert alert-info memo" markdown="1">
++
+[NOTE]
+====
 【Memo】
 
 * 右メニューの［人物・団体を追加する］をクリックすると新規に作成することができます。
 * [派生人物・団体を追加]をクリックすると派生人物・団体の追加登録ができます（詳細な説明については準備中です）。
 * 右メニューの[統合する（取り消しはできません）]をクリックすると人物・団体情報の統合ができます。取消はできませんので注意してください（詳細な説明については準備中です）。
-
-//</div>
+====
 
 . 修正したい人物もしくは団体が検索されたら、［編集］をクリックします。
 +

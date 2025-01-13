@@ -143,6 +143,7 @@ image::../assets/images/1.1/image_content_type_2.png[資料の内容の種別の
 +
 image::../assets/images/1.1/image_content_type_3.png[資料の内容の種別の設定]
 
+[[setup-circulation_status]]
 === 貸出状態を編集作成する
 
 システムの標準設定を変更する必要がでることは基本的にはありません。 所蔵情報登録の際に表示される[貸出状態]のメニューで表示される文言や、メニューの表示順序を変更したいときのみ編集の必要がでます。
@@ -215,6 +216,7 @@ image::../assets/images/1.1/image_initial_062.png[利用制限の編集]
 +
 image::../assets/images/1.1/image_initial_063.png[利用制限の更新]
 
+[[setup-agent]]
 === 人物・団体の種類を編集する
 
 システムの標準設定を変更する必要がでることは基本的にはありません。

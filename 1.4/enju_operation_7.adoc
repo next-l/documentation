@@ -10,6 +10,7 @@ version: 1.4
 
 toc::[]
 
+[[add-closed-days-events]]
 == 休館日と催し物を登録する
 
 Enjuでは、休館日の登録に関して、次のような機能があります。

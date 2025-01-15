@@ -95,6 +95,7 @@ image::../assets/images/1.2/image_operation_033.png[利用者を登録する]
 +
 image::../assets/images/1.1/image_operation_034.png[仮パスワードが発行]
 
+[[import-user-data]]
 === 既存のデータから利用者情報をインポートする
 
 既存の利用者データがファイルで存在する場合は、インポートと呼ぶ読み込みを行い、利用者情報に取り込めます。インポートするには、あらかじめファイルをTSV形式で作成しておく必要があります。

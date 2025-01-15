@@ -91,6 +91,7 @@ image::../assets/images/1.1/image_initial_002.png[Enjuにログイン]
 +
 image:../assets/images/1.1/image_initial_003.png[Enjuログイン中]
 
+[[change-password]]
 ==== パスワードを変更する
 
 . ［アカウント］をクリックします。  

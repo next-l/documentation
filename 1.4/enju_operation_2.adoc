@@ -66,7 +66,7 @@ Librarian（図書館員）はアカウントの権限を変更することが�
 ==== アカウントを編集する
 
 アカウントの権限以外の項目の編集はLibrarian（図書館員）でも行うことができます。
-操作の方法については、[「3-3 利用者情報を変更する」](enju_operation_3.html#section3-3)
+操作の方法については、xref:enju_operation_3.adoc#update-user-info[「利用者情報を変更する（編集する）」]
 を参照してください。
 
 === ログイン／ログアウトする
@@ -94,7 +94,7 @@ image::../assets/images/1.1/image_operation_005.png[Enjuログイン]
 メールアドレス（Enjuに登録した自分のメールアドレス）を入れて、
 [パスワードを再発行する]ボタンをクリックすると、
 再発行されたパスワードがメールで送られてきます。
-但し、[メールサーバーの設定（インストールマニュアル 4-4-3節参照）](enju_install_vm_4.html#section4-4-3)があらかじめ必要です。
+但し、xref:enju_install_vm_4.adoc#setup-mail-server[メールサーバーの設定（インストールマニュアル）]があらかじめ必要です。
 ====
 
 . 自分のアカウントでログインされていることを確認します。
@@ -122,11 +122,11 @@ Librarian（図書館員Librarian）は，
 ==== パスワードを変更する
 
 ログインしている本人のパスワードを変更する場合は、
-[初期設定マニュアル「2-2-2 パスワードを変更する」](enju_setup_2.html#section2-2-2)
+xref:enju_setup_2.adoc#change-password[初期設定マニュアル「パスワードを変更する」]
 を参照してください。
 
 他の利用者のパスワードを変更する場合は、
-[「3-3 利用者情報を変更する」](enju_operation_3.html#section3-3)
+xref:enju_operation_3#update-user-info[「利用者情報を変更する」]
 を参照してください。
 
 [[message-function]]

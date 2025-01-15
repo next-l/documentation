@@ -62,5 +62,10 @@ $ docker compose up -d
 
 これで，再度Enjuが利用できるようになりました。
 
+[[setup-mail-server]]
+==== メールサーバーの設定
+
+（準備中です。）
+
 include::enju_install_vm_toc.adoc[]
 

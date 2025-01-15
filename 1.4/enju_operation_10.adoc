@@ -52,7 +52,7 @@ image::../assets/images/1.1/image_operation_257.png[ブックマーク回数]
 
 [NOTE]
 ======
-【Memo】もし、[ブックマーク回数]がない場合は、[enju_bookmark]モジュールを
+もし、[ブックマーク回数]がない場合は、[enju_bookmark]モジュールを
 インストール必要があります。
 インストール方法については[インストールマニュアル「5-2 [enju_bookmark]モジュール（ブックマーク機能）」](enju_install_vm.html#section5-2)
 の章を参照ください。
@@ -105,7 +105,7 @@ image::../assets/images/1.1/image_operation_269_2.png[統計データの一覧]
 +
 [NOTE]
 =====
-【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、[利用者の貸出回数]リンクをクリックすればでいつでも行けます。
+この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、[利用者の貸出回数]リンクをクリックすればでいつでも行けます。
 =====
 +
 7. 統計結果が表示されます。右メニューの［TSV］をクリックし、統計データを保存します。  
@@ -114,7 +114,7 @@ image::../assets/images/1.1/image_operation_269_3.png[統計データを保存]
 +
 [NOTE]
 ======
-【Memo】TSVファイルの例
+TSVファイルの例
 
 image::../assets/images/1.1/image_operation_269_3_tsv.png[TSV 統計データを保存]
 ======
@@ -151,7 +151,7 @@ image::../assets/images/1.1/image_operation_272_2_c_2.png[統計データを保�
 +
 [NOTE]
 ======
-【Memo】TSVファイルの例
+TSVファイルの例
 
 image::../assets/images/1.1/image_operation_272_2_tsv.png[TSV 統計データを保存]
 
@@ -197,7 +197,7 @@ image::../assets/images/1.1/image_operation_277_2.png[統計データの一覧]
 +
 [NOTE]
 ======
-【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
+この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
 [利用者の予約回数]リンクをクリックすればでいつでも行けます。
 ======
 +
@@ -207,7 +207,7 @@ image::../assets/images/1.1/image_operation_277_3.png[統計データを保存]
 +
 [NOTE]
 ======
-【Memo】TSVファイルの例
+TSVファイルの例
 
 image::../assets/images/1.1/image_operation_277_3_tsv.png[TSV 統計データを保存]
 ======
@@ -246,7 +246,7 @@ image::../assets/images/1.1/image_operation_280_3.png[統計データの一覧]
 +
 [NOTE]
 ======
-【Memo】この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
+この画面は 3 の画面と同じです。[図書館の管理]メニューの[統計]をたどり、
 [資料の予約回数]リンクをクリックすればでいつでも行けます。
 ======
 +
@@ -256,7 +256,7 @@ image:../assets/images/1.1/image_operation_280_4.png[統計データを保存]
 +
 [NOTE]
 ======
-【Memo】TSVファイルの例
+TSVファイルの例
 
 image::../assets/images/1.1/image_operation_280_4_tsv.png[TSV 統計データを保存]
 ======

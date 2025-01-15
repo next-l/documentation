@@ -82,12 +82,12 @@ image::../assets/images/1.1/image_operation_003.png[Enju初期画面]
 . ユーザー名とパスワードを入力し［ログイン］をクリックします。
 +
 image::../assets/images/1.1/image_operation_005.png[Enjuログイン]
-
++
 [NOTE]
 ====
 ブラウザを閉じてもログイン状態を保持したい場合は、［ウィンドウを閉じてもログインしたままにする］をオンにします。
 ====
-
++
 [NOTE]
 ====
 [パスワードを忘れましたか？」のリンクをたどった先の画面で、
@@ -110,14 +110,15 @@ image::../assets/images/1.1/image_operation_009.png[Enjuログアウト]
 . ログアウトされたこと（［ログイン］の表示に変わったこと）を画面で確認します。
 +
 image::../assets/images/1.1/image_operation_011.png[Enjuログアウト後]
-
-<div class="alert alert-info">
-【Memo】時間の経過にともなって自動ログアウトする機能は用意されていません。
++
+[NOTE]
+====
+時間の経過にともなって自動ログアウトする機能は用意されていません。
 Librarian（図書館員Librarian）は，
 利用者の個人情報などを閲覧できる権限を持っているので，
 パソコンを共有する時や離席時などには、
 きちんとログアウトするよう心がけましょう。
-</div>
+====
 
 ==== パスワードを変更する
 
@@ -143,9 +144,11 @@ image::../assets/images/1.1/image_operation_user.png[利用者の管理]
 . メッセージを送りたいユーザのユーザ名をクリックします。
 +
 image::../assets/images/1.1/image_operation_015.png[ユーザ名をクリック]
-
-<div class="alert alert-info memo">【Memo】［検索語］にユーザ名や利用者番号を入力して、ユーザを検索することもできます。
-</div>
++
+[NOTE]
+====
+［検索語］にユーザ名や利用者番号を入力して、ユーザを検索することもできます。
+====
 
 . 右メニューの［メッセージを送信する］をクリックします。
 +
@@ -168,10 +171,11 @@ image::../assets/images/1.1/image_operation_020_2.png[メッセージの新規�
 . 宛先（ユーザー名）、件名、本文を入力し、［メッセージを送信する］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_020_3.png[メッセージ送信]
-
-<div class="alert alert-info memo">【Memo】
++
+[NOTE]
+====
 右メニューの[メッセージの一覧]リンクをクリックするとメッセージの一覧に戻ります。
-</div>
+====
 
 ==== 受信したメッセージを読む
 

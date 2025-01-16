@@ -148,7 +148,7 @@ image::../assets/images/1.1/image_initial_053.png[件名標目の種類の作成
 
 ==== 設定項目
 
-* 分類の種類：▼をクリックし，リストから選択します。ここで表示されるリストは，<<_分類の種類を設定する>>で設定します。
+* 分類の種類：▼をクリックし，リストから選択します。ここで表示されるリストは，<<setup-classification-type,分類の種類を設定する>>で設定します。
 * 分類記号：分類記号を入力します。
 * 分類項目名：分類項目名を入力します。
 * URL：分類のURLを入力します。（例: https://udcdata.info/015008[]）
@@ -179,6 +179,7 @@ image::../assets/images/1.1/image_initial_054.png[分類の新規作成]
 +
 image::../assets/images/1.1/image_initial_055.png[分類の作成]
 
+[[setup-classification-type]]
 === 分類の種類を設定する
 
 ==== 設定項目

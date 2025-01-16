@@ -985,7 +985,7 @@ image::../assets/images/1.2/image_operation_113.png[資料]
 image::../assets/images/1.1/image_operation_119.png[所蔵情報の新規作成]
 ====
 
-. 図書館や貸出状態などを設定して、［登録する］ボタンをクリックします。
+. [[input-value]]図書館や貸出状態などを設定して、［登録する］ボタンをクリックします。
 +
 image::../assets/images/1.1/image_operation_121.png[所蔵情報を作成]
 +
@@ -1606,6 +1606,7 @@ image::../assets/images/1.1/image_operation_142_3.png[削除]
 {:/comment}
 ////
 
+[[add-image]]
 === 画像を登録する
 
 Enjuでは、画像（図書の表紙など）を登録し、資料に関連づけることができます。

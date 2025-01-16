@@ -10,6 +10,7 @@ version: 1.4
 
 toc::[]
 
+[[get-search-result-list]]
 == 検索結果一覧を取得する
 
 Enju は検索結果一覧を好みのフォーマットで取得する機能があります。

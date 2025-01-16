@@ -29,48 +29,113 @@ toc::[]
 ◎があるものは一般ユーザーが自身の利用者情報編集機能で入力できる項目です。
 「権限」項目はAdministrator権限でログインした時のみ入力できる項目なので△になっています。
 
-
-<!--
+////
 * アカウント情報
   利用者番号、ユーザ名、有効期限、利用者グループ、権限、既定の図書館、情報参照権限、言語
 * プロフィール情報（バージョンによっては入力できないものもあります）
   メールアドレス、フルネーム（漢字）、フルネーム（ヨミ）、生年月日、住所等（郵便番号、住所、電話番号、FAX番号
--->
+////
 
-<table class="table table-bordered table-condensed table-striped">
-<caption>利用者情報</caption>
-<thead>
-<tr><th>新規</th><th>編集</th><th>項目名</th><th>説明</th></tr>
-</thead>
-<tbody>
-<tr><td>○</td><td></td><td>ユーザ名</td><td>任意のユーザ名です。半角英数で入力します。</td></tr>
-<tr><td>○</td><td>◎</td><td>メールアドレス</td><td>連絡先メールアドレスを入力します。メールアドレスを登録しておくと、パスワードを忘れた時に、再設定されたパスワードを送信する機能が使えるようになります。予約の取り置きのメールのお知らせがくるようになります(※ Enju Leaf 1.1.0 ではこの機能は動作しません（詳細 <a href="https://github.com/next-l/enju_leaf/issues/1016">issue #1016</a>)。 書誌詳細（「書誌情報を電子メールで送信する」リンク）で書誌をメールに送れるようになります。インポート・エクスポート・利用統計の集計の完了通知が来るようになります（管理者権限のみ）。</td></tr>
-<tr><td></td><td>○</td><td>パスワードの自動生成</td><td>自動生成したパスワードを設定するかどうか。チェックをいれて[更新する]とすると、自動生成したパスワードを設定し、更新後の画面で表示します。</td></tr>
-<tr><td>○</td><td>○</td><td>有効期限</td><td>ユーザの有効期限です。書式：yyyy-mm-dd</td></tr>
-<tr><td></td><td>○</td><td>利用不可</td><td>ユーザアカウントを有効にするかどうかです。チェックを入れると利用不可になります。</td></tr>
-<tr><td></td><td>△</td><td>権限</td><td>User, Librarian, Administratorがあります。Administrator権限でログインしたときのみ権限の変更ができます。</td></tr>
-<tr><td>○</td><td>◎</td><td>フルネーム</td><td>利用者の氏名を入力します。表示に使われます（主に、図書館職員の管理用に用いられます）。</td></tr>
-<tr><td>○</td><td>◎</td><td>フルネーム（ヨミ）</td><td>利用者の氏名のヨミをカタカナで入力します。</td></tr>
-<tr><td>○</td><td>○</td><td>利用者グループ</td><td>貸出冊数や期間などの条件を設定した利用者グループです。利用者グループを選択します。例えば、一般利用者、在勤・在学利用者、団体利用者など。利用者グループの作成や詳細については、<a href="enju_setup_3.html#section3-4">初期設定マニュアル「3-4 利用者グループを設定する」</a>を参照してください。</td></tr>
-<tr><td>○</td><td>○</td><td>利用者番号</td><td>利用者番号です。一般的には、利用者カードのバーコード番号などに利用します。</td></tr>
-<tr><td>○</td><td>○</td><td>図書館</td><td>利用者既定の図書館名を設定します。書誌詳細で請求記号の背ラベル表示の際に使用されます。Librarian権限以上の場合は、書誌・所蔵・イベント・利用者情報等のインポートファイルのデフォルト所属図書館の指定に利用されます。</td></tr>
-<tr><td></td><td>○</td><td>参照に必要な情報</td><td>プロフィールをどの権限の利用者にまで公開するかを指定します。</td></tr>
-<tr><td>○</td><td>◎</td><td>言語</td><td>表示する言語を選ぶことができます。標準では、日本語と英語が選択可能です。</td></tr>
-<tr><td></td><td>◎</td><td>キーワードリスト</td><td>ログインしたときに表示される「ピックアップ」資料は、このキーワードリストに入れたキーワードに関連したものを優先して表示します。</td></tr>
-<tr><td></td><td>◎</td><td>貸出期限通知用のicalendar url</td><td>貸出期限通知に利用するicalendarのURL（リセットまたは削除）。デフォルトは未設定です。こちらを「リセット」して表示して表示したURLを使うことで、自身のカレンダーソフトに「貸出期限」などが表示されるように設定できます。アクセスに認証をともなわないので、このURLを他者に知られないように注意する必要があります。</td></tr>
-<tr><td>○</td><td>◎</td><td>貸出の履歴を保存する</td><td>チェックを入れると、現在借りている本だけでなく、返却した本の記録を閲覧できるようになります。ただし、チェックを入れる前の返却本は表示されません。</td></tr>
-<tr><td>○</td><td>○</td><td>注記</td><td>注記です。備考等を入力します。</td></tr>
-</tbody>
-</table>
+[.table.table-bordered.table-condensed.table-striped,cols="1,1,4,9"]
+.利用者情報
+|===
+|新規|編集|項目|説明
 
+|○
+|
+|ユーザ名
+|任意のユーザ名です。半角英数で入力します。
 
-{::comment}3-1  enju_operation/user_new.md {:/comment}
-{::comment}3-2  enju_operation/user_import.md {:/comment}
-{::comment}3-3  enju_operation/user_edit.md {:/comment}
-{::comment}3-4  enju_operation/user_profile.md {:/comment}
-{::comment}3-5  enju_operation/user_delete.md {:/comment}
-{::comment}3-6  enju_operation/user_search.md {:/comment}
-{::comment}3-7  enju_operation/user.md {:/comment}
+|○
+|◎
+|メールアドレス
+|連絡先メールアドレスを入力します。メールアドレスを登録しておくと、パスワードを忘れた時に、再設定されたパスワードを送信する機能が使えるようになります。予約の取り置きのメールのお知らせがくるようになります(※ Enju Leaf 1.1.0 ではこの機能は動作しません（詳細 https://github.com/next-l/enju_leaf/issues/1016[issue #1016])。 書誌詳細（「書誌情報を電子メールで送信する」リンク）で書誌をメールに送れるようになります。インポート・エクスポート・利用統計の集計の完了通知が来るようになります（管理者権限のみ）。
+
+|
+|○
+|パスワードの自動生成
+|自動生成したパスワードを設定するかどうか。チェックをいれて[更新する]とすると、自動生成したパスワードを設定し、更新後の画面で表示します。
+
+|○
+|○
+|有効期限
+|ユーザの有効期限です。書式：yyyy-mm-dd
+
+|
+|○
+|利用不可
+|ユーザアカウントを有効にするかどうかです。チェックを入れると利用不可になります。
+
+|
+|△
+|権限
+|User, Librarian, Administratorがあります。Administrator権限でログインしたときのみ権限の変更ができます。
+
+|○
+|◎
+|フルネーム
+|利用者の氏名を入力します。表示に使われます（主に、図書館職員の管理用に用いられます）。
+
+|○
+|◎
+|フルネーム（ヨミ）
+|利用者の氏名のヨミをカタカナで入力します。
+
+|○
+|○
+|利用者グループ
+|貸出冊数や期間などの条件を設定した利用者グループです。利用者グループを選択します。例えば、一般利用者、在勤・在学利用者、団体利用者など。利用者グループの作成や詳細については、xref:enju_setup_3.adoc#setup-user-groups[初期設定マニュアル「3-4 利用者グループを設定する」]を参照してください。
+
+|○
+|○
+|利用者番号
+|利用者番号です。一般的には、利用者カードのバーコード番号などに利用します。
+
+|○
+|○
+|図書館
+|利用者既定の図書館名を設定します。書誌詳細で請求記号の背ラベル表示の際に使用されます。Librarian権限以上の場合は、書誌・所蔵・イベント・利用者情報等のインポートファイルのデフォルト所属図書館の指定に利用されます。
+
+|
+|○
+|参照に必要な情報
+|プロフィールをどの権限の利用者にまで公開するかを指定します。
+
+|○
+|◎
+|言語
+|表示する言語を選ぶことができます。標準では、日本語と英語が選択可能です。
+
+|
+|◎
+|キーワードリスト
+|ログインしたときに表示される「ピックアップ」資料は、このキーワードリストに入れたキーワードに関連したものを優先して表示します。
+
+|
+|◎
+|貸出期限通知用のicalendar url
+|貸出期限通知に利用するicalendarのURL（リセットまたは削除）。デフォルトは未設定です。こちらを「リセット」して表示して表示したURLを使うことで、自身のカレンダーソフトに「貸出期限」などが表示されるように設定できます。アクセスに認証をともなわないので、このURLを他者に知られないように注意する必要があります。
+
+|○
+|◎
+|貸出の履歴を保存する
+|チェックを入れると、現在借りている本だけでなく、返却した本の記録を閲覧できるようになります。ただし、チェックを入れる前の返却本は表示されません。
+
+|○
+|○
+|注記
+|注記です。備考等を入力します。
+|===
+
+////
+3-1  enju_operation/user_new.md
+3-2  enju_operation/user_import.md
+3-3  enju_operation/user_edit.md
+3-4  enju_operation/user_profile.md
+3-5  enju_operation/user_delete.md
+3-6  enju_operation/user_search.md
+3-7  enju_operation/user.md
+////
 
 === 利用者情報を新規作成する
 
@@ -90,7 +155,7 @@ image::../assets/images/1.2/image_operation_033.png[利用者を登録する]
 +
 [NOTE]
 ====
-「*」のマークが付いた項目は入力必須項目です。また、登録の取り消しはできません。取り消しを行いたい場合は、利用者の削除を行います。（参照：[「3-4 利用者情報を削除する」](#section3-4)）
+「*」のマークが付いた項目は入力必須項目です。また、登録の取り消しはできません。取り消しを行いたい場合は、利用者の削除を行います。（参照：<<remove-user-info,「3-4 利用者情報を削除する」>>
 ====
 
 . 利用者が作成され、仮パスワードが発行されます。
@@ -104,119 +169,122 @@ image::../assets/images/1.1/image_operation_034.png[仮パスワードが発行]
 
 ==== TSVファイルの作成
 
-TSVファイルとは、項目をタブで区切ったテキストファイルです。サンプルファイルは、[https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv](https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv)を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として " " で囲みます。
+TSVファイルとは、項目をタブで区切ったテキストファイルです。サンプルファイルは、 https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として " " で囲みます。
 フィールド名とその意味については次の通りです。
 
-■利用者情報の項目
-
 ////
-{::comment}![利用者情報の項目](../assets/images/1.1/image_operation_041.png)
-{:/comment}
+![利用者情報の項目](../assets/images/1.1/image_operation_041.png)
 ////
 
-<table class="table table-bordered table-condensed table-striped">
-<caption>利用者情報の項目</caption>
-<thead>
-<tr>
-<th>フィールド名</th>
-<th>データ形式</th>
-<th>内容</th>
-<th>未入力の場合（作成時）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>username</td><td>ascii</td><td>ユーザ名（入力必須）</td><td>（インポートが「失敗」になる）</td>
-</tr>
-<tr>
-<td>password</td><td>ascii</td><td>パスワード（入力推奨）：登録しなければ、登録
-直後は利用不能／後日adminが指定するしかない</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>full_name</td><td>utf8</td><td>フルネーム</td><td>未設定</td>
-</tr>
-<tr>
-<td>full_name_transcription</td><td>utf8</td><td>フルネーム（ヨミ）</td><td>未設定</td>
-</tr>
-<tr>
-<td>user_number</td><td>ascii</td><td>利用者番号（数字以外にアルファベットも使用可能）</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>email</td><td>ascii</td><td>メールアドレス：2つ以上入力したい場合は注記（note）に書くしかない</td><td>未設定</td>
-</tr>
-<tr>
-<td>library</td><td>code</td><td>既定の図書館</td>
-<td>インポート時に「既定の図書館」として指定した図書館</td>
-</tr>
-<tr>
-<td>user_group</td><td>code</td><td>利用者グループ※1</td><td>インポート時に「既定の利用者グループ」として指定した利用者グループ</td>
-</tr>
-<tr>
-<td>locale</td><td>code</td><td>（使用）言語(日本語の場合：ja,　英語の場合：en) ※2</td><td>ja</td>
-</tr>
-<tr>
-<td>role</td><td>code</td><td>権限（Guest, User, Librarian, Administrator ）</td>
-<td>User</td>
-</tr>
-<tr>
-<td>expired_at</td><td>ISO8601</td><td>有効期限（2011-01-30　のような形式）</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>checkout_icalendar_token</td><td>ascii</td><td>貸出期限のicalendar urlに使うトークン</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>save_checkout_history</td><td>ascii</td><td>貸出の履歴を保存するかどうか。t または　TRUE または trueなら真（保存する）。</td>
-<td>FALSE</td>
-</tr>
-<tr>
-<td>locked</td><td>ascii</td><td>利用不可のアカウントにするかどうか。t または　TRUE または trueなら真（利用不可にする）。</td>
-<td>FALSE</td>
-</tr>
-<tr>
-<td>required_role</td><td>code</td><td>参照に必要な権限（Guest, User, Librarian, Administrator ）</td>
-<td>Librarian</td>
-</tr>
-<tr>
-<td>keyword_list</td><td>utf8</td><td>キーワードリスト。//で区切る。</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>save_search_history</td><td>ascii</td><td>資料の検索履歴をデータベースに保存するかどうか。t または　TRUE または trueなら真（保存にする）。 ※3</td>
-<td>FALSE</td>
-</tr>
-<tr>
-<td>share_bookmarks</td><td>ascii</td><td>ブックマークが他のユーザから参照できるかどうか。t または　TRUE または trueなら真（参照可にする）。※4</td>
-<td>FALSE</td>
-</tr>
-<tr>
-<td>note</td><td>utf8</td><td>注記</td>
-<td>未設定</td>
-</tr>
-<tr>
-<td>dummy</td><td>utf8</td><td>ダミー行の指定（なにかを書いているとその行は無視する行と判定される）</td>
-<td>（読み込まれる行と判定される）</td>
-</tr>
-</tbody>
-</table>
+[.table.table-bordered.table-condensed.table-striped,cols="3,1,5,4"]
+.利用者情報のTSV入力項目
+|===
+|フィールド名|データ形式|内容|未入力の場合（作成時）
 
-※1 利用者のグループの[名前]については[初期設定マニュアル「3-4 利用者グループを設定する」](enju_setup_3.html#section3-4)を参照ください。
+|username
+|ascii
+|ユーザ名（入力必須）
+|（インポートが「失敗」になる）
+
+|password
+|ascii
+|パスワード（入力推奨）：登録しなければ、登録 直後は利用不能／後日adminが指定するしかない
+|未設定
+
+|full_name
+|utf8
+|フルネーム
+|未設定
+
+|full_name_transcription
+|utf8
+|フルネーム（ヨミ）
+|未設定
+
+|user_number
+|ascii
+|利用者番号（数字以外にアルファベットも使用可能）
+|未設定
+
+|email
+|ascii
+|メールアドレス：2つ以上入力したい場合は注記（note）に書くしかない
+|未設定
+
+|library
+|code
+|既定の図書館
+|インポート時に「既定の図書館」として指定した図書館
+
+|user_group
+|code
+|利用者グループ※1
+|インポート時に「既定の利用者グループ」として指定した利用者グループ
+
+|locale
+|code
+|（使用）言語(日本語の場合：ja,　英語の場合：en) ※2
+|ja
+
+|role
+|code
+|権限（Guest, User, Librarian, Administrator ）
+|User
+
+|expired_at
+|ISO8601
+|有効期限（2011-01-30　のような形式）
+|未設定
+
+|checkout_icalendar_token
+|ascii
+|貸出期限のicalendar urlに使うトークン
+|未設定
+
+|save_checkout_history
+|ascii
+|貸出の履歴を保存するかどうか。t または　TRUE または trueなら真（保存する）。
+|FALSE
+
+|locked
+|ascii
+|利用不可のアカウントにするかどうか。t または　TRUE または trueなら真（利用不可にする）。
+|FALSE
+
+|required_role
+|code
+|参照に必要な権限（Guest, User, Librarian, Administrator ）
+|Librarian
+
+|keyword_list
+|utf8
+|キーワードリスト。//で区切る。
+|未設定
+
+|share_bookmarks
+|ascii
+|ブックマークが他のユーザから参照できるかどうか。t または　TRUE または trueなら真（参照可にする）。
+|FALSE
+
+|note
+|utf8
+|注記
+|未設定
+
+|dummy
+|utf8
+|ダミー行の指定（なにかを書いているとその行は無視する行と判定される）
+|（読み込まれる行と判定される）
+|===
+
+※1 利用者のグループの[名前]についてはxref:enju_setup_3.adoc#setup-user-groups[初期設定マニュアル「利用者グループを設定する」]を参照ください。
 
 ※2 環境によっては異なることがあります。
-使用できるものに何があるかは，[初期設定マニュアル「7-1 システムの基本的な情報の表示」](enju_setup_7.html#section7-1)機能でわかります。
-
-※3 注意：モジュール enju_search_log をインストールした場合（[インストールマニュアル 5-6節](enju_install_vm_5.html#section5-6)参照）にのみ使用できます。インストールしていない場合は、無視されます。
-
-※4 注意：モジュール enju_bookmark をインストールした場合（[インストールマニュアル 5-5節](enju_install_vm_5.html#section5-5)参照）にのみ使用できます。インストールしていない場合は、無視されます。
+使用できるものに何があるかは，xref:enju_setup_7.adoc#show-sysytem-info[初期設定マニュアル「システムの基本的な情報の表示機能」]でわかります。
 
 ////
-{::comment}
 ==== ■個人情報に関わる項目
 image::../assets/images/1.1/image_operation_042.png[個人情報に関わる項目]
-{:/comment}
 ////
 
 ==== TSVファイルのインポート
@@ -398,6 +466,7 @@ image::../assets/images/1.1/image_operation_054.jpg[利用者は正常に更新�
 
 ////
 
+[[remove-user-info]]
 ==== 利用者情報を削除する
 
 登録した利用者情報は、不要になった際に削除できます。
@@ -443,7 +512,7 @@ image::../assets/images/1.1/image_operation_user.png[利用者の管理]
 +
 image::../assets/images/1.1/image_operation_068.png[利用者一覧]
 
-. 当該利用者の利用者情報が表示されます。 {#user_info_page}
+. [[show-user-info]]当該利用者の利用者情報が表示されます。
 +
 image::../assets/images/1.2/image_operation_068_2.png[利用者の詳細情報]
 +
@@ -494,7 +563,7 @@ image::../assets/images/1.1/image_userinfo_local_001.png[Excelファイルの例
 このファイルで、生年月日や住所などEnjuに入力していない情報で利用者の情報を検索して、本人確認のための利用者情報を調べることができますし、URLのリンクをたどれば、その利用者のページにたどりつけます。
 +
 サンプルファイルは、
-[Next-L公式サイト（https://www.next-l.jp/?page=etc%5Ffiles&file=userinfo%5Flocalfile%5Fsample%2Exlsx&action=ATTACH）](https://www.next-l.jp/?page=etc%5Ffiles&file=userinfo%5Flocalfile%5Fsample%2Exlsx&action=ATTACH)
+[Next-L公式サイト https://www.next-l.jp/?page=etc%5Ffiles&file=userinfo%5Flocalfile%5Fsample%2Exlsx&action=ATTACH
 にありますので、参考にしてください。ここで用いている情報は架空のものです。
 +
 例えば、「ユーザ名」が 「u550001」 であれば、以下のようなURLを書けば
@@ -516,7 +585,7 @@ image::../assets/images/1.1/image_userinfo_local_001_2.png[リンクをたどる
 +
 右メニューの[貸出の新規作成]をクリックして
 当該利用者の利用者番号の入った貸出画面に行くこともできます
-（詳細：[「3-5 利用者情報を表示する」の 3.](#user_info_page)）。
+（詳細：<<show-user-info,「利用者情報を表示する」の 3.>>）。
 +
 image::../assets/images/1.2/image_userinfo_local_002.png[該当利用者のページ]
 

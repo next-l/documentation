@@ -97,6 +97,7 @@ image::../assets/images/1.1/image_user_reserve_015.png[予約の一覧の絞り�
 +
 image::../assets/images/1.1/image_user_reserve_017.png[予約の一覧]
 
+[[modify-reservation]]
 === 予約の変更をする
 
 受取館を変えたり、有効期限を変えたりできます。

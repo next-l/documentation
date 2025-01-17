@@ -500,6 +500,7 @@ image::../assets/images/1.2/image_alert.png[OK]
 
 ////
 
+[[show-user-info]]
 ==== 利用者情報を表示する
 
 利用者の一覧を、画面上で表示し、利用者情報を表示することができます。
@@ -512,7 +513,7 @@ image::../assets/images/1.1/image_operation_user.png[利用者の管理]
 +
 image::../assets/images/1.1/image_operation_068.png[利用者一覧]
 
-. [[show-user-info]]当該利用者の利用者情報が表示されます。
+. [[li:show-user-info]]当該利用者の利用者情報が表示されます。
 +
 image::../assets/images/1.2/image_operation_068_2.png[利用者の詳細情報]
 +
@@ -585,7 +586,7 @@ image::../assets/images/1.1/image_userinfo_local_001_2.png[リンクをたどる
 +
 右メニューの[貸出の新規作成]をクリックして
 当該利用者の利用者番号の入った貸出画面に行くこともできます
-（詳細：<<show-user-info,「利用者情報を表示する」の 3.>>）。
+（詳細：<<li:show-user-info,「利用者情報を表示する」の 3.>>）。
 +
 image::../assets/images/1.2/image_userinfo_local_002.png[該当利用者のページ]
 

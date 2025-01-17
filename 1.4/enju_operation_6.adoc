@@ -18,8 +18,8 @@ Enjuでは、図書の貸出・返却・予約の処理が行えます。次の�
 貸出には、次のような手続きがあります。
 
 * 資料を貸し出す
-  カードを忘れた利用者への貸出を含む
-<!-- * 未登録資料を貸し出す -->
+** カードを忘れた利用者への貸出を含む）
+//* 未登録資料を貸し出す
 * 貸出状況を確認する
 * 貸出の延長手続きをする
 
@@ -32,18 +32,18 @@ Enjuでは、図書の貸出・返却・予約の処理が行えます。次の�
 
 * 予約を新規作成する
 * 予約を確認する
-  予約の現状の検索、予約一覧の表示／印刷
+** 予約の現状の検索、予約一覧の表示／印刷
 * 予約の変更・取消をする
 
 また、その他にも、次のような手続きがあります。
 
 * 延滞情報を表示する
 
-{::comment}6-1  enju_operation/checkout.md {:/comment}
-{::comment}6-2  enju_operation/checkin.md {:/comment}
-{::comment}6-3  enju_operation/reserve.md {:/comment}
-{::comment}6-4  enju_operation/reminder.md {:/comment}
-{::comment}6-5  enju_operation/ill.md {:/comment}
+//6-1  enju_operation/checkout.md
+//6-2  enju_operation/checkin.md
+//6-3  enju_operation/reserve.md
+//6-4  enju_operation/reminder.md
+//6-5  enju_operation/ill.md
 
 === 貸出をする
 
@@ -94,8 +94,8 @@ image::../assets/images/1.2/image_operation_166.png[貸出が完了しました]
 * 右メニューにある「図書 : 2/ 10」は、「借りている本の数 / 借りられる上限数」を表しています。
 * 右メニューの[予約]リンクをたどると、この利用者分の予約の一覧画面へ遷移します。
 * 右メニューの[全ての貸出]リンクをたどると、全ての利用者分の貸出の一覧画面へ遷移します。
-* 予約ありの[はい]をたどると予約がはいっている資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： [issue #982](https://github.com/next-l/enju_leaf/issues/982)）
-* 予約ありの[いいえ]をたどると予約がはいっていない資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： [issue #982](https://github.com/next-l/enju_leaf/issues/982)）
+* 予約ありの[はい]をたどると予約がはいっている資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： https://github.com/next-l/enju_leaf/issues/982[issue #982]）
+* 予約ありの[いいえ]をたどると予約がはいっていない資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： https://github.com/next-l/enju_leaf/issues/982[issue #982]）
 * [RSS]をたどるとこの利用者の貸出履歴をRSSでダウンロードできます
 * [TSV]をたどるとこの利用者の貸出履歴をTSVでダウンロードできます。
 ====
@@ -138,7 +138,7 @@ image::../assets/images/1.2/image_operation_176.png[利用者番号]
 ログインユーザ自身の貸出履歴を表示する方法を説明します。
 
 個々の利用者の貸出履歴を確認したい場合は、利用者情報の表示画面やその画面の右メニューのリンクから辿れる画面で確認できます
-（詳細：[「3-5 利用者情報を表示する」](enju_operation_3.html#section3-5)）。
+（詳細：xref:enju_operation_3.adoc#show-user-info[「利用者情報を表示する」]）。
 
 . ［貸出・返却・予約］メニューから［貸出履歴］を選択します。
 +
@@ -156,9 +156,9 @@ image::../assets/images/1.3/image_operation_181.png[貸出中の資料の一覧]
 * 「利用者アカウント」列は空白になっているのは、「貸出の履歴を保存する」にチェックの入っていない利用者アカウントの返却済みのレコードの場合です。
 * 右メニューの[自分の貸出]をクリックするとログインユーザ自身の貸出のみを表示します。
 * 右メニューの[延滞]リンクをたどると、延滞している資料の貸出履歴のみを表示します。
-* 予約ありの[はい]をたどると予約がはいっている資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： [issue #982](https://github.com/next-l/enju_leaf/issues/982)）
-* 予約ありの[いいえ]をたどると予約がはいっていない資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： [issue #982](https://github.com/next-l/enju_leaf/issues/982)）
-* [RSS]をたどると全利用者の貸出履歴の最新の500件をRSSでダウンロードできます（詳細 [#issue 984](https://github.com/next-l/enju_leaf/issues/984)）。
+* 予約ありの[はい]をたどると予約がはいっている資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： https://github.com/next-l/enju_leaf/issues/982[issue #982]
+* 予約ありの[いいえ]をたどると予約がはいっていない資料のみを表示します。※Enju Leaf 1.1.0では、バグがあり、正常に動作しません（参照： https://github.com/next-l/enju_leaf/issues/982[issue #982]）
+* [RSS]をたどると全利用者の貸出履歴の最新の500件をRSSでダウンロードできます（詳細 https://github.com/next-l/enju_leaf/issues/984[#issue 984]）。
 * [TSV]をたどると全利用者の貸出履歴の最新の500件をTSVでダウンロードできます。
 ====
 +
@@ -186,12 +186,13 @@ image::../assets/images/1.1/image_operation_181_2_rss.png[貸出履歴の一覧�
 ====
 【Column】TSVの例
 
-<pre>
+[source,tsv]
+----
 username	user_number	item_identifier	title	checked_out_at	due_date	checked_in_at	(created_at: 2020-01-11 14:56:04 +0900)
 "zuser01"	"z123"	"110333796"	"基本件名標目表"	"2020-01-11 14:55:44 +0900"	"2020-02-10 23:59:59 +0900"	"2020-01-11 14:55:51 +0900"
 "20020044"	"20020044"	"876123"	"Ruby on Rails 5.0インストール手順書"	"2019-12-19 14:59:23 +0900"	"2020-01-18 23:59:59 +0900"	
 		"156106009970"	"図書館の問題利用者 : 前向きに対応するためのハンドブック"	"2019-10-03 11:50:06 +0900"	"2019-11-02 23:59:59 +0900"	"2019-10-03 12:09:56 +0900"
-</pre>
+----
 
 注） バージョン 1.3.0 より、checked_in_at（返却日）が追加されました。バージョン 1.3.0でusernameが表示されていないバグは1.3.1で修正されました。バージョン 1.3.2 より、usernumber（利用者番号）が追加されました。
 
@@ -213,9 +214,10 @@ username	user_number	item_identifier	title	checked_out_at	due_date	checked_in_at
 現在の貸出データ（今までの累計ではなく、今現在の貸し出し状況）を抽出する方法です。
 現在、Webブラウザから操作して現在の貸出データをまとめて出力する機能がないため、代替機能として、コンソールにログインしてコマンドで出力する方法を紹介しておきます。
 
-<pre>
+[source,sh]
+----
 $ rake enju_circulation:export:checkout RAILS_ENV=production > output.txt
-</pre>
+----
 
 とすると、output.txt ファイルに出力されます。
 （RAILS_ENV=production は、RAILS_ENV=development など必要に応じて修正してください）
@@ -247,7 +249,7 @@ image::../assets/images/1.3/image_operation_185.png[貸出を更新]
 [NOTE]
 ====
 * 注：貸出の更新、「新しい貸出期限日」、[更新する]ボタンの部分は、User権限の時の表示部分が表示されているだけですので、無視してください。
-* 注：「更新回数」は修正できるようなフォームがありますが修正できません（詳細 [#1005](https://github.com/next-l/enju_leaf/issues/1005)）
+* 注：「更新回数」は修正できるようなフォームがありますが修正できません（詳細 https://github.com/next-l/enju_leaf/issues/1005[#1005]）
 * 右メニューの[表示]をクリックすると、この編集画面の表示画面に遷移します。
 * 右メニューの[戻る]をクリックすると、この画面の一つ前の画面に遷移します。
 ====
@@ -263,6 +265,7 @@ image::../assets/images/1.3/image_operation_186.png[貸出が更新されまし�
 * 右メニューの[貸出の一覧]をクリックすると全利用者分の貸出履歴に遷移します。
 ====
 
+[[process-returns]]
 === 返却を受け付ける
 
 Enjuでは、返却資料を受け付けられると同時に、予約の入っている資料が返却された場合は、アラートを表示させることができます。アラートの表示に気付いたら、予約された本は書架に戻さずに特定の場所で管理しましょう。
@@ -300,8 +303,8 @@ image::../assets/images/1.1/image_operation_188_2_r.png[返却]
 ====
 【Column】予約情報
 
-予約資料が返却された場合、予約情報が修正されます。予約情報に取り置きした資料の[所蔵情報ID]と[請求記号]が記録され、[予約状態]が「受付済み」から「取置済み」に変更されます。予約情報の確認は「6-3予約を受け付ける」の[「6-3-2 予約の一覧を表示・印刷する」](#section6-3-2)
-や[「6-3-4 取置済みの資料を表示する」](#section6-3-4)を参照してください。
+予約資料が返却された場合、予約情報が修正されます。予約情報に取り置きした資料の[所蔵情報ID]と[請求記号]が記録され、[予約状態]が「受付済み」から「取置済み」に変更されます。予約情報の確認は「予約を受け付ける」の<<view-printout-reservation-list,「予約の一覧を表示・印刷する」>>
+や<<show-on-hold-items,「取置済みの資料を表示する」>>を参照してください。
 ====
 
 ==== 予約を受け付ける
@@ -344,6 +347,7 @@ image::../assets/images/1.2/image_operation_197_2.png[作成]
 * 右メニューの[予約の一覧]リンクをたどるとこの予約の一覧画面が表示されます。
 ====
 
+[[view-printout-reservation-list]]
 ==== 予約の一覧を表示・印刷する
 
 . ［貸出・返却・予約］メニューから［予約の一覧］を選択します。
@@ -360,13 +364,13 @@ image::../assets/images/1.1/image_operation_200.png[TSV]
 * [編集]リンクをクリックすると、その予約情報を編集できます。
 * [取消]リンクをクリックすると、その予約情報を取消できます。
 * 取消した予約情報には[削除]リンクが表示されますので、削除できます。
-* ※ 状態が、「取置済み」の場合、右の[編集]、[取消]リンクが表示されないことがあるというバグが確認されています。 (詳細 [#1014](https://github.com/next-l/enju_leaf/issues/1014)）
+* ※ 状態が、「取置済み」の場合、右の[編集]、[取消]リンクが表示されないことがあるというバグが確認されています。 (詳細 https://github.com/next-l/enju_leaf/issues/1014[#1014]）
 * 右メニューの[予約の新規作成]リンクをたどると、予約が可能な資料のみに絞り込んだ資料検索画面へ遷移しますので、その画面で検索して、予約の新規作成にすすむことができます。
 * 右メニューの[全ての予約]リンクをクリックすると、利用者全員分の予約の一覧画面に遷移します。
 * 右メニューの[自分の予約]リンクをクリックすると、ログインユーザーの分の予約の一覧画面に遷移します。
 * 右メニューの状態の下のリンク[受付済み]、[取置き済み]、[取消済み]などのリンクをクリックするとその状態に絞り込んだ予約が表示されます。
-* 右メニューの[RSS]リンクをクリックすると予約の一覧の情報がRSSで表示されます。常に最新の500件のみを表示します。（詳細 [#issue 998](https://github.com/next-l/enju_leaf/issues/998)）
-* 右メニューの[TSV]リンクをクリックすると予約の一覧の情報がTSVで表示されます。常に最新の500件のみを表示します。（詳細 [#issue 998](https://github.com/next-l/enju_leaf/issues/998)）
+* 右メニューの[RSS]リンクをクリックすると予約の一覧の情報がRSSで表示されます。常に最新の500件のみを表示します。（詳細 https://github.com/next-l/enju_leaf/issues/998[#issue 998]）
+* 右メニューの[TSV]リンクをクリックすると予約の一覧の情報がTSVで表示されます。常に最新の500件のみを表示します。（詳細 https://github.com/next-l/enju_leaf/issues/998[#issue 998]）
 ====
 
 [NOTE]
@@ -378,77 +382,71 @@ TSV形式のデータファイル（TSVファイル）とは、
       1行目にそれぞれの項目に関わるフィールド名が記入されています。
       フィールド名とその意味については次の通りです。
 
-  <table class="table table-bordered table-condensed table-striped">
-    <caption>予約一覧のエクスポートTSVの項目</caption>
-    <thead>
-      <tr>
-        <th>フィールド名</th>
-        <th>データ形式</th>
-        <th>内容</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>id</td>
-        <td>int</td>
-        <td>予約ID</td></tr>
-      <tr>
-        <td>state</td>
-        <td>utf8</td>
-        <td>状態（retained（取置済み）、requested（受付済み）etc）</td></tr>
-      <tr>
-        <td>maniestation_id</td>
-        <td>ascii</td>
-        <td>書誌ID</td></tr>
-      <tr>
-        <td>title</td>
-        <td>utf8</td>
-        <td>予約資料のタイトル</td></tr>
-      <tr>
-        <td>creator</td>
-        <td>utf8</td>
-        <td>著者</td></tr>
-      <tr>
-        <td>publisher</td>
-        <td>utf8</td>
-        <td>出版者</td></tr>
-      <tr>
-        <td>pub_date</td>
-        <td>ascii(yyyy)</td>
-        <td>出版年</td></tr>
-      <tr>
-        <td>isbn</td>
-        <td>ascii</td>
-        <td>予約資料のISBN</td></tr>
-      <tr>
-        <td>item_identifier</td>
-        <td>ascii</td>
-        <td>取置資料の所蔵情報ID（取置済みの場合のみ表示）</td></tr>
-      <tr>
-        <td>call_number</td>
-        <td>utf8</td>
-        <td>取置資料の請求記号（取置済みの場合のみ表示）</td></tr>
-      <tr>
-        <td>user_number</td>
-        <td>ascii</td>
-        <td>利用者番号</td></tr>
-      <tr>
-        <td>username</td>
-        <td>ascii</td>
-        <td>利用者名</td></tr>
-      <tr>
-        <td>library</td>
-        <td>ascii</td>
-        <td>受け取り館</td></tr>
-      <tr>
-        <td>created_at</td>
-        <td>ISO8601</td>
-        <td>予約時刻（例：2014-06-24 15:00:00 +0900）</td></tr>
-      <tr>
-        <td>expired_at</td>
-        <td>ISO8601</td>
-        <td>有効期限（例：2014-06-24 15:00:00 +0900）</td></tr>
-    </tbody>
-  </table>
+[.table.table-bordered.table-condensed.table-striped,cols="1,1,3"]
+.予約一覧のエクスポートTSVの項目
+|===
+|フィールド名|データ形式|内容
+
+|id
+|int
+|予約ID
+
+|state
+|utf8
+|状態（retained（取置済み）、requested（受付済み）etc）
+
+|maniestation_id
+|ascii
+|書誌ID
+
+|title
+|utf8
+|予約資料のタイトル
+
+|creator
+|utf8
+|著者
+
+|publisher
+|utf8
+|出版者
+
+|pub_date
+|ascii(yyyy)
+|出版年
+
+|isbn
+|ascii
+|予約資料のISBN
+
+|item_identifier
+|ascii
+|取置資料の所蔵情報ID（取置済みの場合のみ表示）
+
+|call_number
+|utf8
+|取置資料の請求記号（取置済みの場合のみ表示）
+
+|user_number
+|ascii
+|利用者番号
+
+|username
+|ascii
+|利用者名
+
+|library
+|ascii
+|受け取り館
+
+|created_at
+|ISO8601
+|予約時刻（例：2014-06-24 15:00:00 +0900）
+
+|expired_at
+|ISO8601
+|有効期限（例：2014-06-24 15:00:00 +0900）
+|===
 
 予約一覧のエクスポートTSVの例
 
@@ -468,7 +466,7 @@ image::../assets/images/1.1/image_operation_200_rss.png[RSSデータ]
 1. 返却処理を行う
 2. 予約情報を編集する
 
-返却処理による方法は[「6-2 返却を受け付ける」](#section6-2)を参照してください。
+返却処理による方法は<<process-returns,「返却を受け付ける」>>を参照してください。
 ここでは、予約情報を編集する方法について説明します。
 
 . [貸出・返却・予約］メニューから［予約の一覧］を選択します。
@@ -500,6 +498,7 @@ image::../assets/images/1.2/image_operation_reserve_edit_2.png[受付済みの�
 * 右メニューの[予約の一覧]リンクをたどると予約の一覧画面が表示されます。
 ====
 
+[[show-on-hold-items]]
 ==== 取置済みの資料を表示する
 
 状態が[取置済み]の予約資料のみを表示することができます。
@@ -525,7 +524,7 @@ image::../assets/images/1.1/image_operation_200_3.png[取置済みの資料の�
 
 [NOTE]
 ====
-Next-L Enju Leaf 1.1.0 現在、この機能は未実装です(開発予定はあります）（詳細 [#1016](https://github.com/next-l/enju_leaf/issues/1016)）
+Next-L Enju Leaf 1.1.0 現在、この機能は未実装です(開発予定はあります）（詳細 https://github.com/next-l/enju_leaf/issues/1016[#1016]）
 ====
 
 ////
@@ -555,7 +554,7 @@ image::../assets/images/1.1/image_operation_202_2.png[予約の編集等]
 +
 ※個別資料IDを他のものに変更する場合は取り置いておいた本を他の本に変えたいときに使用します。
 +
-※User権限の場合はできることが異なります（詳細　利用者マニュアル[「4-3 予約の変更をする」](https://next-l.github.io/manual/enju_user_4.html#section4-3)）。
+※User権限の場合はできることが異なります（詳細:xref:enju_user_4.adoc#modify-reservation[利用者マニュアル「予約の変更をする」]）。
 +
 image::../assets/images/1.1/image_operation_203.png[予約を更新]
 
@@ -567,9 +566,9 @@ image::../assets/images/1.1/image_operation_203.png[予約を更新]
 
 === 延滞情報を表示する
 
-[利用者グループの設定（初期設定マニュアル3-4節参照）](enju_setup_3.html#section3-4)で、設定した時期・頻度で
+xref:enju_setup_3.adoc#setup-user-groups[初期設定マニュアル「利用者グループを設定する」]で、設定した時期・頻度で
 システムから自動的に貸出期限を過ぎていることを知らせるメッセージやメールが送られます
-（※メールの送信には[メールサーバー（インストールマニュアル4-4-3節参照）](enju_install_vm_4.html#section4-4-3)の設定が必要です）。
+（※メールの送信にはメールサーバーの設定（xref:enju_install_vm_4.adoc#setup-mail-server[インストールマニュアル「メールサーバーの設定」参照）]が必要です）。
 
 この機能とは別に、個別にメールや電話の督促の連絡をするために、
 資料の返却が遅れている資料や借りているユーザを一覧表示する機能について説明します。
@@ -596,20 +595,18 @@ image::../assets/images/1.1/image_operation_209.png[延滞日数に数値を入�
 ====
 * たとえば、延滞日数に「7」と入力すると、1週間以上延滞している資料のみに絞り込まれます。
 * 右メニューの[貸出の一覧に戻る]をクリックすると貸出履歴の一覧の画面に遷移します。
-* 右メニューの予約ありの[はい]や[いいえ]をクリックすると予約のあるもののみもしくは予約のないもののみを表示します ※ Enju Leaf 1.1.0 ではバグがあり、うまく機能しません　詳細 [issue #1037](https://github.com/next-l/enju_leaf/issues/1037)
+* 右メニューの予約ありの[はい]や[いいえ]をクリックすると予約のあるもののみもしくは予約のないもののみを表示します ※ Enju Leaf 1.1.0 ではバグがあり、うまく機能しません（詳細 https://github.com/next-l/enju_leaf/issues/1037[issue #1037]）。
 ====
 +
 ////
-<!--
 
 . メールで督促の連絡をする人にチェックをして、［メールを送信］をクリックします。
 
--->
 ////
 
 . 必要に応じて右メニューの［TSV］をクリックしてTSVファイルを保存します。 
 +
-※　注意!　この画面で見えている延滞日数にかかわらず、すべての延滞日数の資料をTSVに出力します(https://github.com/next-l/enju_leaf/issues/990[詳細 [issue #1037]] )。
+※　注意!　この画面で見えている延滞日数にかかわらず、すべての延滞日数の資料をTSVに出力します(詳細 https://github.com/next-l/enju_leaf/issues/990[issue #1037] )。
 +
 image::../assets/images/1.1/image_operation_210.png[TSVファイルを保存]
 
@@ -617,12 +614,13 @@ image::../assets/images/1.1/image_operation_210.png[TSVファイルを保存]
 ====
 【Column】TSVの例
 
-<pre>
+[source,tsv]
+----
 username	item_identifier	title	checked_out_at	due_date	Overdue items (created_at: 2017-06-08 01:35:17 +0900)
 "akiyama"	"2101"	"本当にあった!特殊兵器大図鑑"	"2017-05-17 17:17:40 +0900"	"2017-05-17 23:59:59 +0900"
 "user1206"	"3117"	"天下人の茶"	"2017-02-23 10:27:29 +0900"	"2017-03-25 23:59:59 +0900"
 "yuka"	"567009"	"ドリーム・ギバー : 夢紡ぐ精霊たち"	"2015-12-20 11:54:10 +0900"	"2016-12-20 23:59:59 +0900"
-</pre>
+----
 ====
 
 [NOTE]

@@ -16,7 +16,7 @@ toc::[]
 
 Enjuは資料の検索結果などに外部のサービスからリンクするOpenURLに対応しています。
 
-OpenURLの詳細な仕様は http://alcme.oclc.org/openurl/docs/pdf/openurl-01.pdf[OpenURL Version 0.1] などをご覧ください。
+OpenURLの詳細な仕様は https://oclc-research.github.io/OpenURL-Frozen/docs/pdf/openurl-01.pdf[OpenURL Version 0.1] などをご覧ください。
 
 === アクセス先（ベースURL）
 

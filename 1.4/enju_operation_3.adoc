@@ -637,7 +637,7 @@ image::../assets/images/1.1/image_operation_export_user_3.png[エクスポート
 +
 image::../assets/images/1.1/image_operation_export_user_4.png[エクスポートの表示]
 
-. 今までのエクスポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。[開始]のものは現在、実行中です。エクスポート完了時には[メッセージ機能（2-3節参照）](enju_operation_2.html#section2-3)にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。
+. 今までのエクスポート結果の一覧が表示されます。[状態]を見ると処理結果がわかります。エクスポートが完了したものは[完了]と表示されます。[開始]のものは現在、実行中です。エクスポート完了時にはメッセージ機能（xref:enju_operation_2.adoc#message-function[「メッセージをやり取りする」参照]）にてお知らせします（「エクスポートが完了しました」というメッセージが送られてきます）。
 +
 image::../assets/images/1.1/image_operation_export_user_5.png[エクスポート結果の一覧表示]
 +

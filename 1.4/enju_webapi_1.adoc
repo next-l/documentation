@@ -50,6 +50,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 
 ※Enju Leaf1.3.3以前は、改行は \n に変換されていましたが、Enju Leaf1.3.4以降では改行はそのままとなりますので、改行がはいったデータがある場合、Excelへのインポートでは次の列になってしまうことに注意(Googleスプレッドシートなどでは問題なくできます)。
 
+[[example-bib-tsv]]
 ==== 書誌と所蔵のTSVの例
 
  manifestation_id	original_title	title_alternative	title_transcription	statement_of_responsibility	serial	manifestation_identifier	creator	contributor	publisher	pub_date	year_of_publication	publication_place	manifestation_created_at	manifestation_updated_at	carrier_type	content_type	frequency	language	isbn	issn	volume_number	volume_number_string	edition	edition_string	issue_number	issue_number_string	serial_number	extent	start_page	end_page	dimensions	height	width	depth	price	access_address	manifestation_required_role	abstract	description	note	identifier:isbn	identifier:issn	identifier:jpno	identifier:doi	identifier:iss_itemno	identifier:lccn	identifier:ncid	identifier:loc_identifier	identifier:issn_l	identifier:epi	series_statement_id	series_statement_original_title	series_statement_title_subseries	series_statement_title_subseries_transcription	series_statement_title_transcription	series_statement_creator	series_statement_volume_number	series_statement_series_master	series_statement_root_manifestation_id	series_statement_manifestation_id	series_statement_position	series_statement_note	series_statement_created_at	series_statement_updated_at	manifestation_memo	manifestation:custom	subject:unknown	subject:ndlsh	subject:bsh	subject:lcsh	classification:ndc9	classification:ddc	classification:ndc8	classification:ndc10	jpno	ncid	item_id	item_identifier	binding_item_identifier	call_number	shelf	item_note	accepted_at	acquired_at	item_created_at	item_updated_at	bookstore	budget_type	item_required_role	item_price	item_memo	item:custom	use_restriction	circulation_status	checkout_type	total_checkouts
@@ -58,7 +59,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 
 * 注: Enju Leaf 1.3.6のTSVです。
 
-[[bib_tsv_export]]
+[[bib-tsv-export]]
 ==== 書誌と所蔵のTSVの項目
 
 次の項目が入っています(Enju Leaf 1.3.6)。
@@ -216,6 +217,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 
 ※2 識別子や分類や件名で複数あるものは//で区切られて出力されます。
 
+[[get-rdf-xml]]
 === RDF/XML形式のデータを取得する
 
 
@@ -293,6 +295,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 
 ※現在、表示している検索結果のみを表示します。他の画面の検索結果は含みません。
 
+[[example-bib-json]]
 ==== 書誌と所蔵のJSON形式のデータの例
 
 [source,json]
@@ -353,6 +356,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 }
 ----
 
+[[bib-json-export]]
 ==== 書誌と所蔵のJSON形式の項目
 
 JSON形式は以下のキーと値のペアから構成されます。

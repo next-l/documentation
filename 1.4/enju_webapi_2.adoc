@@ -44,7 +44,7 @@ manifestation_id	original_title	title_transcription	creator	contributor	publishe
 
 ==== 書誌と所蔵のTSVの項目
 
-link:enju_webapi_1.html#bib_tsv_export[書誌と所蔵のTSVの項目（1-1-3節参照）]を参照してください。
+xref:enju_webapi_1.adoc#bib-tsv-export[書誌と所蔵のTSVの項目（1-1-3節参照）]を参照してください。
 
 === RDF/XML形式のデータを取得する
 
@@ -65,6 +65,7 @@ link:enju_webapi_1.html#bib_tsv_export[書誌と所蔵のTSVの項目（1-1-3節
 +
 . この検索結果詳細画面がRDF/XML形式で表示されます。
 
+[[example-bib-rdf-xml]]
 ==== 書誌のRDF/XML形式のデータの例
 
 ....

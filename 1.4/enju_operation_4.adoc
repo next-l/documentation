@@ -1718,10 +1718,10 @@ image::../assets/images/1.1/image_operation_export_bib_6.png[エクスポート�
 [削除]とするとこのエクスポートファイルを削除することができます。
 ====
 
-[[bib_tsv_export]]
+[[bib-tsv-export]]
 ==== 【Column】TSVファイルで出力される項目
 
-xref:enju_webapi_1.adoc#bib_tsv_export[Web APIマニュアル「書誌と所蔵のTSVの項目」]を参照してください。
+xref:enju_webapi_1.adoc#bib-tsv-export[Web APIマニュアル「書誌と所蔵のTSVの項目」]を参照してください。
 
 [[add-agent]]
 === 人物・団体情報を登録する

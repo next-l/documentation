@@ -167,7 +167,7 @@ image::../assets/images/1.1/search_result_rdf_1.png[RDF/XML]
 +
 . RDF/XML 形式のファイルがダウンロードできます。
 
-* xref:enju_webapi_1.adoc# RDF/XML形式のデータを取得する[Web APIマニュアル「RDF/XML形式のデータを取得する」参照]
+* xref:enju_webapi_1.adoc#get-rdf-xml[Web APIマニュアル「RDF/XML形式のデータを取得する」]参照
 
 ==== MODS 形式で書き出し
 
@@ -331,8 +331,8 @@ image::../assets/images/1.2/search_result_tsv_1.png[TSV]
 +
 . TSV 形式のファイルがダウンロードできます。
 
-* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの例[出力されるTSVの例（Web APIマニュアル）]
-* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの項目[出力される項目の詳細（Web APIマニュアル）]
+* 出力されるTSVの例：xref:enju_webapi_1.adoc#example-bib-tsv[「書誌と所蔵のTSVの例」（Web APIマニュアル）]
+* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-tsv-export[「書誌と所蔵のTSVの項目」（Web APIマニュアル）]
 
 ==== JSON 形式で書き出し
 
@@ -347,8 +347,8 @@ image::../assets/images/1.3/search_result_json_1.png[TSV]
 +
 . JSON 形式のファイルがダウンロードできます。
 +
-* xref:enju_webapi_1.adoc#_書誌と所蔵のJSON形式のデータの例[出力されるJSONの例（Web APIマニュアル「書誌と所蔵のJSON形式のデータの例」参照）]
-* xref:enju_webapi_1.adoc#_書誌と所蔵のJSON形式の項目[出力される項目の詳細（Web APIマニュアル「書誌と所蔵のJSON形式の項目」参照）]
+* 出力されるJSONの例：xref:enju_webapi_1.adoc#example-bib-json[「書誌と所蔵のJSON形式のデータの例」（Web APIマニュアル）]
+* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-json-export[「書誌と所蔵のJSON形式の項目」（Web APIマニュアル）]
 
 === 検索結果詳細の書き出し
 
@@ -360,7 +360,7 @@ image::../assets/images/1.1/search_result_full_rdf_1.png[RDF/XML]
 
 . RDF/XML 形式のファイルがダウンロードできます。
 
-* xref:enju_webapi_2#_書誌のRDF/XML形式のデータの例[出力されるRDF/XMLの例（Web APIマニュアル参照）]
+* 出力されるRDF/XMLの例：xref:enju_webapi_2#example-bib-rdf-xml[「書誌のRDF/XML形式のデータの例」（Web APIマニュアル参照）]
 
 ==== MODS 形式で書き出し
 
@@ -433,14 +433,14 @@ image::../assets/images/1.1/search_result_full_tsv_1.png[TSV]
 
 . TSV 形式のファイルがダウンロードできます。
 +
-* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの例[出力されるTSVの例（Web APIマニュアル）]
-* xref:enju_webapi_1.adoc#_書誌と所蔵のTSVの項目[出力される項目の詳細（Web APIマニュアル）]
+* 出力されるTSVの例：xref:enju_webapi_1.adoc#example-bib-tsv[「書誌と所蔵のTSVの例」（Web APIマニ ュアル）]
+* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-tsv-export[書誌と所蔵のTSVの項目（Web APIマニ ュアル）]
 
 === 検索結果詳細を電子メールで送る
 
 メールアドレスを登録しており、ログインしていると、検索結果詳細を電子メールで送ることができます。
 
-メールアドレスの登録方法はxref:enju_user_3.adoc#_メールアドレスや名前などを変更する[利用者マニュアル「メールアドレスや名前などを変更する」]を参照してください。
+メールアドレスの登録方法はxref:enju_user_3.adoc#profile-info[利用者マニュアル「メールアドレスや名前などを変更する」]を参照してください。
 
 . 電子メールで送りたい検索結果詳細画面を表示させます。[書誌情報を電子メールで送信する]リンクをクリックします
 +

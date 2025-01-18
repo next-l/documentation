@@ -356,6 +356,7 @@ image::../assets/images/1.3/search_result_json_1.png[TSV]
 
 === 検索結果詳細の書き出し
 
+[[bib-rdf-xml-one-record]]
 ==== RDF/XML 形式で書き出し（詳細）
 
 . 書き出しをしたい検索結果詳細画面を表示させます。[RDF/XML]リンクをクリックします
@@ -366,6 +367,7 @@ image::../assets/images/1.1/search_result_full_rdf_1.png[RDF/XML]
 
 * 出力されるRDF/XMLの例：xref:enju_webapi_2#example-bib-rdf-xml[「書誌のRDF/XML形式のデータの例」（Web APIマニュアル参照）]
 
+[[bib-mods-one-record]]
 ==== MODS 形式で書き出し（詳細）
 
 . 書き出しをしたい検索結果詳細画面を表示させます。[MODS]リンクをクリックします
@@ -429,6 +431,7 @@ image::../assets/images/1.1/search_result_full_mods_1.png[MODS]
 </mods>
 ----
 
+[[bib-tsv-one-record]]
 ==== TSV 形式で書き出し（詳細）
 
 . 書き出しをしたい検索結果詳細画面を表示させます。[TSV]リンクをクリックします

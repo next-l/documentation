@@ -57,7 +57,7 @@ image::../assets/images/1.1/image_operation_event_new_success.png[休館日登�
 +
 [NOTE]
 ======
-休館日を登録しておくことにより、資料を貸し出す際の返却日を1日ずらすよう設定できます。設定方法は[初期設定マニュアル「3-6 利用者グループと貸出区分の関係を設定する」](enju_setup_3.html#section3-6)をご覧ください。
+休館日を登録しておくことにより、資料を貸し出す際の返却日を1日ずらすよう設定できます。設定方法はxref:enju_setup_3.adoc#setup-user-group-checkup_type[初期設定マニュアル「利用者グループと貸出区分の関係を設定する」]をご覧ください。
 ======
 
 === 催し物を登録する
@@ -85,7 +85,7 @@ image::../assets/images/1.1/image_operation_event_other_new.png[開催日と催�
 +
 [NOTE]
 ======
-催し物の種別を追加する方法は[初期設定マニュアル「3-8 催し物の種類を設定する」](enju_setup_3.html#section3-8)をご覧ください。
+催し物の種別を追加する方法はxref:enju_setup_3.adoc#setup-event-type[初期設定マニュアル「催し物の種別を設定する」]をご覧ください。
 ======
 
 4. 「開館日と催し物は正常に作成されました。」のメッセージが表示され、催し物が登録されます。
@@ -95,7 +95,7 @@ image::../assets/images/1.1/image_operation_event_other_new_success.png[催し�
 [[import-event-data]]
 ==== 催し物のデータをインポートする
 
-既存のデータファイルを指定して読み込む「インポート」を行うと，一度に複数のデータを登録することができます。インポートするには，あらかじめデータファイルをTSV形式で作成しておきます(参照：[「TSV形式のデータファイルの作り方」](#section7_import_tsv)（本節の最後に記載）)。
+既存のデータファイルを指定して読み込む「インポート」を行うと，一度に複数のデータを登録することができます。インポートするには，あらかじめデータファイルをTSV形式で作成しておきます(参照：<<event-tsv-import,「TSV形式のデータファイルの作り方」>>]（本節の最後に記載）)。
 
 
 1. ［開館日と催し物］メニューから［インポート］を選択します。
@@ -138,154 +138,127 @@ image::../assets/images/1.1/image_operation_223_2.png[催し物ファイルの�
 この画面は[図書館の管理]メニュー→[インポート]→[開催日と催し物]とすればいつでも閲覧できます。
 ======
 
-==== 【Column】TSV形式のデータファイルの作り方 {#section7_import_tsv}
-  <p>TSV形式のデータファイル（TSVファイル）とは、項目をタブで区切ったテキストファイルです。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として &ldquo; &ldquo; で囲みます。
-フィールド名とその意味については次の通りです。</p>
+[[event-tsv-import]]
+==== 【Column】TSV形式のデータファイルの作り方
+TSV形式のデータファイル（TSVファイル）とは、項目をタブで区切ったテキストファイルです。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として &ldquo; &ldquo; で囲みます。
+フィールド名とその意味については次の通りです。
 
-  <table class="table table-bordered table-condensed table-striped">
-    <caption>開館日や催し物などの情報に関わる項目</caption>
-    <thead>
-      <tr>
-        <th>必須/任意</th>
-        <th>フィールド名</th>
-        <th>データ形式</th>
-        <th>内容</th>
-        <th>未入力の場合（確認中）</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>任意</td>
-        <td>id</td>
-        <td>int</td>
-        <td>ID(新規作成のときは無視される、更新・削除では必須)</td>
-        <td>自動設定</td>
-      </tr>
-      <tr>
-        <td>必須</td>
-        <td>name</td>
-        <td>utf8</td>
-        <td>名前（イベントの名称）</td>
-        <td>インポートが「失敗」になる</td>
-      </tr>
-      <tr>
-        <td>任意</td>
-        <td>display_name</td>
-        <td>utf8</td>
-        <td>イベントの表示名</td>
-        <td>nameに入力したものが使用される</td>
-      </tr>
-      <tr>
-        <td>任意</td>
-        <td>event_category</td>
-        <td>code</td>
-        <td>催し物の種別。「催し物の種別」の[名前]を値とします(例：休館日であれば"closed"など）。見方については、<a href="enju_setup_3.html#section3-8">初期設定マニュアル「3-8 催し物の種別を設定する」</a> を参照してください。</td>
-        <td>インポート時に「既定の催し物の種別」として指定した種別</td>
-      </tr>
-      <tr>
-        <td>任意</td>
-        <td>library</td>
-        <td>code</td>
-        <td>図書館。「図書館の一覧」の[名前]を値とします(例："yours"など）。見方については、<a href="enju_setup_3.html#section3-2">初期設定マニュアル「3-2 個々の図書館を設定する」</a>を参照してください。</td>
-        <td>インポート時に「既定の図書館」として指定した図書館</td>
-      </tr>
-      <tr>
-        <td>必須</td>
-        <td>start_at</td>
-        <td>ISO8601</td>
-        <td>開始時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合は時刻が無視される。</td>
-        <td>インポートが「失敗」になる</td>
-      </tr>
-      <tr>
-         <td>必須</td>
-         <td>end_at</td>
-         <td>ISO8601</td>
-         <td>終了時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合時刻は無視される。</td>
-         <td>インポートが「失敗」になる</td></tr>
-      <tr>
-         <td>任意</td>
-         <td>all_day</td>
-         <td>真偽</td>
-         <td>終日かどうか。TRUE or FALSE</td>
-         <td>FALSE</td>
-      </tr>
-      <tr>
-         <td>任意</td>
-         <td>note</td>
-         <td>utf8</td>
-         <td>注記</td>
-         <td>未設定</td>
-      </tr>
-      <tr>
-         <td>任意</td>
-         <td>dummy</td>
-         <td>utf8</td>
-         <td>ダミー行（なにかを書いていると無視する行）</td>
-         <td>(読み込む行だと判定される）</td>
-      </tr>
-    </tbody>
-  </table>
+[.table.table-bordered.table-condensed.table-striped,cols="1,1,1,6,4"]
+.開館日や催し物などの情報に関わる項目
+|===
+|必須/任意|フィールド名|データ形式|内容|未入力の場合（確認中）
 
-  <table class="table table-bordered table-condensed table-striped">
-    <caption>＊設定例</caption>
-    <tbody>
-      <tr>
-        <td>"name"      </td>
-        <td>"event_category"</td>
-        <td>"library"</td>
-        <td>"start_at"</td>
-        <td>"end_at"</td>
-        <td>"all_day"</td>
-        <td>"note"</td>
-        <td>"dummy"</td></tr>
-      <tr>
-        <td>"名前（イベントの名称）"</td>
-        <td>"催し物の種別"</td> 
-        <td>"図書館"</td>
-        <td>"開始時刻"</td>
-        <td>"終了時刻"</td>
-        <td>"終日"</td>
-        <td>"注記"</td>
-        <td>この行はダミー行</td></tr>
-      <tr>
-        <td>必須</td>
-        <td>任意</td>
-        <td>任意</td>
-        <td>必須</td>
-        <td>必須</td>
-        <td>任意</td>
-        <td>任意</td>
-        <td>任意</td></tr>
-      <tr>
-        <td>"おはなし会"  </td>
-        <td>"story_telling"     </td>
-        <td>"kiri"</td>
-        <td>"2009-04-05 15:00:00 +0900"</td>
-        <td>"2009-04-05 16:00:00 +0900"</td>
-        <td>FALSE</td>
-        <td>短めのお話会です</td>
-        <td>　</td></tr>
-      <tr>
-        <td>"蔵書点検"  </td>
-        <td></td>
-        <td>"tachibana"</td>
-        <td>"2009-04-01"</td>
-        <td>"2009-04-02"</td>
-        <td>  </td>
-        <td>  </td>
-        <td>　</td></tr>
-      <tr>
-        <td>"休館日"    </td>
-        <td>"closed"         </td>
-        <td>"tachibana"</td>
-        <td>"2011-04-01"</td>
-        <td>"2011-04-03"</td>
-        <td>  </td>
-        <td>蔵書点検のため長めです</td>
-        <td>　</td></tr>
-    </tbody>
-  </table>
+|任意
+|id
+|int
+|ID(新規作成のときは無視される、更新・削除では必須)
+|自動設定
 
+|必須
+|name
+|utf8
+|名前（イベントの名称）
+|インポートが「失敗」になる
+
+|任意
+|display_name
+|utf8
+|イベントの表示名
+|nameに入力したものが使用される
+
+|任意
+|event_category
+|code
+|催し物の種別。「催し物の種別」の[名前]を値とします(例：休館日であれば"closed"など）。見方については、xref:enju_setup_3.adoc#setup-event-type[初期設定マニュアル「催し物の種別を設定する」] を参照してください。
+|インポート時に「既定の催し物の種別」として指定した種別
+
+|任意
+|library
+|code
+|図書館。「図書館の一覧」の[名前]を値とします(例："yours"など）。見方については、xref:enju_setup_3.adoc#configure-libraries[初期設定マニュアル「3-2 個々の図書館を設定する」]を参照してください。
+|インポート時に「既定の図書館」として指定した図書館
+
+|必須
+|start_at
+|ISO8601
+|開始時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合は時刻が無視される。
+|インポートが「失敗」になる
+
+|必須
+|end_at
+|ISO8601
+|終了時刻（例：2014-06-24 15:00:00 +0900 もしくは 2014-06-24）、all_dayがTRUEの場合時刻は無視される。
+|インポートが「失敗」になる
+
+|任意
+|all_day
+|真偽
+|終日かどうか。TRUE or FALSE
+|FALSE
+
+|任意
+|note
+|utf8
+|注記
+|未設定
+
+|任意
+|dummy
+|utf8
+|ダミー行（なにかを書いていると無視する行）
+|(読み込む行だと判定される）
+|===
+
+[.table.table-bordered.table-condensed.table-striped,cols="1,1,1,1,1,1,1,1"]
+.＊設定例
+|===
+|"name"|"event_category"|"library"|"start_at"|"end_at"|"all_day"|"note"|"dummy"
+
+|"名前（イベントの名称）"
+|"催し物の種別"
+|"図書館"
+|"開始時刻"
+|"終了時刻"
+|"終日"
+|"注記"
+|"この行はダミー行"
+
+|必須
+|任意
+|任意
+|必須
+|必須
+|任意
+|任意
+|任意
+
+|"おはなし会"
+|"story_telling"
+|"kiri"
+|"2009-04-05 15:00:00 +0900"
+|"2009-04-05 16:00:00 +0900"
+|FALSE
+|"短めのお話会です"
+|
+
+|"蔵書点検"
+|
+|"tachibana"
+|"39904"
+|"39905"
+|
+|
+|
+
+|"休館日"
+|"closed"
+|"tachibana"
+|"40634"
+|"40636"
+|
+|"蔵書点検のため長めです"
+|
+|===
 
 ==== カレンダーを利用する
 
@@ -306,9 +279,10 @@ image::../assets/images/1.1/image_operation_225.png[カレンダー表示]
 * [＜]をクリックすると前の月に移動します。
 * [＞]をクリックすると次の月に移動します。
 * 右メニューの[一覧表示]をクリックすると休館日や催し物を一覧表示します。
-* その他の右メニューについては、[「7-4  休館日や催し物を表示する」](#section7-4)と同様です。
+* その他の右メニューについては、<<show-closed-days-event,「休館日や催し物を表示する」>>と同様です。
 ======
 
+[[show-closed-days-event]]
 ==== 休館日や催し物を表示する
 
 図書館の休館日や催し物を表示することができます。
@@ -337,11 +311,11 @@ image::../assets/images/1.1/image_operation_event_browse.png[開催日と催し�
 * 図書館のリンクをたどるとその図書館の情報ページを表示します。
 * 名前のリンクをたどるとその休館日や催し物の詳細を表示します。
 * 右メニューの[カレンダー表示]をクリックすると登録済みの休館日や催し物をカレンダー形式で表示します。
-* 右メニューの[催し物のインポート]をクリックすると催し物のインポートファイルの一覧の画面に遷移します（参照：[「7-2-2 催し物のデータをインポートする」](#section7-2-2)の5.の画面）
+* 右メニューの[催し物のインポート]をクリックすると催し物のインポートファイルの一覧の画面に遷移します（参照：<<import-event-data,「催し物のデータをインポートする」>>の5.の画面）
 * 右メニューの図書館名のリンクをクリックするとその図書館の休館日や催し物のみを表示します。
-* 右メニューの[RSS]リンクをクリックするとRSS形式で登録済みの休館日や催し物を表示します(参照：[「【Column】 休館日や催し物のRSS」（本節の最後に記載）](#section7_rss))。
-* 右メニューの[TSV]リンクをクリックするとTSV形式で登録済みの休館日や催し物を表示します(参照：[「【Column】 休館日や催し物のTSV」（本節の最後に記載）](#section7_tsv))。
-* 右メニューの[iCalendar]リンクをクリックするとiCalendar形式で登録済みの休館日や催し物をダウンロードできます(参照：[「【Column】 休館日や催し物のiCalendar」（本節の最後に記載）](#section7_icalendar))。他のカレンダーソフトやカレンダーサービスに登録済みの休館日や催し物を読み込むことができます。
+* 右メニューの[RSS]リンクをクリックするとRSS形式で登録済みの休館日や催し物を表示します(参照：<<event-rss,「【Column】 休館日や催し物のRSS」（本節の最後に記載）>>）。
+* 右メニューの[TSV]リンクをクリックするとTSV形式で登録済みの休館日や催し物を表示します(参照：<<event-tsv,「【Column】 休館日や催し物のTSV」（本節の最後に記載）>>)。
+* 右メニューの[iCalendar]リンクをクリックするとiCalendar形式で登録済みの休館日や催し物をダウンロードできます(参照：<<event-icalendar,「【Column】 休館日や催し物のiCalendar」（本節の最後に記載）>>)。他のカレンダーソフトやカレンダーサービスに登録済みの休館日や催し物を読み込むことができます。
 ======
 
 3. 休館日や催し物の詳細が表示されます。
@@ -355,22 +329,26 @@ image::../assets/images/1.1/image_operation_event_browse_2.png[開催日と催�
 * 右メニューの[開催日と催し物の一覧]リンクをクリックすると、登録済みの休館日や催し物の一覧を表示します。
 ======
 
-
+[[event-rss]]
 === 【Column】 休館日や催し物のRSS
 
 image::../assets/images/1.1/image_operation_event_browse_rss.png[開催日と催し物の詳細]
 
+[[event-tsv]]
 === 【Column】 休館日や催し物のTSV
 
-<pre>
+[source,tsv]
+----
 library	name	note	start_at	end_at
 "Your Library"	"休館日"	""	"2015-12-07 00:00:00 +0900"	"2015-12-07 23:59:59 +0900"
 "Your Library"	"休館日"	""	"2015-11-05 00:00:00 +0900"	"2015-11-05 23:59:59 +0900"
-</pre>
+----
 
+[[event-icalendar]]
 === 【Column】 休館日や催し物のiCalendar
 
-<pre>
+[source,iCalendar]
+----
 BEGIN:VCALENDAR
 PRODID;X-RICAL-TZSOURCE=TZINFO:-//com.denhaven2/NONSGML ri_cal gem//EN
 CALSCALE:GREGORIAN
@@ -398,6 +376,6 @@ DESCRIPTION:休館日
 LOCATION:IbarakiTsukuba
 END:VEVENT
 END:VCALENDAR
-</pre>
+----
 
 include::enju_operation_toc.adoc[]

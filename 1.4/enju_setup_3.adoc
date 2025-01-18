@@ -419,6 +419,7 @@ image::../assets/images/1.1/image_initial_031.png[資料の形態と貸出区分
 
 image::../assets/images/1.1/image_initial_032.png[資料の形態と貸出区分の関係の作成]
 
+[[setup-event-type]]
 === 催し物の種別を設定する
 
 催し物（お知らせ）の登録機能およびカレンダー表示機能で、休館日以外の催し物の種別（例：お話会、蔵書点検など）が必要なった場合に必要になる設定です（参照：xref:enju_operation_7.adoc[運用マニュアル「第7章 休館日と催し物を登録する」]。

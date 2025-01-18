@@ -167,7 +167,7 @@ image::../assets/images/1.1/image_user_reserve_029.png[予約の削除のOK]
 ====
 
 * メッセージ機能を使って知ることができます。
-* xref:enju_user_3.adoc#_メールアドレスを設定[メールアドレスを設定]している場合は、メールでも通知が来ます。
+* メールアドレスを設定場合は（参照：xref:enju_user_3.adoc#profile-info[「メールアドレスや名前などを変更する」]）、メールでも通知が来ます。
 
 === 予約の一覧をTSVを表示する
 

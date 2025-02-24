@@ -161,13 +161,8 @@ image::../assets/images/1.1/image_user_reserve_029.png[予約の削除のOK]
 
 === 予約した資料が用意されたことを知る
 
-[NOTE]
-====
-現行のEnju Leafではこの機能にバグがあり、メッセージ機能、メール通知機能ともに動作していません(詳細 https://github.com/next-l/enju_leaf/issues/1016[issue #1016])。
-====
-
-* メッセージ機能を使って知ることができます。
-* メールアドレスを設定場合は（参照：xref:enju_user_3.adoc#profile-info[「メールアドレスや名前などを変更する」]）、メールでも通知が来ます。
+* xref:enju_user_7.adoc[メッセージ機能]を使って知ることができます。
+* メールアドレスを設定してある場合は、メールでも通知が来ます。メールアドレスの設定方法は、 xref:enju_user_3.adoc#profile-info[第3章「メールアドレスや名前などを変更する」]をご覧ください。
 
 === 予約の一覧をTSVを表示する
 

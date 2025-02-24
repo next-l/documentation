@@ -4,5 +4,5 @@
 ====
 ※ Administrator権限やLibrarian 権限ではこの画面の右メニューに[メッセージを返信する]リンクがありますので、これをクリックすることで、このメッセージに返信することができます。
 
-image::../assets/images/1.1/image_operation_024.png[メッセージに返信する]+++</div>+++
+image::../assets/images/1.1/image_operation_024.png[メッセージに返信する]
 ====

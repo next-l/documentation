@@ -859,10 +859,12 @@ TSVファイルとは、それぞれのフィールドが、タブ（Tab）で�
 
 [NOTE]
 ====
-Enjuで利用できる使える役割については、「著者の関係」機能の「名称」に一覧されています。
+Enjuで利用できる使える役割については、「著作の関係」機能の「名称」に一覧されています。
+「著作の関係」は、下図の通り、システムの設定メニューからリンクされています。
 
-Enju Leaf 1.3.4 現在、「著者の関係」はどこからもリンクないですが `/create_types` をEnjuが稼働するサーバのベースURLに追加するとアクセスできます（例：デモサーバーでは https://enju.next-l.jp/create_types ）。ここから新しい役割を追加することもできます。
-//<!-- issue #1522 にて-->
+image::../assets/images/1.4/operation-configuration-create_types.png[システムの設定画面における「著作の関係」画面へのリンク]
+
+image::../assets/images/1.4/operation-create_types-list.png[「著作の関係」の一覧例]
 ====
 
 [[content_type]]

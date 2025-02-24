@@ -65,7 +65,35 @@ $ docker compose up -d
 [[setup-mail-server]]
 ==== メールサーバーの設定
 
-（準備中です。）
+パスワードの再発行や資料予約通知などのメール送信機能を使うために必要です。
+
+config/environments/production.rb を以下のように変更します。
+[source]
+----
+Rails.application.configure do
+  # 中略
+
+  # hostオプションはEnjuを動作させているホストのホスト名を指定
+  config.action_mailer.default_url_options = {host: 'enju.example.jp'}
+
+  # SMTPサーバの設定
+  # address, port, domain, user_name, passwordなどを変更してください
+  # 不要な設定はコメントアウトできます。設定例は以下も参照してください
+  # https://railsguides.jp/action_mailer_basics.html#gmail%E7%94%A8%E3%81%AEaction-mailer%E8%A8%AD%E5%AE%9A
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'yoursmtpserver.example.jp',
+    port: 25,
+    domain: 'example.jp',
+    user_name: 'smtpusername',
+    password: 'smtppassword',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    open_timeout: 5,
+    read_timeout: 5
+  }
+end
+----
 
 include::enju_install_vm_toc.adoc[]
 

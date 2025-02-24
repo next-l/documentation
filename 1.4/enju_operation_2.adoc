@@ -187,11 +187,11 @@ _includes/enju_read_message.md と enju_read_message_admin.md
 
 の内容を編集してください 
 {:/comment}
-
-include::enju_read_message.adoc[]
-
-include::enju_read_message_admin.adoc[]
 ////
+
+include::../_includes/enju_read_message.adoc[]
+
+include::../_includes/enju_read_message_admin.adoc[]
 
 ==== メッセージを削除する
 
@@ -203,8 +203,8 @@ _includes/enju_rm_message.md
 
 の内容を編集してください 
 {:/comment}
-
-include::enju_rm_message.adoc[]
 ////
+
+include::../_includes/enju_rm_message.adoc[]
 
 include::enju_operation_toc.adoc[]

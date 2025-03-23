@@ -1,10 +1,10 @@
 ---
-:layout: page 
-:group: enju_webapi
-:page-layout: page
-:title_short: 第2章 検索結果詳細を取得
-:title: 第2章 検索結果詳細を取得 - Next-L Enju Web APIマニュアル
-:version: 1.4
+layout: page
+group: enju_webapi
+page-layout: page
+title_short: 第2章 検索結果詳細を取得
+title: 第2章 検索結果詳細を取得 - Next-L Enju Web APIマニュアル
+version: 1.4
 ---
 
 :toc: macro

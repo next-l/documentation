@@ -1,11 +1,11 @@
 ---
-:doctype: book
-:layout: page 
-:group: enju_webapi
-:page-layout: page
-:title_short: 第4章 外部システムから書誌情報にリンクする (OpenURL)
-:title: 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
-:version: 1.4
+doctype: book
+layout: page
+group: enju_webapi
+page-layout: page
+title_short: 第4章 外部システムから書誌情報にリンクする (OpenURL)
+title: 第4章 外部システムから書誌情報にリンクする (OpenURL) - Next-L Enju Web APIマニュアル
+version: 1.4
 ---
 
 :toc: macro

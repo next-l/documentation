@@ -136,7 +136,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 | height|高さ（cm）||
 | width|幅（cm）||
 | depth|奥行き（cm）||
-| manifestation_price|販売価格|少なくともEnju Leaf 1.3.4～1.3.6は「price」（修正予定あり）|
+| manifestation_price|販売価格|Enju Leaf 1.3系までは「price」でした。1.4系からはmanifestation_priceに変更しました|
 | access_address|アクセスアドレス||
 | manifestation_required_role|書誌情報の参照に必要な権限||
 | abstract|内容細目|Enju Leaf 1.3.6より出力|

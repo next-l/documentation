@@ -55,22 +55,14 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 
 [[source,tsv]]
 ----
- manifestation_id	original_title	title_alternative	title_transcription	statement_of_responsibility	serial	manifestation_identifier	creator	contributor	publisher	pub_date	year_of_publication	publication_place	manifestation_created_at	manifestation_updated_at	carrier_type	content_type	frequency	language	isbn	issn	volume_number	volume_number_string	edition	edition_string	issue_number	issue_number_string	serial_number	extent	start_page	end_page	dimensions	height	width	depth	price	access_address	manifestation_required_role	abstract	description	note	identifier:isbn	identifier:issn	identifier:jpno	identifier:doi	identifier:iss_itemno	identifier:lccn	identifier:ncid	identifier:loc_identifier	identifier:issn_l	identifier:epi	series_statement_id	series_statement_original_title	series_statement_title_subseries	series_statement_title_subseries_transcription	series_statement_title_transcription	series_statement_creator	series_statement_volume_number	series_statement_series_master	series_statement_root_manifestation_id	series_statement_manifestation_id	series_statement_position	series_statement_note	series_statement_created_at	series_statement_updated_at	manifestation_memo	manifestation:custom	subject:unknown	subject:ndlsh	subject:bsh	subject:lcsh	classification:ndc9	classification:ddc	classification:ndc8	classification:ndc10	jpno	ncid	item_id	item_identifier	binding_item_identifier	call_number	shelf	item_note	accepted_at	acquired_at	item_created_at	item_updated_at	bookstore	budget_type	item_required_role	item_price	item_memo	item:custom	use_restriction	circulation_status	checkout_type	total_checkouts
-94	メッセンジャー : 緑の森の使者	MESSENGER	メッセンジャー : ミドリ ノ モリ ノ シシャ	ロイス・ローリー [著]; 島津やよい 訳		http://iss.ndl.go.jp/books/R100000002-I025741509-00	Lowry, Lois, 1937-//島津, やよい		新評論	2014-01-01 00:00:00 +0900	2014	東京	2022-03-21 21:59:30 +0900	2022-03-21 22:05:47 +0900	volume	text	unknown	Japanese	9784794809773									228p	1	228	20cm	20			1500		Guest		人類の行く末を戦慄をもって描く近未来小説「ギヴァー」に始まる4部作の3冊目。相互扶助の平和な村に暮らす少年マティに訪れた運命の急旋回とは…。 (日本図書館協会)		9784794809773		22464008		R100000002-I025741509-00																										933.7				22464008		75	2011		933.7|ロ|1	tachibana_default				2022-03-21 22:00:58 +0900	2022-03-21 22:05:47 +0900			Guest				Limited Circulation, Normal Loan Period	Available On Shelf	book	0
+manifestation_id	original_title	title_alternative	title_transcription	statement_of_responsibility	serial	manifestation_identifier	creator	contributor	publisher	pub_date	date_of_publication	year_of_publication	publication_place	manifestation_created_at	manifestation_updated_at	carrier_type	content_type	frequency	language	isbn	issn	volume_number	volume_number_string	edition	edition_string	issue_number	issue_number_string	serial_number	extent	start_page	end_page	dimensions	height	width	depth	manifestation_price	access_address	manifestation_required_role	abstract	description	note	identifier:iss_itemno	identifier:isdn	identifier:loc_identifier	identifier:cho	identifier:jan	identifier:issn_l	identifier:old_syozou	identifier:ndl_bib_id	identifier:ris502	series_statement_id	series_statement_original_title	series_statement_title_subseries	series_statement_title_subseries_transcription	series_statement_title_transcription	series_statement_creator	series_statement_volume_number	series_statement_series_master	series_statement_root_manifestation_id	series_statement_manifestation_id	series_statement_position	series_statement_note	series_statement_created_at	series_statement_updated_at	memo	manifestation:sokubaikai	manifestation:fund	manifestation:marcno	subject:unknown	subject:ndlsh	subject:bsh	subject:lcsh	subject:sokubaikai	classification:ndc9	classification:ddc	classification:ndc8	classification:ndc10	classification:sokubaikai	classification:org	doi	jpno	ncid	lccn	iss_itemno	item_id	item_identifier	binding_item_identifier	call_number	library	shelf	item_note	accepted_at	acquired_at	item_created_at	item_updated_at	bookstore	budget_type	item_required_role	item_price	memo	item:old_syozou_no	use_restriction	circulation_status	checkout_type	total_checkouts
+83	メッセンジャー : 緑の森の使者	MESSENGER	メッセンジャー : ミドリ ノ モリ ノ シシャ	ロイス・ローリー [著]; 島津やよい 訳		http://iss.ndl.go.jp/books/R100000002-I025741509-00	//	""	""	2014	2014-01-01 00:00:00 +0900	2014	東京	2022-11-15 20:29:35 +0900	2025-01-19 05:43:24 +0900	volume	text	unknown	Japanese	9784794809773	""								228p	1	228	20cm	20			1500		Guest		人類の行く末を戦慄をもって描く近未来小説「ギヴァー」に始まる4部作の3冊目。相互扶助の平和な村に暮らす少年マティに訪れた運命の急旋回とは…。 (日本図書館協会)		R100000002-I025741509-00	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""	""					""	""	""	""	""	933.7	""	""	""	""	""		22464008			R100000002-I025741509-00
 ----
-
-* 注: Enju Leaf 1.3.6のTSVです。
 
 [[bib-tsv-export]]
 ==== 書誌と所蔵のTSVの項目
 
-次の項目が入っています(Enju Leaf 1.3.6)。
-
-////
-全件エクスポート（Librarian権限以上のみ）、
-検索結果一覧エクスポート、検索結果詳細エクスポートの出力項目は
-1.2.0ではところ共通です。 
-////
+次の項目が入っています。
 
 [.table.table-bordered.table-condensed.table-striped,cols="1m,1,3a,1"]
 |===
@@ -191,7 +183,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 | classification:ndc10|分類（NDC10版）||
 | jpno|JPNO||
 | ncid|NCID|※入力データによっては出力されないこともあります。|
-| item_id|所蔵データID(自動付与）||
+| item_id|所蔵データID（自動付与）||
 | item_identifier|所蔵情報ID||
 | binding_item_identifier|製本後の所蔵情報ID||
 | call_number|請求記号||
@@ -238,7 +230,7 @@ Enju は検索結果一覧を好みのフォーマットで取得する機能が
 +
 にします
 +
-※ 検索結果画面の右メニューの[RDF/XML]リンクをクリックした先のURLと同様です(詳細：xref:enju_user_1.adoc#bib-rdf-xml[利用者マニュアル「RDF/XML 形式で書き出し（一覧）」]）。
+※ 検索結果画面の右メニューの[RDF/XML]リンクをクリックした先のURLと同様です（詳細：xref:enju_user_1.adoc#bib-rdf-xml[利用者マニュアル「RDF/XML 形式で書き出し（一覧）」]）。
 +
 . この検索結果画面がRDF/XML形式で表示されます。 
 

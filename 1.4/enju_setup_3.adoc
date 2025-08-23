@@ -538,12 +538,32 @@ image::../assets/images/1.1/image_initial_041.png[新規書店の作成]
 予約を受け付けた時や、書誌のエクスポートが完了したときなどに、
 システムから送られてくるメッセージの定型文を変更できます。
 
-==== 設定項目
+これらの定型文は、以下のシステムフォルダにある各テキストファイルの内容をそのまま使います。
+編集したあとに、システム再起動すると、新しいメッセージテンプレートが有効になります。
 
-* 状態：メッセージの内容を示す状態を入力します。
-* 言語：▼をクリックし，リストから選択します。
-* タイトル：メッセージを表示するときのタイトルを入力します。
-* 本文：メッセージの本文を入力します。
+* 貸出情報: app/views/checkout_mailer/
+** due_date.ja.text.erb: 資料の貸出期限のリマインドメッセージ
+** due_date.en.text.erb: （上記の英語版）
+** overdue.ja.text.erb: 資料の貸出期限切れ時のメッセージ
+** overdue.en.text.erb: （上記の英語版）
+* 予約情報: app/views/reserve_mailer
+** accepted.text.erb: 資料の予約受け付け時のメッセージ
+** canceled.text.erb: 資料の予約キャンセル時のメッセージ
+** expired.text.erb: 資料の予約期限切れの際のメッセージ
+** postponed.text.erb: 資料の予約期限延長の際のメッセージ
+** retained.text.erb: 予約資料を確保した際のメッセージ
+
+* 資料や利用者情報、催し物等のインポートとエクスポート：
+** 資料のインポート: app/views/resource_import_mailer/
+** 資料のエクスポート: app/views/resource_export_mailer/
+** 利用者のインポート: app/views/user_import_mailer/
+** 催しもののインポート: app/views/event_import_mailer/
+** 催しもののエクスポート: app/views/event_export_mailer/
+
+* 統計情報の出力:
+** 資料別貸出統計: app/views/manifestation_checkout_stat_mailer/
+** 利用者別貸出統計: app/views/user_checkout_stat_mailer/
+** 利用者別予約統計: app/views/user_reserve_stat_mailer/
 
 [NOTE]
 ====
@@ -552,26 +572,17 @@ image::../assets/images/1.1/image_initial_041.png[新規書店の作成]
 
 ==== 設定方法
 
-. ［図書館の管理］メニューから［システムの設定］を選択します。  
+1. システムフォルダ（enju_leaf）内にある該当のメッセージテンプレートファイルをエディタツールで開きます。
 +
-image::../assets/images/1.1/image_system_setup.png[システムの設定]
-
-. ［メッセージテンプレート］をクリックします。  
+image::../assets/images/1.4/mailer_template.png[メッセージテンプレートの編集]
 +
-image::../assets/images/1.1/image_initial_042_0.png[メッセージテンプレートの設定]
-
-. 設定したい項目の［編集］をクリックします。  
+. 編集したい内容をエディタで修正を加えて保存します。
 +
-image::../assets/images/1.1/image_initial_042.png[メッセージテンプレートの編集]
+image::../assets/images/1.4/mailer_template_edit.png[メッセージテンプレートの編集]
 +
-[NOTE]
-====
-一覧表示の表示順序を変更するには，表の1列目に表示されている↑または↓をクリックして行を入れ替えます。
-====
-
-. 設定項目に必要事項を入力し、［更新する］ボタンをクリックして，設定内容を更新します。  
+※上記では例として、資料の貸出期限のリマインドメッセージに利用者の利用者番号を表示するような修正を加えています。
 +
-image::../assets/images/1.1/image_initial_043.png[メッセージテンプレートの更新]
+. システムを再起動して、変更内容が反映されることを確認します（詳細：xref:enju_install_vm_4.adoc#enjuの再起動[Enjuの再起動の方法（インストールマニュアル）]）。
 
 === 検索エンジンを設定する
 

@@ -237,6 +237,8 @@ manifestation_id	original_title	title_alternative	title_transcription	statement_
 
 ※現在、表示している検索結果のみを表示します。他の画面の検索結果は含みません。検索結果の表示件数を増やすなどするとよいと思います。
 
+データ項目は、xref:bib-tsv-export[TSV形式の出力項目]と同一です。
+
 [[example-bib-xlsx]]
 ==== 書誌と所蔵のExcelの例
 

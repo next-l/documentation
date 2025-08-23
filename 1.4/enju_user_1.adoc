@@ -12,7 +12,6 @@ toc::[]
 
 == 資料を検索する
 
-
 Enjuを利用した資料の検索方法には、演算子やフィールド名を直接入力して検索する方法と、該当のテキストボックスに検索語入力する方法があります。
 
 * キーワードで検索する
@@ -153,6 +152,41 @@ image::../assets/images/1.1/search_result_rss_1.png[検索結果のフィード]
 image::../assets/images/1.1/search_result_rss_2.png[RSS]
 
 === 検索結果一覧の書き出し
+
+[[bib-xlsx]]
+==== XLSX 形式で書き出し（一覧）
+
+. 書き出しをしたい検索結果画面を表示させます。[XLSX]リンクをクリックします
++
+image::../assets/images/1.4/search_result_xlsx.png[XLSX形式で書き出し]
++
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
++
+. TSV 形式のファイルがダウンロードできます。
+
+* 出力されるTSVの例：xref:enju_webapi_1.adoc#example-bib-xlsx[「書誌と所蔵のXLSXの例」（Web APIマニュアル）]
+* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-tsv-export[「書誌と所蔵のTSVの項目」（Web APIマニュアル）と同一]
+
+[[bib-tsv]]
+==== TSV 形式で書き出し（一覧）
+
+. 書き出しをしたい検索結果画面を表示させます。[TSV]リンクをクリックします
++
+image::../assets/images/1.2/search_result_tsv_1.png[TSV]
++
+[NOTE]
+====
+現在、画面でみえている結果の分だけが書き出しができます。
+====
++
+. TSV 形式のファイルがダウンロードできます。
+
+* 出力されるTSVの例：xref:enju_webapi_1.adoc#example-bib-tsv[「書誌と所蔵のTSVの例」（Web APIマニュアル）]
+* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-tsv-export[「書誌と所蔵のTSVの項目」（Web APIマニュアル）]
+
 
 [[bib-rdf-xml]]
 ==== RDF/XML 形式で書き出し（一覧）
@@ -319,23 +353,6 @@ image::../assets/images/1.1/search_result_mods_1.png[MODS]
 </recordInfo>
 </modsCollection>
 ----
-
-[[bib-tsv]]
-==== TSV 形式で書き出し（一覧）
-
-. 書き出しをしたい検索結果画面を表示させます。[TSV]リンクをクリックします
-+
-image::../assets/images/1.2/search_result_tsv_1.png[TSV]
-+
-[NOTE]
-====
-現在、画面でみえている結果の分だけが書き出しができます。
-====
-+
-. TSV 形式のファイルがダウンロードできます。
-
-* 出力されるTSVの例：xref:enju_webapi_1.adoc#example-bib-tsv[「書誌と所蔵のTSVの例」（Web APIマニュアル）]
-* 出力される項目の詳細：xref:enju_webapi_1.adoc#bib-tsv-export[「書誌と所蔵のTSVの項目」（Web APIマニュアル）]
 
 [[bib-json]]
 ==== JSON 形式で書き出し（一覧）

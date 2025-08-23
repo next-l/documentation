@@ -580,6 +580,8 @@ image::../assets/images/1.1/image_initial_043.png[メッセージテンプレー
 
 image::../assets/images/1.1/image_initial_044_00.png[0件ヒットと検索エンジン]
 
+※Enjuでは、標準インストール時に「NDL Search」を検索エンジンに追加しています。
+
 ==== 設定項目
 
 * 名前：検索エンジンの名称を入力します。

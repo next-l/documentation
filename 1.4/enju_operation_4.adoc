@@ -1609,6 +1609,39 @@ image::../assets/images/1.1/image_operation_142_3.png[削除]
 {:/comment}
 ////
 
+[[add-attachment]]
+=== 添付ファイルを登録する
+
+Enjuでは、資料ごとの本文テキストやスキャン画像など、別ファイルを登録して添付ファイルとすることができます。
+
+[NOTE]
+====
+添付ファイルは、各資料ごとに一つだけ付けることができ、複数のファイルを添付することはできませんので、ご注意ください。
+====
+
+==== 添付ファイルの登録
+
+. ファイルを添付したい資料の書誌情報を開き、その詳細画面から編集画面を開きます。
++
+::image:../assets/images/1.4/attachment_edit.png
++
+. 編集画面フォームの中ほどにある「ファイル」項目から「ファイルを選択」をクリックしてファイルを追加します。
++
+::image:../assets/images/1.4/attachment_file_add.png
++
+. ファイル選択時には、ファイル選択ウィンドウから添付したいローカルファイルを選びます。
++
+::image:../assets/images/1.4/attachment_file_select.png
++
+. 書誌編集フォームの添付ファイル項目にて、選択されたローカルファイルが追加されていることを確認し、フォーム末尾の「更新する」をクリックします。
++
+::image:../assets/images/1.4/attachment_file_added.png
++
+. 更新された書誌詳細画面にて、添付ファイルへのリンクが付いていることを確認します。
++
+::image:../assets/images/1.4/attachment_file_manifestation.png
+
+
 [[add-image]]
 === 画像を登録する
 

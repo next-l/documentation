@@ -1654,6 +1654,26 @@ image::../assets/images/1.1/image_operation_151_3.png[画像ファイルを作�
 +
 image::../assets/images/1.1/image_operation_151_4.png[画像ファイルを追加した資料の表示]
 
+==== 画像の削除
+
+登録した画像が不要になった場合など、書誌情報の編集画面から削除することができます。
+
+. 登録済みで削除したい画像がつけられた書誌情報の編集画面を開き、右メニューのなかの「画像ファイルの一覧」をクリックします。
++
+image::../assets/images/1.4/image_operation_edit.png[書誌情報編集画面の中の「画像ファイルの一覧」リンク]
++
+. 当該書誌情報に関連付けられた画像ファイルの一覧が出るので、そのなかから、削除したい画像の「削除」リンクをクリックします。
++
+image::../assets/images/1.4/image_operation_delete.png[画像ファイルの一覧画面]
++
+. 本当に削除してもよいか確認する確認画面が出るので、削除してもよい場合は「OK」ボタンをクリックします。
++
+image::../assets/images/1.4/image_operation_delete_confirm.png[画像ファイルの削除確認画面]
++
+. 削除に成功すると、削除しましたというメッセージが出ることを確認します。
++
+image::../assets/images/1.4/image_operation_deleted.png[画像ファイルの削除に成功しました]
+
 [[list-images]]
 ==== 画像の一覧表示
 

@@ -1641,6 +1641,24 @@ image::../assets/images/1.4/attachment_file_added.png[添付ファイルの追�
 +
 image::../assets/images/1.4/attachment_file_manifestation.png[添付ファイルへのリンクを確認する]
 
+==== 添付ファイルの削除
+
+. ファイルを添付したい資料の書誌情報を開き、その詳細画面から編集画面を開きます。
++
+image::../assets/images/1.4/attachment_edit.png[書誌情報の編集画面を開く]
++
+. 編集画面フォームの中ほどにある「ファイル」項目の直下にある「ファイルを削除」項目から、削除したいファイルの「削除」チェックボックスをクリックして選択します。
++
+image::../assets/images/1.4/attachment_file_delete.png[削除したい添付ファイルを選択する]
++
+. 正しく選択されていることを確認して、書誌編集フォーム末尾の「資料を更新する」をクリックします。
++
+image::../assets/images/1.4/attachment_file_deleted.png[添付ファイルの削除を確認する]
++
+. 更新された書誌詳細画面にて、添付ファイルへのリンクが削除されていることを確認します。
++
+image::../assets/images/1.4/attachment_file_manifestation_deleted.png[添付ファイルへのリンクが削除されていることを確認する]
+
 [[add-image]]
 === 画像を登録する
 

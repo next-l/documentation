@@ -149,7 +149,7 @@ image::../assets/images/1.4/search_result_rss_1.png[検索結果のフィード]
 
 . 最近登録された10件のRSSが表示されます。
 +
-image::../assets/images/1.4/search_result_rss_2.png[RSS形式の出力結果]
+image::../assets/images/1.4/search_result_rss_2.png[RSS形式の出力結果例]
 
 === 検索結果一覧の書き出し
 

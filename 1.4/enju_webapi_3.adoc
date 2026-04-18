@@ -74,4 +74,30 @@ http://localhost:8080/oai?verb=ListRecords&metadataPrefix=junii2
 http://localhost:8080/oai?verb=ListRecords&metadataPrefix=dcndl&from=2016-04-01&until=2016-06-30
 ----
 
+[[resourcesync]]
+== 書誌情報をまとめて取得する (ResourceSync)
+
+EnjuはOAI-PMHのほか、ResourceSyncによる書誌情報のまとめて取得にも対応しています。
+
+[NOTE]
+====
+EnjuにおけるResourceSync APIの利用は、Enju管理者が出力設定を有効にしている場合のみ利用可能です。ResourceSyncの設定方法は xref:enju_setup_7.adoc#resourcesync-setup[ResourceSyncの設定方法（初期設定マニュアル）] をご覧ください。
+====
+
+ResourceSyncの仕様は https://www.openarchives.org/rs/1.1/resourcesync[ResourceSync Framework Specification] をご覧ください。
+
+=== 書誌情報を取得する
+
+ResourceSyncで書誌情報を取得するには、全体の書誌情報提供機能の一覧 (capability list) と書誌情報リスト
+ (resource list) の2種類のURLにアクセスする必要があります。
+
+全体の書誌情報提供機能の一覧 (capability list) のURLは以下のようになります。
+
+http://localhost:8080/capabilitylist.xml
+
+書誌情報リスト (resource list) のURLは以下のようになります。
+
+http://localhost:8080/resourcelist_index.xml
+
+
 include::enju_webapi_toc.adoc[]

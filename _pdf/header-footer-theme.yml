@@ -1,0 +1,8 @@
+header:
+    height: 12mm
+    recto:
+        left:
+            content: '{document-title} Version {revnumber}'
+    verso:
+        right:
+            content: '{chapter-title}'

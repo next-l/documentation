@@ -1,0 +1,4 @@
+extends:
+  - default
+  - cjk
+  - header-footer

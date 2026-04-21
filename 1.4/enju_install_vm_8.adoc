@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 第8章 Enjuのアップデート及び停止・起動 - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第8章 Enjuのアップデート及び停止・起動
+title: 第9章 データのバックアップ - Next-L Enju インストールマニュアル（Docker編）
+title_short: 第9章 データのバックアップとリストア
 group: enju_install_vm
 version: 1.4
 ---
@@ -11,41 +11,10 @@ version: 1.4
 
 toc::[]
 
-== Enjuのアップデート及び停止・起動
+== データのバックアップとリストア
 
-Enjuは，以下の手順で，Enjuのソースコードが公開されているGitHubから変更されたファイルを取り込み最新版にすることができます。
+https://github.com/next-l/enju_leaf/wiki/Backup を参照してください。
 
-=== Enjuの停止
-
-以下のコマンドを入力します。
-```
-$ docker compose down
-```
-
-=== 最新ソースコードの取り込み
-
-. 以下のコマンドを入力します。
-+
-```
-$ cd enju_leaf
-```
-
-. 以下のコマンドを入力します。
-+
-```
-$ git pull
-$ docker compose pull
-$ docker compose build
-$ docker compose run --rm web rake db:migrate
-$ docker compose run --rm web rake assets:precompile
-```
-
-=== Enjuを（再）起動
-
-以下のコマンドを入力します。
-```
-$ docker compose up -d
-```
+// {::comment}別ファイル名候補：backup.md{:/comment}
 
 include::enju_install_vm_toc.adoc[]
-

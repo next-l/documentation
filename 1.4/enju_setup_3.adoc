@@ -118,7 +118,7 @@ image::../assets/images/1.3/image_initial_016.png[設定項目の入力]
 [NOTE]
 ====
 * [ログイン画面でのメッセージ]と[フッターのメッセージ]はHTMLやmarkdownを使って、文字装飾したり、リンクをつけたり、画像を表示させたりすることができます。
-* 画像をEnjuに置く方法はxref:enju_install_vm_10.adoc#add-image-to-home[インストールマニュアル「トップ画面やヘルプなどに表示する画像を置く」]を参照してください。
+* 画像をEnjuに置く方法はxref:enju_install_vm_9.adoc#add-image-to-home[インストールマニュアル「トップ画面やヘルプなどに表示する画像を置く」]を参照してください。
 * 画像を表示させるmarkdown記述の例: ``![ロゴ](http://localhost:8080/assets/logo.html)``
 * リンクのmarkdown記述の例: ``[Porject NextL](https://www.next-l.jp/)``
 ====

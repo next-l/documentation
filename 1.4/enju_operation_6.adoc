@@ -383,9 +383,9 @@ image::../assets/images/1.1/image_operation_200.png[TSV]
 【Column】TVS形式のデータファイル
 
 TSV形式のデータファイル（TSVファイル）とは、
-      項目をタブで区切ったテキストファイルです。
-      1行目にそれぞれの項目に関わるフィールド名が記入されています。
-      フィールド名とその意味については次の通りです。
+項目をタブで区切ったテキストファイルです。
+1行目にそれぞれの項目に関わるフィールド名が記入されています。
+フィールド名とその意味については次の通りです。
 
 [.table.table-bordered.table-condensed.table-striped,cols="1,1,3"]
 .予約一覧のエクスポートTSVの項目
@@ -460,7 +460,6 @@ image::../assets/images/1.3/image_operation_200_tsv.png[TSVデータ]
 【Column】予約の一覧のRSSの例
 
 image::../assets/images/1.1/image_operation_200_rss.png[RSSデータ]
-
 ====
 
 ==== 予約資料を取置済みにする

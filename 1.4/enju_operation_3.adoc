@@ -169,7 +169,7 @@ image::../assets/images/1.1/image_operation_034.png[仮パスワードが発行]
 
 ==== TSVファイルの作成
 
-TSVファイルとは、項目をタブで区切ったテキストファイルです。サンプルファイルは、 https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として " " で囲みます。
+TSVファイルとは、項目をタブで区切ったテキストファイルです。サンプルファイルは、 https://github.com/next-l/enju_leaf/blob/1.1/examples/user_import_file_sample.tsv を参照してください。Enjuで利用するTSVファイルでは、1行目にそれぞれの項目に関わるフィールド名を指定します。フィールド名および値は原則として "" で囲みます。
 フィールド名とその意味については次の通りです。
 
 ////

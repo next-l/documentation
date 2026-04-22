@@ -2,28 +2,83 @@
 
 require "tempfile"
 require "fileutils"
+require "open3"
 
-if $0 == __FILE__
-  d = File.dirname(__FILE__)
-  files = Dir.glob(File.join(d, "..", "1.4/enju_*.adoc"))
-  FileUtils.cp(files, d)
-  header_regex = /\A---.*?---/m
-  toc_regex = /^include::.*_toc.*$/
-  xref_regex = /(xref:enju_\w+)_\d+\.adoc/
-  Dir.glob(File.join(d, "*.adoc")).each do |file|
-    #STDERR.puts file
-    cont = open(file).read
-    content_adoc = cont.sub(header_regex, "").strip
-    content_adoc = content_adoc.gsub(toc_regex, "")
-    content_adoc = content_adoc.gsub(xref_regex, '\1_all.adoc')
-    open(file, "w"){|io| io.print(content_adoc) }
+HEADER_REGEX = /\A---.*?---/m
+TOC_REGEX    = /^include::.*_toc.*$/
+XREF_REGEX   = /(xref:enju_\w+)_\d+\.adoc/
+IMAGE_REGEX   = /image(::?)\.\.\/assets\/images\//
+INCLUDE_REGEX = /^include::..\/_includes/
+
+def usage!
+  abort "Usage: #{File.basename($PROGRAM_NAME)} 1.4/enju_manual_all.adoc"
+end
+
+def normalize_content(content)
+  content
+    .sub(HEADER_REGEX, "")
+    .gsub(TOC_REGEX, "")
+    .gsub(XREF_REGEX, '\1_all.adoc')
+    .gsub(IMAGE_REGEX, 'image\1../../assets/images/')
+    .gsub(INCLUDE_REGEX, "include::../../_includes/")
+    .strip
+end
+
+def output_pdf_path(input_file)
+  input_file.sub(/\.adoc\z/, ".pdf")
+end
+
+def asciidoctor_command(input_file, output_file, base_dir)
+  [
+    "asciidoctor-pdf",
+    "-v",
+    "-t",
+    "-a", "compress",
+    "-a", "scripts=cjk",
+    "-a", "pdf-theme=base",
+    "-a", "pdf-themesdir=#{File.join(base_dir, "..")}",
+    "-a", "pdf-fontsdir=#{File.join(base_dir, '..', 'fonts')}",
+    "-a", "imagesdir=../../assets/images",
+#    "-r", "asciidoctor/pdf/nogmagick",
+    "-o", output_file,
+    input_file
+  ]
+end
+
+def build_pdf(input_file, output_file, base_dir)
+  stdout, stderr, status = Open3.capture3(*asciidoctor_command(input_file, output_file, base_dir))
+  warn stdout unless stdout.empty?
+  warn stderr unless stderr.empty?
+  raise "PDF build failed: #{output_file}" unless status.success?
+end
+
+if File.expand_path($0) == File.expand_path(__FILE__)
+  input_files = ARGV
+  if input_files.empty?
+    usage!
   end
-  %w[ enju_install_vm_all.adoc
-      enju_setup_all.adoc
-      enju_operation_all.adoc
-      enju_user_all.adoc
-      enju_webapi_all.adoc ].each do |file|
-    STDERR.puts file
-    system("asciidoctor-pdf -v -a scripts=cjk -a pdf-theme=base -a pdf-themesdir=#{d} -a pdf-fontsdir=#{d}/fonts -r asciidoctor/pdf/nogmagick #{File.join(d, file)}")
+
+  input_files.each do |input_file|
+    base_name = File.basename(input_file, "_all.adoc")
+    base_dir = File.dirname(input_file)
+    version_dir = File.basename(base_dir)
+    output_pdf = output_pdf_path(input_file)
+    warn "input:  #{input_file}"
+    warn "output: #{output_pdf}"
+    #warn "base_dir: #{base_dir}"
+    #warn "version: #{version_dir}"
+
+    FileUtils.cp(File.join(base_dir, "..", "..", version_dir, "enju_introduction.adoc"), base_dir)
+
+    Dir.glob(File.join(base_dir,"..", "..", version_dir, "#{base_name}*.adoc")).each do |file|
+      file = File.expand_path(file)
+      output_file = File.expand_path(File.join(base_dir, File.basename(file)))
+      next if output_file == file
+      content = File.read(file)
+      normalized = normalize_content(content)
+      #warn "cp #{file} #{output_file}"
+      File.open(output_file, "w"){|io| io.print(normalized) }
+    end
+    build_pdf(input_file, output_pdf, base_dir)
   end
 end

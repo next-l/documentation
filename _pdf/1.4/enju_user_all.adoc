@@ -6,7 +6,7 @@
 :sectnums:
 :author: Project Next-L
 :revnumber: 1.4.x
-:title-logo-image: image:../assets/images/logo.png[]
+:title-logo-image: image:../../assets/images/logo.png[]
 
 include::enju_user.adoc[]
 

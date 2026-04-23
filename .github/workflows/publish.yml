@@ -24,7 +24,7 @@ jobs:
         with:
           ruby-version: '3.4'
           bundler-cache: true
-          cache-version: 0
+          cache-version: 1
       - name: Generate Site
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:

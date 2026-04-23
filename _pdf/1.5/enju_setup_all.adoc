@@ -1,0 +1,21 @@
+= Enju運用マニュアル
+:doctype: book
+:toc:
+:toclevels: 3
+// :toc-placement!:
+:sectnums:
+:author: Project Next-L
+:revnumber: 1.5.x
+:title-logo-image: image:../../assets/images/logo.png[]
+:xrefstyle: full
+:!section-refsig:
+
+include::enju_setup.adoc[]
+
+include::enju_setup_1.adoc[]
+include::enju_setup_2.adoc[]
+include::enju_setup_3.adoc[]
+include::enju_setup_4.adoc[]
+include::enju_setup_5.adoc[]
+include::enju_setup_6.adoc[]
+include::enju_setup_7.adoc[]

@@ -1,0 +1,145 @@
+---
+layout: page
+title: 第4章 Enjuのインストール - Next-L Enju インストールマニュアル（Docker編）
+title_short: 第4章 Enjuのインストール
+group: enju_install_vm
+version: 1.5
+---
+
+:toc: macro
+
+
+toc::[]
+
+[[enju-install]]
+== Enjuのインストール
+
+=== Enjuの入手
+
+Enjuのインストールに必要なパッケージは，すべてネットワーク上で提供されます。
+
+以下のコマンドを入力します。
+[source]
+----
+$ git clone https://github.com/next-l/enju_leaf.git -b 1.5
+----
+
+=== コンテナと初期設定ファイルの作成
+
+以下のコマンドで、コンテナと初期設定ファイルを作成します。
+
+[source]
+----
+$ cd enju_leaf
+$ cp .env.template .env
+$ docker compose build
+$ echo SECRET_KEY_BASE=`docker compose run --rm web bin/rake secret` >> .env
+----
+
+=== Dockerの起動
+
+Dockerを起動します。
+
+[source]
+----
+$ docker compose up -d
+----
+
+=== データベースの作成・初期データの投入
+
+以下のコマンドでデータベースを作成します。
+
+[source]
+----
+$ docker compose run --rm web bin/rake db:create
+$ docker compose run --rm web bin/rake db:migrate
+$ docker compose run --rm web bin/rake db:seed
+----
+
+CSS・JavaScriptのビルドと、インデックスの更新を行った後、アプリケーションを停止します。
+
+[source]
+----
+$ docker compose run --rm web bin/rake assets:precompile
+$ docker compose run --rm web bin/rake sunspot:reindex
+$ docker compose down
+----
+
+=== Enjuの起動
+
+Enjuの起動や停止は、enju_leafディレクトリで実行する必要があります。まだenju_leafディレクトリに移動していない場合、以下のコマンドで移動します。
+
+[source]
+----
+$ cd enju_leaf
+----
+
+以下のコマンドでEnjuを起動します。
+
+[source]
+----
+$ docker compose up -d
+----
+
+Windows上でWebブラウザを起動し、アドレス欄に http://localhost:8080 と入力してください（ブラウザによっては localhost:8080 でも可）。
+
+これで，Enjuのサーバに対してアクセスすることが可能になりました。
+
+=== Enjuの停止
+
+Enjuを終了(シャットダウン)させる場合には，正しい手順でのシャットダウンを行う必要があり，Dockerをいきなり終了させたり，PCの電源ボタンを押すなどして強制終了させると，使用中のデータベースファイルが壊れて，再起動できなくなるなどの問題が発生する可能性があります。
+
+以下のコマンドを入力します。
+
+[source]
+----
+$ docker compose down
+----
+
+Enjuをシャットダウンするタイミングは，図書館の運用方針で決定することができます。起動したら基本的にはずっと動作させ続けていても問題ありません。毎日Enjuコンテナをシャットダウンする，必要な時だけ稼働させるなど，ポリシーに応じた運用をすることができます。
+
+==== Enjuの再起動
+
+[source]
+----
+$ docker compose down
+$ docker compose up -d
+----
+
+これで，再度Enjuが利用できるようになりました。
+
+[[setup-mail-server]]
+==== メールサーバーの設定
+
+パスワードの再発行や資料予約通知などのメール送信機能を使うために必要です。
+
+config/environments/production.rb を以下のように変更します。
+[source]
+----
+Rails.application.configure do
+  # 中略
+
+  # hostオプションはEnjuを動作させているホストのホスト名を指定
+  config.action_mailer.default_url_options = {host: 'enju.example.jp'}
+
+  # SMTPサーバの設定
+  # address, port, domain, user_name, passwordなどを変更してください
+  # 不要な設定はコメントアウトできます。設定例は以下も参照してください
+  # https://railsguides.jp/action_mailer_basics.html#gmail%E7%94%A8%E3%81%AEaction-mailer%E8%A8%AD%E5%AE%9A
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'yoursmtpserver.example.jp',
+    port: 25,
+    domain: 'example.jp',
+    user_name: 'smtpusername',
+    password: 'smtppassword',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    open_timeout: 5,
+    read_timeout: 5
+  }
+end
+----
+
+include::enju_install_vm_toc.adoc[]
+

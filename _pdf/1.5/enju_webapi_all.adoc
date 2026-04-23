@@ -1,0 +1,16 @@
+= Enju Web APIマニュアル
+:doctype: book
+:toc:
+:toclevels: 3
+// :toc-placement!:
+:sectnums:
+:author: Project Next-L
+:revnumber: 1.5.x
+:title-logo-image: image:../../assets/images/logo.png[]
+
+include::enju_webapi.adoc[]
+
+include::enju_webapi_1.adoc[]
+include::enju_webapi_2.adoc[]
+include::enju_webapi_3.adoc[]
+include::enju_webapi_4.adoc[]

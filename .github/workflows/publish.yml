@@ -22,7 +22,7 @@ jobs:
       - name: Install Ruby and Jekyll
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.4'
           bundler-cache: true
           cache-version: 0
       - name: Generate Site
@@ -33,6 +33,8 @@ jobs:
         run: |
           bundle exec _pdf/convert-adoc2pdf.rb _pdf/1.4/enju_*_all.adoc
           mv _pdf/1.4/enju_*_all.pdf _site/1.4/
+          bundle exec _pdf/convert-adoc2pdf.rb _pdf/1.5/enju_*_all.adoc
+          mv _pdf/1.5/enju_*_all.pdf _site/1.5/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   deploy:

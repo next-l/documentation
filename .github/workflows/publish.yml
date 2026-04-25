@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Install GraphicMagick
         run: |
           sudo apt update
@@ -40,7 +40,7 @@ jobs:
           bundle exec _pdf/convert-adoc2pdf.rb _pdf/1.5/enju_*_all.adoc
           mv _pdf/1.5/enju_*_all.pdf _site/1.5/
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./_site
   deploy:

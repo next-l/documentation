@@ -1,5 +1,4 @@
 // {::comment} メッセージを削除する {:/comment}
-:imagesdir: ../assets/images
 
 1. ［アカウント］の左にあるメールアイコンをクリックします。  
 +

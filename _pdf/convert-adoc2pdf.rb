@@ -3,6 +3,11 @@
 require "tempfile"
 require "fileutils"
 require "open3"
+require "digest"
+require "time"
+require "json"
+
+CACHE_FILE = ".jekyll-pdf-cache.json"
 
 HEADER_REGEX = /\A---.*?---/m
 TOC_REGEX    = /^include::.*_toc.*$/
@@ -12,6 +17,15 @@ INCLUDE_REGEX = /^include::..\/_includes/
 
 def usage!
   abort "Usage: #{File.basename($PROGRAM_NAME)} 1.4/enju_manual_all.adoc"
+end
+
+def hash_files(files)
+  Digest::SHA256.hexdigest(
+    files.select { |f| File.file?(f) }
+         .sort
+         .map { |f| "#{f}\0#{Digest::SHA256.file(f).hexdigest}" }
+         .join("\0")
+  )
 end
 
 def normalize_content(content)
@@ -28,6 +42,23 @@ def output_pdf_path(input_file)
   input_file.sub(/\.adoc\z/, ".pdf")
 end
 
+def load_cache
+  return {} unless File.exist?(CACHE_FILE)
+  begin
+    JSON.parse(File.read(CACHE_FILE))
+  rescue JSON::ParserError
+    {}
+  end
+end
+
+def save_cache(cache)
+  File.write(CACHE_FILE, JSON.pretty_generate(cache))
+end
+
+def source_files_for(input_file, base_name, base_dir, version_dir)
+  Dir.glob(File.join(base_dir, "..", "..", version_dir, "#{base_name}*.adoc"))
+end
+
 def asciidoctor_command(input_file, output_file, base_dir)
   [
     "asciidoctor-pdf",
@@ -39,6 +70,7 @@ def asciidoctor_command(input_file, output_file, base_dir)
     "-a", "pdf-themesdir=#{File.join(base_dir, "..")}",
     "-a", "pdf-fontsdir=#{File.join(base_dir, '..', 'fonts')}",
     "-a", "imagesdir=../../assets/images",
+    "-a", "includedir=../../_includes",
 #    "-r", "asciidoctor/pdf/nogmagick",
     "-o", output_file,
     input_file
@@ -58,6 +90,9 @@ if File.expand_path($0) == File.expand_path(__FILE__)
     usage!
   end
 
+  cache = load_cache
+  cache_changed = false
+
   input_files.each do |input_file|
     base_name = File.basename(input_file, "_all.adoc")
     base_dir = File.dirname(input_file)
@@ -68,9 +103,15 @@ if File.expand_path($0) == File.expand_path(__FILE__)
     #warn "base_dir: #{base_dir}"
     #warn "version: #{version_dir}"
 
-    FileUtils.cp(File.join(base_dir, "..", "..", version_dir, "enju_introduction.adoc"), base_dir)
+    source_files = source_files_for(input_file, base_name, base_dir, version_dir)
+    current_hash = hash_files(source_files)
+    cache_key = input_file
+    if File.exist?(output_pdf) and cache.dig(cache_key, "hash") == current_hash
+      warn "skip: PDF is up to date"
+      next
+    end
 
-    Dir.glob(File.join(base_dir,"..", "..", version_dir, "#{base_name}*.adoc")).each do |file|
+    source_files.each do |file|
       file = File.expand_path(file)
       output_file = File.expand_path(File.join(base_dir, File.basename(file)))
       next if output_file == file
@@ -80,5 +121,13 @@ if File.expand_path($0) == File.expand_path(__FILE__)
       File.open(output_file, "w"){|io| io.print(normalized) }
     end
     build_pdf(input_file, output_pdf, base_dir)
+
+    cache[cache_key] = {
+      "hash" => current_hash,
+      "sources_count" => source_files.count { |f| File.file?(f) },
+      "updated_at" => Time.now.utc.iso8601
+    }
+    cache_changed = true
   end
+  save_cache(cache) if cache_changed
 end

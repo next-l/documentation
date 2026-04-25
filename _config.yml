@@ -22,6 +22,8 @@ asciidoctor:
     - idseparator=_
     - source-highlighter=coderay
     - icons=font
+    - includedir=../_includes
+    - imagesdir=../assets/images
 safe: true
 
 JB:

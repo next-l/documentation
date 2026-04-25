@@ -5,7 +5,6 @@ title_short: 第1章 Enju概要
 group: enju_operation
 version: 1.4
 ---
-
-include::enju_introduction.adoc[]
+include::{includedir}/enju_introduction.adoc[]
 
 include::enju_operation_toc.adoc[]

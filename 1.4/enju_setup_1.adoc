@@ -5,8 +5,7 @@ title_short: 第1章 Enju概要
 group: enju_setup
 version: 1.4
 ---
-
-include::enju_introduction.adoc[]
+include::{includedir}/enju_introduction.adoc[]
 
 // {::comment}第1章 Enju概要{:/comment}
 

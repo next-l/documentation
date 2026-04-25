@@ -1,5 +1,4 @@
 // {::comment} 受信したメッセージを読む {:/comment}
-:imagesdir: ../assets/images
 
 1. ［アカウント］の左にあるメールアイコンをクリックします。  
 +

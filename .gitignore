@@ -1,5 +1,6 @@
 *~
-/_site/
-/.bundle/
-/.jekyll-cache/
-/Gemfile.lock
+_site/
+.bundle/
+.jekyll-cache/
+Gemfile.lock
+.jekyll-pdf-cache.json

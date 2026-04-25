@@ -642,9 +642,13 @@ CiNii Booksの登録例（検索語がflowerであれば：https://ci.nii.ac.jp/
 
 * 名前: NDL Search
 ** URL: https://ndlsearch.ndl.go.jp/
-** ベースURL: https://ndlsearch.ndl.go.jp/books
+** ベースURL: https://ndlsearch.ndl.go.jp/search
 ** HTTPメソッド: get
-** クエリパラメータ: any
+** クエリパラメータ: keyword
+** 追加のパラメータ:
+*** cs=bib
+*** f-ht=ndl
+*** display=panel
 * 名前: amazon.co.jp
 ** URL: https://www.amazon.co.jp/
 ** ベースURL: https://www.amazon.co.jp/s?

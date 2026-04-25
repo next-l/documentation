@@ -74,13 +74,13 @@ Enjuを利用するには，まずシステムにログインします。
 
 . Enjuにアクセスし，［ログイン］をクリックします。  
 +
-image::../assets/images/1.1/image_initial_001.png[Enju初期画面]
+image::1.1/image_initial_001.png[Enju初期画面]
 
 . ユーザ名とパスワードを入力し［ログイン］をクリックします。  
 +
 インストール直後の場合には，Enjuのユーザとしては 「 enjuadmin 」 もしくは 「 admin 」だけが登録されており，その初期パスワードは「 adminpassword 」です。
 +
-image::../assets/images/1.1/image_initial_002.png[Enjuにログイン]
+image::1.1/image_initial_002.png[Enjuにログイン]
 +
 [NOTE]
 ====
@@ -89,36 +89,36 @@ image::../assets/images/1.1/image_initial_002.png[Enjuにログイン]
 
 . 自分のアカウントでログインされていることを確認します。  
 +
-image:../assets/images/1.1/image_initial_003.png[Enjuログイン中]
+image:1.1/image_initial_003.png[Enjuログイン中]
 
 [[change-password]]
 ==== パスワードを変更する
 
 . ［アカウント］をクリックします。  
 +
-image:../assets/images/1.1/image_initial_070.png[Enjuアカウント]
+image:1.1/image_initial_070.png[Enjuアカウント]
 
 . 右メニューの［パスワード変更］をクリックします。  
 +
-image:../assets/images/1.1/image_initial_072.png[アカウントの編集]
+image:1.1/image_initial_072.png[アカウントの編集]
 
 . ［現在のパスワード］と「パスワード」「パスワード(確認)」を入力します。パスワードは画面には表示されません。また「パスワード」と「パスワード(確認)」は同じものを入れてください。  
 +
-image:../assets/images/1.1/image_initial_073.png[アカウントの編集]
+image:1.1/image_initial_073.png[アカウントの編集]
 
 . ［更新］ボタンを押します。  
 +
-image:../assets/images/1.1/image_initial_073_2.png[アカウントの編集]
+image:1.1/image_initial_073_2.png[アカウントの編集]
 
 ==== ログアウトする
 
 . ［ログアウト］をクリックします。
 +
-image:../assets/images/1.1/image_initial_003_2.png[Enjuログアウト]
+image:1.1/image_initial_003_2.png[Enjuログアウト]
 
 . ログアウトされたこと（［ログイン］の表示に変わったこと）を画面で確認します。
 +
-image:../assets/images/1.1/image_initial_001.png[Enjuログイン]
+image:1.1/image_initial_001.png[Enjuログイン]
 
 [NOTE]
 ====

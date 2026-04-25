@@ -25,11 +25,11 @@ toc::[]
 
 1. ［貸出と予約］メニューから［貸出履歴］を選択します。
 +
-image::../assets/images/1.1/image_user_checkouts.png[貸出履歴]
+image::1.1/image_user_checkouts.png[貸出履歴]
 +
 2. 貸出履歴が表示されます。右メニューの「予約あり」の下の「はい」をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_003.png[貸出履歴]
+image::1.1/image_user_checkouts_003.png[貸出履歴]
 +
 [NOTE]
 ====
@@ -40,61 +40,61 @@ image::../assets/images/1.1/image_user_checkouts_003.png[貸出履歴]
 +
 3. 予約がかかっている資料だけが表示されます。右メニューの[この絞り込みを解除する]をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_005.png[絞り込みを解除する]
+image::1.1/image_user_checkouts_005.png[絞り込みを解除する]
 +
 4. 絞り込みが解除され、すべての貸出履歴が表示されます。
 +
-image::../assets/images/1.1/image_user_checkouts_007.png[貸出履歴]
+image::1.1/image_user_checkouts_007.png[貸出履歴]
 
 === 貸出延長をする
 
 1. ［貸出と予約］メニューから［貸出履歴］を選択します。
 +
-image::../assets/images/1.1/image_user_checkouts.png[貸出履歴]
+image::1.1/image_user_checkouts.png[貸出履歴]
 +
 2. 貸出履歴が表示されます。[貸出期間の延長]をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_009.png[貸出期間の延長リンク]
+image::1.1/image_user_checkouts_009.png[貸出期間の延長リンク]
 +
 3. 新しい貸出期間を確認し、[更新する]をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_011.png[貸出期間の延長]
+image::1.1/image_user_checkouts_011.png[貸出期間の延長]
 +
 [NOTE]
 ====
 * すでに貸出期間が過ぎている資料の場合
 * 予約が入っている資料の場合は、次のような画面が出て、貸出期間の延長ができません。
 +
-image::../assets/images/1.1/image_user_checkouts_013.png[貸出期間の延長が不可]
+image::1.1/image_user_checkouts_013.png[貸出期間の延長が不可]
 ====
 
 === 返却済みの貸出の記録を削除する
 
 1. ［貸出と予約］メニューから［貸出履歴］を選択します。
 +
-image::../assets/images/1.1/image_user_checkouts.png[貸出履歴]
+image::1.1/image_user_checkouts.png[貸出履歴]
 +
 2. ［削除]リンクをクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_015.png[貸出履歴の削除リンク]
+image::1.1/image_user_checkouts_015.png[貸出履歴の削除リンク]
 +
 3. ［OK]をクリックします。
 +
-image::../assets/images/1.2/image_alert.png[貸出履歴の削除のOK]
+image::1.2/image_alert.png[貸出履歴の削除のOK]
 +
 4. 返却済みの記録が削除されました。
 +
-image::../assets/images/1.1/image_user_checkouts_017.png[貸出履歴の削除]
+image::1.1/image_user_checkouts_017.png[貸出履歴の削除]
 
 === 貸出の一覧のTSVを表示する
 
 1. ［貸出と予約］メニューから［貸出履歴］を選択します。
 +
-image::../assets/images/1.1/image_user_checkouts.png[貸出履歴]
+image::1.1/image_user_checkouts.png[貸出履歴]
 +
 2. 右メニューの［TSV］をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_019.png[貸出履歴のTSVリンク]
+image::1.1/image_user_checkouts_019.png[貸出履歴のTSVリンク]
 +
 3. TSVが表示されます。
 
@@ -109,14 +109,14 @@ username	user_number	item_identifier	title	checked_out_at	due_date	checked_in_at
 
 1. ［貸出と予約］メニューから［貸出履歴］を選択します。
 +
-image::../assets/images/1.1/image_user_checkouts.png[貸出履歴]
+image::1.1/image_user_checkouts.png[貸出履歴]
 +
 2. 右メニューの［RSS］をクリックします。
 +
-image::../assets/images/1.1/image_user_checkouts_023.png[貸出履歴のRSSリンク]
+image::1.1/image_user_checkouts_023.png[貸出履歴のRSSリンク]
 +
 3. RSSが表示されます。
 +
-image::../assets/images/1.1/image_user_checkouts_025.png[貸出履歴のRSS表示]
+image::1.1/image_user_checkouts_025.png[貸出履歴のRSS表示]
 
 include::enju_user_toc.adoc[]

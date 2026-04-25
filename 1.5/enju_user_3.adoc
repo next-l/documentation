@@ -16,19 +16,19 @@ toc::[]
 
 1. 右上の[アカウント]リンクをクリックします。
 +
-image::../assets/images/1.1/image_user_passwd_003.png[アカウント]
+image::1.1/image_user_passwd_003.png[アカウント]
 +
 2. 右メニューの[パスワード変更]リンクをクリックします。
 +
-image::../assets/images/1.1/image_user_passwd_005.png[パスワード変更]
+image::1.1/image_user_passwd_005.png[パスワード変更]
 +
 3. ［現在のパスワード］と「パスワード」「パスワード(確認)」を入力します。パスワードは画面には表示されません。また「パスワード」と「パスワード(確認)」は同じものを入れてください。[更新]ボタンを押します。
 +
-image::../assets/images/1.1/image_user_passwd_007.png[パスワード入力]
+image::1.1/image_user_passwd_007.png[パスワード入力]
 +
 4. 「アカウントは正常に更新されました。」と表示されます。パスワードは変更されました。
 +
-image:../assets/images/1.1/image_user_passwd_009.png[パスワード変更完了]
+image:1.1/image_user_passwd_009.png[パスワード変更完了]
 
 [[profile-info]]
 === メールアドレスや名前などを変更する
@@ -37,11 +37,11 @@ image:../assets/images/1.1/image_user_passwd_009.png[パスワード変更完了
 
 1. 右上の[アカウント]リンクをクリックします。
 +
-image::../assets/images/1.1/image_user_passwd_003.png[アカウント]
+image::1.1/image_user_passwd_003.png[アカウント]
 +
 2. 右メニューの[編集]リンクをクリックします。
 +
-image::../assets/images/1.1/image_user_account_003.png[アカウントの編集]
+image::1.1/image_user_account_003.png[アカウントの編集]
 +
 [NOTE]
 ====
@@ -52,7 +52,7 @@ image::../assets/images/1.1/image_user_account_003.png[アカウントの編集]
 ====
 3. メールアドレスや名前を編集し、[更新する]をクリックします。
 +
-image::../assets/images/1.1/image_user_account_005.png[メールアドレスなどを編集]
+image::1.1/image_user_account_005.png[メールアドレスなどを編集]
 +
 [NOTE]
 ====

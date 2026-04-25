@@ -242,7 +242,7 @@ manifestation_id	original_title	title_alternative	title_transcription	statement_
 [[example-bib-xlsx]]
 ==== 書誌と所蔵のExcelの例
 
-image::../assets/images/1.4/export-xlsx.png[書誌と所蔵のExcelの例]
+image::1.4/export-xlsx.png[書誌と所蔵のExcelの例]
 
 [[get-rdf-xml]]
 === RDF/XML形式のデータを取得する

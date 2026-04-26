@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第4章 図書の受入をする - Next-L Enju 運用マニュアル
-title_short: 第4章 図書の受入をする
-group: enju_operation
-version: 1.5
+title: 第4章 図書の受入をする
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 4
 ---
 
 :toc: macro
@@ -1840,5 +1839,3 @@ image::1.1/image_operation_agent_3.png[編集]
 . 必要な情報を修正入力し、［更新する］ボタンをクリックします。
 +
 image::1.1/image_operation_agent_4.png[更新]
-
-include::enju_operation_toc.adoc[]

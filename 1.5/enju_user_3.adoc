@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第3章 パスワード/ユーザアカウント情報を変更する - Next-L Enju 利用者マニュアル
-title_short: 第3章 パスワード/ユーザアカウント情報を変更する
-group: enju_user
-version: 1.5
+title: 第3章 パスワード/ユーザアカウント情報を変更する
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -88,5 +86,3 @@ image::1.1/image_user_account_005.png[メールアドレスなどを編集]
 9. 「貸出の履歴を保存する」について
 +
 チェックを入れると、現在借りている本だけでなく、返却した本の記録を閲覧できるようになります。ただし、チェックを入れるまえの返却本は表示されません。
-
-include::enju_user_toc.adoc[]

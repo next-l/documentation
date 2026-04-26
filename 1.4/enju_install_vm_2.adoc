@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第2章 Enjuを動作させる方法 - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第2章 Enjuを動作させる方法
-group: enju_install_vm
-version: 1.4
+title: 第2章 Enjuを動作させる方法
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 2
 ---
 
 :toc: macro
@@ -70,5 +69,3 @@ Dockerを使ったEnjuのインストールは以下の手順で行います。
 6. Enjuコンテナの動作確認
 7. Enjuコンテナのネットワーク設定
 8. Enjuコンテナの起動
-
-include::enju_install_vm_toc.adoc[]

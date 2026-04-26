@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第9章 蔵書点検機能を利用する - Next-L Enju 運用マニュアル
-title_short: 第9章 蔵書点検機能を利用する
-group: enju_operation
-version: 1.5
+title: 第9章 蔵書点検機能を利用する
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 9
 ---
 
 :toc: macro
@@ -81,5 +80,3 @@ image::1.1/image_operation_249.jpg[蔵書点検]
 
 {:/comment}
 ////
-
-include::enju_operation_toc.adoc[]

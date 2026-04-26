@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第4章 資料を予約する - Next-L Enju 利用者マニュアル
-title_short: 第4章 資料を予約する
-group: enju_user
-version: 1.4
+title: 第4章 資料を予約する
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
 ---
 
 :toc: macro
@@ -191,5 +189,3 @@ image::1.1/image_user_reserve_035.png[予約のRSSリンク]
 3. RSSが表示されます。
 +
 image::1.1/image_user_reserve_037.png[予約のTSV]
-
-include::enju_user_toc.adoc[]

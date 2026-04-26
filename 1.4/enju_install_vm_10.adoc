@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 第11章 トラブルシューティング - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第11章 トラブルシューティング
-group: enju_install_vm
-version: 1.4
+title: 第10章 トラブルシューティング
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 10
 ---
 
 :toc: macro
@@ -33,5 +33,3 @@ toc::[]
 ```
 docker compose logs -f web
 ```
-
-include::enju_install_vm_toc.adoc[]

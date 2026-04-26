@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第3章 動作環境の確認とDockerのインストール - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第3章 動作環境の確認とDockerのインストール
-group: enju_install_vm
-version: 1.5
+title: 第3章 動作環境の確認とDockerのインストール
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 3
 ---
 
 :toc: macro
@@ -129,5 +128,3 @@ Docker DesktopをDocker社のWebサイトからダウンロードします。
 ==== Dockerのインストール
 
 前項でダウンロードしたファイルを実行し，Docker Desktopをインストールします。
-
-include::enju_install_vm_toc.adoc[]

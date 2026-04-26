@@ -1,10 +1,8 @@
 ---
-layout: page
-title: 第1章 Enju概要 - Next-L Enju初期設定マニュアル
-title_short: 第1章 Enju概要
-group: enju_setup
-version: 1.5
+title: 第1章 Enju概要
+parent: Next-L Enju初期設定マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 // {::comment}第1章 Enju概要{:/comment}
 
-include::enju_setup_toc.adoc[]
+include::{includedir}/enju_introduction.adoc[]

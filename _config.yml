@@ -5,9 +5,6 @@ author :
   twitter : ProjectNextL
   feedburner : false
 
-# uncomment baseurl if you want to publish the site to a subfolder
-#baseurl: /blog
-description: The Jekyll AsciiDoc Quickstart project is a leg-up in starting your own website hosted on GitHub with content based in AsciiDoc.
 exclude:
   - LICENSE.adoc
   - README.adoc
@@ -26,7 +23,12 @@ asciidoctor:
     - imagesdir=../assets/images
 safe: true
 
-JB:
-  BASE_PATH : https://next-l.github.io/documentation
-  pages_list :
-    provider : custom
+theme: just-the-docs
+logo: "/assets/images/logo.png"
+nav_external_links:
+  - title: "Project Next-L公式サイト"
+    url: "https://www.next-l.jp"
+  - title: "GitHub (next-l/enju_leaf)"
+    url: "https://github.com/next-l/enju_leaf"
+footer_content: '&copy; 2007 Project Next-L'
+search_enabled: false

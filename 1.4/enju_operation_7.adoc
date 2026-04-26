@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第7章 休館日と催し物を登録する - Next-L Enju 運用マニュアル
-title_short: 第7章 休館日と催し物を登録する
-group: enju_operation
-version: 1.4
+title: 第7章 休館日と催し物を登録する
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 7
 ---
 
 :toc: macro
@@ -377,5 +376,3 @@ LOCATION:IbarakiTsukuba
 END:VEVENT
 END:VCALENDAR
 ----
-
-include::enju_operation_toc.adoc[]

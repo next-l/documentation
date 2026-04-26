@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第8章 資料を検索する - Next-L Enju 運用マニュアル
-title_short: 第8章 資料を検索する
-group: enju_operation
-version: 1.4
+title: 第8章 資料を検索する
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 8
 ---
 
 :toc: macro
@@ -33,5 +32,3 @@ image::1.2/advanced_search_1_librarian.png[本棚を指定して検索]
 の下部に、資料の貸出回数が表示されます。
 
 image::1.2/image_operation_244_2_librarian.png[貸出回数の表示]
-
-include::enju_operation_toc.adoc[]

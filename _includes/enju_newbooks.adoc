@@ -4,8 +4,8 @@ Enjuでは、新着資料（1か月以内に登録された資料）の
 
 1. トップページの［新着資料］をクリックします。  
 +
-image:{imagesdir}/1.1/image_operation_133.png[新着資料]
+image:1.1/image_operation_133.png[新着資料]
 +
 2. 新着資料の一覧が表示されます。  
 +
-image:{imagesdir}/1.1/image_operation_134.png[新着資料の一覧]
+image:1.1/image_operation_134.png[新着資料の一覧]

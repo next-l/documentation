@@ -31,4 +31,6 @@ nav_external_links:
   - title: "GitHub (next-l/enju_leaf)"
     url: "https://github.com/next-l/enju_leaf"
 footer_content: '&copy; 2007 Project Next-L'
-search_enabled: false
+# search_enabled: false
+search:
+  language: ja

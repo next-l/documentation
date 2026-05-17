@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第5章 雑誌の受入をする - Next-L Enju 運用マニュアル
-title_short: 第5章 雑誌の受入をする
-group: enju_operation
-version: 1.5
+title: 第5章 雑誌の受入をする
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 5
 ---
 
 :toc: macro
@@ -204,5 +203,3 @@ image::1.1/image_operation_104.png[内部的に存在するもの]
 ======
 
 ////
-
-include::enju_operation_toc.adoc[]

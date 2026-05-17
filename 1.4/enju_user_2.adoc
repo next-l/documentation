@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第2章 ログイン/ログアウトする - Next-L Enju 利用者マニュアル
-title_short: 第2章 ログイン/ログアウトする
-group: enju_user
-version: 1.4
+title: 第2章 ログイン/ログアウトする
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
 ---
 
 :toc: macro
@@ -54,5 +52,3 @@ image::1.1/image_user_011.png[Enjuログアウト後]
 パソコンを共有する時や離席時などには、
 きちんとログアウトするよう心がけましょう。
 ====
-
-include::enju_user_toc.adoc[]

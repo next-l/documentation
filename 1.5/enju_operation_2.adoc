@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第2章 Enjuを利用する - Next-L Enju 運用マニュアル
-title_short: 第2章 Enjuを利用する
-group: enju_operation
-version: 1.5
+title: 第2章 Enjuを利用する
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 2
 ---
 
 :toc: macro
@@ -231,5 +230,3 @@ _includes/enju_rm_message.md
 ////
 
 include::../_includes/enju_rm_message.adoc[]
-
-include::enju_operation_toc.adoc[]

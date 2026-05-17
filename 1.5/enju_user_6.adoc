@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第6章 新着資料の一覧を表示する - Next-L Enju 利用者マニュアル
-title_short: 第6章 新着資料の一覧を表示する
-group: enju_user
-version: 1.5
+title: 第6章 新着資料の一覧を表示する
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -15,5 +13,3 @@ toc::[]
 // 注意！ ここの内容は _includes/enju_newbook.mdの内容を編集してください 
 
 include::../_includes/enju_newbooks.adoc[]
-
-include::enju_user_toc.adoc[]

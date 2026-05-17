@@ -1,10 +1,7 @@
 ---
-layout: page
 title: Next-L Enju Web APIマニュアル
-title_short: Web API
-group: navigation
-version: 1.4
+has_children: true
+parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 5
 ---
 本マニュアルは、オープンソース統合図書館システムEnjuが提供するWeb APIについて、説明しています。EnjuのWeb APIを使うときにお読みください。
-
-include::enju_webapi_toc.adoc[]

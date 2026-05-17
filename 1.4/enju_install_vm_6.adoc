@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第7章 他のコンピュータからの利用設定 - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第7章 他のコンピュータからの利用設定
-group: enju_install_vm
-version: 1.4
+title: 第6章 他のコンピュータからの利用設定
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 6
 ---
 
 :toc: macro
@@ -18,5 +17,3 @@ toc::[]
 https://github.com/next-l/enju_leaf/wiki/Production
 
 // {::comment}別ファイル名候補：setup_other_computer.md{:/comment}
-
-include::enju_install_vm_toc.adoc[]

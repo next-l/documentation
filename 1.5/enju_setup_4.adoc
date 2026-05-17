@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第4章　件名のシステム設定を行う - Next-L Enju初期設定マニュアル
-title_short: 第4章　件名のシステム設定を行う
-group: enju_setup
-version: 1.5
+title: 第4章 件名のシステム設定を行う
+parent: Next-L Enju初期設定マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -228,5 +226,3 @@ Enjuでは，その他，次の機能が利用できます。
 
 {:/comment}
 ////
-
-include::enju_setup_toc.adoc[]

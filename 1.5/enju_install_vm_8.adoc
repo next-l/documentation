@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第9章 データのバックアップ - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第9章 データのバックアップとリストア
-group: enju_install_vm
-version: 1.5
+title: 第8章 データのバックアップ
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 8
 ---
 
 :toc: macro
@@ -16,5 +15,3 @@ toc::[]
 https://github.com/next-l/enju_leaf/wiki/Backup を参照してください。
 
 // {::comment}別ファイル名候補：backup.md{:/comment}
-
-include::enju_install_vm_toc.adoc[]

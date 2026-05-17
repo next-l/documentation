@@ -1,10 +1,7 @@
 ---
-layout: page
-title: 第1章 Enju概要 - Next-L Enju 運用マニュアル
-title_short: 第1章 Enju概要
-group: enju_operation
-version: 1.4
+title: 第1章 Enju概要
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 1
 ---
 include::{includedir}/enju_introduction.adoc[]
-
-include::enju_operation_toc.adoc[]

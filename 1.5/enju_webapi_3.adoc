@@ -1,10 +1,7 @@
 ---
-layout: page
-group: enju_webapi
-page-layout: page
-title_short: 第3章 書誌情報をまとめて取得する (OAI-PMH)
-title: 第3章 書誌情報をまとめて取得する (OAI-PMH) - Next-L Enju Web APIマニュアル
-version: 1.5
+title: 第3章 書誌情報をまとめて取得する (OAI-PMH)
+parent: Next-L Enju Web APIマニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -98,6 +95,3 @@ http://localhost:8080/capabilitylist.xml
 書誌情報リスト (resource list) のURLは以下のようになります。
 
 http://localhost:8080/resourcelist_index.xml
-
-
-include::enju_webapi_toc.adoc[]

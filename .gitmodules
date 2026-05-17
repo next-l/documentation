@@ -1,0 +1,3 @@
+[submodule "assets/js/vendor/lunr-languages"]
+	path = assets/js/vendor/lunr-languages
+	url = git@github.com:MihaiValentin/lunr-languages.git

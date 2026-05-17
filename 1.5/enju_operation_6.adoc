@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第6章 貸出・返却・予約を処理する - Next-L Enju 運用マニュアル
-title_short: 第6章 貸出・返却・予約を処理する
-group: enju_operation
-version: 1.5
+title: 第6章 貸出・返却・予約を処理する
+parent: Next-L Enju 運用マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 6
 ---
 
 :toc: macro
@@ -633,5 +632,3 @@ image::1.1/image_operation_210_rss_d.png[TSVファイル]
 === 相互貸借をする
 
 Enjuでは、NACSIS-ILL、ゆにかねっとの利用を検討しています（ https://github.com/next-l/enju_leaf/issues/617[issue #617] ）。
-
-include::enju_operation_toc.adoc[]

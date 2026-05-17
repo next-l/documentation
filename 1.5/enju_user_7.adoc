@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第7章 メッセージを受信する - Next-L Enju 利用者マニュアル
-title_short: 第7章 メッセージを受信する
-group: enju_user
-version: 1.5
+title: 第7章 メッセージを受信する
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -23,5 +21,3 @@ include::../_includes/enju_read_message.adoc[]
 // 注意！ ここの内容は _includes/enju_rm_message.adoc の内容を編集してください 
 
 include::../_includes/enju_rm_message.adoc[]
-
-include::enju_user_toc.adoc[]

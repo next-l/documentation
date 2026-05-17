@@ -1,13 +1,11 @@
 ---
-layout: page
-title: 第4章 Enjuのインストール - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第4章 Enjuのインストール
-group: enju_install_vm
-version: 1.5
+title: 第4章 Enjuのインストール
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 4
 ---
 
 :toc: macro
-
 
 toc::[]
 
@@ -140,6 +138,3 @@ Rails.application.configure do
   }
 end
 ----
-
-include::enju_install_vm_toc.adoc[]
-

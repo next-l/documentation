@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第5章 資料の貸出状況を確認する/貸出延長をする - Next-L Enju 利用者マニュアル
-title_short: 第5章 資料の貸出状況を確認する/貸出延長をする
-group: enju_user
-version: 1.5
+title: 第5章 資料の貸出状況を確認する/貸出延長をする
+parent: Next-L Enju 利用者マニュアル
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
 ---
 
 :toc: macro
@@ -118,5 +116,3 @@ image::1.1/image_user_checkouts_023.png[貸出履歴のRSSリンク]
 3. RSSが表示されます。
 +
 image::1.1/image_user_checkouts_025.png[貸出履歴のRSS表示]
-
-include::enju_user_toc.adoc[]

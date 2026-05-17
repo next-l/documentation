@@ -1,7 +1,0 @@
-* xref:enju_setup_1.adoc[第1章 Enju概要]
-* xref:enju_setup_2.adoc[第2章 Enjuを利用する]
-* xref:enju_setup_3.adoc[第3章 図書館のシステム設定を行う]
-* xref:enju_setup_4.adoc[第4章 件名のシステム設定を行う]
-* xref:enju_setup_5.adoc[第5章 各種形態や状態等に関するシステム設定を行う]
-* xref:enju_setup_6.adoc[第6章 資料に関するシステム設定を行う]
-* xref:enju_setup_7.adoc[第7章 その他]

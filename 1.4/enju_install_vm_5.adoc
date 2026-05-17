@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第6章 検索エンジンの設定 - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第6章 検索エンジンの設定
-group: enju_install_vm
-version: 1.4
+title: 第5章 検索エンジンの設定
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+nav_order: 5
 ---
 
 :toc: macro
@@ -176,5 +175,3 @@ https://cwiki.apache.org/confluence/display/solr/CharFilterFactories#CharFilterF
 蔵書構成だけでなく，利用者層の特性も考慮して決めるとよいでしょう。
 
 なお，異体字対策については，検索機能でなくデータ側で頑張る方針もあります。異体字の範囲はほどほどにとどめ，書誌情報に異表記を積極的に追加して再現率を上げるやり方です。
-
-include::enju_install_vm_toc.adoc[]

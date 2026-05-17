@@ -1,9 +1,8 @@
 ---
-layout: page
-title: 第10章 その他（カスタマイズなど） - Next-L Enju インストールマニュアル（Docker編）
-title_short: 第10章 その他（カスタマイズなど）
-group: enju_install_vm
-version: 1.5
+title: 第9章 その他（カスタマイズなど）
+parent: Next-L Enju インストールマニュアル（Docker編）
+grand_parent: Next-L Enju Leaf 1.5 マニュアル
+nav_order: 9
 ---
 
 :toc: macro
@@ -189,5 +188,3 @@ docker compose run --rm web rake sitemap:create
 サイトマップは以下のようなURLでアクセスできます。
 
 https://enju.example.jp/sitemap.xml.gz
-
-include::enju_install_vm_toc.adoc[]

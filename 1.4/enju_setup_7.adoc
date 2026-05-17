@@ -1,9 +1,7 @@
 ---
-layout: page
-title: 第7章 その他 - Next-L Enju初期設定マニュアル
-title_short: 第7章 その他
-group: enju_setup
-version: 1.4
+title: 第7章 その他
+grand_parent: Next-L Enju Leaf 1.4 マニュアル
+parent: Next-L Enju初期設定マニュアル
 ---
 
 == その他
@@ -121,5 +119,3 @@ image::1.1/image_initial_085.png[システムの設定]
 * [発注リスト]
 ** [図書館の管理]メニューから[発注リスト]をたどっていける画面と同じ
 ** 参照：xref:enju_operation_4.adoc#make-purchase-list[運用マニュアル「発注リストを作成する」]
-
-include::enju_setup_toc.adoc[]

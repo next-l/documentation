@@ -24,8 +24,8 @@ http://localhost:8080/oai?verb={_Verb_}
 
 === 取得できるメタデータ形式
 
-EnjuがOAI-PMHで提供するメタデータ形式は Dublin Core, junii2, DCNDL の3種類に対応しています。
-それぞれメタデータ名称として oai_dc, junii2, dcndl を指定してください。
+EnjuがOAI-PMHで提供するメタデータ形式は Dublin Core, JPCOARスキーマ, DC-NDL の3種類に対応しています。
+それぞれメタデータ名称として `oai_dc`, `jpcoar`, `dcndl` を指定してください。
 
 === サーバ情報を取得する (Identify)
 
@@ -48,16 +48,16 @@ http://localhost:8080/oai?verb=ListMetadataFormats
 書誌情報レコードを取得するには ListRecords リクエストを送ります。
 取得されるメタデータ形式として、`metadataPrefix` パラメータで指定します。
 
-DCNDLの場合:
+DC-NDLの場合:
 
 ----
 http://localhost:8080/oai?verb=ListRecords&metadataPrefix=dcndl
 ----
 
-junii2の場合:
+JPCOARスキーマの場合:
 
 ----
-http://localhost:8080/oai?verb=ListRecords&metadataPrefix=junii2
+http://localhost:8080/oai?verb=ListRecords&metadataPrefix=jpcoar
 ----
 
 一度に取得できるレコード件数は100件までです。
@@ -65,7 +65,7 @@ http://localhost:8080/oai?verb=ListRecords&metadataPrefix=junii2
 
 そのほか、`from`, `until` パラメータを使って、更新日付を限定したレコード取得も可能です。
 
-更新日付によって限定したレコードの取得の例（2016年4月1日から2016年6月30日まで、DCNDL形式での取得）:
+更新日付によって限定したレコードの取得の例（2016年4月1日から2016年6月30日まで、DC-NDL形式での取得）:
 
 ----
 http://localhost:8080/oai?verb=ListRecords&metadataPrefix=dcndl&from=2016-04-01&until=2016-06-30

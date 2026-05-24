@@ -228,11 +228,11 @@ $ rake enju_circulation:export:checkout RAILS_ENV=production > output.txt
 - item_identifier（所蔵情報ID）
 - call_number（請求記号）
 - shelf（本棚）
-- carrier_type（資料の形態）
+- carrier_type（キャリア種別）
 - title（原題）
 - username（ユーザ名）
 - full_name（フルネーム）
--user_number（利用者番号）
+- user_number（利用者番号）
 ====    
 
 ==== 貸出の延長手続きをする

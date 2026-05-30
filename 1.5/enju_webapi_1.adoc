@@ -110,7 +110,7 @@ manifestation_id	original_title	title_alternative	title_transcription	statement_
 |carrier_type|資料種別||
 
 |content_type|資料の内容の種類||
-|frequency|発行頻度||
+|frequency|刊行頻度||
 |language|言語||
 |isbn|ISBN||
 |issn|ISSN||
